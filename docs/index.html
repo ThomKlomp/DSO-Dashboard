@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DSO Dashboard</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --bg:#f5f4f0;--surface:#fff;--border:#e2e0d9;--text:#1a1916;
   --muted:#7a7870;--accent:#2563eb;--red:#dc2626;--orange:#ea580c;
@@ -28,24 +28,22 @@ body{font-family:var(--serif);background:var(--bg);color:var(--text);min-height:
 
 /* LAYOUT */
 .page{max-width:1200px;margin:0 auto;padding:32px 24px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;}
+.grid-3{display:grid;grid-template-columns:2fr 1fr;gap:20px;margin-bottom:20px;}
+@media(max-width:768px){.grid-2,.grid-3{grid-template-columns:1fr;}}
 
 /* KPI */
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:2px;margin-bottom:32px;border:2px solid var(--ink);border-radius:4px;overflow:hidden;}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:2px;margin-bottom:32px;border:2px solid var(--ink);border-radius:4px;overflow:hidden;}
 .kpi{background:var(--surface);padding:20px;border-right:1px solid var(--border);position:relative;transition:background .15s;}
 .kpi:last-child{border-right:none;}
 .kpi:hover{background:#fafaf8;}
 .kpi-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
-.kpi-value{font-size:28px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;}
+.kpi-value{font-size:26px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;}
 .kpi-sub{font-size:11px;color:var(--muted);margin-top:5px;font-family:var(--mono);}
-.kpi-badge{position:absolute;top:14px;right:12px;font-size:9px;font-weight:700;letter-spacing:.5px;padding:3px 7px;border-radius:2px;}
+.kpi-badge{position:absolute;top:12px;right:12px;font-size:9px;font-weight:700;letter-spacing:.5px;padding:3px 7px;border-radius:2px;}
 .badge-good{background:#dcfce7;color:var(--green);}
 .badge-warn{background:#fef9c3;color:var(--amber);}
 .badge-urgent{background:#fee2e2;color:var(--red);}
-
-/* GRIDS */
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;}
-.grid-3{display:grid;grid-template-columns:2fr 1fr;gap:20px;margin-bottom:20px;}
-@media(max-width:768px){.grid-2,.grid-3{grid-template-columns:1fr;}}
 
 /* CARD */
 .card{background:var(--surface);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:20px;}
@@ -83,6 +81,7 @@ body{font-family:var(--serif);background:var(--bg);color:var(--text);min-height:
 .pill-urgent{background:#fee2e2;color:var(--red);}
 .pill-high{background:#ffedd5;color:var(--orange);}
 .pill-ok{background:#fef9c3;color:var(--amber);}
+.pill-current{background:#f0fdf4;color:var(--green);}
 .days-chip{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:600;padding:2px 7px;border-radius:2px;}
 .days-0{background:#f0fdf4;color:var(--green);}
 .days-30{background:#fef9c3;color:var(--amber);}
@@ -98,29 +97,50 @@ body{font-family:var(--serif);background:var(--bg);color:var(--text);min-height:
 #dashboard{display:none;}
 footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;color:var(--muted);}
 
-/* DETAIL PANEL */
-#detail-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.45);backdrop-filter:blur(2px);align-items:flex-start;justify-content:flex-end;}
-#detail-overlay.open{display:flex;}
-#detail-panel{width:min(520px,100vw);height:100vh;overflow-y:auto;background:var(--surface);border-left:2px solid var(--ink);display:flex;flex-direction:column;animation:slideIn .2s ease;}
+/* ── SLIDE PANEL (shared by invoice + customer) ── */
+#panel-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.45);backdrop-filter:blur(2px);align-items:flex-start;justify-content:flex-end;}
+#panel-overlay.open{display:flex;}
+#panel{width:min(580px,100vw);height:100vh;overflow-y:auto;background:var(--surface);border-left:2px solid var(--ink);display:flex;flex-direction:column;animation:slideIn .2s ease;}
 @keyframes slideIn{from{transform:translateX(40px);opacity:0}to{transform:translateX(0);opacity:1}}
-.detail-header{padding:20px 24px;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;}
-.detail-header h2{font-size:15px;font-weight:700;}
-.close-btn{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0 4px;line-height:1;opacity:.7;}
+.panel-header{padding:20px 24px;background:var(--ink);color:#fff;display:flex;align-items:flex-start;justify-content:space-between;position:sticky;top:0;z-index:10;gap:12px;}
+.panel-header-text{flex:1;}
+.panel-header h2{font-size:15px;font-weight:700;line-height:1.3;}
+.panel-header .panel-sub{font-size:11px;opacity:.6;font-family:var(--mono);margin-top:3px;}
+.close-btn{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0 4px;line-height:1;opacity:.7;flex-shrink:0;}
 .close-btn:hover{opacity:1;}
-.detail-body{padding:24px;flex:1;}
-.detail-section{margin-bottom:24px;}
-.detail-section-title{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+.panel-body{padding:24px;flex:1;}
+
+/* PANEL SECTIONS */
+.ps{margin-bottom:24px;}
+.ps-title{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border);}
 .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 .detail-field label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px;}
 .detail-field value{font-size:14px;font-weight:500;display:block;}
 .detail-field value.mono{font-family:var(--mono);}
-.reminder-item{background:#f8f7f4;border:1px solid var(--border);border-radius:4px;padding:12px;margin-bottom:8px;}
-.reminder-item .r-date{font-family:var(--mono);font-size:11px;color:var(--muted);}
-.reminder-item .r-text{font-size:13px;margin-top:4px;}
-.no-data{font-size:13px;color:var(--muted);font-style:italic;}
+
+/* INVOICE LIST IN CUSTOMER PANEL */
+.inv-list{display:flex;flex-direction:column;gap:8px;}
+.inv-card{border:1px solid var(--border);border-radius:4px;padding:12px 14px;cursor:pointer;transition:background .1s,border-color .1s;}
+.inv-card:hover{background:#f0f7ff;border-color:#bfdbfe;}
+.inv-card.is-overdue{border-left:3px solid var(--red);}
+.inv-card.is-current{border-left:3px solid var(--green);}
+.inv-card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.inv-card-no{font-family:var(--mono);font-size:12px;font-weight:600;}
+.inv-card-amount{font-family:var(--mono);font-size:13px;font-weight:700;}
+.inv-card-bottom{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:11px;color:var(--muted);font-family:var(--mono);}
+.inv-note-preview{font-size:11px;color:var(--amber);margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+
+/* BREADCRUMB */
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:12px;margin-bottom:16px;color:var(--muted);}
+.breadcrumb a{color:var(--accent);cursor:pointer;text-decoration:underline;}
+.breadcrumb-sep{color:var(--border);}
+
+/* NOTES */
 .note-item{background:#fffbeb;border:1px solid #fde68a;border-radius:4px;padding:12px;margin-bottom:8px;}
-.note-item .note-meta{font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:4px;}
+.note-item.customer-note{background:#eff6ff;border-color:#bfdbfe;}
+.note-item .note-meta{font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:4px;display:flex;justify-content:space-between;}
 .note-item .note-text{font-size:13px;line-height:1.5;}
+.no-data{font-size:13px;color:var(--muted);font-style:italic;}
 .note-form{display:flex;flex-direction:column;gap:8px;margin-top:12px;}
 .note-author{font-family:var(--mono);font-size:12px;padding:8px 12px;border:1px solid var(--border);border-radius:4px;background:#fff;width:100%;}
 .note-textarea{font-family:var(--serif);font-size:13px;padding:10px 12px;border:1px solid var(--border);border-radius:4px;background:#fff;width:100%;resize:vertical;min-height:72px;}
@@ -134,6 +154,17 @@ footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;col
 .token-input-row{display:flex;gap:8px;margin-top:8px;}
 .token-input{flex:1;font-family:var(--mono);font-size:11px;padding:6px 10px;border:1px solid var(--border);border-radius:4px;}
 .token-btn{background:var(--accent);color:#fff;border:none;border-radius:4px;padding:6px 12px;font-size:12px;cursor:pointer;white-space:nowrap;}
+
+/* REMINDER */
+.reminder-item{background:#f8f7f4;border:1px solid var(--border);border-radius:4px;padding:12px;margin-bottom:8px;}
+.reminder-item .r-date{font-family:var(--mono);font-size:11px;color:var(--muted);}
+.reminder-item .r-text{font-size:13px;margin-top:4px;}
+
+/* CUSTOMER SUMMARY BAR */
+.customer-summary{display:flex;gap:16px;padding:14px 16px;background:#f8f7f4;border-radius:4px;margin-bottom:16px;flex-wrap:wrap;}
+.cs-item{display:flex;flex-direction:column;gap:2px;}
+.cs-label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);}
+.cs-value{font-size:16px;font-weight:700;font-family:var(--mono);}
 </style>
 </head>
 <body>
@@ -145,7 +176,7 @@ footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;col
   </div>
   <div class="topbar-right">
     <div class="status-dot"></div>
-    <span id="sync-time">Loading…</span>
+    <span id="sync-time">Laden…</span>
   </div>
 </div>
 
@@ -173,7 +204,7 @@ footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;col
     <div class="card" style="margin-bottom:0">
       <div class="card-header">
         <span class="card-title">Top Overdue Klanten</span>
-        <span style="font-size:10px;color:var(--muted);font-family:var(--mono)">totaal per klant</span>
+        <span class="click-hint">↗ klik voor klantoverzicht</span>
       </div>
       <div class="card-body"><div class="chart-wrap"><canvas id="customerChart"></canvas></div></div>
     </div>
@@ -184,24 +215,15 @@ footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;col
         <div class="priority-legend">
           <div class="legend-item">
             <div class="legend-dot" style="background:#dc2626"></div>
-            <div class="legend-text">
-              <strong style="color:#dc2626">URGENT</strong>
-              <span>Score ≥ 70 — Hoog bedrag én lang uitstaand. Bel de klant vandaag nog.</span>
-            </div>
+            <div class="legend-text"><strong style="color:#dc2626">URGENT</strong><span>Score ≥ 70 — Hoog bedrag én lang uitstaand. Bel vandaag nog.</span></div>
           </div>
           <div class="legend-item">
             <div class="legend-dot" style="background:#ea580c"></div>
-            <div class="legend-text">
-              <strong style="color:#ea580c">High</strong>
-              <span>Score 40–69 — Aanzienlijk risico. Stuur formele herinnering deze week.</span>
-            </div>
+            <div class="legend-text"><strong style="color:#ea580c">High</strong><span>Score 40–69 — Aanzienlijk risico. Stuur formele herinnering.</span></div>
           </div>
           <div class="legend-item">
             <div class="legend-dot" style="background:#d97706"></div>
-            <div class="legend-text">
-              <strong style="color:#d97706">Monitor</strong>
-              <span>Score &lt; 40 — In de gaten houden. Vriendelijke herinnering volstaat.</span>
-            </div>
+            <div class="legend-text"><strong style="color:#d97706">Monitor</strong><span>Score &lt; 40 — Vriendelijke herinnering volstaat.</span></div>
           </div>
         </div>
       </div>
@@ -229,14 +251,17 @@ footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;col
 </div>
 <footer id="footer"></footer>
 
-<!-- DETAIL PANEL -->
-<div id="detail-overlay">
-  <div id="detail-panel">
-    <div class="detail-header">
-      <h2 id="detail-title">Factuur Detail</h2>
-      <button class="close-btn" onclick="closeDetail()">✕</button>
+<!-- SLIDE PANEL -->
+<div id="panel-overlay">
+  <div id="panel">
+    <div class="panel-header">
+      <div class="panel-header-text">
+        <h2 id="panel-title">Detail</h2>
+        <div class="panel-sub" id="panel-sub"></div>
+      </div>
+      <button class="close-btn" onclick="closePanel()">✕</button>
     </div>
-    <div class="detail-body" id="detail-body"></div>
+    <div class="panel-body" id="panel-body"></div>
   </div>
 </div>
 
@@ -248,9 +273,11 @@ const OVERDUE_PCT_TARGET = 10;
 const fmt  = n => new Intl.NumberFormat('nl-NL',{minimumFractionDigits:0,maximumFractionDigits:0}).format(n);
 const fmtE = n => '€'+fmt(n);
 const fmtD = n => n.toFixed(1);
+const esc  = s => String(s).replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const AGING_COLORS = {'Current':'#16a34a','1-30 days':'#ca8a04','31-60 days':'#ea580c','61-90 days':'#dc2626','>90 days':'#7f1d1d'};
 
 let _data = null, _notes = {}, _notesSHA = null;
+let _customerChartInstance = null;
 
 // ── LOAD ─────────────────────────────────────────────────────────────────
 async function load() {
@@ -271,9 +298,8 @@ async function load() {
 async function loadNotes() {
   try {
     const r = await fetch('notes.json?t='+Date.now());
-    if (r.ok) { _notes = await r.json(); }
+    if (r.ok) _notes = await r.json();
   } catch(e) { _notes = {}; }
-  // Also get SHA via GitHub API for later saves
   try {
     const r = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${NOTES_FILE}`);
     if (r.ok) { const j = await r.json(); _notesSHA = j.sha; }
@@ -290,31 +316,23 @@ function render(d) {
   renderKPIs(d); renderAgingBars(d); renderDSOChart(d);
   renderCustomerChart(d); renderPriorityChart(d); renderTable(d);
   document.getElementById('footer').textContent =
-    'Last sync: '+new Date(d.generated).toISOString()+' · '+d.invoice_count+' facturen gevolgd';
+    'Last sync: '+new Date(d.generated).toISOString()+' · '+d.invoice_count+' facturen';
 }
 
 // ── KPIs ─────────────────────────────────────────────────────────────────
 function renderKPIs(d) {
-  const total      = d.total_ar || 1;
-  const overduePct = (d.overdue_30||0) / total * 100;
-  const pctOk      = overduePct <= OVERDUE_PCT_TARGET;
-  const pctClose   = overduePct <= OVERDUE_PCT_TARGET * 1.3;
-  const dsoOk      = d.dso <= d.dso_target;
-  const dsoClose   = d.dso <= d.dso_target * 1.15;
+  const total = d.total_ar||1, overduePct = (d.overdue_30||0)/total*100;
+  const pctOk = overduePct<=OVERDUE_PCT_TARGET, pctClose = overduePct<=OVERDUE_PCT_TARGET*1.3;
+  const dsoOk = d.dso<=d.dso_target, dsoClose = d.dso<=d.dso_target*1.15;
   const items = [
     {label:'DSO (dagen)',value:fmtD(d.dso),sub:'Target: '+d.dso_target+' dagen',
-     badge:dsoOk?'ON TARGET':dsoClose?'LET OP':'ACTIE VEREIST',
-     badgeClass:dsoOk?'badge-good':dsoClose?'badge-warn':'badge-urgent'},
+     badge:dsoOk?'ON TARGET':dsoClose?'LET OP':'ACTIE',badgeClass:dsoOk?'badge-good':dsoClose?'badge-warn':'badge-urgent'},
     {label:'% Verlopen >30d',value:overduePct.toFixed(1)+'%',sub:'Target: max '+OVERDUE_PCT_TARGET+'%',
-     badge:pctOk?'ON TARGET':pctClose?'LET OP':'BOVEN TARGET',
-     badgeClass:pctOk?'badge-good':pctClose?'badge-warn':'badge-urgent'},
+     badge:pctOk?'ON TARGET':pctClose?'LET OP':'BOVEN TARGET',badgeClass:pctOk?'badge-good':pctClose?'badge-warn':'badge-urgent'},
     {label:'Totaal AR',value:fmtE(d.total_ar),sub:d.invoice_count+' open facturen'},
-    {label:'Verlopen >30d',value:fmtE(d.overdue_30),sub:'Opvolging vereist',
-     badge:d.overdue_30>0?'VERLOPEN':null,badgeClass:'badge-warn'},
-    {label:'Verlopen >60d',value:fmtE(d.overdue_60),sub:'Formele aanmaning',
-     badge:d.overdue_60>0?'ESCALEER':null,badgeClass:'badge-urgent'},
-    {label:'Verlopen >90d',value:fmtE(d.overdue_90),sub:'Incassofase',
-     badge:d.overdue_90>0?'KRITIEK':null,badgeClass:'badge-urgent'},
+    {label:'Verlopen >30d',value:fmtE(d.overdue_30),sub:'Opvolging vereist',badge:d.overdue_30>0?'VERLOPEN':null,badgeClass:'badge-warn'},
+    {label:'Verlopen >60d',value:fmtE(d.overdue_60),sub:'Formele aanmaning',badge:d.overdue_60>0?'ESCALEER':null,badgeClass:'badge-urgent'},
+    {label:'Verlopen >90d',value:fmtE(d.overdue_90),sub:'Incassofase',badge:d.overdue_90>0?'KRITIEK':null,badgeClass:'badge-urgent'},
   ];
   document.getElementById('kpi-grid').innerHTML = items.map(k=>`
     <div class="kpi">
@@ -325,25 +343,24 @@ function renderKPIs(d) {
     </div>`).join('');
 }
 
-// ── AGING BARS ───────────────────────────────────────────────────────────
+// ── AGING ────────────────────────────────────────────────────────────────
 function renderAgingBars(d) {
-  const total      = Object.values(d.aging).reduce((a,b)=>a+b,0)||1;
-  const overduePct = (d.overdue_30||0)/total*100;
-  const over       = overduePct > OVERDUE_PCT_TARGET;
-  const order      = ['Current','1-30 days','31-60 days','61-90 days','>90 days'];
+  const total = Object.values(d.aging).reduce((a,b)=>a+b,0)||1;
+  const over  = (d.overdue_30||0)/total*100 > OVERDUE_PCT_TARGET;
+  const order = ['Current','1-30 days','31-60 days','61-90 days','>90 days'];
   document.getElementById('aging-bars').innerHTML = order.map(b=>{
-    const amt = d.aging[b]||0, pct = (amt/total*100).toFixed(1);
-    const warn = (b!=='Current' && over) ? ' <span style="color:#dc2626;font-weight:700">▲</span>' : '';
+    const amt=d.aging[b]||0, pct=(amt/total*100).toFixed(1);
+    const warn=(b!=='Current'&&over)?' <span style="color:#dc2626;font-weight:700">▲</span>':'';
     return `<div class="aging-row">
       <span class="aging-label">${b}</span>
       <div class="aging-bar-wrap"><div class="aging-bar" style="width:${pct}%;background:${AGING_COLORS[b]}"></div></div>
       <span class="aging-amount">${fmtE(amt)}</span>
       <span class="aging-pct">${pct}%${warn}</span>
     </div>`;
-  }).join('')+`
-  <div style="margin-top:10px;font-size:11px;font-family:var(--mono);color:var(--muted)">
-    Target: max ${OVERDUE_PCT_TARGET}% verlopen (>30d) van totaal AR
-    ${over?'<span style="color:#dc2626;font-weight:700"> — BOVEN TARGET</span>':'<span style="color:#16a34a;font-weight:700"> — ON TARGET ✓</span>'}
+  }).join('')+`<div style="margin-top:10px;font-size:11px;font-family:var(--mono);color:var(--muted)">
+    Target: max ${OVERDUE_PCT_TARGET}% verlopen (>30d) ${over
+      ?'<span style="color:#dc2626;font-weight:700">— BOVEN TARGET</span>'
+      :'<span style="color:#16a34a;font-weight:700">— ON TARGET ✓</span>'}
   </div>`;
 }
 
@@ -355,37 +372,32 @@ function renderDSOChart(d) {
     data:{
       labels:hist.map(h=>new Date(h.date).toLocaleDateString('nl-NL',{month:'short',day:'numeric'})),
       datasets:[
-        {label:'DSO (dagen)',data:hist.map(h=>h.dso),borderColor:'#1a1916',
-         backgroundColor:'rgba(26,25,22,.06)',borderWidth:2,pointRadius:3,
-         pointBackgroundColor:'#1a1916',fill:true,tension:.3},
-        {label:'Target',data:hist.map(h=>h.target),borderColor:'#dc2626',
-         borderWidth:1.5,borderDash:[6,4],pointRadius:0,fill:false},
+        {label:'DSO (dagen)',data:hist.map(h=>h.dso),borderColor:'#1a1916',backgroundColor:'rgba(26,25,22,.06)',borderWidth:2,pointRadius:3,pointBackgroundColor:'#1a1916',fill:true,tension:.3},
+        {label:'Target',data:hist.map(h=>h.target),borderColor:'#dc2626',borderWidth:1.5,borderDash:[6,4],pointRadius:0,fill:false},
       ]
     },
     options:{responsive:true,maintainAspectRatio:false,
       plugins:{legend:{labels:{font:{family:'IBM Plex Mono',size:11},boxWidth:12}}},
-      scales:{
-        x:{grid:{display:false},ticks:{font:{family:'IBM Plex Mono',size:10},maxTicksLimit:8}},
-        y:{grid:{color:'#e2e0d9'},ticks:{font:{family:'IBM Plex Mono',size:10}}}
-      }}
+      scales:{x:{grid:{display:false},ticks:{font:{family:'IBM Plex Mono',size:10},maxTicksLimit:8}},
+              y:{grid:{color:'#e2e0d9'},ticks:{font:{family:'IBM Plex Mono',size:10}}}}}
   });
 }
 
-// ── CUSTOMER CHART — grouped by company ──────────────────────────────────
+// ── CUSTOMER CHART — clickable ────────────────────────────────────────────
 function renderCustomerChart(d) {
-  const byCompany = {};
   const rank = {URGENT:3,High:2,Monitor:1};
+  const byCompany = {};
   d.invoices.forEach(inv=>{
     if (inv.days_overdue<=0) return;
-    if (!byCompany[inv.company]) byCompany[inv.company]={amount:0,level:'Monitor'};
+    if (!byCompany[inv.company]) byCompany[inv.company]={amount:0,level:'Monitor',contact_id:inv.contact_id};
     byCompany[inv.company].amount += inv.amount;
-    if ((rank[inv.level]||0)>(rank[byCompany[inv.company].level]||0))
-      byCompany[inv.company].level = inv.level;
+    if ((rank[inv.level]||0)>(rank[byCompany[inv.company].level]||0)) byCompany[inv.company].level=inv.level;
   });
-  const sorted = Object.entries(byCompany)
-    .map(([company,v])=>({company,...v}))
-    .sort((a,b)=>b.amount-a.amount).slice(0,8);
-  new Chart(document.getElementById('customerChart'),{
+  const sorted = Object.entries(byCompany).map(([company,v])=>({company,...v})).sort((a,b)=>b.amount-a.amount).slice(0,8);
+
+  if (_customerChartInstance) _customerChartInstance.destroy();
+  const canvas = document.getElementById('customerChart');
+  _customerChartInstance = new Chart(canvas,{
     type:'bar',
     data:{
       labels:sorted.map(i=>i.company.length>22?i.company.slice(0,20)+'…':i.company),
@@ -397,12 +409,18 @@ function renderCustomerChart(d) {
       }]
     },
     options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false}},
-      scales:{
-        x:{grid:{color:'#e2e0d9'},ticks:{font:{family:'IBM Plex Mono',size:10},callback:v=>'€'+fmt(v)}},
-        y:{grid:{display:false},ticks:{font:{family:'IBM Plex Sans',size:11}}}
-      }}
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' '+fmtE(ctx.raw)}}},
+      scales:{x:{grid:{color:'#e2e0d9'},ticks:{font:{family:'IBM Plex Mono',size:10},callback:v=>'€'+fmt(v)}},
+              y:{grid:{display:false},ticks:{font:{family:'IBM Plex Sans',size:11}}}},
+      onClick:(evt,elements)=>{
+        if (!elements.length) return;
+        const item = sorted[elements[0].index];
+        openCustomerPanel(item.contact_id);
+      }
+    }
   });
+  // Make cursor pointer on hover
+  canvas.style.cursor = 'pointer';
 }
 
 // ── PRIORITY CHART ───────────────────────────────────────────────────────
@@ -414,20 +432,19 @@ function renderPriorityChart(d) {
     data:{labels:['URGENT','High','Monitor'],
       datasets:[{data:[counts.URGENT,counts.High,counts.Monitor],
         backgroundColor:['#dc2626','#ea580c','#d97706'],borderColor:'#fff',borderWidth:3}]},
-    options:{responsive:true,maintainAspectRatio:false,cutout:'65%',
-      plugins:{legend:{display:false}}}
+    options:{responsive:true,maintainAspectRatio:false,cutout:'65%',plugins:{legend:{display:false}}}
   });
 }
 
-// ── TABLE ────────────────────────────────────────────────────────────────
+// ── OVERDUE TABLE ─────────────────────────────────────────────────────────
 function renderTable(d) {
-  const dC = n=>n<=0?'days-0':n<=30?'days-30':n<=60?'days-60':'days-90';
-  const lP = l=>`<span class="pill ${l==='URGENT'?'pill-urgent':l==='High'?'pill-high':'pill-ok'}">${l}</span>`;
+  const dC=n=>n<=0?'days-0':n<=30?'days-30':n<=60?'days-60':'days-90';
+  const lP=l=>`<span class="pill ${l==='URGENT'?'pill-urgent':l==='High'?'pill-high':'pill-ok'}">${l}</span>`;
   document.getElementById('overdue-tbody').innerHTML = d.overdue_top.map((inv,i)=>`
-    <tr onclick="openDetail('${inv.id}')">
+    <tr onclick="openInvoicePanel('${inv.id}')">
       <td class="mono" style="color:var(--muted)">${i+1}</td>
-      <td><strong>${inv.company}</strong></td>
-      <td class="mono">${inv.invoice_no}</td>
+      <td><strong>${esc(inv.company)}</strong></td>
+      <td class="mono">${esc(inv.invoice_no)}</td>
       <td class="mono">${inv.due_date}</td>
       <td class="amount">${fmtE(inv.amount)}</td>
       <td><span class="days-chip ${dC(inv.days_overdue)}">${inv.days_overdue}d</span></td>
@@ -435,104 +452,240 @@ function renderTable(d) {
     </tr>`).join('');
 }
 
-// ── DETAIL PANEL ─────────────────────────────────────────────────────────
-function openDetail(id) {
-  const inv = _data.invoices.find(i=>i.id===id);
+// ── PANEL HELPERS ─────────────────────────────────────────────────────────
+function openPanel(title, sub, bodyHTML) {
+  document.getElementById('panel-title').textContent = title;
+  document.getElementById('panel-sub').textContent = sub||'';
+  document.getElementById('panel-body').innerHTML = bodyHTML;
+  document.getElementById('panel-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closePanel() {
+  document.getElementById('panel-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('panel-overlay').addEventListener('click', e=>{
+  if (e.target===e.currentTarget) closePanel();
+});
+
+// ── CUSTOMER PANEL ────────────────────────────────────────────────────────
+function openCustomerPanel(contactId) {
+  const cust = _data.customers && _data.customers[contactId];
+  if (!cust) return;
+
+  const invs       = cust.invoices || [];
+  const overdue    = invs.filter(i=>i.days_overdue>0);
+  const current    = invs.filter(i=>i.days_overdue===0);
+  const lP         = l=>`<span class="pill ${l==='URGENT'?'pill-urgent':l==='High'?'pill-high':l==='Monitor'?'pill-ok':'pill-current'}">${l}</span>`;
+  const dC         = n=>n<=0?'days-0':n<=30?'days-30':n<=60?'days-60':'days-90';
+
+  // All notes for this customer (customer-level + all invoice notes)
+  const custNoteKey = 'customer_'+contactId;
+  const custNotes   = (_notes[custNoteKey]||[]).slice().reverse();
+  const allInvNotes = invs.flatMap(inv=>
+    (_notes[inv.id]||[]).map(n=>({...n, invoice_no:inv.invoice_no, inv_id:inv.id}))
+  ).sort((a,b)=>new Date(b.ts)-new Date(a.ts));
+
+  function invCard(inv) {
+    const invNotes = _notes[inv.id]||[];
+    const notePreview = invNotes.length
+      ? `<div class="inv-note-preview">💬 ${invNotes.length} notitie${invNotes.length>1?'s':''}: "${esc(invNotes[invNotes.length-1].text.slice(0,60))}${invNotes[invNotes.length-1].text.length>60?'…':''}"</div>`
+      : '';
+    return `<div class="inv-card ${inv.days_overdue>0?'is-overdue':'is-current'}" onclick="openInvoicePanel('${inv.id}', '${contactId}')">
+      <div class="inv-card-top">
+        <span class="inv-card-no">${esc(inv.invoice_no)}</span>
+        <span class="inv-card-amount">${fmtE(inv.amount)}</span>
+      </div>
+      <div class="inv-card-bottom">
+        <span>Vervalt: ${inv.due_date}</span>
+        ${inv.days_overdue>0?`<span class="days-chip ${dC(inv.days_overdue)}">${inv.days_overdue}d verlopen</span>`:'<span class="days-chip days-0">Niet verlopen</span>'}
+        ${lP(inv.days_overdue>0?inv.level:'Current')}
+      </div>
+      ${notePreview}
+    </div>`;
+  }
+
+  const allInvNotesHTML = allInvNotes.length
+    ? allInvNotes.map(n=>`<div class="note-item">
+        <div class="note-meta">
+          <span>${esc(n.author||'Anoniem')} — factuur ${esc(n.invoice_no)}</span>
+          <span>${new Date(n.ts).toLocaleString('nl-NL')}</span>
+        </div>
+        <div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div>
+      </div>`).join('')
+    : '<p class="no-data">Geen factuurnotities voor deze klant.</p>';
+
+  const custNotesHTML = custNotes.length
+    ? custNotes.map(n=>`<div class="note-item customer-note">
+        <div class="note-meta">
+          <span>${esc(n.author||'Anoniem')}</span>
+          <span>${new Date(n.ts).toLocaleString('nl-NL')}</span>
+        </div>
+        <div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div>
+      </div>`).join('')
+    : '<p class="no-data">Nog geen klantnotities.</p>';
+
+  const tokenSection = localStorage.getItem('github_notes_token') ? '' : tokenSetupHTML();
+
+  openPanel(cust.company, `${invs.length} open facturen · ${fmtE(cust.total_open)} openstaand · ${fmtE(cust.total_overdue)} verlopen`,`
+    <div class="customer-summary">
+      <div class="cs-item"><span class="cs-label">Totaal open</span><span class="cs-value">${fmtE(cust.total_open)}</span></div>
+      <div class="cs-item"><span class="cs-label">Verlopen</span><span class="cs-value" style="color:var(--red)">${fmtE(cust.total_overdue)}</span></div>
+      <div class="cs-item"><span class="cs-label">Max. verlopen</span><span class="cs-value">${cust.max_days}d</span></div>
+      <div class="cs-item"><span class="cs-label">Prioriteit</span><span class="cs-value">${lP(cust.level)}</span></div>
+    </div>
+
+    ${overdue.length ? `
+    <div class="ps">
+      <div class="ps-title">Verlopen facturen (${overdue.length})</div>
+      <div class="inv-list">${overdue.map(invCard).join('')}</div>
+    </div>` : ''}
+
+    ${current.length ? `
+    <div class="ps">
+      <div class="ps-title">Openstaand — niet verlopen (${current.length})</div>
+      <div class="inv-list">${current.map(invCard).join('')}</div>
+    </div>` : ''}
+
+    <div class="ps">
+      <div class="ps-title">Klantnotities (zichtbaar bij alle facturen)</div>
+      <div id="cnotes-list-${contactId}">${custNotesHTML}</div>
+      <div class="note-form">
+        <input class="note-author" id="cna-${contactId}" placeholder="Jouw naam" maxlength="50">
+        <textarea class="note-textarea" id="cnt-${contactId}" placeholder="Notitie over deze klant (bijv. belooft te betalen op 15/03)…" rows="3"></textarea>
+        <button class="note-submit" onclick="saveNote('customer_${contactId}', 'cna-${contactId}', 'cnt-${contactId}', 'cns-${contactId}', 'cnotes-list-${contactId}', 'customer')">Notitie opslaan</button>
+        <span id="cns-${contactId}" class="note-status"></span>
+      </div>
+      ${tokenSection}
+    </div>
+
+    <div class="ps">
+      <div class="ps-title">Alle factuurnotities van deze klant</div>
+      <div id="allinv-notes-${contactId}">${allInvNotesHTML}</div>
+    </div>
+  `);
+}
+
+// ── INVOICE PANEL ─────────────────────────────────────────────────────────
+function openInvoicePanel(invoiceId, returnToCustomer) {
+  const inv = _data.invoices.find(i=>i.id===invoiceId);
   if (!inv) return;
-  document.getElementById('detail-title').textContent = inv.invoice_no+' — '+inv.company;
   const lP = l=>`<span class="pill ${l==='URGENT'?'pill-urgent':l==='High'?'pill-high':'pill-ok'}">${l}</span>`;
-  const dC = n=>n<=30?'days-30':n<=60?'days-60':'days-90';
-  const notes = (_notes[id]||[]).slice().reverse();
+  const dC = n=>n<=0?'days-0':n<=30?'days-30':n<=60?'days-60':'days-90';
+
+  const notes = (_notes[invoiceId]||[]).slice().reverse();
   const notesHTML = notes.length
     ? notes.map(n=>`<div class="note-item">
-        <div class="note-meta">${n.author||'Anoniem'} · ${new Date(n.ts).toLocaleString('nl-NL')}</div>
-        <div class="note-text">${n.text.replace(/</g,'&lt;').replace(/\n/g,'<br>')}</div>
+        <div class="note-meta">
+          <span>${esc(n.author||'Anoniem')}</span>
+          <span>${new Date(n.ts).toLocaleString('nl-NL')}</span>
+        </div>
+        <div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div>
       </div>`).join('')
     : '<p class="no-data">Nog geen notities voor deze factuur.</p>';
 
-  const hasToken = !!localStorage.getItem('github_notes_token');
-  const tokenSection = hasToken ? '' : `
-    <div class="token-setup">
-      <strong>🔑 Eenmalige instelling voor teambrede notities</strong><br>
-      Maak een GitHub token aan via: <a href="https://github.com/settings/tokens/new" target="_blank">github.com/settings/tokens</a><br>
-      Scope: selecteer <strong>repo</strong> → Generate → plak hieronder:<br>
-      <div class="token-input-row">
-        <input class="token-input" id="token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" type="password">
-        <button class="token-btn" onclick="saveToken()">Opslaan</button>
-      </div>
-    </div>`;
+  // Also show customer notes
+  const contactId   = inv.contact_id;
+  const custNoteKey = 'customer_'+contactId;
+  const custNotes   = (_notes[custNoteKey]||[]).slice().reverse();
+  const custNotesHTML = custNotes.length
+    ? custNotes.map(n=>`<div class="note-item customer-note">
+        <div class="note-meta">
+          <span>${esc(n.author||'Anoniem')} — klantnotitie</span>
+          <span>${new Date(n.ts).toLocaleString('nl-NL')}</span>
+        </div>
+        <div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div>
+      </div>`).join('')
+    : '<p class="no-data">Geen klantnotities.</p>';
 
-  document.getElementById('detail-body').innerHTML = `
-    <div class="detail-section">
-      <div class="detail-section-title">Factuurgegevens</div>
+  const breadcrumb = returnToCustomer
+    ? `<div class="breadcrumb"><a onclick="openCustomerPanel('${returnToCustomer}')">← ${esc(inv.company)}</a><span class="breadcrumb-sep">/</span><span>${esc(inv.invoice_no)}</span></div>`
+    : `<div class="breadcrumb"><a onclick="openCustomerPanel('${contactId}')">← Alle facturen ${esc(inv.company)}</a></div>`;
+
+  const tokenSection = localStorage.getItem('github_notes_token') ? '' : tokenSetupHTML();
+
+  openPanel(inv.invoice_no, esc(inv.company), `
+    ${breadcrumb}
+    <div class="ps">
+      <div class="ps-title">Factuurgegevens</div>
       <div class="detail-grid">
-        <div class="detail-field"><label>Klant</label><value>${inv.company}</value></div>
-        <div class="detail-field"><label>Factuur Nr.</label><value class="mono">${inv.invoice_no}</value></div>
+        <div class="detail-field"><label>Klant</label><value>${esc(inv.company)}</value></div>
+        <div class="detail-field"><label>Factuur Nr.</label><value class="mono">${esc(inv.invoice_no)}</value></div>
         <div class="detail-field"><label>Factuurdatum</label><value class="mono">${inv.invoice_date||'—'}</value></div>
         <div class="detail-field"><label>Vervaldatum</label><value class="mono">${inv.due_date}</value></div>
         <div class="detail-field"><label>Open bedrag</label><value class="mono" style="font-size:20px;font-weight:700">${fmtE(inv.amount)}</value></div>
-        <div class="detail-field"><label>Dagen verlopen</label><value><span class="days-chip ${dC(inv.days_overdue)}">${inv.days_overdue} dagen</span></value></div>
-        <div class="detail-field"><label>Moneybird status</label><value>${inv.state||'—'}</value></div>
+        <div class="detail-field"><label>Dagen verlopen</label><value><span class="days-chip ${dC(inv.days_overdue)}">${inv.days_overdue}d</span></value></div>
+        <div class="detail-field"><label>Status Moneybird</label><value>${inv.state||'—'}</value></div>
         <div class="detail-field"><label>Prioriteit</label><value>${lP(inv.level)}</value></div>
       </div>
     </div>
-    <div class="detail-section">
-      <div class="detail-section-title">Herinneringen</div>
+
+    <div class="ps">
+      <div class="ps-title">Herinneringen</div>
       ${inv.state==='reminded'
-        ? `<div class="reminder-item"><div class="r-date">Via Moneybird verstuurd</div><div class="r-text">Status: <strong>reminded</strong> — minimaal één herinnering is verstuurd via Moneybird.</div></div>`
-        : `<p class="no-data">Nog geen herinneringen verstuurd (Moneybird status: <em>${inv.state}</em>).</p>`}
+        ? `<div class="reminder-item"><div class="r-date">Via Moneybird verstuurd</div><div class="r-text">Status: <strong>reminded</strong> — er is minimaal één herinnering verstuurd.</div></div>`
+        : `<p class="no-data">Geen herinneringen verstuurd (status: <em>${inv.state}</em>).</p>`}
     </div>
-    <div class="detail-section">
-      <div class="detail-section-title">Team Notities</div>
-      <div id="notes-list-${id}">${notesHTML}</div>
+
+    <div class="ps">
+      <div class="ps-title">Notities bij deze factuur</div>
+      <div id="notes-list-${invoiceId}">${notesHTML}</div>
       <div class="note-form">
-        <input class="note-author" id="na-${id}" placeholder="Jouw naam" maxlength="50">
-        <textarea class="note-textarea" id="nt-${id}" placeholder="Schrijf een notitie…" rows="3"></textarea>
-        <button class="note-submit" onclick="saveNote('${id}')">Notitie opslaan</button>
-        <span id="ns-${id}" class="note-status"></span>
+        <input class="note-author" id="na-${invoiceId}" placeholder="Jouw naam" maxlength="50">
+        <textarea class="note-textarea" id="nt-${invoiceId}" placeholder="Bijv: klant gebeld op 12/03, belooft te betalen voor 20/03…" rows="3"></textarea>
+        <button class="note-submit" onclick="saveNote('${invoiceId}','na-${invoiceId}','nt-${invoiceId}','ns-${invoiceId}','notes-list-${invoiceId}','invoice')">Notitie opslaan</button>
+        <span id="ns-${invoiceId}" class="note-status"></span>
       </div>
       ${tokenSection}
-      <p class="github-note">Notities worden opgeslagen in je GitHub repo en zijn zichtbaar voor het hele team na de volgende paginaRefresh.</p>
-    </div>`;
+      <p class="github-note">Notities zijn ook zichtbaar in het klantoverzicht van ${esc(inv.company)}.</p>
+    </div>
 
-  document.getElementById('detail-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
+    <div class="ps">
+      <div class="ps-title">Klantnotities — ${esc(inv.company)}</div>
+      ${custNotesHTML}
+    </div>
+  `);
 }
 
-function closeDetail() {
-  document.getElementById('detail-overlay').classList.remove('open');
-  document.body.style.overflow = '';
+// ── NOTES ─────────────────────────────────────────────────────────────────
+function tokenSetupHTML() {
+  return `<div class="token-setup">
+    <strong>🔑 Eenmalige instelling voor teambrede notities</strong><br>
+    Maak een token aan op: <a href="https://github.com/settings/tokens/new" target="_blank">github.com/settings/tokens</a><br>
+    Scope: selecteer <strong>repo</strong> → Generate token → plak hieronder:<br>
+    <div class="token-input-row">
+      <input class="token-input" id="token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" type="password">
+      <button class="token-btn" onclick="saveToken()">Opslaan</button>
+    </div>
+  </div>`;
 }
-document.getElementById('detail-overlay').addEventListener('click', e=>{
-  if (e.target===e.currentTarget) closeDetail();
-});
 
 function saveToken() {
-  const t = document.getElementById('token-input').value.trim();
+  const t = document.getElementById('token-input')?.value.trim();
   if (!t) return;
   localStorage.setItem('github_notes_token', t);
-  document.querySelector('.token-setup').innerHTML = '<span style="color:#16a34a;font-weight:600">✅ Token opgeslagen! Notities worden nu gesynchroniseerd voor het hele team.</span>';
+  document.querySelector('.token-setup').innerHTML = '<span style="color:#16a34a;font-weight:600">✅ Token opgeslagen! Notities worden gesynchroniseerd voor het hele team.</span>';
 }
 
-// ── NOTES ────────────────────────────────────────────────────────────────
-async function saveNote(id) {
-  const author = document.getElementById(`na-${id}`).value.trim()||'Anoniem';
-  const text   = document.getElementById(`nt-${id}`).value.trim();
-  const status = document.getElementById(`ns-${id}`);
-  if (!text) { status.textContent = '⚠️ Notitie is leeg.'; return; }
-  status.textContent = '💾 Opslaan…';
-  if (!_notes[id]) _notes[id] = [];
-  _notes[id].push({author, text, ts: new Date().toISOString()});
+async function saveNote(noteKey, authorId, textId, statusId, listId, type) {
+  const author = document.getElementById(authorId)?.value.trim()||'Anoniem';
+  const text   = document.getElementById(textId)?.value.trim();
+  const status = document.getElementById(statusId);
+  if (!text) { if(status) status.textContent='⚠️ Notitie is leeg.'; return; }
+  if(status) status.textContent='💾 Opslaan…';
+  if (!_notes[noteKey]) _notes[noteKey] = [];
+  _notes[noteKey].push({author, text, ts: new Date().toISOString()});
+
   const token = localStorage.getItem('github_notes_token');
   if (!token) {
-    refreshNotes(id);
-    document.getElementById(`nt-${id}`).value = '';
-    status.textContent = '⚠️ Alleen lokaal opgeslagen — voer een GitHub token in om te delen met je team.';
+    refreshNotesList(noteKey, listId, type);
+    if(document.getElementById(textId)) document.getElementById(textId).value='';
+    if(status) status.textContent='⚠️ Alleen lokaal — voer GitHub token in om te delen met team.';
     return;
   }
   try {
     const content = btoa(unescape(encodeURIComponent(JSON.stringify(_notes,null,2))));
-    const body = {message:`note: ${id} update`,content};
+    const body = {message:`note: ${noteKey}`,content};
     if (_notesSHA) body.sha = _notesSHA;
     const r = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${NOTES_FILE}`,{
       method:'PUT',
@@ -542,20 +695,23 @@ async function saveNote(id) {
     if (!r.ok) throw new Error('HTTP '+r.status);
     const j = await r.json();
     _notesSHA = j.content.sha;
-    status.textContent = '✅ Opgeslagen — zichtbaar voor het hele team!';
-    document.getElementById(`nt-${id}`).value = '';
-    refreshNotes(id);
+    if(status) status.textContent='✅ Opgeslagen — zichtbaar voor het hele team!';
+    if(document.getElementById(textId)) document.getElementById(textId).value='';
+    refreshNotesList(noteKey, listId, type);
   } catch(e) {
-    status.textContent = '❌ Fout bij opslaan: '+e.message+'. Controleer je GitHub token.';
+    if(status) status.textContent='❌ Fout: '+e.message+'. Controleer je GitHub token.';
   }
 }
 
-function refreshNotes(id) {
-  const notes = (_notes[id]||[]).slice().reverse();
-  document.getElementById(`notes-list-${id}`).innerHTML = notes.length
-    ? notes.map(n=>`<div class="note-item">
-        <div class="note-meta">${n.author||'Anoniem'} · ${new Date(n.ts).toLocaleString('nl-NL')}</div>
-        <div class="note-text">${n.text.replace(/</g,'&lt;').replace(/\n/g,'<br>')}</div>
+function refreshNotesList(noteKey, listId, type) {
+  const el = document.getElementById(listId);
+  if (!el) return;
+  const notes = (_notes[noteKey]||[]).slice().reverse();
+  const cls   = type==='customer'?'note-item customer-note':'note-item';
+  el.innerHTML = notes.length
+    ? notes.map(n=>`<div class="${cls}">
+        <div class="note-meta"><span>${esc(n.author||'Anoniem')}</span><span>${new Date(n.ts).toLocaleString('nl-NL')}</span></div>
+        <div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div>
       </div>`).join('')
     : '<p class="no-data">Nog geen notities.</p>';
 }
