@@ -1,0 +1,30 @@
+name: Update DSO Dashboard
+
+on:
+  schedule:
+    - cron: '0 5 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - name: Genereer dashboard data
+        env:
+          MONEYBIRD_TOKEN: ${{ secrets.MONEYBIRD_TOKEN }}
+          MONEYBIRD_ADMIN_ID: ${{ secrets.MONEYBIRD_ADMIN_ID }}
+        run: python generate_dashboard.py
+      - name: Push naar GitHub Pages
+        run: |
+          git config user.name "DSO Bot"
+          git config user.email "dso-bot@users.noreply.github.com"
+          git add docs/data.json docs/history.json || true
+          git diff --staged --quiet || git commit -m "chore: DSO sync $(date +'%Y-%m-%d %H:%M')"
+          git push
