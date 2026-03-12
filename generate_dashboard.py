@@ -1,23 +1,18 @@
 """
 generate_dashboard.py
 =====================
-1. Fetches invoices from Moneybird API
-2. Writes docs/data.json  (chart data)
-3. Writes docs/index.html (dashboard — reads data.json)
-
-Then `git push` makes it live on GitHub Pages instantly.
+1. Fetches all open/late/reminded invoices from Moneybird API
+2. Writes docs/data.json  (chart data + all open invoices per customer)
 
 Usage:
-    python generate_dashboard.py              # generate + instructions
-    python generate_dashboard.py --push       # generate + git add/commit/push
-    python generate_dashboard.py --loop 1     # regenerate + push every 1 hour
+    python generate_dashboard.py              # generate only
+    python generate_dashboard.py --push       # generate + git push
+    python generate_dashboard.py --loop 1     # loop every 1 hour + push
 """
 
 import argparse, datetime, json, math, os, subprocess, sys, time
-
 import requests
 
-# ─────────────────────────────────────────────────────────────────────────────
 MONEYBIRD_TOKEN   = os.getenv("MONEYBIRD_TOKEN",    "YOUR_TOKEN_HERE")
 ADMINISTRATION_ID = os.getenv("MONEYBIRD_ADMIN_ID", "YOUR_ADMIN_ID_HERE")
 DSO_TARGET        = int(os.getenv("DSO_TARGET", "38"))
@@ -26,7 +21,7 @@ OUT_DIR           = os.path.join(os.path.dirname(__file__), "docs")
 BASE_URL = f"https://moneybird.com/api/v2/{ADMINISTRATION_ID}"
 HEADERS  = {"Authorization": f"Bearer {MONEYBIRD_TOKEN}"}
 TODAY    = datetime.date.today()
-# ─────────────────────────────────────────────────────────────────────────────
+
 
 def api_get(path, params=None):
     url, results = f"{BASE_URL}/{path}", []
@@ -41,11 +36,14 @@ def api_get(path, params=None):
         url = r.links.get("next", {}).get("url"); params = None
     return results
 
+
 def fetch():
+    """Fetch all open/late/reminded invoices — these are ALL open invoices."""
     out = []
     for state in ["open", "late", "reminded"]:
         out.extend(api_get("sales_invoices.json", {"filter": f"state:{state}"}))
     return out
+
 
 def parse(inv):
     c       = inv.get("contact") or {}
@@ -55,6 +53,7 @@ def parse(inv):
     amount  = float(inv.get("total_unpaid_base") or inv.get("total_price_incl_tax") or 0)
     company = (c.get("company_name") or
                f"{c.get('firstname','')} {c.get('lastname','')}".strip() or "Unknown")
+    contact_id = inv.get("contact_id") or (c.get("id") if c else None) or ""
 
     def bucket(d):
         if d == 0:   return "Current"
@@ -68,6 +67,7 @@ def parse(inv):
 
     return {
         "id":           inv["id"],
+        "contact_id":   str(contact_id),
         "invoice_no":   inv.get("invoice_id") or inv.get("reference") or inv["id"],
         "company":      company,
         "invoice_date": inv.get("invoice_date", ""),
@@ -81,6 +81,7 @@ def parse(inv):
         "level":        level,
     }
 
+
 def build_data(invoices):
     total_ar   = sum(i["amount"] for i in invoices)
     recent_rev = sum(i["amount"] for i in invoices
@@ -93,10 +94,37 @@ def build_data(invoices):
     aging   = {b: round(sum(i["amount"] for i in invoices if i["bucket"]==b), 2)
                for b in buckets}
 
-    overdue = sorted([i for i in invoices if i["days_overdue"]>0],
+    overdue = sorted([i for i in invoices if i["days_overdue"] > 0],
                      key=lambda x: x["score"], reverse=True)
 
-    # DSO history: load existing, append today
+    # Build customer index: contact_id -> { company, all open invoices }
+    customers = {}
+    for inv in invoices:
+        cid = inv["contact_id"]
+        if cid not in customers:
+            customers[cid] = {
+                "contact_id": cid,
+                "company":    inv["company"],
+                "invoices":   [],
+            }
+        customers[cid]["invoices"].append(inv)
+
+    # Sort each customer's invoices: overdue first, then by amount desc
+    for cid in customers:
+        customers[cid]["invoices"].sort(
+            key=lambda x: (-(x["days_overdue"] > 0), -x["amount"])
+        )
+        # Add customer-level summary
+        invs = customers[cid]["invoices"]
+        customers[cid]["total_open"]    = round(sum(i["amount"] for i in invs), 2)
+        customers[cid]["total_overdue"] = round(sum(i["amount"] for i in invs if i["days_overdue"] > 0), 2)
+        customers[cid]["max_days"]      = max((i["days_overdue"] for i in invs), default=0)
+        customers[cid]["invoice_count"] = len(invs)
+        scores = [i["score"] for i in invs if i["days_overdue"] > 0]
+        top_score = max(scores) if scores else 0
+        customers[cid]["level"] = "URGENT" if top_score >= 70 else ("High" if top_score >= 40 else "Monitor")
+
+    # DSO history
     hist_file = os.path.join(OUT_DIR, "history.json")
     history = []
     if os.path.exists(hist_file):
@@ -105,30 +133,31 @@ def build_data(invoices):
     today_str = TODAY.isoformat()
     history = [h for h in history if h["date"] != today_str]
     history.append({"date": today_str, "dso": dso, "target": DSO_TARGET})
-    history = history[-90:]  # keep 90 days
+    history = history[-90:]
     with open(hist_file, "w") as f:
         json.dump(history, f)
 
     return {
-        "generated":    datetime.datetime.now().isoformat(),
-        "dso":          dso,
-        "dso_target":   DSO_TARGET,
-        "total_ar":     round(total_ar, 2),
-        "invoice_count":len(invoices),
-        "overdue_30":   round(sum(i["amount"] for i in invoices if i["days_overdue"]>30), 2),
-        "overdue_60":   round(sum(i["amount"] for i in invoices if i["days_overdue"]>60), 2),
-        "overdue_90":   round(sum(i["amount"] for i in invoices if i["days_overdue"]>90), 2),
-        "aging":        aging,
-        "history":      history,
-        "invoices":     invoices,
-        "overdue_top":  overdue[:20],
+        "generated":     datetime.datetime.now().isoformat(),
+        "dso":           dso,
+        "dso_target":    DSO_TARGET,
+        "total_ar":      round(total_ar, 2),
+        "invoice_count": len(invoices),
+        "overdue_30":    round(sum(i["amount"] for i in invoices if i["days_overdue"] > 30), 2),
+        "overdue_60":    round(sum(i["amount"] for i in invoices if i["days_overdue"] > 60), 2),
+        "overdue_90":    round(sum(i["amount"] for i in invoices if i["days_overdue"] > 90), 2),
+        "aging":         aging,
+        "history":       history,
+        "invoices":      invoices,
+        "overdue_top":   overdue[:20],
+        "customers":     customers,
     }
+
 
 def git_push():
     cmds = [
         ["git", "-C", OUT_DIR+"/..", "add", "docs/"],
-        ["git", "-C", OUT_DIR+"/..", "commit", "-m",
-         f"chore: DSO sync {TODAY.isoformat()}"],
+        ["git", "-C", OUT_DIR+"/..", "commit", "-m", f"chore: DSO sync {TODAY.isoformat()}"],
         ["git", "-C", OUT_DIR+"/..", "push"],
     ]
     for cmd in cmds:
@@ -138,11 +167,11 @@ def git_push():
         else:
             print(f"  ✅ {' '.join(cmd[2:])}")
 
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--push",  action="store_true", help="git push after generating")
-    parser.add_argument("--loop",  type=int, default=0,  metavar="HOURS",
-                        help="Regenerate every N hours")
+    parser.add_argument("--push", action="store_true")
+    parser.add_argument("--loop", type=int, default=0, metavar="HOURS")
     args = parser.parse_args()
 
     if MONEYBIRD_TOKEN == "YOUR_TOKEN_HERE":
@@ -153,16 +182,14 @@ def main():
         raw  = fetch()
         invs = [parse(i) for i in raw]
         data = build_data(invs)
-
         os.makedirs(OUT_DIR, exist_ok=True)
         with open(os.path.join(OUT_DIR, "data.json"), "w") as f:
             json.dump(data, f, indent=2)
-        print(f"  ✅  data.json written ({len(invs)} invoices, DSO: {data['dso']} days)")
-
+        print(f"  ✅  data.json written ({len(invs)} invoices, {len(data['customers'])} customers, DSO: {data['dso']} days)")
         if args.push:
             git_push()
         else:
-            print("  ℹ️   Run with --push to auto-publish to GitHub Pages")
+            print("  ℹ️   Run with --push to publish to GitHub Pages")
 
     run()
     if args.loop:
