@@ -1,23 +1,23 @@
 {
-  "generated": "2026-03-12T10:13:48.860325",
-  "dso": 39.3,
+  "generated": "2026-03-12T10:24:32.999097",
+  "dso": 39.0,
   "dso_target": 38,
-  "total_ar": 768084.5,
-  "invoice_count": 544,
-  "overdue_30": 82097.76,
-  "overdue_60": 51318.64,
+  "total_ar": 763054.41,
+  "invoice_count": 543,
+  "overdue_30": 77067.67,
+  "overdue_60": 46288.55,
   "overdue_90": 29367.3,
   "aging": {
     "Current": 583725.08,
     "1-30 days": 102261.66,
     "31-60 days": 30779.12,
-    "61-90 days": 21951.34,
+    "61-90 days": 16921.25,
     ">90 days": 29367.3
   },
   "history": [
     {
       "date": "2026-03-12",
-      "dso": 39.3,
+      "dso": 39.0,
       "target": 38
     }
   ],
@@ -6711,21 +6711,6 @@
       "state": "late",
       "score": 37.4,
       "level": "Monitor"
-    },
-    {
-      "id": "471899750422021589",
-      "contact_id": "469899997721134874",
-      "invoice_no": "2025-4531",
-      "company": "Nederick Furniture Delivery B.V.",
-      "invoice_date": "2025-12-05",
-      "due_date": "2026-01-04",
-      "amount": 5030.09,
-      "currency": "EUR",
-      "days_overdue": 67,
-      "bucket": "61-90 days",
-      "state": "late",
-      "score": 76.4,
-      "level": "URGENT"
     },
     {
       "id": "471342834209785059",
@@ -18140,32 +18125,6 @@
       "max_days": 125,
       "invoice_count": 3,
       "level": "High"
-    },
-    "469899997721134874": {
-      "contact_id": "469899997721134874",
-      "company": "Nederick Furniture Delivery B.V.",
-      "invoices": [
-        {
-          "id": "471899750422021589",
-          "contact_id": "469899997721134874",
-          "invoice_no": "2025-4531",
-          "company": "Nederick Furniture Delivery B.V.",
-          "invoice_date": "2025-12-05",
-          "due_date": "2026-01-04",
-          "amount": 5030.09,
-          "currency": "EUR",
-          "days_overdue": 67,
-          "bucket": "61-90 days",
-          "state": "late",
-          "score": 76.4,
-          "level": "URGENT"
-        }
-      ],
-      "total_open": 5030.09,
-      "total_overdue": 5030.09,
-      "max_days": 67,
-      "invoice_count": 1,
-      "level": "URGENT"
     },
     "455137444859217344": {
       "contact_id": "455137444859217344",
