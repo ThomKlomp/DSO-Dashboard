@@ -3,259 +3,325 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DSO Dashboard</title>
+<title>DSO Dashboard | De Sjouwers</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#f5f4f0;--surface:#fff;--border:#e2e0d9;--text:#1a1916;
-  --muted:#7a7870;--accent:#2563eb;--red:#dc2626;--orange:#ea580c;
-  --amber:#d97706;--green:#16a34a;--ink:#1a1916;
-  --serif:'IBM Plex Sans',sans-serif;--mono:'IBM Plex Mono',monospace;
+  /* De Sjouwers brand */
+  --brand:#1a56db;       /* sjouwer-blauw */
+  --brand-dark:#1344b3;
+  --brand-light:#eff6ff;
+  --bg:#f8fafc;
+  --surface:#ffffff;
+  --border:#e2e8f0;
+  --border-strong:#cbd5e1;
+  --text:#0f172a;
+  --text-2:#475569;
+  --text-3:#94a3b8;
+  --ink:#0f172a;
+  /* Status colours — unchanged per request */
+  --red:#dc2626; --red-bg:#fee2e2;
+  --orange:#ea580c; --orange-bg:#ffedd5;
+  --amber:#d97706; --amber-bg:#fef9c3;
+  --green:#16a34a; --green-bg:#dcfce7;
+  --purple:#7c3aed; --purple-bg:#f3e8ff;
+  --serif:'Inter',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+  --radius:8px;
+  --shadow:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.05);
+  --shadow-md:0 4px 6px rgba(0,0,0,.07),0 2px 4px rgba(0,0,0,.05);
 }
-body{font-family:var(--serif);background:var(--bg);color:var(--text);min-height:100vh;}
+body{font-family:var(--serif);background:var(--bg);color:var(--text);min-height:100vh;font-size:14px;}
 
 /* TOPBAR */
-.topbar{background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:52px;position:sticky;top:0;z-index:100;}
-.topbar-left{display:flex;align-items:center;gap:16px;}
-.topbar h1{font-size:14px;font-weight:600;letter-spacing:.5px;}
-.topbar-tag{font-family:var(--mono);font-size:11px;background:rgba(255,255,255,.1);padding:3px 10px;border-radius:3px;color:rgba(255,255,255,.6);}
-.topbar-right{display:flex;align-items:center;gap:12px;}
-#sync-time{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.5);}
+.topbar{background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:56px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.25);}
+.topbar-left{display:flex;align-items:center;gap:20px;}
+.topbar-logo{display:flex;align-items:center;gap:12px;}
+.logo-icon{width:34px;height:34px;background:var(--brand);border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:#fff;letter-spacing:-.5px;flex-shrink:0;}
+.topbar-divider{width:1px;height:24px;background:rgba(255,255,255,.2);}
+.topbar-title{font-size:13px;font-weight:600;letter-spacing:.3px;color:rgba(255,255,255,.9);}
+.topbar-tag{font-family:var(--mono);font-size:10px;background:rgba(255,255,255,.1);padding:3px 9px;border-radius:4px;color:rgba(255,255,255,.55);}
+.topbar-right{display:flex;align-items:center;gap:16px;}
+#sync-time{font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.45);}
 .status-dot{width:7px;height:7px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 
+/* SEARCH BAR in topbar */
+.topbar-search{position:relative;}
+.topbar-search input{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);color:#fff;font-family:var(--serif);font-size:12px;padding:6px 12px 6px 32px;border-radius:6px;width:200px;outline:none;transition:all .2s;}
+.topbar-search input::placeholder{color:rgba(255,255,255,.4);}
+.topbar-search input:focus{background:rgba(255,255,255,.18);border-color:var(--brand);width:260px;}
+.topbar-search .search-icon{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.4);font-size:13px;pointer-events:none;}
+.search-results{position:absolute;top:calc(100% + 6px);left:0;right:0;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-md);z-index:200;max-height:320px;overflow-y:auto;display:none;}
+.search-results.show{display:block;}
+.search-result-item{padding:10px 14px;cursor:pointer;border-bottom:1px solid var(--border);transition:background .1s;}
+.search-result-item:last-child{border-bottom:none;}
+.search-result-item:hover{background:var(--brand-light);}
+.sr-name{font-size:13px;font-weight:600;color:var(--text);}
+.sr-meta{font-family:var(--mono);font-size:11px;color:var(--text-2);margin-top:2px;}
+
 /* LAYOUT */
-.page{max-width:1200px;margin:0 auto;padding:32px 24px;}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;}
-.grid-3{display:grid;grid-template-columns:2fr 1fr;gap:20px;margin-bottom:20px;}
-@media(max-width:768px){.grid-2,.grid-3{grid-template-columns:1fr;}}
+.page{max-width:1280px;margin:0 auto;padding:28px 24px;}
+.section-title{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-3);margin-bottom:16px;margin-top:8px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.grid-3{display:grid;grid-template-columns:2fr 1fr;gap:16px;margin-bottom:16px;}
+@media(max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr;}}
 
 /* KPI */
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:2px;margin-bottom:32px;border:2px solid var(--ink);border-radius:4px;overflow:hidden;}
-.kpi{background:var(--surface);padding:18px 16px 24px;border-right:1px solid var(--border);position:relative;transition:background .15s;}
-.kpi:last-child{border-right:none;}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;margin-bottom:28px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+.kpi{background:var(--surface);padding:18px 16px 22px;position:relative;transition:background .15s;}
 .kpi.clickable{cursor:pointer;}
-.kpi.clickable:hover{background:#f0f7ff;}
-.kpi.clickable::after{content:'↗';position:absolute;bottom:8px;right:10px;font-size:10px;color:var(--muted);}
-.kpi:not(.clickable):hover{background:#fafaf8;}
-.kpi-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
-.kpi-value{font-size:24px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;}
-.kpi-sub{font-size:10px;color:var(--muted);margin-top:5px;font-family:var(--mono);}
-.kpi-badge{position:absolute;top:10px;right:10px;font-size:9px;font-weight:700;letter-spacing:.5px;padding:2px 6px;border-radius:2px;}
-.badge-good{background:#dcfce7;color:var(--green);}
-.badge-warn{background:#fef9c3;color:var(--amber);}
-.badge-urgent{background:#fee2e2;color:var(--red);}
+.kpi.clickable:hover{background:var(--brand-light);}
+.kpi.clickable::after{content:'';position:absolute;bottom:10px;right:12px;width:14px;height:14px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2394a3b8'%3E%3Cpath fill-rule='evenodd' d='M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z'/%3E%3C/svg%3E");}
+.kpi:not(.clickable):hover{background:#fafbfc;}
+.kpi-label{font-size:10px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-3);margin-bottom:8px;}
+.kpi-value{font-size:22px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;color:var(--text);}
+.kpi-sub{font-size:10px;color:var(--text-3);margin-top:5px;font-family:var(--mono);}
+.kpi-badge{position:absolute;top:10px;right:10px;font-size:9px;font-weight:700;letter-spacing:.4px;padding:2px 6px;border-radius:4px;}
+.badge-good{background:var(--green-bg);color:var(--green);}
+.badge-warn{background:var(--amber-bg);color:var(--amber);}
+.badge-urgent{background:var(--red-bg);color:var(--red);}
 
 /* CARD */
-.card{background:var(--surface);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:20px;}
-.card-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border);background:#fafaf8;flex-wrap:wrap;gap:8px;}
-.card-title{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);}
-.card-body{padding:20px;}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+.card-header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--border);background:#fafbfc;flex-wrap:wrap;gap:8px;}
+.card-title{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-2);}
+.card-body{padding:18px;}
 .chart-wrap{position:relative;height:240px;}
 
 /* CHART TOGGLES */
-.chart-toggles{display:flex;gap:8px;flex-wrap:wrap;}
-.toggle-btn{display:flex;align-items:center;gap:6px;padding:4px 10px;border-radius:3px;border:1.5px solid var(--border);background:#fff;cursor:pointer;font-family:var(--serif);font-size:11px;font-weight:600;transition:all .15s;opacity:.45;}
-.toggle-btn.active{opacity:1;}
-.toggle-btn .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.chart-toggles{display:flex;gap:6px;}
+.toggle-btn{display:flex;align-items:center;gap:5px;padding:4px 10px;border-radius:5px;border:1.5px solid var(--border);background:var(--surface);cursor:pointer;font-family:var(--serif);font-size:11px;font-weight:600;transition:all .15s;opacity:.45;}
+.toggle-btn.active{opacity:1;border-color:currentColor;}
+.toggle-btn .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
 
 /* AGING */
-.aging-row{display:flex;align-items:center;gap:10px;padding:8px 4px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s;border-radius:2px;}
+.aging-row{display:flex;align-items:center;gap:10px;padding:8px 4px;border-bottom:1px solid var(--border);cursor:pointer;border-radius:4px;transition:background .1s;}
 .aging-row:last-child{border-bottom:none;}
-.aging-row:hover{background:#f0f7ff;}
-.aging-label{font-family:var(--mono);font-size:11px;width:82px;flex-shrink:0;color:var(--muted);}
-.aging-bar-wrap{flex:1;background:var(--border);border-radius:2px;height:7px;overflow:hidden;}
-.aging-bar{height:100%;border-radius:2px;transition:width 1s ease;}
+.aging-row:hover{background:var(--brand-light);}
+.aging-label{font-family:var(--mono);font-size:11px;width:86px;flex-shrink:0;color:var(--text-2);}
+.aging-bar-wrap{flex:1;background:var(--border);border-radius:99px;height:6px;overflow:hidden;}
+.aging-bar{height:100%;border-radius:99px;transition:width 1s ease;}
 .aging-amount{font-family:var(--mono);font-size:11px;font-weight:500;width:82px;text-align:right;flex-shrink:0;}
-.aging-pct{font-family:var(--mono);font-size:10px;color:var(--muted);width:34px;text-align:right;flex-shrink:0;}
+.aging-pct{font-family:var(--mono);font-size:10px;color:var(--text-3);width:34px;text-align:right;flex-shrink:0;}
 
 /* PRIORITY LEGEND */
-.priority-legend{display:flex;flex-direction:column;gap:9px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border);}
+.priority-legend{display:flex;flex-direction:column;gap:9px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
 .legend-item{display:flex;align-items:flex-start;gap:9px;}
-.legend-dot{width:9px;height:9px;border-radius:2px;flex-shrink:0;margin-top:3px;}
+.legend-dot{width:8px;height:8px;border-radius:2px;flex-shrink:0;margin-top:4px;}
 .legend-text strong{font-size:11px;font-weight:700;display:block;}
-.legend-text span{font-size:11px;color:var(--muted);line-height:1.4;}
+.legend-text span{font-size:11px;color:var(--text-2);line-height:1.5;}
 
 /* TABLE */
 .data-table{width:100%;border-collapse:collapse;font-size:13px;}
-.data-table th{text-align:left;padding:10px 12px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--border);background:#fafaf8;white-space:nowrap;position:sticky;top:0;z-index:2;}
-.data-table td{padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle;white-space:nowrap;}
+.data-table th{text-align:left;padding:10px 14px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-3);border-bottom:2px solid var(--border);background:#fafbfc;white-space:nowrap;position:sticky;top:0;z-index:2;}
+.data-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle;white-space:nowrap;}
 .data-table tr:last-child td{border-bottom:none;}
 .data-table tbody tr{cursor:pointer;}
-.data-table tbody tr:hover td{background:#f0f7ff;}
+.data-table tbody tr:hover td{background:var(--brand-light);}
 .data-table td.mono{font-family:var(--mono);font-size:12px;}
 .data-table td.amount{font-family:var(--mono);font-weight:600;}
-/* FIX: scrollable table wrapper */
-.table-scroll{overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;}
+.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
 
-.pill{display:inline-block;padding:2px 7px;border-radius:2px;font-size:10px;font-weight:700;letter-spacing:.5px;white-space:nowrap;}
-.pill-urgent{background:#fee2e2;color:var(--red);}
-.pill-high{background:#ffedd5;color:var(--orange);}
-.pill-ok{background:#fef9c3;color:var(--amber);}
-.pill-current{background:#f0fdf4;color:var(--green);}
-.pill-bankrupt{background:#f3e8ff;color:#7c3aed;}
+/* PILLS */
+.pill{display:inline-flex;align-items:center;padding:2px 8px;border-radius:5px;font-size:10px;font-weight:700;letter-spacing:.4px;white-space:nowrap;gap:3px;}
+.pill-urgent{background:var(--red-bg);color:var(--red);}
+.pill-high{background:var(--orange-bg);color:var(--orange);}
+.pill-ok{background:var(--amber-bg);color:var(--amber);}
+.pill-current{background:var(--green-bg);color:var(--green);}
+.pill-bankrupt{background:var(--purple-bg);color:var(--purple);}
 .pill-collector{background:#fff7ed;color:#c2410c;}
 .pill-bad-debt{background:#fef2f2;color:#991b1b;}
-.pill-credit{background:#f0fdf4;color:var(--green);}
+.pill-credit{background:var(--green-bg);color:var(--green);}
 
-.days-chip{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:600;padding:2px 6px;border-radius:2px;}
-.days-0{background:#f0fdf4;color:var(--green);}
-.days-30{background:#fef9c3;color:var(--amber);}
-.days-60{background:#ffedd5;color:var(--orange);}
-.days-90{background:#fee2e2;color:var(--red);}
-.click-hint{font-size:11px;color:var(--muted);font-family:var(--mono);}
+.days-chip{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:600;padding:2px 7px;border-radius:5px;}
+.days-0{background:var(--green-bg);color:var(--green);}
+.days-30{background:var(--amber-bg);color:var(--amber);}
+.days-60{background:var(--orange-bg);color:var(--orange);}
+.days-90{background:var(--red-bg);color:var(--red);}
+.click-hint{font-size:10px;color:var(--text-3);font-family:var(--mono);}
 
 /* FLAGS */
 .flag-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px;}
-.flag-check{display:flex;align-items:center;gap:6px;padding:5px 10px;border:1.5px solid var(--border);border-radius:4px;cursor:pointer;font-size:12px;font-weight:500;transition:all .15s;user-select:none;background:#fff;}
-.flag-check .fc-box{width:14px;height:14px;border:2px solid #ccc;border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;transition:all .15s;}
-.flag-check.checked-bankrupt{background:#f3e8ff;border-color:#7c3aed;color:#7c3aed;}
-.flag-check.checked-bankrupt .fc-box{background:#7c3aed;border-color:#7c3aed;}
+.flag-check{display:flex;align-items:center;gap:6px;padding:5px 11px;border:1.5px solid var(--border);border-radius:6px;cursor:pointer;font-size:12px;font-weight:500;transition:all .15s;user-select:none;background:var(--surface);}
+.flag-check .fc-box{width:14px;height:14px;border:2px solid #cbd5e1;border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;transition:all .15s;}
+.flag-check.checked-bankrupt{background:var(--purple-bg);border-color:var(--purple);color:var(--purple);}
+.flag-check.checked-bankrupt .fc-box{background:var(--purple);border-color:var(--purple);}
 .flag-check.checked-collector{background:#fff7ed;border-color:#c2410c;color:#c2410c;}
 .flag-check.checked-collector .fc-box{background:#c2410c;border-color:#c2410c;}
-.flag-check.checked-bad-debt{background:#fef2f2;border-color:#991b1b;color:#991b1b;}
-.flag-check.checked-bad-debt .fc-box{background:#991b1b;border-color:#991b1b;}
-.flag-saving{font-size:11px;color:var(--muted);font-style:italic;margin-top:4px;min-height:16px;}
+.flag-saving{font-size:11px;color:var(--text-3);font-style:italic;margin-top:4px;min-height:16px;}
+
+/* BANKRUPT SECTION */
+.bankrupt-card{border:1.5px solid var(--purple);background:var(--purple-bg);border-radius:var(--radius);}
+.bankrupt-card .card-header{background:#f5f0ff;border-color:var(--purple);}
+.bankrupt-card .card-title{color:var(--purple);}
 
 /* LOADING */
 #loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:80vh;gap:16px;}
-.spinner{width:32px;height:32px;border:3px solid var(--border);border-top-color:var(--ink);border-radius:50%;animation:spin .7s linear infinite;}
+.spinner{width:32px;height:32px;border:3px solid var(--border);border-top-color:var(--brand);border-radius:50%;animation:spin .7s linear infinite;}
 @keyframes spin{to{transform:rotate(360deg)}}
-#error-msg{display:none;background:#fee2e2;border:1px solid #fca5a5;color:var(--red);padding:16px 24px;border-radius:4px;font-size:14px;margin:32px auto;max-width:480px;}
+#error-msg{display:none;background:var(--red-bg);border:1px solid #fca5a5;color:var(--red);padding:16px 24px;border-radius:var(--radius);font-size:14px;margin:32px auto;max-width:480px;}
 #dashboard{display:none;}
-footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;color:var(--muted);}
+footer{text-align:center;padding:32px;font-family:var(--mono);font-size:10px;color:var(--text-3);}
 
-/* SLIDE PANEL — KEY FIX: panel is flex column, body scrolls */
-#panel-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.45);backdrop-filter:blur(2px);align-items:flex-start;justify-content:flex-end;}
+/* SLIDE PANEL */
+#panel-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(15,23,42,.5);backdrop-filter:blur(3px);align-items:flex-start;justify-content:flex-end;}
 #panel-overlay.open{display:flex;}
-#panel{width:min(640px,100vw);height:100vh;display:flex;flex-direction:column;background:var(--surface);border-left:2px solid var(--ink);animation:slideIn .2s ease;}
+#panel{width:min(640px,100vw);height:100vh;display:flex;flex-direction:column;background:var(--surface);border-left:2px solid var(--brand);animation:slideIn .2s ease;box-shadow:-8px 0 32px rgba(0,0,0,.12);}
 @keyframes slideIn{from{transform:translateX(40px);opacity:0}to{transform:translateX(0);opacity:1}}
 .panel-header{padding:18px 24px;background:var(--ink);color:#fff;display:flex;align-items:flex-start;justify-content:space-between;flex-shrink:0;gap:12px;}
 .panel-header-text{flex:1;min-width:0;}
 .panel-header h2{font-size:15px;font-weight:700;line-height:1.3;word-break:break-word;}
-.panel-header .panel-sub{font-size:11px;opacity:.6;font-family:var(--mono);margin-top:3px;}
-.close-btn{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0 4px;line-height:1;opacity:.7;flex-shrink:0;}
-.close-btn:hover{opacity:1;}
-/* CRITICAL: panel-body scrolls independently */
+.panel-sub{font-size:10px;opacity:.6;font-family:var(--mono);margin-top:3px;}
+.close-btn{background:none;border:none;color:#fff;font-size:20px;cursor:pointer;padding:2px 6px;line-height:1;opacity:.7;flex-shrink:0;border-radius:4px;}
+.close-btn:hover{opacity:1;background:rgba(255,255,255,.1);}
 .panel-body{flex:1;overflow-y:auto;overflow-x:hidden;padding:24px;}
 
 /* PANEL SECTIONS */
 .ps{margin-bottom:24px;}
-.ps-title{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border);}
+.ps-title{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-3);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border);}
 .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.detail-field label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:4px;}
+.detail-field label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-3);display:block;margin-bottom:4px;}
 .detail-field value{font-size:14px;font-weight:500;display:block;}
 .detail-field value.mono{font-family:var(--mono);}
 
 /* INVOICE CARDS */
-.inv-list{display:flex;flex-direction:column;gap:7px;}
-.inv-card{border:1px solid var(--border);border-radius:4px;padding:11px 13px;cursor:pointer;transition:background .1s,border-color .1s;}
-.inv-card:hover{background:#f0f7ff;border-color:#bfdbfe;}
+.inv-list{display:flex;flex-direction:column;gap:8px;}
+.inv-card{border:1px solid var(--border);border-radius:6px;padding:12px 14px;cursor:pointer;transition:all .1s;}
+.inv-card:hover{background:var(--brand-light);border-color:#93c5fd;}
 .inv-card.is-overdue{border-left:3px solid var(--red);}
 .inv-card.is-current{border-left:3px solid var(--green);}
 .inv-card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;}
 .inv-card-no{font-family:var(--mono);font-size:12px;font-weight:600;}
 .inv-card-amount{font-family:var(--mono);font-size:13px;font-weight:700;}
-.inv-card-bottom{display:flex;align-items:center;gap:7px;margin-top:5px;font-size:11px;color:var(--muted);font-family:var(--mono);flex-wrap:wrap;}
+.inv-card-bottom{display:flex;align-items:center;gap:7px;margin-top:6px;font-size:11px;color:var(--text-2);font-family:var(--mono);flex-wrap:wrap;}
 .inv-note-preview{font-size:11px;color:var(--amber);margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 
 /* BREADCRUMB */
-.breadcrumb{display:flex;align-items:center;gap:6px;font-size:12px;margin-bottom:16px;color:var(--muted);flex-wrap:wrap;}
-.breadcrumb a{color:var(--accent);cursor:pointer;text-decoration:underline;}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:12px;margin-bottom:16px;color:var(--text-2);flex-wrap:wrap;}
+.breadcrumb a{color:var(--brand);cursor:pointer;text-decoration:none;font-weight:500;}
+.breadcrumb a:hover{text-decoration:underline;}
 .breadcrumb-sep{color:var(--border);}
 
 /* NOTES */
-.notes-box{background:#fafaf8;border:1px solid var(--border);border-radius:4px;padding:12px;margin-bottom:12px;}
+.notes-box{background:#fafbfc;border:1px solid var(--border);border-radius:6px;padding:12px;margin-bottom:12px;}
 .note-item{border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:10px;}
 .note-item:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0;}
-.note-item.customer-note .note-text-wrap{background:#eff6ff;border-left:3px solid #93c5fd;padding:8px 10px;border-radius:0 4px 4px 0;}
-.note-item .note-text-wrap{background:#fffbeb;border-left:3px solid #fcd34d;padding:8px 10px;border-radius:0 4px 4px 0;}
-.note-item .note-meta{font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:5px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;}
-.note-item .note-text{font-size:13px;line-height:1.5;}
-.no-data{font-size:13px;color:var(--muted);font-style:italic;}
-.notes-more{font-size:12px;color:var(--accent);cursor:pointer;margin-top:6px;display:inline-block;}
+.note-item .note-text-wrap{padding:8px 10px;border-radius:0 5px 5px 0;margin-top:4px;}
+.note-item.customer-note .note-text-wrap{background:#eff6ff;border-left:3px solid #93c5fd;}
+.note-item:not(.customer-note) .note-text-wrap{background:#fffbeb;border-left:3px solid #fcd34d;}
+.note-meta{font-family:var(--mono);font-size:10px;color:var(--text-3);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;}
+.note-text{font-size:13px;line-height:1.5;}
+.no-data{font-size:13px;color:var(--text-3);font-style:italic;}
+.notes-more{font-size:12px;color:var(--brand);cursor:pointer;margin-top:6px;display:inline-block;font-weight:500;}
 .notes-more:hover{text-decoration:underline;}
 
 /* NOTE FORM */
 .note-form{display:flex;flex-direction:column;gap:7px;margin-top:12px;}
-.note-author{font-family:var(--mono);font-size:12px;padding:8px 11px;border:1px solid var(--border);border-radius:4px;background:#fff;width:100%;}
-.note-textarea{font-family:var(--serif);font-size:13px;padding:9px 11px;border:1px solid var(--border);border-radius:4px;background:#fff;width:100%;resize:vertical;min-height:68px;}
-.note-textarea:focus,.note-author:focus{outline:none;border-color:var(--accent);}
-.note-submit{align-self:flex-end;background:var(--ink);color:#fff;border:none;border-radius:4px;padding:7px 16px;font-family:var(--serif);font-size:13px;font-weight:600;cursor:pointer;}
-.note-submit:hover{background:#333;}
-.note-status{font-size:12px;color:var(--muted);font-style:italic;}
-.github-note{font-size:11px;color:var(--muted);margin-top:5px;font-style:italic;}
+.note-author{font-family:var(--mono);font-size:12px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;background:#fff;width:100%;}
+.note-textarea{font-family:var(--serif);font-size:13px;padding:9px 12px;border:1px solid var(--border);border-radius:6px;background:#fff;width:100%;resize:vertical;min-height:68px;}
+.note-textarea:focus,.note-author:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(26,86,219,.1);}
+.note-submit{align-self:flex-end;background:var(--brand);color:#fff;border:none;border-radius:6px;padding:8px 18px;font-family:var(--serif);font-size:13px;font-weight:600;cursor:pointer;transition:background .15s;}
+.note-submit:hover{background:var(--brand-dark);}
+.note-status{font-size:12px;color:var(--text-3);font-style:italic;}
+.github-note{font-size:11px;color:var(--text-3);margin-top:5px;font-style:italic;}
 
 /* TOKEN SETUP */
-.token-setup{background:#eff6ff;border:1px solid #bfdbfe;border-radius:4px;padding:11px;margin-top:7px;font-size:12px;line-height:1.6;}
-.token-setup a{color:var(--accent);}
-.token-input-row{display:flex;gap:7px;margin-top:7px;}
-.token-input{flex:1;font-family:var(--mono);font-size:11px;padding:6px 9px;border:1px solid var(--border);border-radius:4px;}
-.token-btn{background:var(--accent);color:#fff;border:none;border-radius:4px;padding:6px 11px;font-size:12px;cursor:pointer;white-space:nowrap;}
+.token-setup{background:var(--brand-light);border:1px solid #bfdbfe;border-radius:6px;padding:12px;margin-top:8px;font-size:12px;line-height:1.6;}
+.token-setup a{color:var(--brand);font-weight:500;}
+.token-input-row{display:flex;gap:7px;margin-top:8px;}
+.token-input{flex:1;font-family:var(--mono);font-size:11px;padding:7px 10px;border:1px solid var(--border);border-radius:5px;}
+.token-btn{background:var(--brand);color:#fff;border:none;border-radius:5px;padding:7px 12px;font-size:12px;cursor:pointer;}
 
 /* MONEYBIRD STATUS */
-.mb-status{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 10px;border-radius:4px;font-weight:500;}
+.mb-status{display:inline-flex;align-items:center;gap:7px;font-size:12px;padding:6px 12px;border-radius:6px;font-weight:500;margin-bottom:4px;}
 .mb-open{background:#f0fdf4;color:#15803d;}
 .mb-late{background:#fef9c3;color:#a16207;}
 .mb-reminded{background:#eff6ff;color:#1d4ed8;}
 
 /* CUSTOMER SUMMARY */
-.customer-summary{display:flex;gap:12px;padding:12px 14px;background:#f8f7f4;border-radius:4px;margin-bottom:16px;flex-wrap:wrap;}
+.customer-summary{display:flex;gap:12px;padding:14px 16px;background:#f8fafc;border:1px solid var(--border);border-radius:6px;margin-bottom:16px;flex-wrap:wrap;}
 .cs-item{display:flex;flex-direction:column;gap:2px;}
-.cs-label{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);}
+.cs-label{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-3);}
 .cs-value{font-size:15px;font-weight:700;font-family:var(--mono);}
+
+/* SCORE INFO */
+.score-info{display:inline-flex;align-items:center;gap:4px;}
+.info-icon{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:var(--border);color:var(--text-3);font-size:10px;font-weight:700;cursor:help;flex-shrink:0;font-style:normal;}
+.info-icon:hover{background:var(--brand);color:#fff;}
+
+/* TOOLTIP */
+[data-tooltip]{position:relative;}
+[data-tooltip]:hover::after{content:attr(data-tooltip);position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;font-size:11px;padding:6px 10px;border-radius:5px;white-space:pre;z-index:300;pointer-events:none;min-width:180px;line-height:1.5;}
+
+/* JULY TARGET KPI */
+.kpi-progress{margin-top:8px;}
+.kpi-progress-bar{height:4px;background:var(--border);border-radius:99px;overflow:hidden;margin-top:4px;}
+.kpi-progress-fill{height:100%;border-radius:99px;transition:width .8s ease;}
 </style>
 </head>
 <body>
 
 <div class="topbar">
   <div class="topbar-left">
-    <h1>DSO DASHBOARD</h1>
-    <span class="topbar-tag">Credit Management</span>
+    <div class="topbar-logo">
+      <div class="logo-icon">OU</div>
+      <div class="topbar-divider"></div>
+      <span class="topbar-title">DSO DASHBOARD</span>
+      <span class="topbar-tag">Credit Management</span>
+    </div>
   </div>
   <div class="topbar-right">
+    <div class="topbar-search">
+      <span class="search-icon">&#9906;</span>
+      <input type="text" id="search-input" placeholder="Klant zoeken..." autocomplete="off" oninput="handleSearch(this.value)" onfocus="showResults()" onblur="setTimeout(hideResults,200)">
+      <div class="search-results" id="search-results"></div>
+    </div>
     <div class="status-dot"></div>
-    <span id="sync-time">Laden…</span>
+    <span id="sync-time">Laden...</span>
   </div>
 </div>
 
-<div id="loading"><div class="spinner"></div><span style="font-size:13px;color:var(--muted)">Dashboard laden…</span></div>
+<div id="loading"><div class="spinner"></div><span style="font-size:13px;color:var(--text-3)">Dashboard laden...</span></div>
 <div id="error-msg"></div>
 
 <div id="dashboard">
 <div class="page">
 
+  <!-- KPI ROW -->
   <div class="kpi-grid" id="kpi-grid"></div>
 
+  <!-- TREND + AGING -->
   <div class="grid-3">
     <div class="card" style="margin-bottom:0">
       <div class="card-header">
         <span class="card-title">Trend (90 dagen)</span>
         <div class="chart-toggles">
-          <div class="toggle-btn active" id="toggle-dso" style="color:#1a1916" onclick="toggleSeries('dso')">
-            <div class="dot" style="background:#1a1916"></div>DSO
+          <div class="toggle-btn active" id="toggle-dso" style="color:#0f172a" onclick="toggleSeries('dso')">
+            <div class="dot" style="background:#0f172a"></div>DSO
           </div>
-          <div class="toggle-btn active" id="toggle-pct" style="color:#2563eb" onclick="toggleSeries('pct')">
-            <div class="dot" style="background:#2563eb"></div>% Verlopen
+          <div class="toggle-btn active" id="toggle-pct" style="color:#1a56db" onclick="toggleSeries('pct')">
+            <div class="dot" style="background:#1a56db"></div>% Verlopen
           </div>
         </div>
       </div>
       <div class="card-body"><div class="chart-wrap"><canvas id="trendChart"></canvas></div></div>
     </div>
     <div class="card" style="margin-bottom:0">
-      <div class="card-header"><span class="card-title">AR Aging</span><span class="click-hint">↗ klik voor details</span></div>
+      <div class="card-header"><span class="card-title">AR Aging</span><span class="click-hint">klik voor details</span></div>
       <div class="card-body" id="aging-bars"></div>
     </div>
   </div>
-  <div style="margin-bottom:20px"></div>
+  <div style="margin-bottom:16px"></div>
 
+  <!-- CUSTOMER CHART + PRIORITY -->
   <div class="grid-2">
     <div class="card" style="margin-bottom:0">
       <div class="card-header">
-        <span class="card-title">Top Overdue Klanten</span>
-        <span class="click-hint">↗ klik voor klantoverzicht</span>
+        <span class="card-title">Top Verlopen Klanten</span>
+        <span class="click-hint">klik voor klantoverzicht</span>
       </div>
       <div class="card-body"><div class="chart-wrap"><canvas id="customerChart"></canvas></div></div>
     </div>
@@ -264,31 +330,49 @@ footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;col
       <div class="card-body">
         <div class="chart-wrap" style="height:140px"><canvas id="priorityChart"></canvas></div>
         <div class="priority-legend">
-          <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-text"><strong style="color:#dc2626">URGENT</strong><span>Score ≥ 70 — Bel vandaag.</span></div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#ea580c"></div><div class="legend-text"><strong style="color:#ea580c">High</strong><span>Score 40–69 — Formele herinnering.</span></div></div>
-          <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div><div class="legend-text"><strong style="color:#d97706">Monitor</strong><span>Score &lt; 40 — Vriendelijke herinnering.</span></div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-text"><strong style="color:#dc2626">URGENT</strong><span>Score ≥ 70. Bel vandaag.</span></div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#ea580c"></div><div class="legend-text"><strong style="color:#ea580c">High</strong><span>Score 40-69. Formele herinnering.</span></div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div><div class="legend-text"><strong style="color:#d97706">Monitor</strong><span>Score &lt; 40. Vriendelijke herinnering.</span></div></div>
         </div>
       </div>
     </div>
   </div>
-  <div style="margin-bottom:20px"></div>
+  <div style="margin-bottom:16px"></div>
 
+  <!-- OVERDUE TABLE -->
   <div class="card">
     <div class="card-header">
-      <span class="card-title">Verlopen Facturen — Prioriteitsvolgorde</span>
-      <span class="click-hint">↗ klik op rij voor details &amp; notities</span>
+      <span class="card-title">Verlopen Facturen</span>
+      <span class="click-hint">klik op rij voor details &amp; notities</span>
     </div>
     <div class="table-scroll">
       <table class="data-table">
         <thead><tr>
           <th>#</th><th>Klant</th><th>Factuur</th><th>Vervaldatum</th>
-          <th>Bedrag (€)</th><th>Verlopen</th><th>Prioriteit</th><th>Status</th>
+          <th>Bedrag (EUR)</th><th>Verlopen</th><th>Prioriteit</th><th>Status</th>
         </tr></thead>
         <tbody id="overdue-tbody"></tbody>
       </table>
     </div>
   </div>
 
+  <!-- BANKRUPT TABLE (shown when flagged customers exist) -->
+  <div class="card bankrupt-card" id="bankrupt-section" style="display:none">
+    <div class="card-header">
+      <span class="card-title">Failliet / Buiten Beheer</span>
+      <span class="click-hint" style="color:var(--purple)">facturen uitgesloten uit KPIs</span>
+    </div>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead><tr>
+          <th>#</th><th>Klant</th><th>Factuur</th><th>Bedrag (EUR)</th><th>Verlopen</th><th>Status</th>
+        </tr></thead>
+        <tbody id="bankrupt-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CREDIT TABLE -->
   <div class="card">
     <div class="card-header">
       <span class="card-title">Openstaande Creditfacturen</span>
@@ -297,7 +381,7 @@ footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;col
     <div class="table-scroll">
       <table class="data-table">
         <thead><tr>
-          <th>#</th><th>Klant</th><th>Factuur</th><th>Datum</th><th>Bedrag (€)</th><th>Status</th>
+          <th>#</th><th>Klant</th><th>Factuur</th><th>Datum</th><th>Bedrag (EUR)</th><th>Status</th>
         </tr></thead>
         <tbody id="credit-tbody"></tbody>
       </table>
@@ -316,7 +400,7 @@ footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;col
         <h2 id="panel-title">Detail</h2>
         <div class="panel-sub" id="panel-sub"></div>
       </div>
-      <button class="close-btn" onclick="closePanel()">✕</button>
+      <button class="close-btn" onclick="closePanel()">x</button>
     </div>
     <div class="panel-body" id="panel-body"></div>
   </div>
@@ -327,14 +411,14 @@ const GITHUB_REPO        = 'ThommieAlfa/dso-dashboard';
 const NOTES_FILE         = 'docs/notes.json';
 const OVERDUE_PCT_TARGET = 10;
 const DSO_TARGET         = 36;
+const JULY_TARGET_DATE   = '2026-07-01';
 
 const fmt  = n => new Intl.NumberFormat('nl-NL',{minimumFractionDigits:0,maximumFractionDigits:0}).format(n);
-const fmtE = n => '€'+fmt(n);
+const fmtE = n => 'EUR '+fmt(n);
 const fmtD = n => (+n).toFixed(1);
 const esc  = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-const AGING_COLORS={'Current':'#16a34a','1-30 days':'#ca8a04','31-60 days':'#ea580c','61-90 days':'#dc2626','>90 days':'#7f1d1d'};
+const AGING_COLORS = {'Current':'#16a34a','1-30 days':'#ca8a04','31-60 days':'#ea580c','61-90 days':'#dc2626','>90 days':'#7f1d1d'};
 
-// days_overdue === 0 → "Openstaand", else Nd
 function daysLabel(n){ return n===0?'Openstaand':n+'d verlopen'; }
 function daysClass(n){ return n===0?'days-0':n<=30?'days-30':n<=60?'days-60':'days-90'; }
 function levelPill(l){
@@ -343,15 +427,15 @@ function levelPill(l){
 }
 function flagPills(f){
   const o=[];
-  if(f.bankrupt)  o.push(`<span class="pill pill-bankrupt">🏳 Failliet</span>`);
-  if(f.collector) o.push(`<span class="pill pill-collector">📋 Incasso</span>`);
-  if(f.bad_debt)  o.push(`<span class="pill pill-bad-debt">✕ Oninbaar</span>`);
+  if(f.bankrupt)  o.push(`<span class="pill pill-bankrupt">Failliet</span>`);
+  if(f.collector) o.push(`<span class="pill pill-collector">Incasso</span>`);
   return o.join(' ');
 }
 
 let _data=null,_notes={},_notesSHA=null,_flags={};
 let _trendChart=null,_customerChart=null;
 let _showDso=true,_showPct=true;
+let _bankruptContactIds=new Set();
 
 // ── LOAD ──────────────────────────────────────────────────────────────────
 async function load(){
@@ -362,12 +446,13 @@ async function load(){
     _data.dso_target=DSO_TARGET;
     await loadNotes();
     loadFlags();
+    computeBankruptSet();
     render(_data);
   }catch(e){
     document.getElementById('loading').style.display='none';
     const el=document.getElementById('error-msg');
     el.style.display='block';
-    el.textContent='⚠️ Kon data niet laden. Draai het Python script om data.json te genereren. ('+e.message+')';
+    el.textContent='Kon data niet laden. Draai het Python script om data.json te genereren. ('+e.message+')';
   }
 }
 
@@ -380,8 +465,35 @@ async function loadNotes(){
 }
 function loadFlags(){try{_flags=JSON.parse(localStorage.getItem('dso_flags')||'{}');}catch(e){_flags={};}}
 function saveFlags(){try{localStorage.setItem('dso_flags',JSON.stringify(_flags));}catch(e){}}
-function getFlags(id){return _flags[id]||{bankrupt:false,collector:false,bad_debt:false};}
+function getFlags(id){return _flags[id]||{bankrupt:false,collector:false};}
 function setFlag(id,key,val){if(!_flags[id])_flags[id]={};_flags[id][key]=val;saveFlags();}
+
+function computeBankruptSet(){
+  _bankruptContactIds=new Set();
+  if(!_data) return;
+  // Collect all contact_ids flagged as bankrupt
+  Object.entries(_flags).forEach(([id,f])=>{
+    if(f.bankrupt){
+      // id could be 'customer_CONTACTID'
+      if(id.startsWith('customer_')) _bankruptContactIds.add(id.replace('customer_',''));
+    }
+  });
+}
+
+// Active invoices = exclude bankrupt customer invoices + bad_debt
+function getActiveInvoices(){
+  return (_data.invoices||[]).filter(i=>
+    i.amount>0 &&
+    !i.is_bad_debt &&
+    !_bankruptContactIds.has(i.contact_id)
+  );
+}
+function getBankruptInvoices(){
+  return (_data.invoices||[]).filter(i=>
+    i.amount>0 &&
+    (_bankruptContactIds.has(i.contact_id) || i.is_bad_debt)
+  );
+}
 
 // ── RENDER ────────────────────────────────────────────────────────────────
 function render(d){
@@ -392,34 +504,53 @@ function render(d){
     'Bijgewerkt '+ts.toLocaleDateString('nl-NL')+' '+ts.toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'});
   renderKPIs(d);renderAgingBars(d);renderTrendChart(d);
   renderCustomerChart(d);renderPriorityChart(d);
-  renderTable(d);renderCreditTable(d);
+  renderTable(d);renderBankruptTable();renderCreditTable(d);
   document.getElementById('footer').textContent=
     'Last sync: '+new Date(d.generated).toISOString()+' · '+d.invoice_count+' facturen';
 }
 
 // ── KPIs ──────────────────────────────────────────────────────────────────
 function renderKPIs(d){
-  const total=d.total_ar||1;
-  const allOverdue=(d.invoices||[]).filter(i=>i.days_overdue>0).reduce((s,i)=>s+i.amount,0);
-  const pct=allOverdue/total*100;
-  const pctOk=pct<=OVERDUE_PCT_TARGET,pctClose=pct<=OVERDUE_PCT_TARGET*1.3;
-  const dsoOk=d.dso<=DSO_TARGET,dsoClose=d.dso<=DSO_TARGET*1.15;
+  const active    = getActiveInvoices();
+  const total     = active.reduce((s,i)=>s+i.amount,0)||1;
+  const allOverdue= active.filter(i=>i.days_overdue>0).reduce((s,i)=>s+i.amount,0);
+  const pct       = allOverdue/total*100;
+  const pctOk     = pct<=OVERDUE_PCT_TARGET, pctClose=pct<=OVERDUE_PCT_TARGET*1.3;
+
+  // 6-month avg from history
+  const cutoff6m  = new Date(Date.now()-180*86400000).toISOString().slice(0,10);
+  const hist6m    = (d.history||[]).filter(h=>h.date>=cutoff6m);
+  const avgDso6m  = hist6m.length ? (hist6m.reduce((s,h)=>s+h.dso,0)/hist6m.length).toFixed(1) : fmtD(d.dso);
+  const avgPct6m  = hist6m.length ? (hist6m.reduce((s,h)=>s+(h.overdue_pct||0),0)/hist6m.length).toFixed(1) : pct.toFixed(1);
+  const dsoVal    = parseFloat(avgDso6m);
+  const dsoOk     = dsoVal<=DSO_TARGET, dsoClose=dsoVal<=DSO_TARGET*1.1;
+
+  // July target: 6m avg pct must be <=10% by July 1
+  const julyDate  = new Date(JULY_TARGET_DATE);
+  const today     = new Date();
+  const daysToJuly= Math.max(0,Math.round((julyDate-today)/86400000));
+  const julyPctOk = parseFloat(avgPct6m)<=OVERDUE_PCT_TARGET;
+  const julyProg  = Math.min(100, Math.max(0, (1-(parseFloat(avgPct6m)-OVERDUE_PCT_TARGET)/Math.max(OVERDUE_PCT_TARGET,parseFloat(avgPct6m)-OVERDUE_PCT_TARGET+0.1))*100));
+
   const items=[
-    {label:'DSO (dagen)',value:fmtD(d.dso),sub:'Target: '+DSO_TARGET+' dagen',
+    {label:'DSO (6m gem.)',value:fmtD(dsoVal)+'d',sub:'Target: '+DSO_TARGET+'d | Huidig: '+fmtD(d.dso)+'d',
      badge:dsoOk?'ON TARGET':dsoClose?'LET OP':'ACTIE',badgeClass:dsoOk?'badge-good':dsoClose?'badge-warn':'badge-urgent'},
-    {label:'% Verlopen',value:pct.toFixed(1)+'%',sub:'Target: max '+OVERDUE_PCT_TARGET+'%',
+    {label:'% Verlopen (6m gem.)',value:avgPct6m+'%',sub:'Target: max '+OVERDUE_PCT_TARGET+'% | Nu: '+pct.toFixed(1)+'%',
      badge:pctOk?'ON TARGET':pctClose?'LET OP':'BOVEN TARGET',badgeClass:pctOk?'badge-good':pctClose?'badge-warn':'badge-urgent',
      filter:'overdue_all',filterLabel:'Alle verlopen facturen'},
-    {label:'Totaal AR',value:fmtE(d.total_ar),sub:d.invoice_count+' open facturen'},
-    {label:'Verlopen >30d',value:fmtE(d.overdue_30),sub:'Opvolging vereist',
-     badge:d.overdue_30>0?'VERLOPEN':null,badgeClass:'badge-warn',
+    {label:'Totaal AR',value:fmtE(active.reduce((s,i)=>s+i.amount,0)),sub:active.length+' open facturen',
+     filter:'all_open',filterLabel:'Alle openstaande facturen'},
+    {label:'Verlopen >30d',value:fmtE(active.filter(i=>i.days_overdue>30).reduce((s,i)=>s+i.amount,0)),sub:'Opvolging vereist',
+     badge:active.some(i=>i.days_overdue>30)?'VERLOPEN':null,badgeClass:'badge-warn',
      filter:'overdue_30',filterLabel:'Verlopen > 30 dagen'},
-    {label:'Verlopen >60d',value:fmtE(d.overdue_60),sub:'Formele aanmaning',
-     badge:d.overdue_60>0?'ESCALEER':null,badgeClass:'badge-urgent',
+    {label:'Verlopen >60d',value:fmtE(active.filter(i=>i.days_overdue>60).reduce((s,i)=>s+i.amount,0)),sub:'Formele aanmaning',
+     badge:active.some(i=>i.days_overdue>60)?'ESCALEER':null,badgeClass:'badge-urgent',
      filter:'overdue_60',filterLabel:'Verlopen > 60 dagen'},
-    {label:'Verlopen >90d',value:fmtE(d.overdue_90),sub:'Incassofase',
-     badge:d.overdue_90>0?'KRITIEK':null,badgeClass:'badge-urgent',
-     filter:'overdue_90',filterLabel:'Verlopen > 90 dagen'},
+    {label:'1 Juli Target',
+     value:julyPctOk?'ON TARGET':avgPct6m+'%',
+     sub:`Max 10% gem. verlopen | nog ${daysToJuly}d`,
+     badge:julyPctOk?'GEHAALD':null,badgeClass:'badge-good',
+     extra:`<div class="kpi-progress"><div style="display:flex;justify-content:space-between;font-size:9px;color:var(--text-3)"><span>Huidig: ${avgPct6m}%</span><span>Doel: 10%</span></div><div class="kpi-progress-bar"><div class="kpi-progress-fill" style="width:${julyProg}%;background:${julyPctOk?'#16a34a':'#dc2626'}"></div></div></div>`},
   ];
   document.getElementById('kpi-grid').innerHTML=items.map(k=>`
     <div class="kpi${k.filter?' clickable':''}" ${k.filter?`onclick="openFilteredPanel('${k.filter}','${k.filterLabel}')"`:''}>
@@ -427,51 +558,59 @@ function renderKPIs(d){
       <div class="kpi-label">${k.label}</div>
       <div class="kpi-value">${k.value}</div>
       <div class="kpi-sub">${k.sub}</div>
+      ${k.extra||''}
     </div>`).join('');
 }
 
 // ── AGING ─────────────────────────────────────────────────────────────────
 function renderAgingBars(d){
-  const total=Object.values(d.aging).reduce((a,b)=>a+b,0)||1;
-  const allOverdue=(d.invoices||[]).filter(i=>i.days_overdue>0).reduce((s,i)=>s+i.amount,0);
+  const active=getActiveInvoices();
+  const total=active.reduce((s,i)=>s+i.amount,0)||1;
+  const allOverdue=active.filter(i=>i.days_overdue>0).reduce((s,i)=>s+i.amount,0);
   const over=allOverdue/total*100>OVERDUE_PCT_TARGET;
   const order=['Current','1-30 days','31-60 days','61-90 days','>90 days'];
   const bkeys={'Current':'current','1-30 days':'bucket_1_30','31-60 days':'bucket_31_60','61-90 days':'bucket_61_90','>90 days':'bucket_90plus'};
   document.getElementById('aging-bars').innerHTML=order.map(b=>{
-    const amt=d.aging[b]||0,pct=(amt/total*100).toFixed(1);
-    const warn=b!=='Current'&&over?' <span style="color:#dc2626;font-weight:700">▲</span>':'';
+    const amt=active.filter(i=>i.bucket===b).reduce((s,i)=>s+i.amount,0);
+    const pct=(amt/total*100).toFixed(1);
+    const warn=b!=='Current'&&over?' <span style="color:#dc2626;font-weight:700">!</span>':'';
     return `<div class="aging-row" onclick="openBucketPanel('${bkeys[b]}','${b}')">
       <span class="aging-label">${b==='Current'?'Openstaand':b}</span>
       <div class="aging-bar-wrap"><div class="aging-bar" style="width:${pct}%;background:${AGING_COLORS[b]}"></div></div>
       <span class="aging-amount">${fmtE(amt)}</span>
       <span class="aging-pct">${pct}%${warn}</span>
     </div>`;
-  }).join('')+`<div style="margin-top:9px;font-size:10px;font-family:var(--mono);color:var(--muted)">
-    Target: max ${OVERDUE_PCT_TARGET}% verlopen (>0d) ${over
-      ?'<span style="color:#dc2626;font-weight:700">— BOVEN TARGET</span>'
-      :'<span style="color:#16a34a;font-weight:700">— ON TARGET ✓</span>'}
+  }).join('')+`<div style="margin-top:9px;font-size:10px;font-family:var(--mono);color:var(--text-3)">
+    Target: max ${OVERDUE_PCT_TARGET}% verlopen ${over
+      ?'<span style="color:#dc2626;font-weight:700">BOVEN TARGET</span>'
+      :'<span style="color:#16a34a;font-weight:700">ON TARGET</span>'}
   </div>`;
 }
 
-// ── TREND CHART ───────────────────────────────────────────────────────────
+// ── TREND CHART (dual axis, toggleable, proper Y-axis min) ─────────────────
 function renderTrendChart(d){
   const hist=d.history.slice(-60);
   if(_trendChart)_trendChart.destroy();
+  const dsoVals=hist.map(h=>h.dso).filter(Boolean);
+  const pctVals=hist.map(h=>h.overdue_pct||0);
+  const dsoMin=Math.max(0,Math.min(...dsoVals,DSO_TARGET)-5);
+  const pctMin=0;
+
   _trendChart=new Chart(document.getElementById('trendChart'),{
     type:'line',
     data:{
       labels:hist.map(h=>new Date(h.date).toLocaleDateString('nl-NL',{month:'short',day:'numeric'})),
       datasets:[
         {id:'dso',label:'DSO (d)',data:hist.map(h=>h.dso),
-         borderColor:'#1a1916',backgroundColor:'rgba(26,25,22,.05)',
+         borderColor:'#0f172a',backgroundColor:'rgba(15,23,42,.05)',
          borderWidth:2,pointRadius:2,fill:true,tension:.3,yAxisID:'y'},
         {id:'dso_t',label:'DSO target',data:hist.map(()=>DSO_TARGET),
-         borderColor:'#1a1916',borderWidth:1.5,borderDash:[5,4],pointRadius:0,fill:false,yAxisID:'y'},
+         borderColor:'#0f172a',borderWidth:1.5,borderDash:[5,4],pointRadius:0,fill:false,yAxisID:'y'},
         {id:'pct',label:'% Verlopen',data:hist.map(h=>+(h.overdue_pct||0).toFixed(2)),
-         borderColor:'#2563eb',backgroundColor:'rgba(37,99,235,.04)',
+         borderColor:'#1a56db',backgroundColor:'rgba(26,86,219,.04)',
          borderWidth:2,pointRadius:2,fill:true,tension:.3,yAxisID:'y2'},
         {id:'pct_t',label:'% target',data:hist.map(()=>OVERDUE_PCT_TARGET),
-         borderColor:'#2563eb',borderWidth:1.5,borderDash:[5,4],pointRadius:0,fill:false,yAxisID:'y2'},
+         borderColor:'#1a56db',borderWidth:1.5,borderDash:[5,4],pointRadius:0,fill:false,yAxisID:'y2'},
       ]
     },
     options:{
@@ -486,24 +625,34 @@ function renderTrendChart(d){
           return '';
         }}}},
       scales:{
-        x:{grid:{display:false},ticks:{font:{family:'IBM Plex Mono',size:9},maxTicksLimit:10}},
-        y:{position:'left',grid:{color:'#e2e0d9'},
-           title:{display:true,text:'DSO (d)',font:{family:'IBM Plex Mono',size:9}},
-           ticks:{font:{family:'IBM Plex Mono',size:9}}},
-        y2:{position:'right',grid:{drawOnChartArea:false},
-            title:{display:true,text:'% Verlopen',font:{family:'IBM Plex Mono',size:9}},
-            ticks:{font:{family:'IBM Plex Mono',size:9},callback:v=>v+'%'}},
+        x:{grid:{display:false},ticks:{font:{family:'JetBrains Mono',size:9},maxTicksLimit:10}},
+        y:{position:'left',grid:{color:'#f1f5f9'},min:dsoMin,
+           title:{display:_showDso,text:'DSO (d)',font:{family:'JetBrains Mono',size:9},color:'#0f172a'},
+           ticks:{display:_showDso,font:{family:'JetBrains Mono',size:9},color:'#0f172a'},
+           display:_showDso},
+        y2:{position:'right',grid:{drawOnChartArea:false},min:pctMin,
+            title:{display:_showPct,text:'% Verlopen',font:{family:'JetBrains Mono',size:9},color:'#1a56db'},
+            ticks:{display:_showPct,font:{family:'JetBrains Mono',size:9},color:'#1a56db',callback:v=>v+'%'},
+            display:_showPct},
       }
     }
   });
   applyToggleState();
 }
+
 function toggleSeries(which){
   if(which==='dso') _showDso=!_showDso;
   else _showPct=!_showPct;
   if(_trendChart){
     const show={dso:_showDso,dso_t:_showDso,pct:_showPct,pct_t:_showPct};
     _trendChart.data.datasets.forEach(ds=>{ds.hidden=!show[ds.id];});
+    // Update axis visibility
+    _trendChart.options.scales.y.display=_showDso;
+    _trendChart.options.scales.y.title.display=_showDso;
+    _trendChart.options.scales.y.ticks.display=_showDso;
+    _trendChart.options.scales.y2.display=_showPct;
+    _trendChart.options.scales.y2.title.display=_showPct;
+    _trendChart.options.scales.y2.ticks.display=_showPct;
     _trendChart.update();
   }
   applyToggleState();
@@ -519,7 +668,7 @@ function applyToggleState(){
 function renderCustomerChart(d){
   const rank={URGENT:3,High:2,Monitor:1};
   const byC={};
-  d.invoices.forEach(inv=>{
+  getActiveInvoices().forEach(inv=>{
     if(inv.days_overdue<=0) return;
     if(!byC[inv.company]) byC[inv.company]={amount:0,level:'Monitor',contact_id:inv.contact_id};
     byC[inv.company].amount+=inv.amount;
@@ -531,17 +680,17 @@ function renderCustomerChart(d){
   _customerChart=new Chart(canvas,{
     type:'bar',
     data:{
-      labels:sorted.map(i=>i.company.length>20?i.company.slice(0,18)+'…':i.company),
-      datasets:[{label:'Totaal verlopen (€)',data:sorted.map(i=>i.amount),
+      labels:sorted.map(i=>i.company.length>20?i.company.slice(0,18)+'...':i.company),
+      datasets:[{label:'Totaal verlopen',data:sorted.map(i=>i.amount),
         backgroundColor:sorted.map(i=>i.level==='URGENT'?'#fee2e2':i.level==='High'?'#ffedd5':'#fef9c3'),
         borderColor:sorted.map(i=>i.level==='URGENT'?'#dc2626':i.level==='High'?'#ea580c':'#d97706'),
-        borderWidth:1.5,borderRadius:2}]
+        borderWidth:1.5,borderRadius:4}]
     },
     options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
       plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' '+fmtE(ctx.raw)}}},
       scales:{
-        x:{grid:{color:'#e2e0d9'},ticks:{font:{family:'IBM Plex Mono',size:9},callback:v=>'€'+fmt(v)}},
-        y:{grid:{display:false},ticks:{font:{family:'IBM Plex Sans',size:10}}}},
+        x:{grid:{color:'#f1f5f9'},ticks:{font:{family:'JetBrains Mono',size:9},callback:v=>fmt(v)}},
+        y:{grid:{display:false},ticks:{font:{family:'Inter',size:10}}}},
       onClick:(evt,els)=>{if(els.length) openCustomerPanel(sorted[els[0].index].contact_id);}
     }
   });
@@ -551,7 +700,7 @@ function renderCustomerChart(d){
 // ── PRIORITY CHART ────────────────────────────────────────────────────────
 function renderPriorityChart(d){
   const c={URGENT:0,High:0,Monitor:0};
-  d.invoices.forEach(i=>{if(i.days_overdue>0)c[i.level]++;});
+  getActiveInvoices().forEach(i=>{if(i.days_overdue>0)c[i.level]++;});
   new Chart(document.getElementById('priorityChart'),{
     type:'doughnut',
     data:{labels:['URGENT','High','Monitor'],
@@ -563,42 +712,83 @@ function renderPriorityChart(d){
 
 // ── OVERDUE TABLE ─────────────────────────────────────────────────────────
 function renderTable(d){
-  document.getElementById('overdue-tbody').innerHTML=d.overdue_top.map((inv,i)=>{
+  // Only active invoices that are overdue and NOT credit
+  const rows = getActiveInvoices()
+    .filter(i=>i.days_overdue>0 && i.amount>0)
+    .sort((a,b)=>b.score-a.score)
+    .slice(0,25);
+
+  document.getElementById('overdue-tbody').innerHTML=rows.map((inv,i)=>{
     const f=getFlags(inv.id);
-    const fp=flagPills(f);
     return `<tr onclick="openInvoicePanel('${inv.id}')">
-      <td class="mono" style="color:var(--muted)">${i+1}</td>
+      <td class="mono" style="color:var(--text-3)">${i+1}</td>
       <td><strong>${esc(inv.company)}</strong></td>
       <td class="mono">${esc(inv.invoice_no)}</td>
       <td class="mono">${inv.due_date}</td>
       <td class="amount">${fmtE(inv.amount)}</td>
       <td><span class="days-chip ${daysClass(inv.days_overdue)}">${inv.days_overdue}d</span></td>
       <td>${levelPill(inv.level)}</td>
-      <td>${fp||'<span style="color:var(--muted);font-size:11px">—</span>'}</td>
+      <td>${flagPills(f)||'<span style="color:var(--text-3);font-size:11px">-</span>'}</td>
     </tr>`;
   }).join('');
+}
+
+// ── BANKRUPT TABLE ────────────────────────────────────────────────────────
+function renderBankruptTable(){
+  const rows=getBankruptInvoices();
+  const sec=document.getElementById('bankrupt-section');
+  if(!rows.length){sec.style.display='none';return;}
+  sec.style.display='block';
+  document.getElementById('bankrupt-tbody').innerHTML=rows.map((inv,i)=>`
+    <tr onclick="openInvoicePanel('${inv.id}')">
+      <td class="mono" style="color:var(--text-3)">${i+1}</td>
+      <td><strong>${esc(inv.company)}</strong></td>
+      <td class="mono">${esc(inv.invoice_no)}</td>
+      <td class="amount">${fmtE(inv.amount)}</td>
+      <td><span class="days-chip ${daysClass(inv.days_overdue)}">${daysLabel(inv.days_overdue)}</span></td>
+      <td>${inv.is_bad_debt?'<span class="pill pill-bad-debt">Oninbaar</span>':flagPills(getFlags(inv.id))}</td>
+    </tr>`).join('');
 }
 
 // ── CREDIT TABLE ──────────────────────────────────────────────────────────
 function renderCreditTable(d){
   const credits=(d.invoices||[]).filter(i=>i.amount<0);
   document.getElementById('credit-count').textContent=
-    credits.length?' · '+credits.length+' facturen · totaal '+fmtE(credits.reduce((s,i)=>s+i.amount,0)):'';
+    credits.length?' '+credits.length+' facturen':' Geen openstaande creditfacturen';
   if(!credits.length){
     document.getElementById('credit-tbody').innerHTML=
-      '<tr><td colspan="6" style="color:var(--muted);font-style:italic;font-size:13px;padding:16px">Geen openstaande creditfacturen</td></tr>';
+      '<tr><td colspan="6" style="color:var(--text-3);font-style:italic;font-size:13px;padding:16px">Geen openstaande creditfacturen</td></tr>';
     return;
   }
   document.getElementById('credit-tbody').innerHTML=credits.map((inv,i)=>`
     <tr onclick="openInvoicePanel('${inv.id}')">
-      <td class="mono" style="color:var(--muted)">${i+1}</td>
+      <td class="mono" style="color:var(--text-3)">${i+1}</td>
       <td><strong>${esc(inv.company)}</strong></td>
       <td class="mono">${esc(inv.invoice_no)}</td>
-      <td class="mono">${inv.invoice_date||'—'}</td>
+      <td class="mono">${inv.invoice_date||'-'}</td>
       <td class="amount" style="color:var(--green)">${fmtE(inv.amount)}</td>
-      <td><span class="pill pill-credit">${inv.state||'—'}</span></td>
+      <td><span class="pill pill-credit">${inv.state||'-'}</span></td>
     </tr>`).join('');
 }
+
+// ── SEARCH ────────────────────────────────────────────────────────────────
+function handleSearch(q){
+  const box=document.getElementById('search-results');
+  if(!q||!_data){box.classList.remove('show');return;}
+  const customers=_data.customers||{};
+  const results=Object.values(customers)
+    .filter(c=>c.company.toLowerCase().includes(q.toLowerCase()))
+    .slice(0,8);
+  if(!results.length){box.classList.remove('show');return;}
+  box.innerHTML=results.map(c=>`
+    <div class="search-result-item" onclick="openCustomerPanel('${c.contact_id}');hideResults()">
+      <div class="sr-name">${esc(c.company)}</div>
+      <div class="sr-meta">${c.invoice_count} facturen &middot; ${fmtE(c.total_open)} open &middot; ${fmtE(c.total_overdue)} verlopen</div>
+    </div>`).join('');
+  box.classList.add('show');
+}
+function showResults(){if(document.getElementById('search-input').value) document.getElementById('search-results').classList.add('show');}
+function hideResults(){document.getElementById('search-results').classList.remove('show');}
 
 // ── PANEL ─────────────────────────────────────────────────────────────────
 function openPanel(title,sub,html){
@@ -617,20 +807,23 @@ document.getElementById('panel-overlay').addEventListener('click',e=>{
   if(e.target===e.currentTarget) closePanel();
 });
 
-// ── FILTERED PANEL (KPI click) ────────────────────────────────────────────
+// ── FILTERED PANEL ────────────────────────────────────────────────────────
 function openFilteredPanel(filterKey,title){
+  const active=getActiveInvoices();
   const fns={
-    overdue_all:i=>i.days_overdue>0,
-    overdue_30: i=>i.days_overdue>30,
-    overdue_60: i=>i.days_overdue>60,
-    overdue_90: i=>i.days_overdue>90,
+    all_open:    i=>i.amount>0,
+    overdue_all: i=>i.days_overdue>0,
+    overdue_30:  i=>i.days_overdue>30,
+    overdue_60:  i=>i.days_overdue>60,
+    overdue_90:  i=>i.days_overdue>90,
   };
-  const invs=(_data.invoices||[]).filter(fns[filterKey]).sort((a,b)=>b.score-a.score);
+  const invs=active.filter(fns[filterKey]).sort((a,b)=>b.score-a.score);
   const total=invs.reduce((s,i)=>s+i.amount,0);
-  openPanel(title,invs.length+' facturen · '+fmtE(total),filteredTableHTML(invs,filterKey,encodeURIComponent(title)));
+  openPanel(title,invs.length+' facturen | '+fmtE(total),filteredTableHTML(invs,filterKey,encodeURIComponent(title)));
 }
 
 function openBucketPanel(bucketKey,bucketLabel){
+  const active=getActiveInvoices();
   const fns={
     current:       i=>i.days_overdue===0,
     bucket_1_30:   i=>i.days_overdue>0 && i.days_overdue<=30,
@@ -638,18 +831,18 @@ function openBucketPanel(bucketKey,bucketLabel){
     bucket_61_90:  i=>i.days_overdue>60 && i.days_overdue<=90,
     bucket_90plus: i=>i.days_overdue>90,
   };
-  const invs=(_data.invoices||[]).filter(fns[bucketKey]).sort((a,b)=>b.amount-a.amount);
+  const invs=active.filter(fns[bucketKey]||fns.current).sort((a,b)=>b.amount-a.amount);
   const total=invs.reduce((s,i)=>s+i.amount,0);
   const label=bucketLabel==='Current'?'Openstaand':bucketLabel;
-  openPanel('AR Aging: '+label,invs.length+' facturen · '+fmtE(total),
-    filteredTableHTML(invs,'bucket_'+bucketKey,encodeURIComponent('AR Aging: '+label)));
+  openPanel('AR Aging: '+label,invs.length+' facturen | '+fmtE(total),
+    filteredTableHTML(invs,bucketKey,encodeURIComponent('AR Aging: '+label)));
 }
 
 function filteredTableHTML(invs,filterKey,filterLabelEnc){
   if(!invs.length) return '<p class="no-data" style="padding:16px">Geen facturen in dit filter.</p>';
   const rows=invs.map((inv,i)=>`
     <tr onclick="openInvoicePanel('${inv.id}','','${filterKey}','${filterLabelEnc}')">
-      <td class="mono" style="color:var(--muted)">${i+1}</td>
+      <td class="mono" style="color:var(--text-3)">${i+1}</td>
       <td style="white-space:normal;min-width:120px"><strong>${esc(inv.company)}</strong></td>
       <td class="mono">${esc(inv.invoice_no)}</td>
       <td class="mono">${inv.due_date}</td>
@@ -657,17 +850,16 @@ function filteredTableHTML(invs,filterKey,filterLabelEnc){
       <td><span class="days-chip ${daysClass(inv.days_overdue)}">${inv.days_overdue===0?'Openstaand':inv.days_overdue+'d'}</span></td>
       <td>${levelPill(inv.level)}</td>
     </tr>`).join('');
-  return `<div class="table-scroll" style="max-height:calc(100vh - 160px);overflow-y:auto">
-    <table class="data-table">
-      <thead><tr><th>#</th><th>Klant</th><th>Factuur</th><th>Vervaldatum</th><th>Bedrag (€)</th><th>Verlopen</th><th>Prioriteit</th></tr></thead>
-      <tbody>${rows}</tbody>
-    </table></div>`;
+  return `<div class="table-scroll"><table class="data-table">
+    <thead><tr><th>#</th><th>Klant</th><th>Factuur</th><th>Vervaldatum</th><th>Bedrag</th><th>Verlopen</th><th>Prioriteit</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table></div>`;
 }
 
 // ── FLAG CHECKBOX ─────────────────────────────────────────────────────────
 function flagCheckHTML(id,key,label,cls,checked){
   return `<div class="flag-check ${checked?cls:''}" id="fc-${id}-${key}" onclick="toggleFlag('${id}','${key}','${cls}')">
-    <div class="fc-box">${checked?'✓':''}</div>${label}
+    <div class="fc-box">${checked?'v':''}</div>${label}
   </div>`;
 }
 function toggleFlag(id,key,cls){
@@ -675,9 +867,14 @@ function toggleFlag(id,key,cls){
   const nv=!cur[key];
   setFlag(id,key,nv);
   const el=document.getElementById(`fc-${id}-${key}`);
-  if(el){el.classList.toggle(cls,nv);el.querySelector('.fc-box').textContent=nv?'✓':'';}
+  if(el){el.classList.toggle(cls,nv);el.querySelector('.fc-box').textContent=nv?'v':'';}
+  if(key==='bankrupt'){
+    computeBankruptSet();
+    renderKPIs(_data);renderAgingBars(_data);renderTable(_data);renderBankruptTable();
+    renderCustomerChart(_data);renderPriorityChart(_data);
+  }
   const st=document.getElementById(`flag-st-${id}`);
-  if(st){st.textContent='✅ Opgeslagen';setTimeout(()=>{if(st)st.textContent='';},2000);}
+  if(st){st.textContent='Opgeslagen';setTimeout(()=>{if(st)st.textContent='';},2000);}
 }
 
 // ── CUSTOMER PANEL ────────────────────────────────────────────────────────
@@ -685,38 +882,36 @@ function openCustomerPanel(contactId){
   const cust=_data.customers&&_data.customers[contactId];
   if(!cust) return;
   const invs=cust.invoices||[];
-  const overdue=invs.filter(i=>i.days_overdue>0);
-  const current=invs.filter(i=>i.days_overdue===0);
+  const overdue=invs.filter(i=>i.days_overdue>0&&i.amount>0);
+  const current=invs.filter(i=>i.days_overdue===0&&i.amount>0);
   const custFlags=getFlags('customer_'+contactId);
   const savedName=localStorage.getItem('dso_author_name')||'';
 
-  // Notes: this week first, else last 3
   const key='customer_'+contactId;
   const allNotes=(_notes[key]||[]).slice().reverse();
   const weekAgo=new Date(Date.now()-7*24*3600*1000);
   const weekNotes=allNotes.filter(n=>new Date(n.ts)>=weekAgo);
   const shown=weekNotes.length?weekNotes:allNotes.slice(0,3);
   const hasMore=allNotes.length>shown.length;
-  const notesLabel=weekNotes.length?'Klantnotities — deze week':'Klantnotities — laatste 3';
+  const notesLabel=weekNotes.length?'Klantnotities (deze week)':'Klantnotities (laatste 3)';
 
   function noteItem(n,cls){
     return `<div class="note-item ${cls||''}">
-      <div class="note-meta"><span>${esc(n.author||'Anoniem')}${n.invoice_no?' — factuur '+esc(n.invoice_no):''}</span><span>${new Date(n.ts).toLocaleString('nl-NL')}</span></div>
+      <div class="note-meta"><span>${esc(n.author||'Anoniem')}${n.invoice_no?' | factuur '+esc(n.invoice_no):''}</span><span>${new Date(n.ts).toLocaleString('nl-NL')}</span></div>
       <div class="note-text-wrap"><div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div></div>
     </div>`;
   }
 
   const shownHTML=shown.length
-    ?shown.map(n=>noteItem(n,'customer-note')).join('')+(hasMore?`<span class="notes-more" onclick="showAllCustNotes('${contactId}')">+ ${allNotes.length-shown.length} oudere notities tonen…</span>`:'')
+    ?shown.map(n=>noteItem(n,'customer-note')).join('')+(hasMore?`<span class="notes-more" onclick="showAllCustNotes('${contactId}')">+ ${allNotes.length-shown.length} oudere notities...</span>`:'')
     :'<p class="no-data">Nog geen klantnotities.</p>';
 
-  // All invoice notes for this customer (below)
   const allInvNotes=invs.flatMap(inv=>(_notes[inv.id]||[]).map(n=>({...n,invoice_no:inv.invoice_no}))).sort((a,b)=>new Date(b.ts)-new Date(a.ts));
   const invNotesHTML=allInvNotes.length?allInvNotes.map(n=>noteItem(n)).join(''):'<p class="no-data">Geen factuurnotities.</p>';
 
   function invCard(inv){
     const inotes=_notes[inv.id]||[];
-    const preview=inotes.length?`<div class="inv-note-preview">💬 ${inotes.length}x — "${esc(inotes[inotes.length-1].text.slice(0,60))}"</div>`:'';
+    const preview=inotes.length?`<div class="inv-note-preview">| ${inotes.length}x notitie: "${esc(inotes[inotes.length-1].text.slice(0,60))}"</div>`:'';
     const f=getFlags(inv.id);
     return `<div class="inv-card ${inv.days_overdue>0?'is-overdue':'is-current'}" onclick="openInvoicePanel('${inv.id}','${contactId}')">
       <div class="inv-card-top"><span class="inv-card-no">${esc(inv.invoice_no)}</span><span class="inv-card-amount">${fmtE(inv.amount)}</span></div>
@@ -729,40 +924,35 @@ function openCustomerPanel(contactId){
     </div>`;
   }
 
+  const isBankrupt=custFlags.bankrupt;
   const tokenSection=localStorage.getItem('github_notes_token')?'':tokenSetupHTML();
 
-  openPanel(cust.company,`${invs.length} facturen · ${fmtE(cust.total_open)} open · ${fmtE(cust.total_overdue)} verlopen`,`
-
-    <!-- KLANT STATUS FLAGS — bovenaan -->
+  openPanel(cust.company,`${invs.length} facturen | ${fmtE(cust.total_open)} open | ${fmtE(cust.total_overdue)} verlopen`,`
     <div class="ps">
       <div class="ps-title">Klant Status</div>
       <div class="flag-row">
-        ${flagCheckHTML('customer_'+contactId,'bankrupt','🏳 Failliet','checked-bankrupt',custFlags.bankrupt)}
+        ${flagCheckHTML('customer_'+contactId,'bankrupt','Failliet','checked-bankrupt',isBankrupt)}
       </div>
+      ${isBankrupt?'<div style="margin-top:8px;font-size:12px;color:#7c3aed;background:#f5f0ff;padding:8px 12px;border-radius:5px">Facturen van deze klant zijn uitgesloten uit alle KPIs en tabellen.</div>':''}
       <div id="flag-st-customer_${contactId}" class="flag-saving"></div>
     </div>
 
-    <!-- NOTITIES — direct onder flags -->
     <div class="ps">
       <div class="ps-title">${notesLabel}</div>
       <div class="notes-box" id="cnotes-list-${contactId}">${shownHTML}</div>
       <div class="note-form">
         <input class="note-author" id="cna-${contactId}" placeholder="Jouw naam" maxlength="50" value="${esc(savedName)}">
-        <textarea class="note-textarea" id="cnt-${contactId}" placeholder="Notitie over deze klant…" rows="3"></textarea>
+        <textarea class="note-textarea" id="cnt-${contactId}" placeholder="Notitie over deze klant..." rows="3"></textarea>
         <button class="note-submit"
-          data-key="customer_${contactId}"
-          data-author="cna-${contactId}"
-          data-text="cnt-${contactId}"
-          data-status="cns-${contactId}"
-          data-list="cnotes-list-${contactId}"
-          data-type="customer"
+          data-key="customer_${contactId}" data-author="cna-${contactId}"
+          data-text="cnt-${contactId}" data-status="cns-${contactId}"
+          data-list="cnotes-list-${contactId}" data-type="customer"
           onclick="saveNoteFromBtn(this)">Notitie opslaan</button>
         <span id="cns-${contactId}" class="note-status"></span>
       </div>
       ${tokenSection}
     </div>
 
-    <!-- OVERZICHT -->
     <div class="customer-summary">
       <div class="cs-item"><span class="cs-label">Totaal open</span><span class="cs-value">${fmtE(cust.total_open)}</span></div>
       <div class="cs-item"><span class="cs-label">Verlopen</span><span class="cs-value" style="color:var(--red)">${fmtE(cust.total_overdue)}</span></div>
@@ -771,7 +961,7 @@ function openCustomerPanel(contactId){
     </div>
 
     ${overdue.length?`<div class="ps"><div class="ps-title">Verlopen facturen (${overdue.length})</div><div class="inv-list">${overdue.map(invCard).join('')}</div></div>`:''}
-    ${current.length?`<div class="ps"><div class="ps-title">Openstaand — niet verlopen (${current.length})</div><div class="inv-list">${current.map(invCard).join('')}</div></div>`:''}
+    ${current.length?`<div class="ps"><div class="ps-title">Openstaand, niet verlopen (${current.length})</div><div class="inv-list">${current.map(invCard).join('')}</div></div>`:''}
 
     <div class="ps">
       <div class="ps-title">Alle factuurnotities van deze klant</div>
@@ -792,7 +982,7 @@ function showAllCustNotes(contactId){
 
 // ── INVOICE PANEL ─────────────────────────────────────────────────────────
 function openInvoicePanel(invoiceId,returnToCustomer,returnToFilter,returnToFilterLabel){
-  const inv=_data.invoices.find(i=>i.id===invoiceId);
+  const inv=(_data.invoices||[]).find(i=>i.id===invoiceId);
   if(!inv) return;
   const contactId=inv.contact_id;
   const invFlags=getFlags(invoiceId);
@@ -809,54 +999,74 @@ function openInvoicePanel(invoiceId,returnToCustomer,returnToFilter,returnToFilt
   const custNotes=(_notes['customer_'+contactId]||[]).slice().reverse();
   const custNotesHTML=custNotes.length
     ?custNotes.map(n=>`<div class="note-item customer-note">
-        <div class="note-meta"><span>${esc(n.author||'Anoniem')} — klantnotitie</span><span>${new Date(n.ts).toLocaleString('nl-NL')}</span></div>
+        <div class="note-meta"><span>${esc(n.author||'Anoniem')} | klantnotitie</span><span>${new Date(n.ts).toLocaleString('nl-NL')}</span></div>
         <div class="note-text-wrap"><div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div></div>
       </div>`).join('')
     :'<p class="no-data">Geen klantnotities.</p>';
 
-  const breadcrumb=returnToCustomer
-    ?`<div class="breadcrumb"><a onclick="openCustomerPanel('${returnToCustomer}')">← ${esc(inv.company)}</a><span class="breadcrumb-sep">/</span><span>${esc(inv.invoice_no)}</span></div>`
-    :returnToFilter
-    ?`<div class="breadcrumb"><a onclick="openFilteredPanel('${returnToFilter}','${decodeURIComponent(returnToFilterLabel||'')}')">← ${decodeURIComponent(returnToFilterLabel||'Terug')}</a><span class="breadcrumb-sep">/</span><span>${esc(inv.invoice_no)}</span></div>`
-    :`<div class="breadcrumb"><a onclick="openCustomerPanel('${contactId}')">← Alle facturen ${esc(inv.company)}</a></div>`;
+  // BREADCRUMB — fixed back navigation for bucket panels
+  let breadcrumb='';
+  if(returnToCustomer){
+    breadcrumb=`<div class="breadcrumb"><a onclick="openCustomerPanel('${returnToCustomer}')">&larr; ${esc(inv.company)}</a><span class="breadcrumb-sep">/</span><span>${esc(inv.invoice_no)}</span></div>`;
+  } else if(returnToFilter){
+    const decodedLabel=decodeURIComponent(returnToFilterLabel||'Terug');
+    const isBucket=returnToFilter.startsWith('bucket_')||returnToFilter==='current';
+    if(isBucket){
+      // Parse bucket key and label back for openBucketPanel
+      const rawKey=returnToFilter.replace('bucket_','');
+      breadcrumb=`<div class="breadcrumb"><a onclick="openBucketPanel('${rawKey}','${decodedLabel.replace('AR Aging: ','')}')">&larr; ${esc(decodedLabel)}</a><span class="breadcrumb-sep">/</span><span>${esc(inv.invoice_no)}</span></div>`;
+    } else {
+      breadcrumb=`<div class="breadcrumb"><a onclick="openFilteredPanel('${returnToFilter}','${decodedLabel}')">&larr; ${esc(decodedLabel)}</a><span class="breadcrumb-sep">/</span><span>${esc(inv.invoice_no)}</span></div>`;
+    }
+  } else {
+    breadcrumb=`<div class="breadcrumb"><a onclick="openCustomerPanel('${contactId}')">&larr; Alle facturen ${esc(inv.company)}</a></div>`;
+  }
 
-  // Moneybird status
   const stMap={
-    open:`<span class="mb-status mb-open">● Open — geen automatische herinnering verstuurd</span>`,
-    late:`<span class="mb-status mb-late">● Te laat — Moneybird heeft dit als verlopen gemarkeerd</span>`,
-    reminded:`<span class="mb-status mb-reminded">● Herinnerd — Moneybird heeft automatisch een herinnering verstuurd</span>`,
+    open:`<span class="mb-status mb-open">Open - geen herinnering verstuurd</span>`,
+    late:`<span class="mb-status mb-late">Te laat - Moneybird heeft dit als verlopen gemarkeerd</span>`,
+    reminded:`<span class="mb-status mb-reminded">Herinnerd - automatische herinnering verstuurd${inv.reminder_date?' op '+inv.reminder_date:''}</span>`,
+    bad_debt:`<span class="mb-status" style="background:#fef2f2;color:#991b1b">Oninbaar - als oninbaar gemarkeerd in Moneybird</span>`,
   };
   const stHTML=stMap[inv.state]||`<span class="mb-status">${esc(inv.state)}</span>`;
 
+  // Score info tooltip
+  const scoreInfo=`Score = ${inv.days_overdue} dagen x 1.0 + (${fmt(inv.amount)} / 1000) x 0.3 = ${inv.score}
+Dagen verlopen weegt het zwaarst.
+URGENT: score >= 70
+High: score 40-69
+Monitor: score < 40`;
+
   const tokenSection=localStorage.getItem('github_notes_token')?'':tokenSetupHTML();
+
+  // Bad debt: only show, no manual checkbox
+  const badDebtNotice=inv.is_bad_debt
+    ?`<div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:6px;padding:10px 14px;font-size:12px;color:#991b1b;margin-top:8px">
+        Deze factuur is als <strong>oninbaar</strong> gemarkeerd in Moneybird en is uitgesloten uit alle KPIs.
+      </div>`:'';
 
   openPanel(inv.invoice_no,esc(inv.company),`
     ${breadcrumb}
 
-    <!-- FACTUUR FLAGS -->
     <div class="ps">
       <div class="ps-title">Factuur Status</div>
-      <div class="flag-row">
-        ${flagCheckHTML(invoiceId,'collector','📋 Bij incassobureau','checked-collector',invFlags.collector)}
-        ${flagCheckHTML(invoiceId,'bad_debt','✕ Oninbaar','checked-bad-debt',invFlags.bad_debt)}
-      </div>
+      ${badDebtNotice}
+      ${!inv.is_bad_debt?`<div class="flag-row">
+        ${flagCheckHTML(invoiceId,'collector','Bij incassobureau','checked-collector',invFlags.collector)}
+      </div>`:''}
       <div id="flag-st-${invoiceId}" class="flag-saving"></div>
     </div>
 
-    <!-- NOTITIES — bovenaan -->
     <div class="ps">
       <div class="ps-title">Notities bij deze factuur</div>
       <div class="notes-box" id="notes-list-${invoiceId}">${notesHTML}</div>
       <div class="note-form">
         <input class="note-author" id="na-${invoiceId}" placeholder="Jouw naam" maxlength="50" value="${esc(savedName)}">
-        <textarea class="note-textarea" id="nt-${invoiceId}" placeholder="Bijv: klant gebeld 12/03, belooft te betalen voor 20/03…" rows="3"></textarea>
+        <textarea class="note-textarea" id="nt-${invoiceId}" placeholder="Bijv: klant gebeld 12/03, belooft te betalen voor 20/03..." rows="3"></textarea>
         <button class="note-submit"
-          data-key="${invoiceId}"
-          data-author="na-${invoiceId}"
-          data-text="nt-${invoiceId}"
-          data-status="ns-${invoiceId}"
-          data-list="notes-list-${invoiceId}"
-          data-type="invoice"
+          data-key="${invoiceId}" data-author="na-${invoiceId}"
+          data-text="nt-${invoiceId}" data-status="ns-${invoiceId}"
+          data-list="notes-list-${invoiceId}" data-type="invoice"
           onclick="saveNoteFromBtn(this)">Notitie opslaan</button>
         <span id="ns-${invoiceId}" class="note-status"></span>
       </div>
@@ -864,34 +1074,38 @@ function openInvoicePanel(invoiceId,returnToCustomer,returnToFilter,returnToFilt
       <p class="github-note">Notities zijn ook zichtbaar in het klantoverzicht van ${esc(inv.company)}.</p>
     </div>
 
-    <!-- KLANTNOTITIES -->
     <div class="ps">
-      <div class="ps-title">Klantnotities — ${esc(inv.company)}</div>
+      <div class="ps-title">Klantnotities | ${esc(inv.company)}</div>
       <div class="notes-box">${custNotesHTML}</div>
     </div>
 
-    <!-- HERINNERINGEN -->
     <div class="ps">
       <div class="ps-title">Moneybird Status</div>
       ${stHTML}
-      <p style="font-size:12px;color:var(--muted);margin-top:8px">
-        Moneybird verstuurt automatisch herinneringen op basis van je ingestelde betalingstermijnen.
-        Handmatige belnotities kun je hierboven opslaan.
+      <p style="font-size:12px;color:var(--text-3);margin-top:8px">
+        Moneybird verstuurt automatisch herinneringen. Belnotities kun je hierboven opslaan.
       </p>
     </div>
 
-    <!-- FACTUURGEGEVENS -->
     <div class="ps">
       <div class="ps-title">Factuurgegevens</div>
       <div class="detail-grid">
         <div class="detail-field"><label>Klant</label><value>${esc(inv.company)}</value></div>
         <div class="detail-field"><label>Factuur Nr.</label><value class="mono">${esc(inv.invoice_no)}</value></div>
-        <div class="detail-field"><label>Factuurdatum</label><value class="mono">${inv.invoice_date||'—'}</value></div>
+        <div class="detail-field"><label>Factuurdatum</label><value class="mono">${inv.invoice_date||'-'}</value></div>
         <div class="detail-field"><label>Vervaldatum</label><value class="mono">${inv.due_date}</value></div>
         <div class="detail-field"><label>Open bedrag</label><value class="mono" style="font-size:18px;font-weight:700">${fmtE(inv.amount)}</value></div>
         <div class="detail-field"><label>Verlopen</label><value><span class="days-chip ${daysClass(inv.days_overdue)}">${daysLabel(inv.days_overdue)}</span></value></div>
         <div class="detail-field"><label>Prioriteit</label><value>${levelPill(inv.level)}</value></div>
-        <div class="detail-field"><label>Score</label><value class="mono">${inv.score}</value></div>
+        <div class="detail-field">
+          <label>Score</label>
+          <value class="mono">
+            <span class="score-info">
+              ${inv.score}
+              <span class="info-icon" data-tooltip="${scoreInfo}" title="${scoreInfo}">i</span>
+            </span>
+          </value>
+        </div>
       </div>
     </div>
   `);
@@ -904,9 +1118,9 @@ function saveNoteFromBtn(btn){
 }
 function tokenSetupHTML(){
   return `<div class="token-setup">
-    <strong>🔑 Eenmalige instelling voor teambrede notities</strong><br>
+    <strong>Eenmalige instelling voor teambrede notities</strong><br>
     Maak een token aan via: <a href="https://github.com/settings/tokens/new" target="_blank">github.com/settings/tokens</a><br>
-    Scope: <strong>repo</strong> → Generate → plak hieronder:<br>
+    Scope: <strong>repo</strong> &rarr; Generate &rarr; plak hieronder:<br>
     <div class="token-input-row">
       <input class="token-input" id="token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" type="password">
       <button class="token-btn" onclick="saveToken()">Opslaan</button>
@@ -917,7 +1131,7 @@ function saveToken(){
   const t=document.getElementById('token-input')?.value.trim();
   if(!t) return;
   localStorage.setItem('github_notes_token',t);
-  document.querySelector('.token-setup').innerHTML='<span style="color:#16a34a;font-weight:600">✅ Token opgeslagen!</span>';
+  document.querySelector('.token-setup').innerHTML='<span style="color:#16a34a;font-weight:600">Token opgeslagen!</span>';
 }
 
 async function saveNote(noteKey,authorId,textId,statusId,listId,type){
@@ -925,20 +1139,16 @@ async function saveNote(noteKey,authorId,textId,statusId,listId,type){
   const author=(authorEl?.value.trim())||'Anoniem';
   const text=document.getElementById(textId)?.value.trim();
   const status=document.getElementById(statusId);
-  if(!text){if(status)status.textContent='⚠️ Notitie is leeg.';return;}
-
-  // Remember name
+  if(!text){if(status)status.textContent='Notitie is leeg.';return;}
   if(author&&author!=='Anoniem') localStorage.setItem('dso_author_name',author);
-
-  if(status)status.textContent='💾 Opslaan…';
+  if(status)status.textContent='Opslaan...';
   if(!_notes[noteKey])_notes[noteKey]=[];
   _notes[noteKey].push({author,text,ts:new Date().toISOString()});
-
   const token=localStorage.getItem('github_notes_token');
   if(!token){
     refreshNotesList(noteKey,listId,type);
     if(document.getElementById(textId))document.getElementById(textId).value='';
-    if(status)status.textContent='⚠️ Alleen lokaal — voer GitHub token in om te delen met team.';
+    if(status)status.textContent='Alleen lokaal opgeslagen. Voer GitHub token in om te delen.';
     return;
   }
   try{
@@ -953,11 +1163,11 @@ async function saveNote(noteKey,authorId,textId,statusId,listId,type){
     if(!r.ok)throw new Error('HTTP '+r.status);
     const j=await r.json();
     _notesSHA=j.content.sha;
-    if(status)status.textContent='✅ Opgeslagen voor het hele team!';
+    if(status)status.textContent='Opgeslagen voor het hele team!';
     if(document.getElementById(textId))document.getElementById(textId).value='';
     refreshNotesList(noteKey,listId,type);
   }catch(e){
-    if(status)status.textContent='❌ Fout: '+e.message;
+    if(status)status.textContent='Fout: '+e.message;
   }
 }
 
