@@ -33,64 +33,91 @@ body{font-family:var(--serif);background:var(--bg);color:var(--text);min-height:
 @media(max-width:768px){.grid-2,.grid-3{grid-template-columns:1fr;}}
 
 /* KPI */
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:2px;margin-bottom:32px;border:2px solid var(--ink);border-radius:4px;overflow:hidden;}
-.kpi{background:var(--surface);padding:20px;border-right:1px solid var(--border);position:relative;transition:background .15s;}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:2px;margin-bottom:32px;border:2px solid var(--ink);border-radius:4px;overflow:hidden;}
+.kpi{background:var(--surface);padding:18px 16px 24px;border-right:1px solid var(--border);position:relative;transition:background .15s;}
 .kpi:last-child{border-right:none;}
-.kpi:hover{background:#fafaf8;}
 .kpi.clickable{cursor:pointer;}
 .kpi.clickable:hover{background:#f0f7ff;}
-.kpi.clickable::after{content:'↗';position:absolute;bottom:10px;right:12px;font-size:11px;color:var(--muted);}
+.kpi.clickable::after{content:'↗';position:absolute;bottom:8px;right:10px;font-size:10px;color:var(--muted);}
+.kpi:not(.clickable):hover{background:#fafaf8;}
 .kpi-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
-.kpi-value{font-size:26px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;}
-.kpi-sub{font-size:11px;color:var(--muted);margin-top:5px;font-family:var(--mono);}
-.kpi-badge{position:absolute;top:12px;right:12px;font-size:9px;font-weight:700;letter-spacing:.5px;padding:3px 7px;border-radius:2px;}
+.kpi-value{font-size:24px;font-weight:700;line-height:1;font-variant-numeric:tabular-nums;}
+.kpi-sub{font-size:10px;color:var(--muted);margin-top:5px;font-family:var(--mono);}
+.kpi-badge{position:absolute;top:10px;right:10px;font-size:9px;font-weight:700;letter-spacing:.5px;padding:2px 6px;border-radius:2px;}
 .badge-good{background:#dcfce7;color:var(--green);}
 .badge-warn{background:#fef9c3;color:var(--amber);}
 .badge-urgent{background:#fee2e2;color:var(--red);}
 
 /* CARD */
 .card{background:var(--surface);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:20px;}
-.card-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border);background:#fafaf8;}
+.card-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border);background:#fafaf8;flex-wrap:wrap;gap:8px;}
 .card-title{font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);}
 .card-body{padding:20px;}
-.chart-wrap{position:relative;height:220px;}
+.chart-wrap{position:relative;height:240px;}
+
+/* CHART TOGGLES */
+.chart-toggles{display:flex;gap:8px;flex-wrap:wrap;}
+.toggle-btn{display:flex;align-items:center;gap:6px;padding:4px 10px;border-radius:3px;border:1.5px solid var(--border);background:#fff;cursor:pointer;font-family:var(--serif);font-size:11px;font-weight:600;transition:all .15s;opacity:.45;}
+.toggle-btn.active{opacity:1;}
+.toggle-btn .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
 
 /* AGING */
-.aging-row{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--border);}
+.aging-row{display:flex;align-items:center;gap:10px;padding:8px 4px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s;border-radius:2px;}
 .aging-row:last-child{border-bottom:none;}
-.aging-label{font-family:var(--mono);font-size:12px;width:88px;flex-shrink:0;color:var(--muted);}
-.aging-bar-wrap{flex:1;background:var(--border);border-radius:2px;height:8px;overflow:hidden;}
+.aging-row:hover{background:#f0f7ff;}
+.aging-label{font-family:var(--mono);font-size:11px;width:82px;flex-shrink:0;color:var(--muted);}
+.aging-bar-wrap{flex:1;background:var(--border);border-radius:2px;height:7px;overflow:hidden;}
 .aging-bar{height:100%;border-radius:2px;transition:width 1s ease;}
-.aging-amount{font-family:var(--mono);font-size:12px;font-weight:500;width:90px;text-align:right;flex-shrink:0;}
-.aging-pct{font-family:var(--mono);font-size:11px;color:var(--muted);width:38px;text-align:right;flex-shrink:0;}
+.aging-amount{font-family:var(--mono);font-size:11px;font-weight:500;width:82px;text-align:right;flex-shrink:0;}
+.aging-pct{font-family:var(--mono);font-size:10px;color:var(--muted);width:34px;text-align:right;flex-shrink:0;}
 
 /* PRIORITY LEGEND */
-.priority-legend{display:flex;flex-direction:column;gap:10px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
-.legend-item{display:flex;align-items:flex-start;gap:10px;}
-.legend-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;margin-top:3px;}
-.legend-text strong{font-size:12px;font-weight:700;display:block;}
+.priority-legend{display:flex;flex-direction:column;gap:9px;margin-top:12px;padding-top:12px;border-top:1px solid var(--border);}
+.legend-item{display:flex;align-items:flex-start;gap:9px;}
+.legend-dot{width:9px;height:9px;border-radius:2px;flex-shrink:0;margin-top:3px;}
+.legend-text strong{font-size:11px;font-weight:700;display:block;}
 .legend-text span{font-size:11px;color:var(--muted);line-height:1.4;}
 
 /* TABLE */
 .data-table{width:100%;border-collapse:collapse;font-size:13px;}
-.data-table th{text-align:left;padding:10px 14px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--border);background:#fafaf8;white-space:nowrap;}
-.data-table td{padding:10px 14px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle;}
+.data-table th{text-align:left;padding:10px 12px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);border-bottom:2px solid var(--border);background:#fafaf8;white-space:nowrap;position:sticky;top:0;z-index:2;}
+.data-table td{padding:9px 12px;border-bottom:1px solid var(--border);color:var(--text);vertical-align:middle;white-space:nowrap;}
 .data-table tr:last-child td{border-bottom:none;}
 .data-table tbody tr{cursor:pointer;}
 .data-table tbody tr:hover td{background:#f0f7ff;}
 .data-table td.mono{font-family:var(--mono);font-size:12px;}
 .data-table td.amount{font-family:var(--mono);font-weight:600;}
-.pill{display:inline-block;padding:2px 8px;border-radius:2px;font-size:10px;font-weight:700;letter-spacing:.5px;white-space:nowrap;}
+/* FIX: scrollable table wrapper */
+.table-scroll{overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;}
+
+.pill{display:inline-block;padding:2px 7px;border-radius:2px;font-size:10px;font-weight:700;letter-spacing:.5px;white-space:nowrap;}
 .pill-urgent{background:#fee2e2;color:var(--red);}
 .pill-high{background:#ffedd5;color:var(--orange);}
 .pill-ok{background:#fef9c3;color:var(--amber);}
 .pill-current{background:#f0fdf4;color:var(--green);}
-.days-chip{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:600;padding:2px 7px;border-radius:2px;}
+.pill-bankrupt{background:#f3e8ff;color:#7c3aed;}
+.pill-collector{background:#fff7ed;color:#c2410c;}
+.pill-bad-debt{background:#fef2f2;color:#991b1b;}
+.pill-credit{background:#f0fdf4;color:var(--green);}
+
+.days-chip{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:600;padding:2px 6px;border-radius:2px;}
 .days-0{background:#f0fdf4;color:var(--green);}
 .days-30{background:#fef9c3;color:var(--amber);}
 .days-60{background:#ffedd5;color:var(--orange);}
 .days-90{background:#fee2e2;color:var(--red);}
 .click-hint{font-size:11px;color:var(--muted);font-family:var(--mono);}
+
+/* FLAGS */
+.flag-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px;}
+.flag-check{display:flex;align-items:center;gap:6px;padding:5px 10px;border:1.5px solid var(--border);border-radius:4px;cursor:pointer;font-size:12px;font-weight:500;transition:all .15s;user-select:none;background:#fff;}
+.flag-check .fc-box{width:14px;height:14px;border:2px solid #ccc;border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff;transition:all .15s;}
+.flag-check.checked-bankrupt{background:#f3e8ff;border-color:#7c3aed;color:#7c3aed;}
+.flag-check.checked-bankrupt .fc-box{background:#7c3aed;border-color:#7c3aed;}
+.flag-check.checked-collector{background:#fff7ed;border-color:#c2410c;color:#c2410c;}
+.flag-check.checked-collector .fc-box{background:#c2410c;border-color:#c2410c;}
+.flag-check.checked-bad-debt{background:#fef2f2;border-color:#991b1b;color:#991b1b;}
+.flag-check.checked-bad-debt .fc-box{background:#991b1b;border-color:#991b1b;}
+.flag-saving{font-size:11px;color:var(--muted);font-style:italic;margin-top:4px;min-height:16px;}
 
 /* LOADING */
 #loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:80vh;gap:16px;}
@@ -100,18 +127,19 @@ body{font-family:var(--serif);background:var(--bg);color:var(--text);min-height:
 #dashboard{display:none;}
 footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;color:var(--muted);}
 
-/* ── SLIDE PANEL (shared by invoice + customer) ── */
+/* SLIDE PANEL — KEY FIX: panel is flex column, body scrolls */
 #panel-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.45);backdrop-filter:blur(2px);align-items:flex-start;justify-content:flex-end;}
 #panel-overlay.open{display:flex;}
-#panel{width:min(580px,100vw);height:100vh;overflow-y:auto;background:var(--surface);border-left:2px solid var(--ink);display:flex;flex-direction:column;animation:slideIn .2s ease;}
+#panel{width:min(640px,100vw);height:100vh;display:flex;flex-direction:column;background:var(--surface);border-left:2px solid var(--ink);animation:slideIn .2s ease;}
 @keyframes slideIn{from{transform:translateX(40px);opacity:0}to{transform:translateX(0);opacity:1}}
-.panel-header{padding:20px 24px;background:var(--ink);color:#fff;display:flex;align-items:flex-start;justify-content:space-between;position:sticky;top:0;z-index:10;gap:12px;}
-.panel-header-text{flex:1;}
-.panel-header h2{font-size:15px;font-weight:700;line-height:1.3;}
+.panel-header{padding:18px 24px;background:var(--ink);color:#fff;display:flex;align-items:flex-start;justify-content:space-between;flex-shrink:0;gap:12px;}
+.panel-header-text{flex:1;min-width:0;}
+.panel-header h2{font-size:15px;font-weight:700;line-height:1.3;word-break:break-word;}
 .panel-header .panel-sub{font-size:11px;opacity:.6;font-family:var(--mono);margin-top:3px;}
 .close-btn{background:none;border:none;color:#fff;font-size:22px;cursor:pointer;padding:0 4px;line-height:1;opacity:.7;flex-shrink:0;}
 .close-btn:hover{opacity:1;}
-.panel-body{padding:24px;flex:1;}
+/* CRITICAL: panel-body scrolls independently */
+.panel-body{flex:1;overflow-y:auto;overflow-x:hidden;padding:24px;}
 
 /* PANEL SECTIONS */
 .ps{margin-bottom:24px;}
@@ -121,53 +149,63 @@ footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;col
 .detail-field value{font-size:14px;font-weight:500;display:block;}
 .detail-field value.mono{font-family:var(--mono);}
 
-/* INVOICE LIST IN CUSTOMER PANEL */
-.inv-list{display:flex;flex-direction:column;gap:8px;}
-.inv-card{border:1px solid var(--border);border-radius:4px;padding:12px 14px;cursor:pointer;transition:background .1s,border-color .1s;}
+/* INVOICE CARDS */
+.inv-list{display:flex;flex-direction:column;gap:7px;}
+.inv-card{border:1px solid var(--border);border-radius:4px;padding:11px 13px;cursor:pointer;transition:background .1s,border-color .1s;}
 .inv-card:hover{background:#f0f7ff;border-color:#bfdbfe;}
 .inv-card.is-overdue{border-left:3px solid var(--red);}
 .inv-card.is-current{border-left:3px solid var(--green);}
 .inv-card-top{display:flex;align-items:center;justify-content:space-between;gap:8px;}
 .inv-card-no{font-family:var(--mono);font-size:12px;font-weight:600;}
 .inv-card-amount{font-family:var(--mono);font-size:13px;font-weight:700;}
-.inv-card-bottom{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:11px;color:var(--muted);font-family:var(--mono);}
-.inv-note-preview{font-size:11px;color:var(--amber);margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.inv-card-bottom{display:flex;align-items:center;gap:7px;margin-top:5px;font-size:11px;color:var(--muted);font-family:var(--mono);flex-wrap:wrap;}
+.inv-note-preview{font-size:11px;color:var(--amber);margin-top:4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
 
 /* BREADCRUMB */
-.breadcrumb{display:flex;align-items:center;gap:6px;font-size:12px;margin-bottom:16px;color:var(--muted);}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:12px;margin-bottom:16px;color:var(--muted);flex-wrap:wrap;}
 .breadcrumb a{color:var(--accent);cursor:pointer;text-decoration:underline;}
 .breadcrumb-sep{color:var(--border);}
 
 /* NOTES */
-.note-item{background:#fffbeb;border:1px solid #fde68a;border-radius:4px;padding:12px;margin-bottom:8px;}
-.note-item.customer-note{background:#eff6ff;border-color:#bfdbfe;}
-.note-item .note-meta{font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:4px;display:flex;justify-content:space-between;}
+.notes-box{background:#fafaf8;border:1px solid var(--border);border-radius:4px;padding:12px;margin-bottom:12px;}
+.note-item{border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:10px;}
+.note-item:last-child{border-bottom:none;padding-bottom:0;margin-bottom:0;}
+.note-item.customer-note .note-text-wrap{background:#eff6ff;border-left:3px solid #93c5fd;padding:8px 10px;border-radius:0 4px 4px 0;}
+.note-item .note-text-wrap{background:#fffbeb;border-left:3px solid #fcd34d;padding:8px 10px;border-radius:0 4px 4px 0;}
+.note-item .note-meta{font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:5px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;}
 .note-item .note-text{font-size:13px;line-height:1.5;}
 .no-data{font-size:13px;color:var(--muted);font-style:italic;}
-.note-form{display:flex;flex-direction:column;gap:8px;margin-top:12px;}
-.note-author{font-family:var(--mono);font-size:12px;padding:8px 12px;border:1px solid var(--border);border-radius:4px;background:#fff;width:100%;}
-.note-textarea{font-family:var(--serif);font-size:13px;padding:10px 12px;border:1px solid var(--border);border-radius:4px;background:#fff;width:100%;resize:vertical;min-height:72px;}
+.notes-more{font-size:12px;color:var(--accent);cursor:pointer;margin-top:6px;display:inline-block;}
+.notes-more:hover{text-decoration:underline;}
+
+/* NOTE FORM */
+.note-form{display:flex;flex-direction:column;gap:7px;margin-top:12px;}
+.note-author{font-family:var(--mono);font-size:12px;padding:8px 11px;border:1px solid var(--border);border-radius:4px;background:#fff;width:100%;}
+.note-textarea{font-family:var(--serif);font-size:13px;padding:9px 11px;border:1px solid var(--border);border-radius:4px;background:#fff;width:100%;resize:vertical;min-height:68px;}
 .note-textarea:focus,.note-author:focus{outline:none;border-color:var(--accent);}
-.note-submit{align-self:flex-end;background:var(--ink);color:#fff;border:none;border-radius:4px;padding:8px 18px;font-family:var(--serif);font-size:13px;font-weight:600;cursor:pointer;}
+.note-submit{align-self:flex-end;background:var(--ink);color:#fff;border:none;border-radius:4px;padding:7px 16px;font-family:var(--serif);font-size:13px;font-weight:600;cursor:pointer;}
 .note-submit:hover{background:#333;}
 .note-status{font-size:12px;color:var(--muted);font-style:italic;}
-.github-note{font-size:11px;color:var(--muted);margin-top:6px;font-style:italic;}
-.token-setup{background:#eff6ff;border:1px solid #bfdbfe;border-radius:4px;padding:12px;margin-top:8px;font-size:12px;line-height:1.6;}
+.github-note{font-size:11px;color:var(--muted);margin-top:5px;font-style:italic;}
+
+/* TOKEN SETUP */
+.token-setup{background:#eff6ff;border:1px solid #bfdbfe;border-radius:4px;padding:11px;margin-top:7px;font-size:12px;line-height:1.6;}
 .token-setup a{color:var(--accent);}
-.token-input-row{display:flex;gap:8px;margin-top:8px;}
-.token-input{flex:1;font-family:var(--mono);font-size:11px;padding:6px 10px;border:1px solid var(--border);border-radius:4px;}
-.token-btn{background:var(--accent);color:#fff;border:none;border-radius:4px;padding:6px 12px;font-size:12px;cursor:pointer;white-space:nowrap;}
+.token-input-row{display:flex;gap:7px;margin-top:7px;}
+.token-input{flex:1;font-family:var(--mono);font-size:11px;padding:6px 9px;border:1px solid var(--border);border-radius:4px;}
+.token-btn{background:var(--accent);color:#fff;border:none;border-radius:4px;padding:6px 11px;font-size:12px;cursor:pointer;white-space:nowrap;}
 
-/* REMINDER */
-.reminder-item{background:#f8f7f4;border:1px solid var(--border);border-radius:4px;padding:12px;margin-bottom:8px;}
-.reminder-item .r-date{font-family:var(--mono);font-size:11px;color:var(--muted);}
-.reminder-item .r-text{font-size:13px;margin-top:4px;}
+/* MONEYBIRD STATUS */
+.mb-status{display:inline-flex;align-items:center;gap:6px;font-size:12px;padding:5px 10px;border-radius:4px;font-weight:500;}
+.mb-open{background:#f0fdf4;color:#15803d;}
+.mb-late{background:#fef9c3;color:#a16207;}
+.mb-reminded{background:#eff6ff;color:#1d4ed8;}
 
-/* CUSTOMER SUMMARY BAR */
-.customer-summary{display:flex;gap:16px;padding:14px 16px;background:#f8f7f4;border-radius:4px;margin-bottom:16px;flex-wrap:wrap;}
+/* CUSTOMER SUMMARY */
+.customer-summary{display:flex;gap:12px;padding:12px 14px;background:#f8f7f4;border-radius:4px;margin-bottom:16px;flex-wrap:wrap;}
 .cs-item{display:flex;flex-direction:column;gap:2px;}
-.cs-label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);}
-.cs-value{font-size:16px;font-weight:700;font-family:var(--mono);}
+.cs-label{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);}
+.cs-value{font-size:15px;font-weight:700;font-family:var(--mono);}
 </style>
 </head>
 <body>
@@ -193,11 +231,21 @@ footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;col
 
   <div class="grid-3">
     <div class="card" style="margin-bottom:0">
-      <div class="card-header"><span class="card-title">DSO Trend (90 dagen)</span></div>
-      <div class="card-body"><div class="chart-wrap"><canvas id="dsoChart"></canvas></div></div>
+      <div class="card-header">
+        <span class="card-title">Trend (90 dagen)</span>
+        <div class="chart-toggles">
+          <div class="toggle-btn active" id="toggle-dso" style="color:#1a1916" onclick="toggleSeries('dso')">
+            <div class="dot" style="background:#1a1916"></div>DSO
+          </div>
+          <div class="toggle-btn active" id="toggle-pct" style="color:#2563eb" onclick="toggleSeries('pct')">
+            <div class="dot" style="background:#2563eb"></div>% Verlopen
+          </div>
+        </div>
+      </div>
+      <div class="card-body"><div class="chart-wrap"><canvas id="trendChart"></canvas></div></div>
     </div>
     <div class="card" style="margin-bottom:0">
-      <div class="card-header"><span class="card-title">AR Aging</span></div>
+      <div class="card-header"><span class="card-title">AR Aging</span><span class="click-hint">↗ klik voor details</span></div>
       <div class="card-body" id="aging-bars"></div>
     </div>
   </div>
@@ -214,20 +262,11 @@ footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;col
     <div class="card" style="margin-bottom:0">
       <div class="card-header"><span class="card-title">Priority Distribution</span></div>
       <div class="card-body">
-        <div class="chart-wrap" style="height:150px"><canvas id="priorityChart"></canvas></div>
+        <div class="chart-wrap" style="height:140px"><canvas id="priorityChart"></canvas></div>
         <div class="priority-legend">
-          <div class="legend-item">
-            <div class="legend-dot" style="background:#dc2626"></div>
-            <div class="legend-text"><strong style="color:#dc2626">URGENT</strong><span>Score ≥ 70 — Hoog bedrag én lang uitstaand. Bel vandaag nog.</span></div>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot" style="background:#ea580c"></div>
-            <div class="legend-text"><strong style="color:#ea580c">High</strong><span>Score 40–69 — Aanzienlijk risico. Stuur formele herinnering.</span></div>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot" style="background:#d97706"></div>
-            <div class="legend-text"><strong style="color:#d97706">Monitor</strong><span>Score &lt; 40 — Vriendelijke herinnering volstaat.</span></div>
-          </div>
+          <div class="legend-item"><div class="legend-dot" style="background:#dc2626"></div><div class="legend-text"><strong style="color:#dc2626">URGENT</strong><span>Score ≥ 70 — Bel vandaag.</span></div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#ea580c"></div><div class="legend-text"><strong style="color:#ea580c">High</strong><span>Score 40–69 — Formele herinnering.</span></div></div>
+          <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div><div class="legend-text"><strong style="color:#d97706">Monitor</strong><span>Score &lt; 40 — Vriendelijke herinnering.</span></div></div>
         </div>
       </div>
     </div>
@@ -237,15 +276,30 @@ footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;col
   <div class="card">
     <div class="card-header">
       <span class="card-title">Verlopen Facturen — Prioriteitsvolgorde</span>
-      <span class="click-hint">↗ klik op een rij voor details &amp; notities</span>
+      <span class="click-hint">↗ klik op rij voor details &amp; notities</span>
     </div>
-    <div style="overflow-x:auto">
+    <div class="table-scroll">
       <table class="data-table">
         <thead><tr>
           <th>#</th><th>Klant</th><th>Factuur</th><th>Vervaldatum</th>
-          <th>Bedrag (€)</th><th>Dagen verlopen</th><th>Prioriteit</th>
+          <th>Bedrag (€)</th><th>Verlopen</th><th>Prioriteit</th><th>Status</th>
         </tr></thead>
         <tbody id="overdue-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Openstaande Creditfacturen</span>
+      <span id="credit-count" class="click-hint"></span>
+    </div>
+    <div class="table-scroll">
+      <table class="data-table">
+        <thead><tr>
+          <th>#</th><th>Klant</th><th>Factuur</th><th>Datum</th><th>Bedrag (€)</th><th>Status</th>
+        </tr></thead>
+        <tbody id="credit-tbody"></tbody>
       </table>
     </div>
   </div>
@@ -272,94 +326,103 @@ footer{text-align:center;padding:32px;font-family:var(--mono);font-size:11px;col
 const GITHUB_REPO        = 'ThommieAlfa/dso-dashboard';
 const NOTES_FILE         = 'docs/notes.json';
 const OVERDUE_PCT_TARGET = 10;
+const DSO_TARGET         = 36;
 
 const fmt  = n => new Intl.NumberFormat('nl-NL',{minimumFractionDigits:0,maximumFractionDigits:0}).format(n);
 const fmtE = n => '€'+fmt(n);
-const fmtD = n => n.toFixed(1);
-const esc  = s => String(s).replace(/</g,'&lt;').replace(/>/g,'&gt;');
-const AGING_COLORS = {'Current':'#16a34a','1-30 days':'#ca8a04','31-60 days':'#ea580c','61-90 days':'#dc2626','>90 days':'#7f1d1d'};
+const fmtD = n => (+n).toFixed(1);
+const esc  = s => String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const AGING_COLORS={'Current':'#16a34a','1-30 days':'#ca8a04','31-60 days':'#ea580c','61-90 days':'#dc2626','>90 days':'#7f1d1d'};
 
-let _data = null, _notes = {}, _notesSHA = null;
-let _customerChartInstance = null;
+// days_overdue === 0 → "Openstaand", else Nd
+function daysLabel(n){ return n===0?'Openstaand':n+'d verlopen'; }
+function daysClass(n){ return n===0?'days-0':n<=30?'days-30':n<=60?'days-60':'days-90'; }
+function levelPill(l){
+  const c=l==='URGENT'?'pill-urgent':l==='High'?'pill-high':'pill-ok';
+  return `<span class="pill ${c}">${l}</span>`;
+}
+function flagPills(f){
+  const o=[];
+  if(f.bankrupt)  o.push(`<span class="pill pill-bankrupt">🏳 Failliet</span>`);
+  if(f.collector) o.push(`<span class="pill pill-collector">📋 Incasso</span>`);
+  if(f.bad_debt)  o.push(`<span class="pill pill-bad-debt">✕ Oninbaar</span>`);
+  return o.join(' ');
+}
 
-// ── LOAD ─────────────────────────────────────────────────────────────────
-async function load() {
-  try {
-    const r = await fetch('data.json?t='+Date.now());
-    if (!r.ok) throw new Error('HTTP '+r.status);
-    _data = await r.json();
+let _data=null,_notes={},_notesSHA=null,_flags={};
+let _trendChart=null,_customerChart=null;
+let _showDso=true,_showPct=true;
+
+// ── LOAD ──────────────────────────────────────────────────────────────────
+async function load(){
+  try{
+    const r=await fetch('data.json?t='+Date.now());
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    _data=await r.json();
+    _data.dso_target=DSO_TARGET;
     await loadNotes();
+    loadFlags();
     render(_data);
-  } catch(e) {
-    document.getElementById('loading').style.display = 'none';
-    const err = document.getElementById('error-msg');
-    err.style.display = 'block';
-    err.textContent = '⚠️ Kon dashboard data niet laden. Draai het Python script om data.json te genereren. ('+e.message+')';
+  }catch(e){
+    document.getElementById('loading').style.display='none';
+    const el=document.getElementById('error-msg');
+    el.style.display='block';
+    el.textContent='⚠️ Kon data niet laden. Draai het Python script om data.json te genereren. ('+e.message+')';
   }
 }
 
-async function loadNotes() {
-  try {
-    const r = await fetch('notes.json?t='+Date.now());
-    if (r.ok) _notes = await r.json();
-  } catch(e) { _notes = {}; }
-  try {
-    const r = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${NOTES_FILE}`);
-    if (r.ok) { const j = await r.json(); _notesSHA = j.sha; }
-  } catch(e) {}
+async function loadNotes(){
+  try{const r=await fetch('notes.json?t='+Date.now());if(r.ok)_notes=await r.json();}catch(e){_notes={};}
+  try{
+    const r=await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${NOTES_FILE}`);
+    if(r.ok){const j=await r.json();_notesSHA=j.sha;}
+  }catch(e){}
 }
+function loadFlags(){try{_flags=JSON.parse(localStorage.getItem('dso_flags')||'{}');}catch(e){_flags={};}}
+function saveFlags(){try{localStorage.setItem('dso_flags',JSON.stringify(_flags));}catch(e){}}
+function getFlags(id){return _flags[id]||{bankrupt:false,collector:false,bad_debt:false};}
+function setFlag(id,key,val){if(!_flags[id])_flags[id]={};_flags[id][key]=val;saveFlags();}
 
-// ── RENDER ───────────────────────────────────────────────────────────────
-function render(d) {
-  document.getElementById('loading').style.display = 'none';
-  document.getElementById('dashboard').style.display = 'block';
-  const ts = new Date(d.generated);
-  document.getElementById('sync-time').textContent =
+// ── RENDER ────────────────────────────────────────────────────────────────
+function render(d){
+  document.getElementById('loading').style.display='none';
+  document.getElementById('dashboard').style.display='block';
+  const ts=new Date(d.generated);
+  document.getElementById('sync-time').textContent=
     'Bijgewerkt '+ts.toLocaleDateString('nl-NL')+' '+ts.toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit'});
-  renderKPIs(d); renderAgingBars(d); renderDSOChart(d);
-  renderCustomerChart(d); renderPriorityChart(d); renderTable(d);
-  document.getElementById('footer').textContent =
+  renderKPIs(d);renderAgingBars(d);renderTrendChart(d);
+  renderCustomerChart(d);renderPriorityChart(d);
+  renderTable(d);renderCreditTable(d);
+  document.getElementById('footer').textContent=
     'Last sync: '+new Date(d.generated).toISOString()+' · '+d.invoice_count+' facturen';
 }
 
-// ── KPIs ─────────────────────────────────────────────────────────────────
-function renderKPIs(d) {
-  const total      = d.total_ar||1;
-  // FIX: % verlopen = ALLE verlopen facturen (days_overdue > 0) / totaal AR
-  const allOverdue = (d.invoices||[]).filter(i=>i.days_overdue>0).reduce((s,i)=>s+i.amount,0);
-  const overduePct = allOverdue/total*100;
-  const pctOk      = overduePct<=OVERDUE_PCT_TARGET, pctClose=overduePct<=OVERDUE_PCT_TARGET*1.3;
-  const dsoOk      = d.dso<=d.dso_target, dsoClose=d.dso<=d.dso_target*1.15;
-
-  // filter helpers for each KPI click
-  const filters = {
-    overdue_all:  i=>i.days_overdue>0,
-    overdue_30:   i=>i.days_overdue>30,
-    overdue_60:   i=>i.days_overdue>60,
-    overdue_90:   i=>i.days_overdue>90,
-  };
-
-  const items = [
-    {label:'DSO (dagen)',value:fmtD(d.dso),sub:'Target: '+d.dso_target+' dagen',
-     badge:dsoOk?'ON TARGET':dsoClose?'LET OP':'ACTIE',badgeClass:dsoOk?'badge-good':dsoClose?'badge-warn':'badge-urgent',
-     clickable:false},
-    {label:'% Verlopen',value:overduePct.toFixed(1)+'%',sub:'Target: max '+OVERDUE_PCT_TARGET+'% — alle verlopen',
+// ── KPIs ──────────────────────────────────────────────────────────────────
+function renderKPIs(d){
+  const total=d.total_ar||1;
+  const allOverdue=(d.invoices||[]).filter(i=>i.days_overdue>0).reduce((s,i)=>s+i.amount,0);
+  const pct=allOverdue/total*100;
+  const pctOk=pct<=OVERDUE_PCT_TARGET,pctClose=pct<=OVERDUE_PCT_TARGET*1.3;
+  const dsoOk=d.dso<=DSO_TARGET,dsoClose=d.dso<=DSO_TARGET*1.15;
+  const items=[
+    {label:'DSO (dagen)',value:fmtD(d.dso),sub:'Target: '+DSO_TARGET+' dagen',
+     badge:dsoOk?'ON TARGET':dsoClose?'LET OP':'ACTIE',badgeClass:dsoOk?'badge-good':dsoClose?'badge-warn':'badge-urgent'},
+    {label:'% Verlopen',value:pct.toFixed(1)+'%',sub:'Target: max '+OVERDUE_PCT_TARGET+'%',
      badge:pctOk?'ON TARGET':pctClose?'LET OP':'BOVEN TARGET',badgeClass:pctOk?'badge-good':pctClose?'badge-warn':'badge-urgent',
-     filter:'overdue_all', filterLabel:'Alle verlopen facturen'},
-    {label:'Totaal AR',value:fmtE(d.total_ar),sub:d.invoice_count+' open facturen',clickable:false},
+     filter:'overdue_all',filterLabel:'Alle verlopen facturen'},
+    {label:'Totaal AR',value:fmtE(d.total_ar),sub:d.invoice_count+' open facturen'},
     {label:'Verlopen >30d',value:fmtE(d.overdue_30),sub:'Opvolging vereist',
      badge:d.overdue_30>0?'VERLOPEN':null,badgeClass:'badge-warn',
-     filter:'overdue_30', filterLabel:'Verlopen > 30 dagen'},
+     filter:'overdue_30',filterLabel:'Verlopen > 30 dagen'},
     {label:'Verlopen >60d',value:fmtE(d.overdue_60),sub:'Formele aanmaning',
      badge:d.overdue_60>0?'ESCALEER':null,badgeClass:'badge-urgent',
-     filter:'overdue_60', filterLabel:'Verlopen > 60 dagen'},
+     filter:'overdue_60',filterLabel:'Verlopen > 60 dagen'},
     {label:'Verlopen >90d',value:fmtE(d.overdue_90),sub:'Incassofase',
      badge:d.overdue_90>0?'KRITIEK':null,badgeClass:'badge-urgent',
-     filter:'overdue_90', filterLabel:'Verlopen > 90 dagen'},
+     filter:'overdue_90',filterLabel:'Verlopen > 90 dagen'},
   ];
-
-  document.getElementById('kpi-grid').innerHTML = items.map(k=>`
-    <div class="kpi${k.filter?' clickable':''}" ${k.filter?`onclick="openFilteredPanel('${k.filter}','${k.filterLabel}')"`:''}> 
+  document.getElementById('kpi-grid').innerHTML=items.map(k=>`
+    <div class="kpi${k.filter?' clickable':''}" ${k.filter?`onclick="openFilteredPanel('${k.filter}','${k.filterLabel}')"`:''}>
       ${k.badge?`<span class="kpi-badge ${k.badgeClass}">${k.badge}</span>`:''}
       <div class="kpi-label">${k.label}</div>
       <div class="kpi-value">${k.value}</div>
@@ -367,299 +430,325 @@ function renderKPIs(d) {
     </div>`).join('');
 }
 
-// ── FILTERED INVOICE PANEL (from KPI click) ───────────────────────────────
-function openFilteredPanel(filterKey, title) {
-  const filters = {
-    overdue_all: i=>i.days_overdue>0,
-    overdue_30:  i=>i.days_overdue>30,
-    overdue_60:  i=>i.days_overdue>60,
-    overdue_90:  i=>i.days_overdue>90,
-  };
-  const fn   = filters[filterKey];
-  const invs = (_data.invoices||[]).filter(fn).sort((a,b)=>b.score-a.score);
-  const total = invs.reduce((s,i)=>s+i.amount,0);
-  const dC   = n=>n<=0?'days-0':n<=30?'days-30':n<=60?'days-60':'days-90';
-  const lP   = l=>`<span class="pill ${l==='URGENT'?'pill-urgent':l==='High'?'pill-high':'pill-ok'}">${l}</span>`;
-
-  const rows = invs.map((inv,i)=>`
-    <tr onclick="openInvoicePanel('${inv.id}','','${filterKey}','${encodeURIComponent(title)}')">
-      <td class="mono" style="color:var(--muted)">${i+1}</td>
-      <td><strong>${esc(inv.company)}</strong></td>
-      <td class="mono">${esc(inv.invoice_no)}</td>
-      <td class="mono">${inv.due_date}</td>
-      <td class="amount">${fmtE(inv.amount)}</td>
-      <td><span class="days-chip ${dC(inv.days_overdue)}">${inv.days_overdue}d</span></td>
-      <td>${lP(inv.level)}</td>
-    </tr>`).join('');
-
-  openPanel(title, `${invs.length} facturen · totaal ${fmtE(total)}`, `
-    <div style="overflow-x:auto">
-      <table class="data-table">
-        <thead><tr>
-          <th>#</th><th>Klant</th><th>Factuur</th><th>Vervaldatum</th>
-          <th>Bedrag (€)</th><th>Dagen verlopen</th><th>Prioriteit</th>
-        </tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
-    </div>`);
-}
-
-// ── AGING ────────────────────────────────────────────────────────────────
-function renderAgingBars(d) {
-  const total = Object.values(d.aging).reduce((a,b)=>a+b,0)||1;
-  const allOverduePct = (d.invoices||[]).filter(i=>i.days_overdue>0).reduce((s,i)=>s+i.amount,0)/total*100;
-  const over  = allOverduePct > OVERDUE_PCT_TARGET;
-  const order = ['Current','1-30 days','31-60 days','61-90 days','>90 days'];
-  const bucketFilter = {
-    'Current':    'current',
-    '1-30 days':  'bucket_1_30',
-    '31-60 days': 'bucket_31_60',
-    '61-90 days': 'bucket_61_90',
-    '>90 days':   'bucket_90plus',
-  };
-  document.getElementById('aging-bars').innerHTML = order.map(b=>{
-    const amt=d.aging[b]||0, pct=(amt/total*100).toFixed(1);
-    const warn=(b!=='Current'&&over)?' <span style="color:#dc2626;font-weight:700">▲</span>':'';
-    const fk = bucketFilter[b];
-    return `<div class="aging-row" style="cursor:pointer" onclick="openBucketPanel('${fk}','${b}')" title="Klik voor factuuroverzicht">
-      <span class="aging-label">${b}</span>
+// ── AGING ─────────────────────────────────────────────────────────────────
+function renderAgingBars(d){
+  const total=Object.values(d.aging).reduce((a,b)=>a+b,0)||1;
+  const allOverdue=(d.invoices||[]).filter(i=>i.days_overdue>0).reduce((s,i)=>s+i.amount,0);
+  const over=allOverdue/total*100>OVERDUE_PCT_TARGET;
+  const order=['Current','1-30 days','31-60 days','61-90 days','>90 days'];
+  const bkeys={'Current':'current','1-30 days':'bucket_1_30','31-60 days':'bucket_31_60','61-90 days':'bucket_61_90','>90 days':'bucket_90plus'};
+  document.getElementById('aging-bars').innerHTML=order.map(b=>{
+    const amt=d.aging[b]||0,pct=(amt/total*100).toFixed(1);
+    const warn=b!=='Current'&&over?' <span style="color:#dc2626;font-weight:700">▲</span>':'';
+    return `<div class="aging-row" onclick="openBucketPanel('${bkeys[b]}','${b}')">
+      <span class="aging-label">${b==='Current'?'Openstaand':b}</span>
       <div class="aging-bar-wrap"><div class="aging-bar" style="width:${pct}%;background:${AGING_COLORS[b]}"></div></div>
       <span class="aging-amount">${fmtE(amt)}</span>
       <span class="aging-pct">${pct}%${warn}</span>
     </div>`;
-  }).join('')+`<div style="margin-top:10px;font-size:11px;font-family:var(--mono);color:var(--muted)">
-    Target: max ${OVERDUE_PCT_TARGET}% verlopen (alle dagen) ${over
+  }).join('')+`<div style="margin-top:9px;font-size:10px;font-family:var(--mono);color:var(--muted)">
+    Target: max ${OVERDUE_PCT_TARGET}% verlopen (>0d) ${over
       ?'<span style="color:#dc2626;font-weight:700">— BOVEN TARGET</span>'
       :'<span style="color:#16a34a;font-weight:700">— ON TARGET ✓</span>'}
   </div>`;
 }
 
-function openBucketPanel(bucketKey, bucketLabel) {
-  const bucketFns = {
-    current:       i=>i.days_overdue===0,
-    bucket_1_30:   i=>i.days_overdue>0  && i.days_overdue<=30,
-    bucket_31_60:  i=>i.days_overdue>30 && i.days_overdue<=60,
-    bucket_61_90:  i=>i.days_overdue>60 && i.days_overdue<=90,
-    bucket_90plus: i=>i.days_overdue>90,
-  };
-  const fn   = bucketFns[bucketKey];
-  const invs = (_data.invoices||[]).filter(fn).sort((a,b)=>b.amount-a.amount);
-  const total = invs.reduce((s,i)=>s+i.amount,0);
-  const dC   = n=>n===0?'days-0':n<=30?'days-30':n<=60?'days-60':'days-90';
-  const lP   = l=>`<span class="pill ${l==='URGENT'?'pill-urgent':l==='High'?'pill-high':l==='Monitor'?'pill-ok':'pill-current'}">${l==='Monitor'&&bucketKey==='current'?'Huidig':l}</span>`;
-
-  const rows = invs.map((inv,i)=>`
-    <tr onclick="openInvoicePanel('${inv.id}','','bucket_${bucketKey}','${encodeURIComponent('AR Aging: '+bucketLabel)}')">
-      <td class="mono" style="color:var(--muted)">${i+1}</td>
-      <td><strong>${esc(inv.company)}</strong></td>
-      <td class="mono">${esc(inv.invoice_no)}</td>
-      <td class="mono">${inv.due_date}</td>
-      <td class="amount">${fmtE(inv.amount)}</td>
-      <td><span class="days-chip ${dC(inv.days_overdue)}">${inv.days_overdue===0?'huidig':inv.days_overdue+'d'}</span></td>
-      <td>${lP(inv.level)}</td>
-    </tr>`).join('');
-
-  openPanel('AR Aging: '+bucketLabel, `${invs.length} facturen · ${fmtE(total)}`, `
-    <div style="overflow-x:auto">
-      <table class="data-table">
-        <thead><tr>
-          <th>#</th><th>Klant</th><th>Factuur</th><th>Vervaldatum</th>
-          <th>Bedrag (€)</th><th>Dagen verlopen</th><th>Prioriteit</th>
-        </tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
-    </div>`);
-}
-
-// ── DSO CHART ────────────────────────────────────────────────────────────
-function renderDSOChart(d) {
-  const hist = d.history.slice(-60);
-  new Chart(document.getElementById('dsoChart'),{
+// ── TREND CHART ───────────────────────────────────────────────────────────
+function renderTrendChart(d){
+  const hist=d.history.slice(-60);
+  if(_trendChart)_trendChart.destroy();
+  _trendChart=new Chart(document.getElementById('trendChart'),{
     type:'line',
     data:{
       labels:hist.map(h=>new Date(h.date).toLocaleDateString('nl-NL',{month:'short',day:'numeric'})),
       datasets:[
-        {label:'DSO (dagen)',data:hist.map(h=>h.dso),borderColor:'#1a1916',backgroundColor:'rgba(26,25,22,.06)',borderWidth:2,pointRadius:3,pointBackgroundColor:'#1a1916',fill:true,tension:.3},
-        {label:'Target',data:hist.map(h=>h.target),borderColor:'#dc2626',borderWidth:1.5,borderDash:[6,4],pointRadius:0,fill:false},
+        {id:'dso',label:'DSO (d)',data:hist.map(h=>h.dso),
+         borderColor:'#1a1916',backgroundColor:'rgba(26,25,22,.05)',
+         borderWidth:2,pointRadius:2,fill:true,tension:.3,yAxisID:'y'},
+        {id:'dso_t',label:'DSO target',data:hist.map(()=>DSO_TARGET),
+         borderColor:'#1a1916',borderWidth:1.5,borderDash:[5,4],pointRadius:0,fill:false,yAxisID:'y'},
+        {id:'pct',label:'% Verlopen',data:hist.map(h=>+(h.overdue_pct||0).toFixed(2)),
+         borderColor:'#2563eb',backgroundColor:'rgba(37,99,235,.04)',
+         borderWidth:2,pointRadius:2,fill:true,tension:.3,yAxisID:'y2'},
+        {id:'pct_t',label:'% target',data:hist.map(()=>OVERDUE_PCT_TARGET),
+         borderColor:'#2563eb',borderWidth:1.5,borderDash:[5,4],pointRadius:0,fill:false,yAxisID:'y2'},
       ]
     },
-    options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{labels:{font:{family:'IBM Plex Mono',size:11},boxWidth:12}}},
-      scales:{x:{grid:{display:false},ticks:{font:{family:'IBM Plex Mono',size:10},maxTicksLimit:8}},
-              y:{grid:{color:'#e2e0d9'},ticks:{font:{family:'IBM Plex Mono',size:10}}}}}
-  });
-}
-
-// ── CUSTOMER CHART — clickable ────────────────────────────────────────────
-function renderCustomerChart(d) {
-  const rank = {URGENT:3,High:2,Monitor:1};
-  const byCompany = {};
-  d.invoices.forEach(inv=>{
-    if (inv.days_overdue<=0) return;
-    if (!byCompany[inv.company]) byCompany[inv.company]={amount:0,level:'Monitor',contact_id:inv.contact_id};
-    byCompany[inv.company].amount += inv.amount;
-    if ((rank[inv.level]||0)>(rank[byCompany[inv.company].level]||0)) byCompany[inv.company].level=inv.level;
-  });
-  const sorted = Object.entries(byCompany).map(([company,v])=>({company,...v})).sort((a,b)=>b.amount-a.amount).slice(0,8);
-
-  if (_customerChartInstance) _customerChartInstance.destroy();
-  const canvas = document.getElementById('customerChart');
-  _customerChartInstance = new Chart(canvas,{
-    type:'bar',
-    data:{
-      labels:sorted.map(i=>i.company.length>22?i.company.slice(0,20)+'…':i.company),
-      datasets:[{
-        label:'Totaal verlopen (€)',data:sorted.map(i=>i.amount),
-        backgroundColor:sorted.map(i=>i.level==='URGENT'?'#fee2e2':i.level==='High'?'#ffedd5':'#fef9c3'),
-        borderColor:sorted.map(i=>i.level==='URGENT'?'#dc2626':i.level==='High'?'#ea580c':'#d97706'),
-        borderWidth:1.5,borderRadius:2,
-      }]
-    },
-    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' '+fmtE(ctx.raw)}}},
-      scales:{x:{grid:{color:'#e2e0d9'},ticks:{font:{family:'IBM Plex Mono',size:10},callback:v=>'€'+fmt(v)}},
-              y:{grid:{display:false},ticks:{font:{family:'IBM Plex Sans',size:11}}}},
-      onClick:(evt,elements)=>{
-        if (!elements.length) return;
-        const item = sorted[elements[0].index];
-        openCustomerPanel(item.contact_id);
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      interaction:{mode:'index',intersect:false},
+      plugins:{legend:{display:false},
+        tooltip:{callbacks:{label:ctx=>{
+          if(ctx.dataset.id==='dso') return ' DSO: '+ctx.raw+'d';
+          if(ctx.dataset.id==='dso_t') return ' DSO target: '+DSO_TARGET+'d';
+          if(ctx.dataset.id==='pct') return ' % verlopen: '+ctx.raw+'%';
+          if(ctx.dataset.id==='pct_t') return ' % target: '+OVERDUE_PCT_TARGET+'%';
+          return '';
+        }}}},
+      scales:{
+        x:{grid:{display:false},ticks:{font:{family:'IBM Plex Mono',size:9},maxTicksLimit:10}},
+        y:{position:'left',grid:{color:'#e2e0d9'},
+           title:{display:true,text:'DSO (d)',font:{family:'IBM Plex Mono',size:9}},
+           ticks:{font:{family:'IBM Plex Mono',size:9}}},
+        y2:{position:'right',grid:{drawOnChartArea:false},
+            title:{display:true,text:'% Verlopen',font:{family:'IBM Plex Mono',size:9}},
+            ticks:{font:{family:'IBM Plex Mono',size:9},callback:v=>v+'%'}},
       }
     }
   });
-  // Make cursor pointer on hover
-  canvas.style.cursor = 'pointer';
+  applyToggleState();
+}
+function toggleSeries(which){
+  if(which==='dso') _showDso=!_showDso;
+  else _showPct=!_showPct;
+  if(_trendChart){
+    const show={dso:_showDso,dso_t:_showDso,pct:_showPct,pct_t:_showPct};
+    _trendChart.data.datasets.forEach(ds=>{ds.hidden=!show[ds.id];});
+    _trendChart.update();
+  }
+  applyToggleState();
+}
+function applyToggleState(){
+  const db=document.getElementById('toggle-dso');
+  const pb=document.getElementById('toggle-pct');
+  if(db){db.classList.toggle('active',_showDso);db.style.opacity=_showDso?'1':'0.4';}
+  if(pb){pb.classList.toggle('active',_showPct);pb.style.opacity=_showPct?'1':'0.4';}
 }
 
-// ── PRIORITY CHART ───────────────────────────────────────────────────────
-function renderPriorityChart(d) {
-  const counts={URGENT:0,High:0,Monitor:0};
-  d.invoices.forEach(i=>{if(i.days_overdue>0) counts[i.level]++;});
+// ── CUSTOMER CHART ────────────────────────────────────────────────────────
+function renderCustomerChart(d){
+  const rank={URGENT:3,High:2,Monitor:1};
+  const byC={};
+  d.invoices.forEach(inv=>{
+    if(inv.days_overdue<=0) return;
+    if(!byC[inv.company]) byC[inv.company]={amount:0,level:'Monitor',contact_id:inv.contact_id};
+    byC[inv.company].amount+=inv.amount;
+    if((rank[inv.level]||0)>(rank[byC[inv.company].level]||0)) byC[inv.company].level=inv.level;
+  });
+  const sorted=Object.entries(byC).map(([c,v])=>({company:c,...v})).sort((a,b)=>b.amount-a.amount).slice(0,8);
+  if(_customerChart)_customerChart.destroy();
+  const canvas=document.getElementById('customerChart');
+  _customerChart=new Chart(canvas,{
+    type:'bar',
+    data:{
+      labels:sorted.map(i=>i.company.length>20?i.company.slice(0,18)+'…':i.company),
+      datasets:[{label:'Totaal verlopen (€)',data:sorted.map(i=>i.amount),
+        backgroundColor:sorted.map(i=>i.level==='URGENT'?'#fee2e2':i.level==='High'?'#ffedd5':'#fef9c3'),
+        borderColor:sorted.map(i=>i.level==='URGENT'?'#dc2626':i.level==='High'?'#ea580c':'#d97706'),
+        borderWidth:1.5,borderRadius:2}]
+    },
+    options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>' '+fmtE(ctx.raw)}}},
+      scales:{
+        x:{grid:{color:'#e2e0d9'},ticks:{font:{family:'IBM Plex Mono',size:9},callback:v=>'€'+fmt(v)}},
+        y:{grid:{display:false},ticks:{font:{family:'IBM Plex Sans',size:10}}}},
+      onClick:(evt,els)=>{if(els.length) openCustomerPanel(sorted[els[0].index].contact_id);}
+    }
+  });
+  canvas.style.cursor='pointer';
+}
+
+// ── PRIORITY CHART ────────────────────────────────────────────────────────
+function renderPriorityChart(d){
+  const c={URGENT:0,High:0,Monitor:0};
+  d.invoices.forEach(i=>{if(i.days_overdue>0)c[i.level]++;});
   new Chart(document.getElementById('priorityChart'),{
     type:'doughnut',
     data:{labels:['URGENT','High','Monitor'],
-      datasets:[{data:[counts.URGENT,counts.High,counts.Monitor],
+      datasets:[{data:[c.URGENT,c.High,c.Monitor],
         backgroundColor:['#dc2626','#ea580c','#d97706'],borderColor:'#fff',borderWidth:3}]},
     options:{responsive:true,maintainAspectRatio:false,cutout:'65%',plugins:{legend:{display:false}}}
   });
 }
 
 // ── OVERDUE TABLE ─────────────────────────────────────────────────────────
-function renderTable(d) {
-  const dC=n=>n<=0?'days-0':n<=30?'days-30':n<=60?'days-60':'days-90';
-  const lP=l=>`<span class="pill ${l==='URGENT'?'pill-urgent':l==='High'?'pill-high':'pill-ok'}">${l}</span>`;
-  document.getElementById('overdue-tbody').innerHTML = d.overdue_top.map((inv,i)=>`
-    <tr onclick="openInvoicePanel('${inv.id}')">
+function renderTable(d){
+  document.getElementById('overdue-tbody').innerHTML=d.overdue_top.map((inv,i)=>{
+    const f=getFlags(inv.id);
+    const fp=flagPills(f);
+    return `<tr onclick="openInvoicePanel('${inv.id}')">
       <td class="mono" style="color:var(--muted)">${i+1}</td>
       <td><strong>${esc(inv.company)}</strong></td>
       <td class="mono">${esc(inv.invoice_no)}</td>
       <td class="mono">${inv.due_date}</td>
       <td class="amount">${fmtE(inv.amount)}</td>
-      <td><span class="days-chip ${dC(inv.days_overdue)}">${inv.days_overdue}d</span></td>
-      <td>${lP(inv.level)}</td>
+      <td><span class="days-chip ${daysClass(inv.days_overdue)}">${inv.days_overdue}d</span></td>
+      <td>${levelPill(inv.level)}</td>
+      <td>${fp||'<span style="color:var(--muted);font-size:11px">—</span>'}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ── CREDIT TABLE ──────────────────────────────────────────────────────────
+function renderCreditTable(d){
+  const credits=(d.invoices||[]).filter(i=>i.amount<0);
+  document.getElementById('credit-count').textContent=
+    credits.length?' · '+credits.length+' facturen · totaal '+fmtE(credits.reduce((s,i)=>s+i.amount,0)):'';
+  if(!credits.length){
+    document.getElementById('credit-tbody').innerHTML=
+      '<tr><td colspan="6" style="color:var(--muted);font-style:italic;font-size:13px;padding:16px">Geen openstaande creditfacturen</td></tr>';
+    return;
+  }
+  document.getElementById('credit-tbody').innerHTML=credits.map((inv,i)=>`
+    <tr onclick="openInvoicePanel('${inv.id}')">
+      <td class="mono" style="color:var(--muted)">${i+1}</td>
+      <td><strong>${esc(inv.company)}</strong></td>
+      <td class="mono">${esc(inv.invoice_no)}</td>
+      <td class="mono">${inv.invoice_date||'—'}</td>
+      <td class="amount" style="color:var(--green)">${fmtE(inv.amount)}</td>
+      <td><span class="pill pill-credit">${inv.state||'—'}</span></td>
     </tr>`).join('');
 }
 
-// ── PANEL HELPERS ─────────────────────────────────────────────────────────
-function openPanel(title, sub, bodyHTML) {
-  document.getElementById('panel-title').textContent = title;
-  document.getElementById('panel-sub').textContent = sub||'';
-  document.getElementById('panel-body').innerHTML = bodyHTML;
+// ── PANEL ─────────────────────────────────────────────────────────────────
+function openPanel(title,sub,html){
+  document.getElementById('panel-title').textContent=title;
+  document.getElementById('panel-sub').textContent=sub||'';
+  document.getElementById('panel-body').innerHTML=html;
   document.getElementById('panel-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflow='hidden';
+  document.getElementById('panel-body').scrollTop=0;
 }
-function closePanel() {
+function closePanel(){
   document.getElementById('panel-overlay').classList.remove('open');
-  document.body.style.overflow = '';
+  document.body.style.overflow='';
 }
-document.getElementById('panel-overlay').addEventListener('click', e=>{
-  if (e.target===e.currentTarget) closePanel();
+document.getElementById('panel-overlay').addEventListener('click',e=>{
+  if(e.target===e.currentTarget) closePanel();
 });
 
+// ── FILTERED PANEL (KPI click) ────────────────────────────────────────────
+function openFilteredPanel(filterKey,title){
+  const fns={
+    overdue_all:i=>i.days_overdue>0,
+    overdue_30: i=>i.days_overdue>30,
+    overdue_60: i=>i.days_overdue>60,
+    overdue_90: i=>i.days_overdue>90,
+  };
+  const invs=(_data.invoices||[]).filter(fns[filterKey]).sort((a,b)=>b.score-a.score);
+  const total=invs.reduce((s,i)=>s+i.amount,0);
+  openPanel(title,invs.length+' facturen · '+fmtE(total),filteredTableHTML(invs,filterKey,encodeURIComponent(title)));
+}
+
+function openBucketPanel(bucketKey,bucketLabel){
+  const fns={
+    current:       i=>i.days_overdue===0,
+    bucket_1_30:   i=>i.days_overdue>0 && i.days_overdue<=30,
+    bucket_31_60:  i=>i.days_overdue>30 && i.days_overdue<=60,
+    bucket_61_90:  i=>i.days_overdue>60 && i.days_overdue<=90,
+    bucket_90plus: i=>i.days_overdue>90,
+  };
+  const invs=(_data.invoices||[]).filter(fns[bucketKey]).sort((a,b)=>b.amount-a.amount);
+  const total=invs.reduce((s,i)=>s+i.amount,0);
+  const label=bucketLabel==='Current'?'Openstaand':bucketLabel;
+  openPanel('AR Aging: '+label,invs.length+' facturen · '+fmtE(total),
+    filteredTableHTML(invs,'bucket_'+bucketKey,encodeURIComponent('AR Aging: '+label)));
+}
+
+function filteredTableHTML(invs,filterKey,filterLabelEnc){
+  if(!invs.length) return '<p class="no-data" style="padding:16px">Geen facturen in dit filter.</p>';
+  const rows=invs.map((inv,i)=>`
+    <tr onclick="openInvoicePanel('${inv.id}','','${filterKey}','${filterLabelEnc}')">
+      <td class="mono" style="color:var(--muted)">${i+1}</td>
+      <td style="white-space:normal;min-width:120px"><strong>${esc(inv.company)}</strong></td>
+      <td class="mono">${esc(inv.invoice_no)}</td>
+      <td class="mono">${inv.due_date}</td>
+      <td class="amount">${fmtE(inv.amount)}</td>
+      <td><span class="days-chip ${daysClass(inv.days_overdue)}">${inv.days_overdue===0?'Openstaand':inv.days_overdue+'d'}</span></td>
+      <td>${levelPill(inv.level)}</td>
+    </tr>`).join('');
+  return `<div class="table-scroll" style="max-height:calc(100vh - 160px);overflow-y:auto">
+    <table class="data-table">
+      <thead><tr><th>#</th><th>Klant</th><th>Factuur</th><th>Vervaldatum</th><th>Bedrag (€)</th><th>Verlopen</th><th>Prioriteit</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div>`;
+}
+
+// ── FLAG CHECKBOX ─────────────────────────────────────────────────────────
+function flagCheckHTML(id,key,label,cls,checked){
+  return `<div class="flag-check ${checked?cls:''}" id="fc-${id}-${key}" onclick="toggleFlag('${id}','${key}','${cls}')">
+    <div class="fc-box">${checked?'✓':''}</div>${label}
+  </div>`;
+}
+function toggleFlag(id,key,cls){
+  const cur=getFlags(id);
+  const nv=!cur[key];
+  setFlag(id,key,nv);
+  const el=document.getElementById(`fc-${id}-${key}`);
+  if(el){el.classList.toggle(cls,nv);el.querySelector('.fc-box').textContent=nv?'✓':'';}
+  const st=document.getElementById(`flag-st-${id}`);
+  if(st){st.textContent='✅ Opgeslagen';setTimeout(()=>{if(st)st.textContent='';},2000);}
+}
+
 // ── CUSTOMER PANEL ────────────────────────────────────────────────────────
-function openCustomerPanel(contactId) {
-  const cust = _data.customers && _data.customers[contactId];
-  if (!cust) return;
+function openCustomerPanel(contactId){
+  const cust=_data.customers&&_data.customers[contactId];
+  if(!cust) return;
+  const invs=cust.invoices||[];
+  const overdue=invs.filter(i=>i.days_overdue>0);
+  const current=invs.filter(i=>i.days_overdue===0);
+  const custFlags=getFlags('customer_'+contactId);
+  const savedName=localStorage.getItem('dso_author_name')||'';
 
-  const invs       = cust.invoices || [];
-  const overdue    = invs.filter(i=>i.days_overdue>0);
-  const current    = invs.filter(i=>i.days_overdue===0);
-  const lP         = l=>`<span class="pill ${l==='URGENT'?'pill-urgent':l==='High'?'pill-high':l==='Monitor'?'pill-ok':'pill-current'}">${l}</span>`;
-  const dC         = n=>n<=0?'days-0':n<=30?'days-30':n<=60?'days-60':'days-90';
+  // Notes: this week first, else last 3
+  const key='customer_'+contactId;
+  const allNotes=(_notes[key]||[]).slice().reverse();
+  const weekAgo=new Date(Date.now()-7*24*3600*1000);
+  const weekNotes=allNotes.filter(n=>new Date(n.ts)>=weekAgo);
+  const shown=weekNotes.length?weekNotes:allNotes.slice(0,3);
+  const hasMore=allNotes.length>shown.length;
+  const notesLabel=weekNotes.length?'Klantnotities — deze week':'Klantnotities — laatste 3';
 
-  // All notes for this customer (customer-level + all invoice notes)
-  const custNoteKey = 'customer_'+contactId;
-  const custNotes   = (_notes[custNoteKey]||[]).slice().reverse();
-  const allInvNotes = invs.flatMap(inv=>
-    (_notes[inv.id]||[]).map(n=>({...n, invoice_no:inv.invoice_no, inv_id:inv.id}))
-  ).sort((a,b)=>new Date(b.ts)-new Date(a.ts));
-
-  function invCard(inv) {
-    const invNotes = _notes[inv.id]||[];
-    const notePreview = invNotes.length
-      ? `<div class="inv-note-preview">💬 ${invNotes.length} notitie${invNotes.length>1?'s':''}: "${esc(invNotes[invNotes.length-1].text.slice(0,60))}${invNotes[invNotes.length-1].text.length>60?'…':''}"</div>`
-      : '';
-    return `<div class="inv-card ${inv.days_overdue>0?'is-overdue':'is-current'}" onclick="openInvoicePanel('${inv.id}', '${contactId}')">
-      <div class="inv-card-top">
-        <span class="inv-card-no">${esc(inv.invoice_no)}</span>
-        <span class="inv-card-amount">${fmtE(inv.amount)}</span>
-      </div>
-      <div class="inv-card-bottom">
-        <span>Vervalt: ${inv.due_date}</span>
-        ${inv.days_overdue>0?`<span class="days-chip ${dC(inv.days_overdue)}">${inv.days_overdue}d verlopen</span>`:'<span class="days-chip days-0">Niet verlopen</span>'}
-        ${lP(inv.days_overdue>0?inv.level:'Current')}
-      </div>
-      ${notePreview}
+  function noteItem(n,cls){
+    return `<div class="note-item ${cls||''}">
+      <div class="note-meta"><span>${esc(n.author||'Anoniem')}${n.invoice_no?' — factuur '+esc(n.invoice_no):''}</span><span>${new Date(n.ts).toLocaleString('nl-NL')}</span></div>
+      <div class="note-text-wrap"><div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div></div>
     </div>`;
   }
 
-  const allInvNotesHTML = allInvNotes.length
-    ? allInvNotes.map(n=>`<div class="note-item">
-        <div class="note-meta">
-          <span>${esc(n.author||'Anoniem')} — factuur ${esc(n.invoice_no)}</span>
-          <span>${new Date(n.ts).toLocaleString('nl-NL')}</span>
-        </div>
-        <div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div>
-      </div>`).join('')
-    : '<p class="no-data">Geen factuurnotities voor deze klant.</p>';
+  const shownHTML=shown.length
+    ?shown.map(n=>noteItem(n,'customer-note')).join('')+(hasMore?`<span class="notes-more" onclick="showAllCustNotes('${contactId}')">+ ${allNotes.length-shown.length} oudere notities tonen…</span>`:'')
+    :'<p class="no-data">Nog geen klantnotities.</p>';
 
-  const custNotesHTML = custNotes.length
-    ? custNotes.map(n=>`<div class="note-item customer-note">
-        <div class="note-meta">
-          <span>${esc(n.author||'Anoniem')}</span>
-          <span>${new Date(n.ts).toLocaleString('nl-NL')}</span>
-        </div>
-        <div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div>
-      </div>`).join('')
-    : '<p class="no-data">Nog geen klantnotities.</p>';
+  // All invoice notes for this customer (below)
+  const allInvNotes=invs.flatMap(inv=>(_notes[inv.id]||[]).map(n=>({...n,invoice_no:inv.invoice_no}))).sort((a,b)=>new Date(b.ts)-new Date(a.ts));
+  const invNotesHTML=allInvNotes.length?allInvNotes.map(n=>noteItem(n)).join(''):'<p class="no-data">Geen factuurnotities.</p>';
 
-  const tokenSection = localStorage.getItem('github_notes_token') ? '' : tokenSetupHTML();
+  function invCard(inv){
+    const inotes=_notes[inv.id]||[];
+    const preview=inotes.length?`<div class="inv-note-preview">💬 ${inotes.length}x — "${esc(inotes[inotes.length-1].text.slice(0,60))}"</div>`:'';
+    const f=getFlags(inv.id);
+    return `<div class="inv-card ${inv.days_overdue>0?'is-overdue':'is-current'}" onclick="openInvoicePanel('${inv.id}','${contactId}')">
+      <div class="inv-card-top"><span class="inv-card-no">${esc(inv.invoice_no)}</span><span class="inv-card-amount">${fmtE(inv.amount)}</span></div>
+      <div class="inv-card-bottom">
+        <span>Vervalt: ${inv.due_date}</span>
+        <span class="days-chip ${daysClass(inv.days_overdue)}">${inv.days_overdue===0?'Openstaand':inv.days_overdue+'d verlopen'}</span>
+        ${levelPill(inv.days_overdue>0?inv.level:'Monitor')}
+        ${flagPills(f)}
+      </div>${preview}
+    </div>`;
+  }
 
-  openPanel(cust.company, `${invs.length} open facturen · ${fmtE(cust.total_open)} openstaand · ${fmtE(cust.total_overdue)} verlopen`,`
-    <div class="customer-summary">
-      <div class="cs-item"><span class="cs-label">Totaal open</span><span class="cs-value">${fmtE(cust.total_open)}</span></div>
-      <div class="cs-item"><span class="cs-label">Verlopen</span><span class="cs-value" style="color:var(--red)">${fmtE(cust.total_overdue)}</span></div>
-      <div class="cs-item"><span class="cs-label">Max. verlopen</span><span class="cs-value">${cust.max_days}d</span></div>
-      <div class="cs-item"><span class="cs-label">Prioriteit</span><span class="cs-value">${lP(cust.level)}</span></div>
+  const tokenSection=localStorage.getItem('github_notes_token')?'':tokenSetupHTML();
+
+  openPanel(cust.company,`${invs.length} facturen · ${fmtE(cust.total_open)} open · ${fmtE(cust.total_overdue)} verlopen`,`
+
+    <!-- KLANT STATUS FLAGS — bovenaan -->
+    <div class="ps">
+      <div class="ps-title">Klant Status</div>
+      <div class="flag-row">
+        ${flagCheckHTML('customer_'+contactId,'bankrupt','🏳 Failliet','checked-bankrupt',custFlags.bankrupt)}
+      </div>
+      <div id="flag-st-customer_${contactId}" class="flag-saving"></div>
     </div>
 
-    ${overdue.length ? `
+    <!-- NOTITIES — direct onder flags -->
     <div class="ps">
-      <div class="ps-title">Verlopen facturen (${overdue.length})</div>
-      <div class="inv-list">${overdue.map(invCard).join('')}</div>
-    </div>` : ''}
-
-    ${current.length ? `
-    <div class="ps">
-      <div class="ps-title">Openstaand — niet verlopen (${current.length})</div>
-      <div class="inv-list">${current.map(invCard).join('')}</div>
-    </div>` : ''}
-
-    <div class="ps">
-      <div class="ps-title">Klantnotities (zichtbaar bij alle facturen)</div>
-      <div id="cnotes-list-${contactId}">${custNotesHTML}</div>
+      <div class="ps-title">${notesLabel}</div>
+      <div class="notes-box" id="cnotes-list-${contactId}">${shownHTML}</div>
       <div class="note-form">
-        <input class="note-author" id="cna-${contactId}" placeholder="Jouw naam" maxlength="50">
-        <textarea class="note-textarea" id="cnt-${contactId}" placeholder="Notitie over deze klant (bijv. belooft te betalen op 15/03)…" rows="3"></textarea>
+        <input class="note-author" id="cna-${contactId}" placeholder="Jouw naam" maxlength="50" value="${esc(savedName)}">
+        <textarea class="note-textarea" id="cnt-${contactId}" placeholder="Notitie over deze klant…" rows="3"></textarea>
         <button class="note-submit"
           data-key="customer_${contactId}"
           data-author="cna-${contactId}"
@@ -673,82 +762,94 @@ function openCustomerPanel(contactId) {
       ${tokenSection}
     </div>
 
+    <!-- OVERZICHT -->
+    <div class="customer-summary">
+      <div class="cs-item"><span class="cs-label">Totaal open</span><span class="cs-value">${fmtE(cust.total_open)}</span></div>
+      <div class="cs-item"><span class="cs-label">Verlopen</span><span class="cs-value" style="color:var(--red)">${fmtE(cust.total_overdue)}</span></div>
+      <div class="cs-item"><span class="cs-label">Max. verlopen</span><span class="cs-value">${cust.max_days}d</span></div>
+      <div class="cs-item"><span class="cs-label">Prioriteit</span><span class="cs-value">${levelPill(cust.level)}</span></div>
+    </div>
+
+    ${overdue.length?`<div class="ps"><div class="ps-title">Verlopen facturen (${overdue.length})</div><div class="inv-list">${overdue.map(invCard).join('')}</div></div>`:''}
+    ${current.length?`<div class="ps"><div class="ps-title">Openstaand — niet verlopen (${current.length})</div><div class="inv-list">${current.map(invCard).join('')}</div></div>`:''}
+
     <div class="ps">
       <div class="ps-title">Alle factuurnotities van deze klant</div>
-      <div id="allinv-notes-${contactId}">${allInvNotesHTML}</div>
+      <div class="notes-box">${invNotesHTML}</div>
     </div>
   `);
 }
 
+function showAllCustNotes(contactId){
+  const el=document.getElementById(`cnotes-list-${contactId}`);
+  if(!el) return;
+  const all=(_notes['customer_'+contactId]||[]).slice().reverse();
+  el.innerHTML=all.length?all.map(n=>`<div class="note-item customer-note">
+    <div class="note-meta"><span>${esc(n.author||'Anoniem')}</span><span>${new Date(n.ts).toLocaleString('nl-NL')}</span></div>
+    <div class="note-text-wrap"><div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div></div>
+  </div>`).join(''):'<p class="no-data">Geen notities.</p>';
+}
+
 // ── INVOICE PANEL ─────────────────────────────────────────────────────────
-function openInvoicePanel(invoiceId, returnToCustomer, returnToFilter, returnToFilterLabel) {
-  const inv = _data.invoices.find(i=>i.id===invoiceId);
-  if (!inv) return;
-  const lP = l=>`<span class="pill ${l==='URGENT'?'pill-urgent':l==='High'?'pill-high':'pill-ok'}">${l}</span>`;
-  const dC = n=>n<=0?'days-0':n<=30?'days-30':n<=60?'days-60':'days-90';
+function openInvoicePanel(invoiceId,returnToCustomer,returnToFilter,returnToFilterLabel){
+  const inv=_data.invoices.find(i=>i.id===invoiceId);
+  if(!inv) return;
+  const contactId=inv.contact_id;
+  const invFlags=getFlags(invoiceId);
+  const savedName=localStorage.getItem('dso_author_name')||'';
 
-  const notes = (_notes[invoiceId]||[]).slice().reverse();
-  const notesHTML = notes.length
-    ? notes.map(n=>`<div class="note-item">
-        <div class="note-meta">
-          <span>${esc(n.author||'Anoniem')}</span>
-          <span>${new Date(n.ts).toLocaleString('nl-NL')}</span>
-        </div>
-        <div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div>
+  const invNotes=(_notes[invoiceId]||[]).slice().reverse();
+  const notesHTML=invNotes.length
+    ?invNotes.map(n=>`<div class="note-item">
+        <div class="note-meta"><span>${esc(n.author||'Anoniem')}</span><span>${new Date(n.ts).toLocaleString('nl-NL')}</span></div>
+        <div class="note-text-wrap"><div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div></div>
       </div>`).join('')
-    : '<p class="no-data">Nog geen notities voor deze factuur.</p>';
+    :'<p class="no-data">Nog geen notities voor deze factuur.</p>';
 
-  // Also show customer notes
-  const contactId   = inv.contact_id;
-  const custNoteKey = 'customer_'+contactId;
-  const custNotes   = (_notes[custNoteKey]||[]).slice().reverse();
-  const custNotesHTML = custNotes.length
-    ? custNotes.map(n=>`<div class="note-item customer-note">
-        <div class="note-meta">
-          <span>${esc(n.author||'Anoniem')} — klantnotitie</span>
-          <span>${new Date(n.ts).toLocaleString('nl-NL')}</span>
-        </div>
-        <div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div>
+  const custNotes=(_notes['customer_'+contactId]||[]).slice().reverse();
+  const custNotesHTML=custNotes.length
+    ?custNotes.map(n=>`<div class="note-item customer-note">
+        <div class="note-meta"><span>${esc(n.author||'Anoniem')} — klantnotitie</span><span>${new Date(n.ts).toLocaleString('nl-NL')}</span></div>
+        <div class="note-text-wrap"><div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div></div>
       </div>`).join('')
-    : '<p class="no-data">Geen klantnotities.</p>';
+    :'<p class="no-data">Geen klantnotities.</p>';
 
-  const breadcrumb = returnToCustomer
-    ? `<div class="breadcrumb"><a onclick="openCustomerPanel('${returnToCustomer}')">← ${esc(inv.company)}</a><span class="breadcrumb-sep">/</span><span>${esc(inv.invoice_no)}</span></div>`
-    : returnToFilter
-    ? `<div class="breadcrumb"><a onclick="openFilteredPanel('${returnToFilter}','${decodeURIComponent(returnToFilterLabel||'')}')">← ${decodeURIComponent(returnToFilterLabel||'Terug')}</a><span class="breadcrumb-sep">/</span><span>${esc(inv.invoice_no)}</span></div>`
-    : `<div class="breadcrumb"><a onclick="openCustomerPanel('${contactId}')">← Alle facturen ${esc(inv.company)}</a></div>`;
+  const breadcrumb=returnToCustomer
+    ?`<div class="breadcrumb"><a onclick="openCustomerPanel('${returnToCustomer}')">← ${esc(inv.company)}</a><span class="breadcrumb-sep">/</span><span>${esc(inv.invoice_no)}</span></div>`
+    :returnToFilter
+    ?`<div class="breadcrumb"><a onclick="openFilteredPanel('${returnToFilter}','${decodeURIComponent(returnToFilterLabel||'')}')">← ${decodeURIComponent(returnToFilterLabel||'Terug')}</a><span class="breadcrumb-sep">/</span><span>${esc(inv.invoice_no)}</span></div>`
+    :`<div class="breadcrumb"><a onclick="openCustomerPanel('${contactId}')">← Alle facturen ${esc(inv.company)}</a></div>`;
 
-  const tokenSection = localStorage.getItem('github_notes_token') ? '' : tokenSetupHTML();
+  // Moneybird status
+  const stMap={
+    open:`<span class="mb-status mb-open">● Open — geen automatische herinnering verstuurd</span>`,
+    late:`<span class="mb-status mb-late">● Te laat — Moneybird heeft dit als verlopen gemarkeerd</span>`,
+    reminded:`<span class="mb-status mb-reminded">● Herinnerd — Moneybird heeft automatisch een herinnering verstuurd</span>`,
+  };
+  const stHTML=stMap[inv.state]||`<span class="mb-status">${esc(inv.state)}</span>`;
 
-  openPanel(inv.invoice_no, esc(inv.company), `
+  const tokenSection=localStorage.getItem('github_notes_token')?'':tokenSetupHTML();
+
+  openPanel(inv.invoice_no,esc(inv.company),`
     ${breadcrumb}
+
+    <!-- FACTUUR FLAGS -->
     <div class="ps">
-      <div class="ps-title">Factuurgegevens</div>
-      <div class="detail-grid">
-        <div class="detail-field"><label>Klant</label><value>${esc(inv.company)}</value></div>
-        <div class="detail-field"><label>Factuur Nr.</label><value class="mono">${esc(inv.invoice_no)}</value></div>
-        <div class="detail-field"><label>Factuurdatum</label><value class="mono">${inv.invoice_date||'—'}</value></div>
-        <div class="detail-field"><label>Vervaldatum</label><value class="mono">${inv.due_date}</value></div>
-        <div class="detail-field"><label>Open bedrag</label><value class="mono" style="font-size:20px;font-weight:700">${fmtE(inv.amount)}</value></div>
-        <div class="detail-field"><label>Dagen verlopen</label><value><span class="days-chip ${dC(inv.days_overdue)}">${inv.days_overdue}d</span></value></div>
-        <div class="detail-field"><label>Status Moneybird</label><value>${inv.state||'—'}</value></div>
-        <div class="detail-field"><label>Prioriteit</label><value>${lP(inv.level)}</value></div>
+      <div class="ps-title">Factuur Status</div>
+      <div class="flag-row">
+        ${flagCheckHTML(invoiceId,'collector','📋 Bij incassobureau','checked-collector',invFlags.collector)}
+        ${flagCheckHTML(invoiceId,'bad_debt','✕ Oninbaar','checked-bad-debt',invFlags.bad_debt)}
       </div>
+      <div id="flag-st-${invoiceId}" class="flag-saving"></div>
     </div>
 
-    <div class="ps">
-      <div class="ps-title">Herinneringen</div>
-      ${inv.state==='reminded'
-        ? `<div class="reminder-item"><div class="r-date">Via Moneybird verstuurd</div><div class="r-text">Status: <strong>reminded</strong> — er is minimaal één herinnering verstuurd.</div></div>`
-        : `<p class="no-data">Geen herinneringen verstuurd (status: <em>${inv.state}</em>).</p>`}
-    </div>
-
+    <!-- NOTITIES — bovenaan -->
     <div class="ps">
       <div class="ps-title">Notities bij deze factuur</div>
-      <div id="notes-list-${invoiceId}">${notesHTML}</div>
+      <div class="notes-box" id="notes-list-${invoiceId}">${notesHTML}</div>
       <div class="note-form">
-        <input class="note-author" id="na-${invoiceId}" placeholder="Jouw naam" maxlength="50">
-        <textarea class="note-textarea" id="nt-${invoiceId}" placeholder="Bijv: klant gebeld op 12/03, belooft te betalen voor 20/03…" rows="3"></textarea>
+        <input class="note-author" id="na-${invoiceId}" placeholder="Jouw naam" maxlength="50" value="${esc(savedName)}">
+        <textarea class="note-textarea" id="nt-${invoiceId}" placeholder="Bijv: klant gebeld 12/03, belooft te betalen voor 20/03…" rows="3"></textarea>
         <button class="note-submit"
           data-key="${invoiceId}"
           data-author="na-${invoiceId}"
@@ -763,86 +864,114 @@ function openInvoicePanel(invoiceId, returnToCustomer, returnToFilter, returnToF
       <p class="github-note">Notities zijn ook zichtbaar in het klantoverzicht van ${esc(inv.company)}.</p>
     </div>
 
+    <!-- KLANTNOTITIES -->
     <div class="ps">
       <div class="ps-title">Klantnotities — ${esc(inv.company)}</div>
-      ${custNotesHTML}
+      <div class="notes-box">${custNotesHTML}</div>
+    </div>
+
+    <!-- HERINNERINGEN -->
+    <div class="ps">
+      <div class="ps-title">Moneybird Status</div>
+      ${stHTML}
+      <p style="font-size:12px;color:var(--muted);margin-top:8px">
+        Moneybird verstuurt automatisch herinneringen op basis van je ingestelde betalingstermijnen.
+        Handmatige belnotities kun je hierboven opslaan.
+      </p>
+    </div>
+
+    <!-- FACTUURGEGEVENS -->
+    <div class="ps">
+      <div class="ps-title">Factuurgegevens</div>
+      <div class="detail-grid">
+        <div class="detail-field"><label>Klant</label><value>${esc(inv.company)}</value></div>
+        <div class="detail-field"><label>Factuur Nr.</label><value class="mono">${esc(inv.invoice_no)}</value></div>
+        <div class="detail-field"><label>Factuurdatum</label><value class="mono">${inv.invoice_date||'—'}</value></div>
+        <div class="detail-field"><label>Vervaldatum</label><value class="mono">${inv.due_date}</value></div>
+        <div class="detail-field"><label>Open bedrag</label><value class="mono" style="font-size:18px;font-weight:700">${fmtE(inv.amount)}</value></div>
+        <div class="detail-field"><label>Verlopen</label><value><span class="days-chip ${daysClass(inv.days_overdue)}">${daysLabel(inv.days_overdue)}</span></value></div>
+        <div class="detail-field"><label>Prioriteit</label><value>${levelPill(inv.level)}</value></div>
+        <div class="detail-field"><label>Score</label><value class="mono">${inv.score}</value></div>
+      </div>
     </div>
   `);
 }
 
 // ── NOTES ─────────────────────────────────────────────────────────────────
-// Wrapper so buttons can use data-attributes (avoids quote escaping in onclick)
-function saveNoteFromBtn(btn) {
-  saveNote(btn.dataset.key, btn.dataset.author, btn.dataset.text,
-           btn.dataset.status, btn.dataset.list, btn.dataset.type);
+function saveNoteFromBtn(btn){
+  saveNote(btn.dataset.key,btn.dataset.author,btn.dataset.text,
+           btn.dataset.status,btn.dataset.list,btn.dataset.type);
 }
-
-function tokenSetupHTML() {
+function tokenSetupHTML(){
   return `<div class="token-setup">
     <strong>🔑 Eenmalige instelling voor teambrede notities</strong><br>
-    Maak een token aan op: <a href="https://github.com/settings/tokens/new" target="_blank">github.com/settings/tokens</a><br>
-    Scope: selecteer <strong>repo</strong> → Generate token → plak hieronder:<br>
+    Maak een token aan via: <a href="https://github.com/settings/tokens/new" target="_blank">github.com/settings/tokens</a><br>
+    Scope: <strong>repo</strong> → Generate → plak hieronder:<br>
     <div class="token-input-row">
       <input class="token-input" id="token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" type="password">
       <button class="token-btn" onclick="saveToken()">Opslaan</button>
     </div>
   </div>`;
 }
-
-function saveToken() {
-  const t = document.getElementById('token-input')?.value.trim();
-  if (!t) return;
-  localStorage.setItem('github_notes_token', t);
-  document.querySelector('.token-setup').innerHTML = '<span style="color:#16a34a;font-weight:600">✅ Token opgeslagen! Notities worden gesynchroniseerd voor het hele team.</span>';
+function saveToken(){
+  const t=document.getElementById('token-input')?.value.trim();
+  if(!t) return;
+  localStorage.setItem('github_notes_token',t);
+  document.querySelector('.token-setup').innerHTML='<span style="color:#16a34a;font-weight:600">✅ Token opgeslagen!</span>';
 }
 
-async function saveNote(noteKey, authorId, textId, statusId, listId, type) {
-  const author = document.getElementById(authorId)?.value.trim()||'Anoniem';
-  const text   = document.getElementById(textId)?.value.trim();
-  const status = document.getElementById(statusId);
-  if (!text) { if(status) status.textContent='⚠️ Notitie is leeg.'; return; }
-  if(status) status.textContent='💾 Opslaan…';
-  if (!_notes[noteKey]) _notes[noteKey] = [];
-  _notes[noteKey].push({author, text, ts: new Date().toISOString()});
+async function saveNote(noteKey,authorId,textId,statusId,listId,type){
+  const authorEl=document.getElementById(authorId);
+  const author=(authorEl?.value.trim())||'Anoniem';
+  const text=document.getElementById(textId)?.value.trim();
+  const status=document.getElementById(statusId);
+  if(!text){if(status)status.textContent='⚠️ Notitie is leeg.';return;}
 
-  const token = localStorage.getItem('github_notes_token');
-  if (!token) {
-    refreshNotesList(noteKey, listId, type);
-    if(document.getElementById(textId)) document.getElementById(textId).value='';
-    if(status) status.textContent='⚠️ Alleen lokaal — voer GitHub token in om te delen met team.';
+  // Remember name
+  if(author&&author!=='Anoniem') localStorage.setItem('dso_author_name',author);
+
+  if(status)status.textContent='💾 Opslaan…';
+  if(!_notes[noteKey])_notes[noteKey]=[];
+  _notes[noteKey].push({author,text,ts:new Date().toISOString()});
+
+  const token=localStorage.getItem('github_notes_token');
+  if(!token){
+    refreshNotesList(noteKey,listId,type);
+    if(document.getElementById(textId))document.getElementById(textId).value='';
+    if(status)status.textContent='⚠️ Alleen lokaal — voer GitHub token in om te delen met team.';
     return;
   }
-  try {
-    const content = btoa(unescape(encodeURIComponent(JSON.stringify(_notes,null,2))));
-    const body = {message:`note: ${noteKey}`,content};
-    if (_notesSHA) body.sha = _notesSHA;
-    const r = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${NOTES_FILE}`,{
+  try{
+    const content=btoa(unescape(encodeURIComponent(JSON.stringify(_notes,null,2))));
+    const body={message:`note: ${noteKey}`,content};
+    if(_notesSHA)body.sha=_notesSHA;
+    const r=await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${NOTES_FILE}`,{
       method:'PUT',
       headers:{Authorization:`token ${token}`,'Content-Type':'application/json'},
       body:JSON.stringify(body)
     });
-    if (!r.ok) throw new Error('HTTP '+r.status);
-    const j = await r.json();
-    _notesSHA = j.content.sha;
-    if(status) status.textContent='✅ Opgeslagen — zichtbaar voor het hele team!';
-    if(document.getElementById(textId)) document.getElementById(textId).value='';
-    refreshNotesList(noteKey, listId, type);
-  } catch(e) {
-    if(status) status.textContent='❌ Fout: '+e.message+'. Controleer je GitHub token.';
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const j=await r.json();
+    _notesSHA=j.content.sha;
+    if(status)status.textContent='✅ Opgeslagen voor het hele team!';
+    if(document.getElementById(textId))document.getElementById(textId).value='';
+    refreshNotesList(noteKey,listId,type);
+  }catch(e){
+    if(status)status.textContent='❌ Fout: '+e.message;
   }
 }
 
-function refreshNotesList(noteKey, listId, type) {
-  const el = document.getElementById(listId);
-  if (!el) return;
-  const notes = (_notes[noteKey]||[]).slice().reverse();
-  const cls   = type==='customer'?'note-item customer-note':'note-item';
-  el.innerHTML = notes.length
-    ? notes.map(n=>`<div class="${cls}">
+function refreshNotesList(noteKey,listId,type){
+  const el=document.getElementById(listId);
+  if(!el) return;
+  const notes=(_notes[noteKey]||[]).slice().reverse();
+  const cls=type==='customer'?'note-item customer-note':'note-item';
+  el.innerHTML=notes.length
+    ?notes.map(n=>`<div class="${cls}">
         <div class="note-meta"><span>${esc(n.author||'Anoniem')}</span><span>${new Date(n.ts).toLocaleString('nl-NL')}</span></div>
-        <div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div>
+        <div class="note-text-wrap"><div class="note-text">${esc(n.text).replace(/\n/g,'<br>')}</div></div>
       </div>`).join('')
-    : '<p class="no-data">Nog geen notities.</p>';
+    :'<p class="no-data">Nog geen notities.</p>';
 }
 
 load();
