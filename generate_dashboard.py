@@ -15,7 +15,7 @@ import requests
 
 MONEYBIRD_TOKEN   = os.getenv("MONEYBIRD_TOKEN",    "YOUR_TOKEN_HERE")
 ADMINISTRATION_ID = os.getenv("MONEYBIRD_ADMIN_ID", "YOUR_ADMIN_ID_HERE")
-DSO_TARGET        = int(os.getenv("DSO_TARGET", "38"))
+DSO_TARGET        = int(os.getenv("DSO_TARGET", "36"))
 OUT_DIR           = os.path.join(os.path.dirname(__file__), "docs")
 
 BASE_URL = f"https://moneybird.com/api/v2/{ADMINISTRATION_ID}"
@@ -131,8 +131,10 @@ def build_data(invoices):
         with open(hist_file) as f:
             history = json.load(f)
     today_str = TODAY.isoformat()
+    overdue_amount = sum(i["amount"] for i in invoices if i["days_overdue"] > 0)
+    overdue_pct    = round(overdue_amount / total_ar * 100, 2) if total_ar else 0
     history = [h for h in history if h["date"] != today_str]
-    history.append({"date": today_str, "dso": dso, "target": DSO_TARGET})
+    history.append({"date": today_str, "dso": dso, "target": DSO_TARGET, "overdue_pct": overdue_pct, "overdue_pct_target": 10})
     history = history[-90:]
     with open(hist_file, "w") as f:
         json.dump(history, f)
