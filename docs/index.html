@@ -690,10 +690,12 @@ function renderCustomerChart(d){
 }
 
 // ── PRIORITY CHART ────────────────────────────────────────────────────────
+let _priorityChart=null;
 function renderPriorityChart(d){
   const c={URGENT:0,High:0,Monitor:0};
   getActiveInvoices().forEach(i=>{if(i.days_overdue>0)c[i.level]++;});
-  new Chart(document.getElementById('priorityChart'),{
+  if(_priorityChart)_priorityChart.destroy();
+  _priorityChart=new Chart(document.getElementById('priorityChart'),{
     type:'doughnut',
     data:{labels:['URGENT','High','Monitor'],
       datasets:[{data:[c.URGENT,c.High,c.Monitor],
@@ -785,33 +787,26 @@ function hideDrop(){document.getElementById('search-drop').classList.remove('sho
 
 // ── REFRESH (trigger GitHub Actions) ─────────────────────────────────────
 async function triggerRefresh(){
-  const token=localStorage.getItem('github_notes_token');
   const btn=document.getElementById('refresh-btn');
-  if(!token){
-    // Try to reload data.json directly (fast reload without new Moneybird fetch)
-    btn.disabled=true;btn.classList.add('spinning');
-    await load();
-    btn.disabled=false;btn.classList.remove('spinning');
-    return;
-  }
   btn.disabled=true;btn.classList.add('spinning');
-  try{
-    const r=await fetch(`https://api.github.com/repos/${GITHUB_REPO}/actions/workflows/update-dashboard.yml/dispatches`,{
-      method:'POST',
-      headers:{Authorization:`token ${token}`,'Content-Type':'application/json'},
-      body:JSON.stringify({ref:'main'})
-    });
-    if(r.status===204){
-      document.getElementById('sync-time').textContent='Workflow gestart, wacht ~60s...';
-      setTimeout(async()=>{await load();btn.disabled=false;btn.classList.remove('spinning');},65000);
-    } else {
-      throw new Error('HTTP '+r.status);
-    }
-  }catch(e){
-    alert('Kon workflow niet starten: '+e.message+'\n\nData.json wordt herladen.');
-    await load();
-    btn.disabled=false;btn.classList.remove('spinning');
+  const token=localStorage.getItem('github_notes_token');
+  if(token){
+    try{
+      const r=await fetch(`https://api.github.com/repos/${GITHUB_REPO}/actions/workflows/update-dashboard.yml/dispatches`,{
+        method:'POST',
+        headers:{Authorization:`token ${token}`,'Content-Type':'application/json'},
+        body:JSON.stringify({ref:'main'})
+      });
+      if(r.status===204){
+        document.getElementById('sync-time').textContent='Workflow gestart, even geduld...';
+        setTimeout(async()=>{await load();btn.disabled=false;btn.classList.remove('spinning');},65000);
+        return;
+      }
+    }catch(e){}
   }
+  // No token or failed: just reload data.json
+  await load();
+  btn.disabled=false;btn.classList.remove('spinning');
 }
 
 // ── PANEL ─────────────────────────────────────────────────────────────────
