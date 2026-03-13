@@ -45,7 +45,7 @@ body{font-family:var(--serif);background:var(--bg);color:var(--text);min-height:
 .sr-item{padding:10px 14px;cursor:pointer;border-bottom:1px solid var(--border);transition:background .1s;}
 .sr-item:last-child{border-bottom:none;}
 .sr-item:hover{background:var(--brand-light);}
-.sr-name{font-size:13px;font-weight:600;}
+.sr-name{font-size:13px;font-weight:600;color:var(--text);}
 .sr-meta{font-family:var(--mono);font-size:10px;color:var(--text-2);margin-top:2px;}
 
 /* REFRESH BUTTON */
@@ -64,7 +64,8 @@ body{font-family:var(--serif);background:var(--bg);color:var(--text);min-height:
 .sidebar{display:flex;flex-direction:column;gap:12px;}
 
 /* CARD */
-.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);overflow:visible;box-shadow:var(--shadow);}
+.card>.table-scroll{border-radius:0 0 var(--r) var(--r);}
 .card+.card{margin-top:0;}
 .ch{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--border);background:#fafbfc;gap:8px;flex-wrap:wrap;}
 .ct{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-2);}
@@ -115,7 +116,8 @@ body{font-family:var(--serif);background:var(--bg);color:var(--text);min-height:
 .data-table tbody tr:hover td{background:var(--brand-light);}
 .data-table td.mono{font-family:var(--mono);font-size:11px;}
 .data-table td.amount{font-family:var(--mono);font-weight:600;}
-.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.table-scroll{overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;}
+.card:has(.table-scroll){overflow:visible;border-radius:var(--r);}
 
 /* PILLS */
 .pill{display:inline-flex;align-items:center;padding:2px 7px;border-radius:5px;font-size:10px;font-weight:700;letter-spacing:.3px;white-space:nowrap;}
@@ -474,14 +476,16 @@ function computeBankruptSet(){
   const cutoff=new Date(Date.now()-BANKRUPT_EXPIRY_DAYS*86400000);
   Object.entries(_flags).forEach(([id,f])=>{
     if(!f.bankrupt) return;
-    // Check expiry: bankrupt_since + 90d
+    if(!id.startsWith('customer_')) return;
+    // If bankrupt_since exists and is older than 90d, auto-remove
     if(f.bankrupt_since){
       const since=new Date(f.bankrupt_since);
-      if(since < cutoff){ // expired — remove flag
-        _flags[id].bankrupt=false; _flags[id].bankrupt_since=null; saveFlags(); return;
+      if(since < cutoff){
+        _flags[id].bankrupt=false;_flags[id].bankrupt_since=null;saveFlags();return;
       }
     }
-    if(id.startsWith('customer_')) _bankruptContactIds.add(id.replace('customer_',''));
+    // No bankrupt_since = just set, always include
+    _bankruptContactIds.add(id.replace('customer_',''));
   });
 }
 
@@ -523,15 +527,14 @@ function renderKPIs(d){
   const dsoOk    = dsoVal<=DSO_TARGET, dsoClose=dsoVal<=DSO_TARGET*1.1;
   const pctOk    = pctVal<=OVERDUE_PCT_TARGET, pctClose=pctVal<=OVERDUE_PCT_TARGET*1.3;
 
-  // July target: pctNow on approach to July 1 — use YTD avg as proxy
-  const hytd      = hist.filter(h=>h.date>=JAN1&&h.date<=JULY1);
-  const ytdAvg    = hytd.length?(hytd.reduce((s,h)=>s+(h.overdue_pct||0),0)/hytd.length).toFixed(1):pctNow.toFixed(1);
+  // July target: current overdue_pct must be <= 10% by July 1
+  // We show the CURRENT percentage — this is what must be <=10% on July 1
   const today     = new Date();
   const julyDate  = new Date(JULY1);
   const daysToJuly= Math.max(0,Math.round((julyDate-today)/86400000));
-  const julyOk    = parseFloat(ytdAvg)<=OVERDUE_PCT_TARGET;
-  // Progress: how far ytdAvg is toward target (100% = at or below target)
-  const julyProg  = Math.min(100,Math.max(0,julyOk?100:(OVERDUE_PCT_TARGET/parseFloat(ytdAvg)*100)));
+  const julyOk    = pctNow<=OVERDUE_PCT_TARGET;
+  // Progress bar: 100% = at or below target
+  const julyProg  = Math.min(100,Math.max(0, pctNow<=0?100 : (OVERDUE_PCT_TARGET/pctNow*100)));
 
   const items=[
     {label:'DSO (6m gem.)',value:fmtD(dsoVal)+'d',sub:'Target: '+DSO_TARGET+'d | Nu: '+fmtD(d.dso)+'d',
@@ -550,10 +553,10 @@ function renderKPIs(d){
     {label:'Verlopen >90d',value:fmtE(active.filter(i=>i.days_overdue>90).reduce((s,i)=>s+i.amount,0)),sub:'Incassofase',
      badge:active.some(i=>i.days_overdue>90)?'KRITIEK':null,badgeClass:'badge-urgent',
      filter:'overdue_90',filterLabel:'Verlopen > 90 dagen'},
-    {label:'1 Juli Target',value:julyOk?'ON TARGET':ytdAvg+'%',
-     sub:'Max 10% gem. | '+daysToJuly+'d te gaan',
+    {label:'1 Juli Target',value:julyOk?'ON TARGET':pctNow.toFixed(1)+'%',
+     sub:'Max 10% verlopen op 1 juli | '+daysToJuly+'d te gaan',
      badge:julyOk?'GEHAALD':null,badgeClass:'badge-good',
-     extra:`<div class="kpi-prog"><div style="display:flex;justify-content:space-between;font-size:9px;color:var(--text-3)"><span>YTD: ${ytdAvg}%</span><span>Doel: 10%</span></div><div class="kpi-prog-bar"><div class="kpi-prog-fill" style="width:${julyProg}%;background:${julyOk?'#16a34a':'#dc2626'}"></div></div></div>`},
+     extra:`<div class="kpi-prog"><div style="display:flex;justify-content:space-between;font-size:9px;color:var(--text-3)"><span>Nu: ${pctNow.toFixed(1)}%</span><span>Doel: 10%</span></div><div class="kpi-prog-bar"><div class="kpi-prog-fill" style="width:${julyProg}%;background:${julyOk?'#16a34a':'#dc2626'}"></div></div></div>`},
   ];
 
   document.getElementById('kpi-grid').innerHTML=items.map(k=>`
@@ -1096,9 +1099,12 @@ function openInvoicePanel(invoiceId,returnToCustomer,returnToFilter,returnToFilt
         <div class="df"><label>Open bedrag</label><value class="mono" style="font-size:17px;font-weight:700">${fmtE(inv.amount)}</value></div>
         <div class="df"><label>Verlopen</label><value><span class="days-chip ${daysClass(inv.days_overdue)}">${daysLabel(inv.days_overdue)}</span></value></div>
         <div class="df"><label>Prioriteit</label><value>${levelPill(inv.level)}</value></div>
-        <div class="df"><label>Score <span class="info-icon" title="${scoreExpl}">i</span></label>
-          <value class="mono">${inv.score}</value>
-          <div style="font-size:10px;color:var(--text-3);margin-top:3px;font-family:var(--mono)">${scoreExpl}</div>
+        <div class="df"><label>Score</label>
+          <value class="mono" style="display:flex;align-items:center;gap:6px">
+            ${inv.score}
+            <span class="info-icon" style="cursor:help;flex-shrink:0" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'block':'none'">i</span>
+            <span style="display:none;position:absolute;background:var(--ink);color:#fff;font-size:11px;padding:8px 12px;border-radius:6px;z-index:10;white-space:pre;font-family:var(--mono);line-height:1.6;margin-top:4px;box-shadow:var(--shadow-md)">${scoreExpl.replace(/</g,'&lt;')}</span>
+          </value>
         </div>
       </div>
     </div>
