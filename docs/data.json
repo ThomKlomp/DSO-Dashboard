@@ -1,18 +1,18 @@
 {
-  "generated": "2026-03-13T15:32:51.719846",
+  "generated": "2026-03-13T16:10:08.538975",
   "dso": 10.9,
   "dso_6m_avg": 24.9,
   "dso_target": 36,
-  "total_ar": 762042.2,
-  "invoice_count": 496,
-  "overdue_pct": 20.79,
-  "overdue_pct_6m": 10.39,
-  "overdue_pct_ytd": 10.39,
+  "total_ar": 757627.21,
+  "invoice_count": 493,
+  "overdue_pct": 20.91,
+  "overdue_pct_6m": 10.46,
+  "overdue_pct_ytd": 10.46,
   "overdue_30": 67615.0,
   "overdue_60": 44867.63,
   "overdue_90": 29064.47,
   "aging": {
-    "Current": 603612.26,
+    "Current": 599197.27,
     "1-30 days": 90814.94,
     "31-60 days": 22747.37,
     "61-90 days": 15803.16,
@@ -26,8 +26,8 @@
     },
     {
       "date": "2026-03-13",
-      "total_ar": 762042.2,
-      "overdue_pct": 20.79,
+      "total_ar": 757627.21,
+      "overdue_pct": 20.91,
       "overdue_pct_target": 10,
       "dso": 10.9,
       "target": 36
@@ -6138,23 +6138,6 @@
       "reminders": []
     },
     {
-      "id": "478764215895590340",
-      "contact_id": "337199960248288472",
-      "invoice_no": "2026-0576",
-      "company": "Delta-L B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 1525.79,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "478764207366473235",
       "contact_id": "371405759913658123",
       "invoice_no": "2026-0574",
@@ -6321,40 +6304,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.4,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478854069165754272",
-      "contact_id": "337199960248288472",
-      "invoice_no": "2026-0560",
-      "company": "Delta-L B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 2096.33,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.6,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478854351395227569",
-      "contact_id": "337199960248288472",
-      "invoice_no": "2026-0559",
-      "company": "Delta-L B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": -2162.88,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": -0.6,
       "level": "Monitor",
       "reminders": []
     },
@@ -6782,29 +6731,6 @@
       "score": 0.6,
       "level": "Monitor",
       "reminders": []
-    },
-    {
-      "id": "478137814080291950",
-      "contact_id": "473796805518165277",
-      "invoice_no": "2026-0460",
-      "company": "Meta Internationale Verhuizingen en Transporten B.V.",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": -513.06,
-      "currency": "EUR",
-      "days_overdue": 6,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.8,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
-          "source": "berekend"
-        }
-      ]
     },
     {
       "id": "477961456650814691",
@@ -8508,30 +8434,13 @@
       "company": "Meta Internationale Verhuizingen en Transporten B.V.",
       "invoice_date": "2026-02-11",
       "due_date": "2026-03-13",
-      "amount": 468.54,
+      "amount": 119.92,
       "currency": "EUR",
       "days_overdue": 0,
       "bucket": "Current",
       "state": "reminded",
       "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478766633713665983",
-      "contact_id": "473796805518165277",
-      "invoice_no": "2026-0514",
-      "company": "Meta Internationale Verhuizingen en Transporten B.V.",
-      "invoice_date": "2026-02-11",
-      "due_date": "2026-03-13",
-      "amount": 444.25,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 0.1,
+      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -15587,23 +15496,6 @@
       "reminders": []
     },
     {
-      "id": "478764215895590340",
-      "contact_id": "337199960248288472",
-      "invoice_no": "2026-0576",
-      "company": "Delta-L B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 1525.79,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "478764207366473235",
       "contact_id": "371405759913658123",
       "invoice_no": "2026-0574",
@@ -15770,23 +15662,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.4,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478854069165754272",
-      "contact_id": "337199960248288472",
-      "invoice_no": "2026-0560",
-      "company": "Delta-L B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 2096.33,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.6,
       "level": "Monitor",
       "reminders": []
     },
@@ -17636,30 +17511,13 @@
       "company": "Meta Internationale Verhuizingen en Transporten B.V.",
       "invoice_date": "2026-02-11",
       "due_date": "2026-03-13",
-      "amount": 468.54,
+      "amount": 119.92,
       "currency": "EUR",
       "days_overdue": 0,
       "bucket": "Current",
       "state": "reminded",
       "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478766633713665983",
-      "contact_id": "473796805518165277",
-      "invoice_no": "2026-0514",
-      "company": "Meta Internationale Verhuizingen en Transporten B.V.",
-      "invoice_date": "2026-02-11",
-      "due_date": "2026-03-13",
-      "amount": 444.25,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 0.1,
+      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -29129,40 +28987,6 @@
       "company": "Delta-L B.V.",
       "invoices": [
         {
-          "id": "478854069165754272",
-          "contact_id": "337199960248288472",
-          "invoice_no": "2026-0560",
-          "company": "Delta-L B.V.",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 2096.33,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.6,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "478764215895590340",
-          "contact_id": "337199960248288472",
-          "invoice_no": "2026-0576",
-          "company": "Delta-L B.V.",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 1525.79,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.5,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "478946024444920871",
           "contact_id": "337199960248288472",
           "invoice_no": "2026-0605",
@@ -29195,29 +29019,12 @@
           "score": -0.5,
           "level": "Monitor",
           "reminders": []
-        },
-        {
-          "id": "478854351395227569",
-          "contact_id": "337199960248288472",
-          "invoice_no": "2026-0559",
-          "company": "Delta-L B.V.",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": -2162.88,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": -0.6,
-          "level": "Monitor",
-          "reminders": []
         }
       ],
-      "total_open": 5037.8,
+      "total_open": 1415.68,
       "total_overdue": 0,
       "max_days": 0,
-      "invoice_count": 3,
+      "invoice_count": 1,
       "level": "Monitor"
     },
     "363348136166425656": {
@@ -29656,74 +29463,6 @@
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "473796805518165277": {
-      "contact_id": "473796805518165277",
-      "company": "Meta Internationale Verhuizingen en Transporten B.V.",
-      "invoices": [
-        {
-          "id": "478137814080291950",
-          "contact_id": "473796805518165277",
-          "invoice_no": "2026-0460",
-          "company": "Meta Internationale Verhuizingen en Transporten B.V.",
-          "invoice_date": "2026-02-05",
-          "due_date": "2026-03-07",
-          "amount": -513.06,
-          "currency": "EUR",
-          "days_overdue": 6,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 5.8,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-13",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "478764260382476130",
-          "contact_id": "473796805518165277",
-          "invoice_no": "2026-0533",
-          "company": "Meta Internationale Verhuizingen en Transporten B.V.",
-          "invoice_date": "2026-02-11",
-          "due_date": "2026-03-13",
-          "amount": 468.54,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "478766633713665983",
-          "contact_id": "473796805518165277",
-          "invoice_no": "2026-0514",
-          "company": "Meta Internationale Verhuizingen en Transporten B.V.",
-          "invoice_date": "2026-02-11",
-          "due_date": "2026-03-13",
-          "amount": 444.25,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 912.79,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 2,
       "level": "Monitor"
     },
     "450499877786355246": {
@@ -31113,6 +30852,34 @@
       "invoice_count": 5,
       "level": "High"
     },
+    "473796805518165277": {
+      "contact_id": "473796805518165277",
+      "company": "Meta Internationale Verhuizingen en Transporten B.V.",
+      "invoices": [
+        {
+          "id": "478764260382476130",
+          "contact_id": "473796805518165277",
+          "invoice_no": "2026-0533",
+          "company": "Meta Internationale Verhuizingen en Transporten B.V.",
+          "invoice_date": "2026-02-11",
+          "due_date": "2026-03-13",
+          "amount": 119.92,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 0.0,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 119.92,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
     "477492964732437622": {
       "contact_id": "477492964732437622",
       "company": "Stichting ICTU",
@@ -31957,23 +31724,6 @@
       "reminders": []
     },
     {
-      "id": "478854351395227569",
-      "contact_id": "337199960248288472",
-      "invoice_no": "2026-0559",
-      "company": "Delta-L B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": -2162.88,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": -0.6,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "478682142011819412",
       "contact_id": "471266444919703248",
       "invoice_no": "2026-0499",
@@ -32023,29 +31773,6 @@
       "score": 0.6,
       "level": "Monitor",
       "reminders": []
-    },
-    {
-      "id": "478137814080291950",
-      "contact_id": "473796805518165277",
-      "invoice_no": "2026-0460",
-      "company": "Meta Internationale Verhuizingen en Transporten B.V.",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": -513.06,
-      "currency": "EUR",
-      "days_overdue": 6,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.8,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
-          "source": "berekend"
-        }
-      ]
     },
     {
       "id": "477961456650814691",
