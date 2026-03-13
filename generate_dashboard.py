@@ -190,7 +190,7 @@ def build_data(open_invoices, sent_invoices):
     cutoff_6m    = (TODAY - datetime.timedelta(days=180)).isoformat()
     hist_6m      = [h for h in history if h["date"] >= cutoff_6m]
     avg_dso_6m   = round(sum(h["dso"] for h in hist_6m) / len(hist_6m), 1) if hist_6m else dso
-    avg_pct_6m   = round(sum(h["overdue_pct"] for h in hist_6m) / len(hist_6m), 2) if hist_6m else overdue_pct
+    avg_pct_6m   = round(sum(h.get("overdue_pct", 0) for h in hist_6m) / len(hist_6m), 2) if hist_6m else overdue_pct
 
     active_total = sum(i["amount"] for i in active)
 
