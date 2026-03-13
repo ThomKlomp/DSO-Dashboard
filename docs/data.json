@@ -1,15 +1,15 @@
 {
-  "generated": "2026-03-13T05:39:57.283298",
-  "dso": 38.1,
+  "generated": "2026-03-13T09:17:45.077410",
+  "dso": 37.9,
   "dso_target": 38,
-  "total_ar": 743124.62,
-  "invoice_count": 535,
+  "total_ar": 736326.74,
+  "invoice_count": 533,
   "overdue_30": 66085.88,
   "overdue_60": 45336.22,
   "overdue_90": 29670.7,
   "aging": {
-    "Current": 581464.17,
-    "1-30 days": 95574.57,
+    "Current": 580053.82,
+    "1-30 days": 90187.04,
     "31-60 days": 20749.66,
     "61-90 days": 15665.52,
     ">90 days": 29670.7
@@ -22,7 +22,7 @@
     },
     {
       "date": "2026-03-13",
-      "dso": 38.1,
+      "dso": 37.9,
       "target": 38
     }
   ],
@@ -869,9 +869,9 @@
     },
     {
       "id": "481222549319976923",
-      "contact_id": "454768348108948971",
+      "contact_id": "442164130156119169",
       "invoice_no": "2026-0962",
-      "company": "De Arend Projecten B.V.",
+      "company": "De Arend Waardenburg B.V.",
       "invoice_date": "2026-03-11",
       "due_date": "2026-04-10",
       "amount": 461.53,
@@ -5818,36 +5818,6 @@
       "level": "Monitor"
     },
     {
-      "id": "478764267391157954",
-      "contact_id": "470059802499745179",
-      "invoice_no": "2026-0535",
-      "company": "Nijboer Interieur en Design B.V.",
-      "invoice_date": "2026-02-11",
-      "due_date": "2026-03-13",
-      "amount": 1410.35,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "score": 10.2,
-      "level": "Monitor"
-    },
-    {
-      "id": "478764260382476130",
-      "contact_id": "473796805518165277",
-      "invoice_no": "2026-0533",
-      "company": "Meta Internationale Verhuizingen en Transporten B.V.",
-      "invoice_date": "2026-02-11",
-      "due_date": "2026-03-13",
-      "amount": 468.54,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "score": 2.9,
-      "level": "Monitor"
-    },
-    {
       "id": "478764255261230590",
       "contact_id": "477049156630742576",
       "invoice_no": "2026-0531",
@@ -5968,21 +5938,6 @@
       "level": "Monitor"
     },
     {
-      "id": "478766633713665983",
-      "contact_id": "473796805518165277",
-      "invoice_no": "2026-0514",
-      "company": "Meta Internationale Verhuizingen en Transporten B.V.",
-      "invoice_date": "2026-02-11",
-      "due_date": "2026-03-13",
-      "amount": 444.25,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "score": 2.7,
-      "level": "Monitor"
-    },
-    {
       "id": "478699475172328736",
       "contact_id": "468157939306202351",
       "invoice_no": "2026-0509",
@@ -6025,156 +5980,6 @@
       "bucket": "1-30 days",
       "state": "late",
       "score": -0.4,
-      "level": "Monitor"
-    },
-    {
-      "id": "478141769705326137",
-      "contact_id": "371405759913658123",
-      "invoice_no": "2026-0492",
-      "company": "Beurs van Berlage C.V.",
-      "invoice_date": "2026-02-06",
-      "due_date": "2026-03-08",
-      "amount": 988.16,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "score": 9.3,
-      "level": "Monitor"
-    },
-    {
-      "id": "478141801387001345",
-      "contact_id": "371405759913658123",
-      "invoice_no": "2026-0491",
-      "company": "Beurs van Berlage C.V.",
-      "invoice_date": "2026-02-06",
-      "due_date": "2026-03-08",
-      "amount": 1269.39,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "score": 11.6,
-      "level": "Monitor"
-    },
-    {
-      "id": "477594940108440752",
-      "contact_id": "371405759913658123",
-      "invoice_no": "2026-0490",
-      "company": "Beurs van Berlage C.V.",
-      "invoice_date": "2026-02-06",
-      "due_date": "2026-03-08",
-      "amount": 2221.97,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "score": 19.6,
-      "level": "Monitor"
-    },
-    {
-      "id": "478310593385727578",
-      "contact_id": "477492964732437622",
-      "invoice_no": "2026-0487",
-      "company": "Stichting ICTU",
-      "invoice_date": "2026-02-06",
-      "due_date": "2026-03-08",
-      "amount": 23.29,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "score": 2.6,
-      "level": "Monitor"
-    },
-    {
-      "id": "478137837738264112",
-      "contact_id": "460470010358269165",
-      "invoice_no": "2026-0481",
-      "company": "Zwartwoud",
-      "invoice_date": "2026-02-06",
-      "due_date": "2026-03-08",
-      "amount": 5387.53,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "score": 48.8,
-      "level": "High"
-    },
-    {
-      "id": "478137829905401321",
-      "contact_id": "473799641896322520",
-      "invoice_no": "2026-0479",
-      "company": "Stichting Grote Kerk Naarden",
-      "invoice_date": "2026-02-06",
-      "due_date": "2026-03-08",
-      "amount": 373.1,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "score": 4.7,
-      "level": "Monitor"
-    },
-    {
-      "id": "478137819882063081",
-      "contact_id": "475586299122681088",
-      "invoice_no": "2026-0478",
-      "company": "ON OTHER DRUGS B.V.",
-      "invoice_date": "2026-02-06",
-      "due_date": "2026-03-08",
-      "amount": 1740.06,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "score": 15.5,
-      "level": "Monitor"
-    },
-    {
-      "id": "478137833094120814",
-      "contact_id": "468620747309319517",
-      "invoice_no": "2026-0473",
-      "company": "Vervoort Meubelen B.V.",
-      "invoice_date": "2026-02-06",
-      "due_date": "2026-03-08",
-      "amount": 1042.27,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "score": 9.7,
-      "level": "Monitor"
-    },
-    {
-      "id": "478137832124187811",
-      "contact_id": "476403879088489835",
-      "invoice_no": "2026-0472",
-      "company": "Verel Expo B.V.",
-      "invoice_date": "2026-02-06",
-      "due_date": "2026-03-08",
-      "amount": 1142.59,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "score": 10.5,
-      "level": "Monitor"
-    },
-    {
-      "id": "478214152541701471",
-      "contact_id": "477684703443289774",
-      "invoice_no": "2026-0470",
-      "company": "Van Nek Vastgoed I B.V.",
-      "invoice_date": "2026-02-06",
-      "due_date": "2026-03-08",
-      "amount": 1036.97,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "score": 9.7,
       "level": "Monitor"
     },
     {
@@ -7345,6 +7150,171 @@
       "bucket": "Current",
       "state": "reminded",
       "score": 0.9,
+      "level": "Monitor"
+    },
+    {
+      "id": "478764260382476130",
+      "contact_id": "473796805518165277",
+      "invoice_no": "2026-0533",
+      "company": "Meta Internationale Verhuizingen en Transporten B.V.",
+      "invoice_date": "2026-02-11",
+      "due_date": "2026-03-13",
+      "amount": 468.54,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "reminded",
+      "score": 2.9,
+      "level": "Monitor"
+    },
+    {
+      "id": "478766633713665983",
+      "contact_id": "473796805518165277",
+      "invoice_no": "2026-0514",
+      "company": "Meta Internationale Verhuizingen en Transporten B.V.",
+      "invoice_date": "2026-02-11",
+      "due_date": "2026-03-13",
+      "amount": 444.25,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "reminded",
+      "score": 2.7,
+      "level": "Monitor"
+    },
+    {
+      "id": "478141769705326137",
+      "contact_id": "371405759913658123",
+      "invoice_no": "2026-0492",
+      "company": "Beurs van Berlage C.V.",
+      "invoice_date": "2026-02-06",
+      "due_date": "2026-03-08",
+      "amount": 988.16,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "score": 9.3,
+      "level": "Monitor"
+    },
+    {
+      "id": "478141801387001345",
+      "contact_id": "371405759913658123",
+      "invoice_no": "2026-0491",
+      "company": "Beurs van Berlage C.V.",
+      "invoice_date": "2026-02-06",
+      "due_date": "2026-03-08",
+      "amount": 1269.39,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "score": 11.6,
+      "level": "Monitor"
+    },
+    {
+      "id": "477594940108440752",
+      "contact_id": "371405759913658123",
+      "invoice_no": "2026-0490",
+      "company": "Beurs van Berlage C.V.",
+      "invoice_date": "2026-02-06",
+      "due_date": "2026-03-08",
+      "amount": 2221.97,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "score": 19.6,
+      "level": "Monitor"
+    },
+    {
+      "id": "478310593385727578",
+      "contact_id": "477492964732437622",
+      "invoice_no": "2026-0487",
+      "company": "Stichting ICTU",
+      "invoice_date": "2026-02-06",
+      "due_date": "2026-03-08",
+      "amount": 23.29,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "score": 2.6,
+      "level": "Monitor"
+    },
+    {
+      "id": "478137829905401321",
+      "contact_id": "473799641896322520",
+      "invoice_no": "2026-0479",
+      "company": "Stichting Grote Kerk Naarden",
+      "invoice_date": "2026-02-06",
+      "due_date": "2026-03-08",
+      "amount": 373.1,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "score": 4.7,
+      "level": "Monitor"
+    },
+    {
+      "id": "478137819882063081",
+      "contact_id": "475586299122681088",
+      "invoice_no": "2026-0478",
+      "company": "ON OTHER DRUGS B.V.",
+      "invoice_date": "2026-02-06",
+      "due_date": "2026-03-08",
+      "amount": 1740.06,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "score": 15.5,
+      "level": "Monitor"
+    },
+    {
+      "id": "478137833094120814",
+      "contact_id": "468620747309319517",
+      "invoice_no": "2026-0473",
+      "company": "Vervoort Meubelen B.V.",
+      "invoice_date": "2026-02-06",
+      "due_date": "2026-03-08",
+      "amount": 1042.27,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "score": 9.7,
+      "level": "Monitor"
+    },
+    {
+      "id": "478137832124187811",
+      "contact_id": "476403879088489835",
+      "invoice_no": "2026-0472",
+      "company": "Verel Expo B.V.",
+      "invoice_date": "2026-02-06",
+      "due_date": "2026-03-08",
+      "amount": 1142.59,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "score": 10.5,
+      "level": "Monitor"
+    },
+    {
+      "id": "478214152541701471",
+      "contact_id": "477684703443289774",
+      "invoice_no": "2026-0470",
+      "company": "Van Nek Vastgoed I B.V.",
+      "invoice_date": "2026-02-06",
+      "due_date": "2026-03-08",
+      "amount": 1036.97,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "score": 9.7,
       "level": "Monitor"
     },
     {
@@ -8995,7 +8965,7 @@
           "currency": "EUR",
           "days_overdue": 5,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "score": 9.7,
           "level": "Monitor"
         },
@@ -9096,7 +9066,7 @@
           "currency": "EUR",
           "days_overdue": 5,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "score": 10.5,
           "level": "Monitor"
         },
@@ -9758,21 +9728,6 @@
           "level": "Monitor"
         },
         {
-          "id": "478764267391157954",
-          "contact_id": "470059802499745179",
-          "invoice_no": "2026-0535",
-          "company": "Nijboer Interieur en Design B.V.",
-          "invoice_date": "2026-02-11",
-          "due_date": "2026-03-13",
-          "amount": 1410.35,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "late",
-          "score": 10.2,
-          "level": "Monitor"
-        },
-        {
           "id": "479956555410703771",
           "contact_id": "470059802499745179",
           "invoice_no": "2026-0779",
@@ -9803,10 +9758,10 @@
           "level": "Monitor"
         }
       ],
-      "total_open": 10085.58,
+      "total_open": 8675.23,
       "total_overdue": 0,
       "max_days": 0,
-      "invoice_count": 5,
+      "invoice_count": 4,
       "level": "Monitor"
     },
     "446507406289012553": {
@@ -10984,77 +10939,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "454768348108948971": {
-      "contact_id": "454768348108948971",
-      "company": "De Arend Projecten B.V.",
-      "invoices": [
-        {
-          "id": "479303703625467811",
-          "contact_id": "454768348108948971",
-          "invoice_no": "2026-0638",
-          "company": "De Arend Projecten B.V.",
-          "invoice_date": "2026-02-18",
-          "due_date": "2026-03-20",
-          "amount": 1375.2,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "score": 9.9,
-          "level": "Monitor"
-        },
-        {
-          "id": "479952358444369160",
-          "contact_id": "454768348108948971",
-          "invoice_no": "2026-0760",
-          "company": "De Arend Projecten B.V.",
-          "invoice_date": "2026-02-25",
-          "due_date": "2026-03-27",
-          "amount": 1208.66,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "score": 8.6,
-          "level": "Monitor"
-        },
-        {
-          "id": "481222549319976923",
-          "contact_id": "454768348108948971",
-          "invoice_no": "2026-0962",
-          "company": "De Arend Projecten B.V.",
-          "invoice_date": "2026-03-11",
-          "due_date": "2026-04-10",
-          "amount": 461.53,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "score": 2.8,
-          "level": "Monitor"
-        },
-        {
-          "id": "481222548168640103",
-          "contact_id": "454768348108948971",
-          "invoice_no": "2026-0961",
-          "company": "De Arend Projecten B.V.",
-          "invoice_date": "2026-03-11",
-          "due_date": "2026-04-10",
-          "amount": 384.36,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "score": 2.3,
-          "level": "Monitor"
-        }
-      ],
-      "total_open": 3429.75,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 4,
-      "level": "Monitor"
-    },
     "442164130156119169": {
       "contact_id": "442164130156119169",
       "company": "De Arend Waardenburg B.V.",
@@ -11133,12 +11017,83 @@
           "state": "open",
           "score": 7.6,
           "level": "Monitor"
+        },
+        {
+          "id": "481222549319976923",
+          "contact_id": "442164130156119169",
+          "invoice_no": "2026-0962",
+          "company": "De Arend Waardenburg B.V.",
+          "invoice_date": "2026-03-11",
+          "due_date": "2026-04-10",
+          "amount": 461.53,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "score": 2.8,
+          "level": "Monitor"
         }
       ],
-      "total_open": 9258.12,
+      "total_open": 9719.65,
       "total_overdue": 0,
       "max_days": 0,
-      "invoice_count": 5,
+      "invoice_count": 6,
+      "level": "Monitor"
+    },
+    "454768348108948971": {
+      "contact_id": "454768348108948971",
+      "company": "De Arend Projecten B.V.",
+      "invoices": [
+        {
+          "id": "479303703625467811",
+          "contact_id": "454768348108948971",
+          "invoice_no": "2026-0638",
+          "company": "De Arend Projecten B.V.",
+          "invoice_date": "2026-02-18",
+          "due_date": "2026-03-20",
+          "amount": 1375.2,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "score": 9.9,
+          "level": "Monitor"
+        },
+        {
+          "id": "479952358444369160",
+          "contact_id": "454768348108948971",
+          "invoice_no": "2026-0760",
+          "company": "De Arend Projecten B.V.",
+          "invoice_date": "2026-02-25",
+          "due_date": "2026-03-27",
+          "amount": 1208.66,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "score": 8.6,
+          "level": "Monitor"
+        },
+        {
+          "id": "481222548168640103",
+          "contact_id": "454768348108948971",
+          "invoice_no": "2026-0961",
+          "company": "De Arend Projecten B.V.",
+          "invoice_date": "2026-03-11",
+          "due_date": "2026-04-10",
+          "amount": 384.36,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "score": 2.3,
+          "level": "Monitor"
+        }
+      ],
+      "total_open": 2968.22,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 3,
       "level": "Monitor"
     },
     "436110617984632400": {
@@ -11709,7 +11664,7 @@
           "currency": "EUR",
           "days_overdue": 5,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "score": 19.6,
           "level": "Monitor"
         },
@@ -11754,7 +11709,7 @@
           "currency": "EUR",
           "days_overdue": 5,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "score": 11.6,
           "level": "Monitor"
         },
@@ -11769,7 +11724,7 @@
           "currency": "EUR",
           "days_overdue": 5,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "score": 9.3,
           "level": "Monitor"
         },
@@ -15196,21 +15151,6 @@
       "company": "Zwartwoud",
       "invoices": [
         {
-          "id": "478137837738264112",
-          "contact_id": "460470010358269165",
-          "invoice_no": "2026-0481",
-          "company": "Zwartwoud",
-          "invoice_date": "2026-02-06",
-          "due_date": "2026-03-08",
-          "amount": 5387.53,
-          "currency": "EUR",
-          "days_overdue": 5,
-          "bucket": "1-30 days",
-          "state": "late",
-          "score": 48.8,
-          "level": "High"
-        },
-        {
           "id": "478876609401587636",
           "contact_id": "460470010358269165",
           "invoice_no": "2026-0815",
@@ -15226,11 +15166,11 @@
           "level": "Monitor"
         }
       ],
-      "total_open": 7402.94,
-      "total_overdue": 5387.53,
-      "max_days": 5,
-      "invoice_count": 2,
-      "level": "High"
+      "total_open": 2015.41,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
     },
     "473159267005760707": {
       "contact_id": "473159267005760707",
@@ -17277,6 +17217,32 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
+    "477049156630742576": {
+      "contact_id": "477049156630742576",
+      "company": "Little Monkey B.V.",
+      "invoices": [
+        {
+          "id": "478764255261230590",
+          "contact_id": "477049156630742576",
+          "invoice_no": "2026-0531",
+          "company": "Little Monkey B.V.",
+          "invoice_date": "2026-02-11",
+          "due_date": "2026-03-13",
+          "amount": 627.63,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "late",
+          "score": 4.0,
+          "level": "Monitor"
+        }
+      ],
+      "total_open": 627.63,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
     "473796805518165277": {
       "contact_id": "473796805518165277",
       "company": "Meta Internationale Verhuizingen en Transporten B.V.",
@@ -17307,7 +17273,7 @@
           "currency": "EUR",
           "days_overdue": 0,
           "bucket": "Current",
-          "state": "late",
+          "state": "reminded",
           "score": 2.9,
           "level": "Monitor"
         },
@@ -17322,7 +17288,7 @@
           "currency": "EUR",
           "days_overdue": 0,
           "bucket": "Current",
-          "state": "late",
+          "state": "reminded",
           "score": 2.7,
           "level": "Monitor"
         }
@@ -17331,166 +17297,6 @@
       "total_overdue": -513.06,
       "max_days": 6,
       "invoice_count": 3,
-      "level": "Monitor"
-    },
-    "477049156630742576": {
-      "contact_id": "477049156630742576",
-      "company": "Little Monkey B.V.",
-      "invoices": [
-        {
-          "id": "478764255261230590",
-          "contact_id": "477049156630742576",
-          "invoice_no": "2026-0531",
-          "company": "Little Monkey B.V.",
-          "invoice_date": "2026-02-11",
-          "due_date": "2026-03-13",
-          "amount": 627.63,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "late",
-          "score": 4.0,
-          "level": "Monitor"
-        }
-      ],
-      "total_open": 627.63,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "477492964732437622": {
-      "contact_id": "477492964732437622",
-      "company": "Stichting ICTU",
-      "invoices": [
-        {
-          "id": "478214147649046285",
-          "contact_id": "477492964732437622",
-          "invoice_no": "2026-0453",
-          "company": "Stichting ICTU",
-          "invoice_date": "2026-02-05",
-          "due_date": "2026-03-07",
-          "amount": 489.14,
-          "currency": "EUR",
-          "days_overdue": 6,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "score": 6.0,
-          "level": "Monitor"
-        },
-        {
-          "id": "478310593385727578",
-          "contact_id": "477492964732437622",
-          "invoice_no": "2026-0487",
-          "company": "Stichting ICTU",
-          "invoice_date": "2026-02-06",
-          "due_date": "2026-03-08",
-          "amount": 23.29,
-          "currency": "EUR",
-          "days_overdue": 5,
-          "bucket": "1-30 days",
-          "state": "late",
-          "score": 2.6,
-          "level": "Monitor"
-        }
-      ],
-      "total_open": 512.43,
-      "total_overdue": 512.43,
-      "max_days": 6,
-      "invoice_count": 2,
-      "level": "Monitor"
-    },
-    "473799641896322520": {
-      "contact_id": "473799641896322520",
-      "company": "Stichting Grote Kerk Naarden",
-      "invoices": [
-        {
-          "id": "478137829905401321",
-          "contact_id": "473799641896322520",
-          "invoice_no": "2026-0479",
-          "company": "Stichting Grote Kerk Naarden",
-          "invoice_date": "2026-02-06",
-          "due_date": "2026-03-08",
-          "amount": 373.1,
-          "currency": "EUR",
-          "days_overdue": 5,
-          "bucket": "1-30 days",
-          "state": "late",
-          "score": 4.7,
-          "level": "Monitor"
-        }
-      ],
-      "total_open": 373.1,
-      "total_overdue": 373.1,
-      "max_days": 5,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "475586299122681088": {
-      "contact_id": "475586299122681088",
-      "company": "ON OTHER DRUGS B.V.",
-      "invoices": [
-        {
-          "id": "478137819882063081",
-          "contact_id": "475586299122681088",
-          "invoice_no": "2026-0478",
-          "company": "ON OTHER DRUGS B.V.",
-          "invoice_date": "2026-02-06",
-          "due_date": "2026-03-08",
-          "amount": 1740.06,
-          "currency": "EUR",
-          "days_overdue": 5,
-          "bucket": "1-30 days",
-          "state": "late",
-          "score": 15.5,
-          "level": "Monitor"
-        },
-        {
-          "id": "477597146951976351",
-          "contact_id": "475586299122681088",
-          "invoice_no": "2026-0330",
-          "company": "ON OTHER DRUGS B.V.",
-          "invoice_date": "2026-01-30",
-          "due_date": "2026-03-01",
-          "amount": 1356.71,
-          "currency": "EUR",
-          "days_overdue": 12,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "score": 15.8,
-          "level": "Monitor"
-        }
-      ],
-      "total_open": 3096.77,
-      "total_overdue": 3096.77,
-      "max_days": 12,
-      "invoice_count": 2,
-      "level": "Monitor"
-    },
-    "477684703443289774": {
-      "contact_id": "477684703443289774",
-      "company": "Van Nek Vastgoed I B.V.",
-      "invoices": [
-        {
-          "id": "478214152541701471",
-          "contact_id": "477684703443289774",
-          "invoice_no": "2026-0470",
-          "company": "Van Nek Vastgoed I B.V.",
-          "invoice_date": "2026-02-06",
-          "due_date": "2026-03-08",
-          "amount": 1036.97,
-          "currency": "EUR",
-          "days_overdue": 5,
-          "bucket": "1-30 days",
-          "state": "late",
-          "score": 9.7,
-          "level": "Monitor"
-        }
-      ],
-      "total_open": 1036.97,
-      "total_overdue": 1036.97,
-      "max_days": 5,
-      "invoice_count": 1,
       "level": "Monitor"
     },
     "450499877786355246": {
@@ -18532,6 +18338,140 @@
       "max_days": 68,
       "invoice_count": 5,
       "level": "High"
+    },
+    "477492964732437622": {
+      "contact_id": "477492964732437622",
+      "company": "Stichting ICTU",
+      "invoices": [
+        {
+          "id": "478214147649046285",
+          "contact_id": "477492964732437622",
+          "invoice_no": "2026-0453",
+          "company": "Stichting ICTU",
+          "invoice_date": "2026-02-05",
+          "due_date": "2026-03-07",
+          "amount": 489.14,
+          "currency": "EUR",
+          "days_overdue": 6,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "score": 6.0,
+          "level": "Monitor"
+        },
+        {
+          "id": "478310593385727578",
+          "contact_id": "477492964732437622",
+          "invoice_no": "2026-0487",
+          "company": "Stichting ICTU",
+          "invoice_date": "2026-02-06",
+          "due_date": "2026-03-08",
+          "amount": 23.29,
+          "currency": "EUR",
+          "days_overdue": 5,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "score": 2.6,
+          "level": "Monitor"
+        }
+      ],
+      "total_open": 512.43,
+      "total_overdue": 512.43,
+      "max_days": 6,
+      "invoice_count": 2,
+      "level": "Monitor"
+    },
+    "473799641896322520": {
+      "contact_id": "473799641896322520",
+      "company": "Stichting Grote Kerk Naarden",
+      "invoices": [
+        {
+          "id": "478137829905401321",
+          "contact_id": "473799641896322520",
+          "invoice_no": "2026-0479",
+          "company": "Stichting Grote Kerk Naarden",
+          "invoice_date": "2026-02-06",
+          "due_date": "2026-03-08",
+          "amount": 373.1,
+          "currency": "EUR",
+          "days_overdue": 5,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "score": 4.7,
+          "level": "Monitor"
+        }
+      ],
+      "total_open": 373.1,
+      "total_overdue": 373.1,
+      "max_days": 5,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
+    "475586299122681088": {
+      "contact_id": "475586299122681088",
+      "company": "ON OTHER DRUGS B.V.",
+      "invoices": [
+        {
+          "id": "478137819882063081",
+          "contact_id": "475586299122681088",
+          "invoice_no": "2026-0478",
+          "company": "ON OTHER DRUGS B.V.",
+          "invoice_date": "2026-02-06",
+          "due_date": "2026-03-08",
+          "amount": 1740.06,
+          "currency": "EUR",
+          "days_overdue": 5,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "score": 15.5,
+          "level": "Monitor"
+        },
+        {
+          "id": "477597146951976351",
+          "contact_id": "475586299122681088",
+          "invoice_no": "2026-0330",
+          "company": "ON OTHER DRUGS B.V.",
+          "invoice_date": "2026-01-30",
+          "due_date": "2026-03-01",
+          "amount": 1356.71,
+          "currency": "EUR",
+          "days_overdue": 12,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "score": 15.8,
+          "level": "Monitor"
+        }
+      ],
+      "total_open": 3096.77,
+      "total_overdue": 3096.77,
+      "max_days": 12,
+      "invoice_count": 2,
+      "level": "Monitor"
+    },
+    "477684703443289774": {
+      "contact_id": "477684703443289774",
+      "company": "Van Nek Vastgoed I B.V.",
+      "invoices": [
+        {
+          "id": "478214152541701471",
+          "contact_id": "477684703443289774",
+          "invoice_no": "2026-0470",
+          "company": "Van Nek Vastgoed I B.V.",
+          "invoice_date": "2026-02-06",
+          "due_date": "2026-03-08",
+          "amount": 1036.97,
+          "currency": "EUR",
+          "days_overdue": 5,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "score": 9.7,
+          "level": "Monitor"
+        }
+      ],
+      "total_open": 1036.97,
+      "total_overdue": 1036.97,
+      "max_days": 5,
+      "invoice_count": 1,
+      "level": "Monitor"
     },
     "466274078079059361": {
       "contact_id": "466274078079059361",
