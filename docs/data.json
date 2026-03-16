@@ -1,18 +1,17 @@
 {
-  "generated": "2026-03-16T16:01:17.195403",
-  "dso": 10.2,
-  "dso_6m_avg": 20.0,
+  "generated": "2026-03-16T16:33:14.920179",
+  "dso": 9.9,
+  "dso_6m_avg": 19.9,
   "dso_target": 36,
-  "total_ar": 685579.6,
-  "invoice_count": 460,
-  "overdue_pct": 32.83,
-  "overdue_pct_6m": 17.91,
-  "overdue_pct_ytd": 17.91,
+  "total_ar": 686061.34,
+  "invoice_count": 461,
+  "overdue_pct": 32.81,
+  "overdue_pct_6m": 28.84,
   "overdue_30": 92826.52,
   "overdue_60": 43781.74,
   "overdue_90": 27732.35,
   "aging": {
-    "Current": 460506.42,
+    "Current": 460988.16,
     "1-30 days": 132246.66,
     "31-60 days": 49044.78,
     "61-90 days": 16049.39,
@@ -34,10 +33,10 @@
     },
     {
       "date": "2026-03-16",
-      "total_ar": 685579.6,
-      "overdue_pct": 32.83,
-      "overdue_pct_target": 10,
-      "dso": 10.2,
+      "total_ar": 686061.34,
+      "overdue_ar": 225073.18,
+      "overdue_pct": 32.81,
+      "dso": 9.9,
       "target": 36
     }
   ],
@@ -107,6 +106,23 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "481480391813760909",
+      "contact_id": "423677100806899084",
+      "invoice_no": "2026-1032",
+      "company": "KEK B.V.",
+      "invoice_date": "2026-03-13",
+      "due_date": "2026-04-12",
+      "amount": 481.74,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -9174,6 +9190,23 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "481480391813760909",
+      "contact_id": "423677100806899084",
+      "invoice_no": "2026-1032",
+      "company": "KEK B.V.",
+      "invoice_date": "2026-03-13",
+      "due_date": "2026-04-12",
+      "amount": 481.74,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -18516,6 +18549,23 @@
           "reminders": []
         },
         {
+          "id": "481480391813760909",
+          "contact_id": "423677100806899084",
+          "invoice_no": "2026-1032",
+          "company": "KEK B.V.",
+          "invoice_date": "2026-03-13",
+          "due_date": "2026-04-12",
+          "amount": 481.74,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
           "id": "481480372526253444",
           "contact_id": "423677100806899084",
           "invoice_no": "2026-1031",
@@ -18533,10 +18583,10 @@
           "reminders": []
         }
       ],
-      "total_open": 2376.49,
+      "total_open": 2858.23,
       "total_overdue": 1719.15,
       "max_days": 61,
-      "invoice_count": 3,
+      "invoice_count": 4,
       "level": "High"
     },
     "467351969797768506": {
