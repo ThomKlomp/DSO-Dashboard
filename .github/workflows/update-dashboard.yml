@@ -31,10 +31,10 @@ jobs:
           MONEYBIRD_ADMIN_ID: ${{ secrets.MONEYBIRD_ADMIN_ID }}
         run: python generate_dashboard.py
 
-      - name: Push to GitHub Pages
+      - name: Push naar GitHub Pages
         run: |
           git config user.name  "DSO Bot"
           git config user.email "dso-bot@users.noreply.github.com"
-          git add docs/data.json docs/history.json || true
-          git diff --staged --quiet || git commit -m "chore: DSO sync $(date +'%Y-%m-%d %H:%M')"
+          git add docs/data.json docs/history.json
+          git diff --staged --quiet && echo "Geen wijzigingen" || git commit -m "chore: DSO sync $(date +'%Y-%m-%d %H:%M')"
           git push
