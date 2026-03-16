@@ -144,7 +144,7 @@ def parse(inv):
 
 
 def build_data(open_invoices, revenue_invoices):
-    # ── History: load, update with today's snapshot ──
+    # ── History: load ──
     hist_file = os.path.join(OUT_DIR, "history.json")
     history = []
     if os.path.exists(hist_file):
@@ -155,29 +155,11 @@ def build_data(open_invoices, revenue_invoices):
     active = [i for i in open_invoices if not i["is_bad_debt"] and i["amount"] > 0]
     credit = [i for i in open_invoices if i["amount"] < 0]
 
-    total_ar     = round(sum(i["amount"] for i in active), 2)
-    overdue_ar   = round(sum(i["amount"] for i in active if i["days_overdue"] > 0), 2)
-    overdue_pct  = round(overdue_ar / total_ar * 100, 2) if total_ar else 0.0
+    total_ar   = round(sum(i["amount"] for i in active), 2)
+    overdue_ar = round(sum(i["amount"] for i in active if i["days_overdue"] > 0), 2)
+    overdue_pct = round(overdue_ar / total_ar * 100, 2) if total_ar else 0.0
 
-    today_str = TODAY.isoformat()
-    history   = [h for h in history if h["date"] != today_str]
-    history.append({
-        "date":               today_str,
-        "total_ar":           total_ar,     # needed for DSO avg calc
-        "overdue_pct":        overdue_pct,
-        "overdue_pct_target": 10,
-    })
-    history = history[-365:]  # keep 1 year
-
-    # ── DSO: (avg debiteurensaldo 180d / totale omzet 180d) * 180 ──
-    cutoff_180 = (TODAY - datetime.timedelta(days=DAYS_180)).isoformat()
-    hist_180   = [h for h in history if h["date"] >= cutoff_180]
-
-    # Average debtor balance over available history (grows to true 180d avg over time)
-    ar_values  = [h.get("total_ar", total_ar) for h in hist_180]
-    avg_ar_180 = sum(ar_values) / len(ar_values) if ar_values else total_ar
-
-    # Total revenue in last 180 days (deduplicated)
+    # ── Revenue 180d (deduplicated) ──
     seen_ids = set()
     revenue_180 = 0.0
     for inv in revenue_invoices:
@@ -187,27 +169,32 @@ def build_data(open_invoices, revenue_invoices):
         if amt > 0:
             revenue_180 += amt
 
-    dso = round((avg_ar_180 / revenue_180 * DAYS_180), 1) if revenue_180 else 0.0
+    # ── DSO vandaag: (huidig debiteurensaldo / omzet 180d) * 180 ──
+    dso = round((total_ar / revenue_180 * DAYS_180), 1) if revenue_180 else 0.0
 
-    # Store dso in today's history entry
-    history[-1]["dso"]    = dso
-    history[-1]["target"] = DSO_TARGET
-
-    with open(hist_file, "w") as f:
-        json.dump(history, f)
+    # ── Update history with today's snapshot ──
+    today_str = TODAY.isoformat()
+    history = [h for h in history if h["date"] != today_str]
+    history.append({
+        "date":        today_str,
+        "total_ar":    total_ar,
+        "overdue_ar":  overdue_ar,
+        "overdue_pct": overdue_pct,
+        "dso":         dso,
+        "target":      DSO_TARGET,
+    })
+    history = sorted(history, key=lambda h: h["date"])[-365:]
 
     # ── 6-month averages ──
-    cutoff_6m  = (TODAY - datetime.timedelta(days=180)).isoformat()
-    hist_6m    = [h for h in history if h["date"] >= cutoff_6m]
+    cutoff_6m = (TODAY - datetime.timedelta(days=180)).isoformat()
+    hist_6m   = [h for h in history if h["date"] >= cutoff_6m]
     avg_dso_6m = round(sum(h.get("dso", dso) for h in hist_6m) / len(hist_6m), 1) if hist_6m else dso
-    avg_pct_6m = round(sum(h.get("overdue_pct", 0) for h in hist_6m) / len(hist_6m), 2) if hist_6m else overdue_pct
+    avg_pct_6m = round(sum(h.get("overdue_pct", overdue_pct) for h in hist_6m) / len(hist_6m), 2) if hist_6m else overdue_pct
 
-    # ── July target: rolling average from Jan 1 to Jul 1 ──
-    # We track avg overdue_pct since Jan 1 — on Jul 1 it must be <= 10%
-    jan1 = f"{TODAY.year}-01-01"
-    jul1 = f"{TODAY.year}-07-01"
-    hist_ytd   = [h for h in history if jan1 <= h["date"] <= jul1]
-    avg_pct_ytd = round(sum(h.get("overdue_pct", 0) for h in hist_ytd) / len(hist_ytd), 2) if hist_ytd else overdue_pct
+    # ── Write history.json separately ──
+    os.makedirs(OUT_DIR, exist_ok=True)
+    with open(hist_file, "w") as f:
+        json.dump(history, f, indent=2)
 
     # ── Aging ──
     buckets = ["Current","1-30 days","31-60 days","61-90 days",">90 days"]
@@ -246,7 +233,6 @@ def build_data(open_invoices, revenue_invoices):
         "invoice_count":   len(active),
         "overdue_pct":     overdue_pct,
         "overdue_pct_6m":  avg_pct_6m,
-        "overdue_pct_ytd": avg_pct_ytd,
         "overdue_30":      round(sum(i["amount"] for i in active if i["days_overdue"] > 30), 2),
         "overdue_60":      round(sum(i["amount"] for i in active if i["days_overdue"] > 60), 2),
         "overdue_90":      round(sum(i["amount"] for i in active if i["days_overdue"] > 90), 2),
@@ -277,8 +263,10 @@ def main():
     parser.add_argument("--loop", type=int, default=0)
     args = parser.parse_args()
 
-    if MONEYBIRD_TOKEN == "YOUR_TOKEN_HERE":
-        sys.exit("Set MONEYBIRD_TOKEN environment variable first.")
+    if MONEYBIRD_TOKEN in ("YOUR_TOKEN_HERE", "", None):
+        sys.exit("ERROR: MONEYBIRD_TOKEN secret is not set in GitHub repository settings.")
+    if ADMINISTRATION_ID in ("YOUR_ADMIN_ID_HERE", "", None):
+        sys.exit("ERROR: MONEYBIRD_ADMIN_ID secret is not set in GitHub repository settings.")
 
     def run():
         print(f"\n[{datetime.datetime.now().strftime('%H:%M')}] Fetching from Moneybird...")
