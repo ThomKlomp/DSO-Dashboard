@@ -1,22 +1,22 @@
 {
-  "generated": "2026-03-16T10:00:44.867841",
+  "generated": "2026-03-16T11:44:17.935035",
   "dso": 10.8,
   "dso_6m_avg": 20.2,
   "dso_target": 36,
-  "total_ar": 745617.29,
+  "total_ar": 744285.17,
   "invoice_count": 480,
-  "overdue_pct": 37.63,
-  "overdue_pct_6m": 19.51,
-  "overdue_pct_ytd": 19.51,
-  "overdue_30": 95842.73,
-  "overdue_60": 46797.95,
-  "overdue_90": 29064.47,
+  "overdue_pct": 37.52,
+  "overdue_pct_6m": 19.48,
+  "overdue_pct_ytd": 19.48,
+  "overdue_30": 94510.61,
+  "overdue_60": 45465.83,
+  "overdue_90": 27732.35,
   "aging": {
     "Current": 465007.79,
     "1-30 days": 184766.77,
     "31-60 days": 49044.78,
     "61-90 days": 17733.48,
-    ">90 days": 29064.47
+    ">90 days": 27732.35
   },
   "history": [
     {
@@ -34,8 +34,8 @@
     },
     {
       "date": "2026-03-16",
-      "total_ar": 745617.29,
-      "overdue_pct": 37.63,
+      "total_ar": 744285.17,
+      "overdue_pct": 37.52,
       "overdue_pct_target": 10,
       "dso": 10.8,
       "target": 36
@@ -7951,13 +7951,13 @@
       "company": "Dinner in the Sky Nederland B.V.",
       "invoice_date": "2025-07-29",
       "due_date": "2025-08-28",
-      "amount": 1346.91,
+      "amount": 879.54,
       "currency": "EUR",
       "days_overdue": 200,
       "bucket": ">90 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 200.4,
+      "score": 200.3,
       "level": "URGENT",
       "reminders": [
         {
@@ -8227,13 +8227,13 @@
       "company": "Zind BV",
       "invoice_date": "2025-03-07",
       "due_date": "2025-04-06",
-      "amount": 1268.1,
+      "amount": 403.35,
       "currency": "EUR",
       "days_overdue": 344,
       "bucket": ">90 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 344.4,
+      "score": 344.1,
       "level": "URGENT",
       "reminders": [
         {
@@ -16864,13 +16864,13 @@
       "company": "Dinner in the Sky Nederland B.V.",
       "invoice_date": "2025-07-29",
       "due_date": "2025-08-28",
-      "amount": 1346.91,
+      "amount": 879.54,
       "currency": "EUR",
       "days_overdue": 200,
       "bucket": ">90 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 200.4,
+      "score": 200.3,
       "level": "URGENT",
       "reminders": [
         {
@@ -17094,13 +17094,13 @@
       "company": "Zind BV",
       "invoice_date": "2025-03-07",
       "due_date": "2025-04-06",
-      "amount": 1268.1,
+      "amount": 403.35,
       "currency": "EUR",
       "days_overdue": 344,
       "bucket": ">90 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 344.4,
+      "score": 344.1,
       "level": "URGENT",
       "reminders": [
         {
@@ -18393,29 +18393,6 @@
       ]
     },
     {
-      "id": "447787850861119317",
-      "contact_id": "446336713801860723",
-      "invoice_no": "2025-0648",
-      "company": "Zind BV",
-      "invoice_date": "2025-03-07",
-      "due_date": "2025-04-06",
-      "amount": 1268.1,
-      "currency": "EUR",
-      "days_overdue": 344,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 344.4,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-04-12",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "447787937196673006",
       "contact_id": "446336713801860723",
       "invoice_no": "2025-0649",
@@ -18446,6 +18423,29 @@
       "invoice_date": "2025-03-07",
       "due_date": "2025-04-06",
       "amount": 461.74,
+      "currency": "EUR",
+      "days_overdue": 344,
+      "bucket": ">90 days",
+      "state": "late",
+      "is_bad_debt": false,
+      "score": 344.1,
+      "level": "URGENT",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2025-04-12",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "447787850861119317",
+      "contact_id": "446336713801860723",
+      "invoice_no": "2025-0648",
+      "company": "Zind BV",
+      "invoice_date": "2025-03-07",
+      "due_date": "2025-04-06",
+      "amount": 403.35,
       "currency": "EUR",
       "days_overdue": 344,
       "bucket": ">90 days",
@@ -18629,13 +18629,13 @@
       "company": "Dinner in the Sky Nederland B.V.",
       "invoice_date": "2025-07-29",
       "due_date": "2025-08-28",
-      "amount": 1346.91,
+      "amount": 879.54,
       "currency": "EUR",
       "days_overdue": 200,
       "bucket": ">90 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 200.4,
+      "score": 200.3,
       "level": "URGENT",
       "reminders": [
         {
@@ -29634,13 +29634,13 @@
           "company": "Dinner in the Sky Nederland B.V.",
           "invoice_date": "2025-07-29",
           "due_date": "2025-08-28",
-          "amount": 1346.91,
+          "amount": 879.54,
           "currency": "EUR",
           "days_overdue": 200,
           "bucket": ">90 days",
           "state": "late",
           "is_bad_debt": false,
-          "score": 200.4,
+          "score": 200.3,
           "level": "URGENT",
           "reminders": [
             {
@@ -29674,8 +29674,8 @@
           ]
         }
       ],
-      "total_open": 2047.67,
-      "total_overdue": 2047.67,
+      "total_open": 1580.3,
+      "total_overdue": 1580.3,
       "max_days": 200,
       "invoice_count": 2,
       "level": "URGENT"
@@ -29787,29 +29787,6 @@
       "company": "Zind BV",
       "invoices": [
         {
-          "id": "447787850861119317",
-          "contact_id": "446336713801860723",
-          "invoice_no": "2025-0648",
-          "company": "Zind BV",
-          "invoice_date": "2025-03-07",
-          "due_date": "2025-04-06",
-          "amount": 1268.1,
-          "currency": "EUR",
-          "days_overdue": 344,
-          "bucket": ">90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 344.4,
-          "level": "URGENT",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2025-04-12",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
           "id": "448414434377861027",
           "contact_id": "446336713801860723",
           "invoice_no": "2025-0695",
@@ -29886,6 +29863,29 @@
           "invoice_date": "2025-03-07",
           "due_date": "2025-04-06",
           "amount": 461.74,
+          "currency": "EUR",
+          "days_overdue": 344,
+          "bucket": ">90 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 344.1,
+          "level": "URGENT",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2025-04-12",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "447787850861119317",
+          "contact_id": "446336713801860723",
+          "invoice_no": "2025-0648",
+          "company": "Zind BV",
+          "invoice_date": "2025-03-07",
+          "due_date": "2025-04-06",
+          "amount": 403.35,
           "currency": "EUR",
           "days_overdue": 344,
           "bucket": ">90 days",
@@ -29994,8 +29994,8 @@
           ]
         }
       ],
-      "total_open": 4925.84,
-      "total_overdue": 4925.84,
+      "total_open": 4061.09,
+      "total_overdue": 4061.09,
       "max_days": 344,
       "invoice_count": 9,
       "level": "URGENT"
