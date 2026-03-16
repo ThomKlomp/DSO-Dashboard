@@ -1,18 +1,18 @@
 {
-  "generated": "2026-03-16T14:20:49.316854",
+  "generated": "2026-03-16T16:01:17.195403",
   "dso": 10.2,
   "dso_6m_avg": 20.0,
   "dso_target": 36,
-  "total_ar": 685465.18,
-  "invoice_count": 459,
-  "overdue_pct": 32.84,
-  "overdue_pct_6m": 17.92,
-  "overdue_pct_ytd": 17.92,
+  "total_ar": 685579.6,
+  "invoice_count": 460,
+  "overdue_pct": 32.83,
+  "overdue_pct_6m": 17.91,
+  "overdue_pct_ytd": 17.91,
   "overdue_30": 92826.52,
   "overdue_60": 43781.74,
   "overdue_90": 27732.35,
   "aging": {
-    "Current": 460392.0,
+    "Current": 460506.42,
     "1-30 days": 132246.66,
     "31-60 days": 49044.78,
     "61-90 days": 16049.39,
@@ -34,14 +34,48 @@
     },
     {
       "date": "2026-03-16",
-      "total_ar": 685465.18,
-      "overdue_pct": 32.84,
+      "total_ar": 685579.6,
+      "overdue_pct": 32.83,
       "overdue_pct_target": 10,
       "dso": 10.2,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "481774392504747853",
+      "contact_id": "460910121204057681",
+      "invoice_no": "2026-1040",
+      "company": "Hakvoort Professional B.V.",
+      "invoice_date": "2026-03-16",
+      "due_date": "2026-04-15",
+      "amount": 345.3,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "481774391912302271",
+      "contact_id": "480139559404831885",
+      "invoice_no": "2026-1039",
+      "company": "Independent Project Stoffering",
+      "invoice_date": "2026-03-16",
+      "due_date": "2026-04-15",
+      "amount": 250.86,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "481763064562059109",
       "contact_id": "431018275425486818",
@@ -73,23 +107,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481480391813760909",
-      "contact_id": "423677100806899084",
-      "invoice_no": "2026-1032",
-      "company": "KEK B.V.",
-      "invoice_date": "2026-03-13",
-      "due_date": "2026-04-12",
-      "amount": 481.74,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -9110,6 +9127,40 @@
   ],
   "active_invoices": [
     {
+      "id": "481774392504747853",
+      "contact_id": "460910121204057681",
+      "invoice_no": "2026-1040",
+      "company": "Hakvoort Professional B.V.",
+      "invoice_date": "2026-03-16",
+      "due_date": "2026-04-15",
+      "amount": 345.3,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "481774391912302271",
+      "contact_id": "480139559404831885",
+      "invoice_no": "2026-1039",
+      "company": "Independent Project Stoffering",
+      "invoice_date": "2026-03-16",
+      "due_date": "2026-04-15",
+      "amount": 250.86,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
       "id": "481480399958050416",
       "contact_id": "423677100806899084",
       "invoice_no": "2026-1033",
@@ -9123,23 +9174,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481480391813760909",
-      "contact_id": "423677100806899084",
-      "invoice_no": "2026-1032",
-      "company": "KEK B.V.",
-      "invoice_date": "2026-03-13",
-      "due_date": "2026-04-12",
-      "amount": 481.74,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -18176,6 +18210,79 @@
     }
   ],
   "customers": {
+    "460910121204057681": {
+      "contact_id": "460910121204057681",
+      "company": "Hakvoort Professional B.V.",
+      "invoices": [
+        {
+          "id": "478137793471580061",
+          "contact_id": "460910121204057681",
+          "invoice_no": "2026-0912",
+          "company": "Hakvoort Professional B.V.",
+          "invoice_date": "2026-03-09",
+          "due_date": "2026-04-08",
+          "amount": 1267.29,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.4,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "481774392504747853",
+          "contact_id": "460910121204057681",
+          "invoice_no": "2026-1040",
+          "company": "Hakvoort Professional B.V.",
+          "invoice_date": "2026-03-16",
+          "due_date": "2026-04-15",
+          "amount": 345.3,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 1612.59,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 2,
+      "level": "Monitor"
+    },
+    "480139559404831885": {
+      "contact_id": "480139559404831885",
+      "company": "Independent Project Stoffering",
+      "invoices": [
+        {
+          "id": "481774391912302271",
+          "contact_id": "480139559404831885",
+          "invoice_no": "2026-1039",
+          "company": "Independent Project Stoffering",
+          "invoice_date": "2026-03-16",
+          "due_date": "2026-04-15",
+          "amount": 250.86,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 250.86,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
     "431018275425486818": {
       "contact_id": "431018275425486818",
       "company": "JK Transport Supply B.V.",
@@ -18409,23 +18516,6 @@
           "reminders": []
         },
         {
-          "id": "481480391813760909",
-          "contact_id": "423677100806899084",
-          "invoice_no": "2026-1032",
-          "company": "KEK B.V.",
-          "invoice_date": "2026-03-13",
-          "due_date": "2026-04-12",
-          "amount": 481.74,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "481480372526253444",
           "contact_id": "423677100806899084",
           "invoice_no": "2026-1031",
@@ -18443,10 +18533,10 @@
           "reminders": []
         }
       ],
-      "total_open": 2858.23,
+      "total_open": 2376.49,
       "total_overdue": 1719.15,
       "max_days": 61,
-      "invoice_count": 4,
+      "invoice_count": 3,
       "level": "High"
     },
     "467351969797768506": {
@@ -23483,34 +23573,6 @@
         }
       ],
       "total_open": 1070.27,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "460910121204057681": {
-      "contact_id": "460910121204057681",
-      "company": "Hakvoort Professional B.V.",
-      "invoices": [
-        {
-          "id": "478137793471580061",
-          "contact_id": "460910121204057681",
-          "invoice_no": "2026-0912",
-          "company": "Hakvoort Professional B.V.",
-          "invoice_date": "2026-03-09",
-          "due_date": "2026-04-08",
-          "amount": 1267.29,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.4,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1267.29,
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
