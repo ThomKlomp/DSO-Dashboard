@@ -1,21 +1,21 @@
 {
-  "generated": "2026-03-16T11:44:17.935035",
-  "dso": 10.8,
-  "dso_6m_avg": 20.2,
+  "generated": "2026-03-16T14:20:49.316854",
+  "dso": 10.2,
+  "dso_6m_avg": 20.0,
   "dso_target": 36,
-  "total_ar": 744285.17,
-  "invoice_count": 480,
-  "overdue_pct": 37.52,
-  "overdue_pct_6m": 19.48,
-  "overdue_pct_ytd": 19.48,
-  "overdue_30": 94510.61,
-  "overdue_60": 45465.83,
+  "total_ar": 685465.18,
+  "invoice_count": 459,
+  "overdue_pct": 32.84,
+  "overdue_pct_6m": 17.92,
+  "overdue_pct_ytd": 17.92,
+  "overdue_30": 92826.52,
+  "overdue_60": 43781.74,
   "overdue_90": 27732.35,
   "aging": {
-    "Current": 465007.79,
-    "1-30 days": 184766.77,
+    "Current": 460392.0,
+    "1-30 days": 132246.66,
     "31-60 days": 49044.78,
-    "61-90 days": 17733.48,
+    "61-90 days": 16049.39,
     ">90 days": 27732.35
   },
   "history": [
@@ -34,14 +34,31 @@
     },
     {
       "date": "2026-03-16",
-      "total_ar": 744285.17,
-      "overdue_pct": 37.52,
+      "total_ar": 685465.18,
+      "overdue_pct": 32.84,
       "overdue_pct_target": 10,
-      "dso": 10.8,
+      "dso": 10.2,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "481763064562059109",
+      "contact_id": "431018275425486818",
+      "invoice_no": "2026-1034",
+      "company": "JK Transport Supply B.V.",
+      "invoice_date": "2026-03-16",
+      "due_date": "2026-04-15",
+      "amount": -352.41,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": -0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "481480399958050416",
       "contact_id": "423677100806899084",
@@ -1977,23 +1994,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.4,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481121810344052211",
-      "contact_id": "479327957601486840",
-      "invoice_no": "2026-0902",
-      "company": "IMT van Rooijen",
-      "invoice_date": "2026-03-09",
-      "due_date": "2026-04-08",
-      "amount": 3008.18,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.9,
       "level": "Monitor",
       "reminders": []
     },
@@ -4803,23 +4803,6 @@
       "reminders": []
     },
     {
-      "id": "479303740955821875",
-      "contact_id": "452871894096414419",
-      "invoice_no": "2026-0690",
-      "company": "URA PM",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 413.17,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "478879339406951845",
       "contact_id": "413917749490746370",
       "invoice_no": "2026-0689",
@@ -5190,23 +5173,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479303712738640968",
-      "contact_id": "478213313912636568",
-      "invoice_no": "2026-0651",
-      "company": "Fokker Terminal",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 1194.44,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.4,
       "level": "Monitor",
       "reminders": []
     },
@@ -5602,23 +5568,6 @@
       "reminders": []
     },
     {
-      "id": "478764234203727617",
-      "contact_id": "373979318352611285",
-      "invoice_no": "2026-0582",
-      "company": "Office Service Nederland B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 12466.51,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 5.7,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "476796692642924379",
       "contact_id": "379399769169070072",
       "invoice_no": "2026-0572",
@@ -5734,57 +5683,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 3.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478861701955978957",
-      "contact_id": "469452842013295875",
-      "invoice_no": "2026-0623",
-      "company": "Rikkert Afbouw B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 414.38,
-      "currency": "EUR",
-      "days_overdue": 1,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 1.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478861700569761301",
-      "contact_id": "469452842013295875",
-      "invoice_no": "2026-0622",
-      "company": "Rikkert Afbouw B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 1106.38,
-      "currency": "EUR",
-      "days_overdue": 1,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 1.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478764212433192679",
-      "contact_id": "458655648747358060",
-      "invoice_no": "2026-0620",
-      "company": "Caring Fieldmarketing B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 25293.38,
-      "currency": "EUR",
-      "days_overdue": 1,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 8.6,
       "level": "Monitor",
       "reminders": []
     },
@@ -5925,23 +5823,6 @@
       "reminders": []
     },
     {
-      "id": "478223679652627493",
-      "contact_id": "469452842013295875",
-      "invoice_no": "2026-0607",
-      "company": "Rikkert Afbouw B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 624.92,
-      "currency": "EUR",
-      "days_overdue": 1,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 1.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "478946001485301263",
       "contact_id": "337199960248288472",
       "invoice_no": "2026-0604",
@@ -5955,23 +5836,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 0.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478882603825366898",
-      "contact_id": "373979523751871801",
-      "invoice_no": "2026-0603",
-      "company": "De Projectinrichter B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 980.23,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 2.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -6112,23 +5976,6 @@
       "reminders": []
     },
     {
-      "id": "478764235275372409",
-      "contact_id": "444524248842634623",
-      "invoice_no": "2026-0584",
-      "company": "Gommers Nijmegen B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 2055.0,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 2.6,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "478853550856734054",
       "contact_id": "478147658622437314",
       "invoice_no": "2026-0583",
@@ -6159,23 +6006,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 2.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478853552499853291",
-      "contact_id": "478788377460606237",
-      "invoice_no": "2026-0578",
-      "company": "Ditt B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 360.37,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 2.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -6227,74 +6057,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 2.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478861701329978978",
-      "contact_id": "469452842013295875",
-      "invoice_no": "2026-0569",
-      "company": "Rikkert Afbouw B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 1635.97,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 2.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478861703323322181",
-      "contact_id": "469452842013295875",
-      "invoice_no": "2026-0568",
-      "company": "Rikkert Afbouw B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 1029.24,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 2.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478223680631997549",
-      "contact_id": "469452842013295875",
-      "invoice_no": "2026-0566",
-      "company": "Rikkert Afbouw B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 1817.37,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 2.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478857558002501568",
-      "contact_id": "373979523751871801",
-      "invoice_no": "2026-0561",
-      "company": "De Projectinrichter B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 1443.83,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 2.4,
       "level": "Monitor",
       "reminders": []
     },
@@ -6465,23 +6227,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 3.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478764215002203347",
-      "contact_id": "454113180204926059",
-      "invoice_no": "2026-0522",
-      "company": "Decoriginals",
-      "invoice_date": "2026-02-11",
-      "due_date": "2026-03-13",
-      "amount": 1728.11,
-      "currency": "EUR",
-      "days_overdue": 3,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 3.5,
       "level": "Monitor",
       "reminders": []
     },
@@ -6721,29 +6466,6 @@
         {
           "nr": 1,
           "date": "2026-02-25",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "476414732090214307",
-      "contact_id": "463006006743402409",
-      "invoice_no": "2026-0175",
-      "company": "Schadenberg Dakwerken B.V.",
-      "invoice_date": "2026-01-16",
-      "due_date": "2026-02-15",
-      "amount": 548.67,
-      "currency": "EUR",
-      "days_overdue": 29,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 29.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-02-21",
           "source": "berekend"
         }
       ]
@@ -7439,29 +7161,6 @@
       ]
     },
     {
-      "id": "472515253574304784",
-      "contact_id": "463006006743402409",
-      "invoice_no": "2025-4593",
-      "company": "Schadenberg Dakwerken B.V.",
-      "invoice_date": "2025-12-07",
-      "due_date": "2026-01-06",
-      "amount": 740.29,
-      "currency": "EUR",
-      "days_overdue": 69,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 69.2,
-      "level": "High",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-01-12",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "471342834209785059",
       "contact_id": "467897977202018204",
       "invoice_no": "2025-4493",
@@ -7544,29 +7243,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 82.1,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-12-30",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "471339356485846913",
-      "contact_id": "463006006743402409",
-      "invoice_no": "2025-4397",
-      "company": "Schadenberg Dakwerken B.V.",
-      "invoice_date": "2025-11-24",
-      "due_date": "2025-12-24",
-      "amount": 943.8,
-      "currency": "EUR",
-      "days_overdue": 82,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 82.3,
       "level": "URGENT",
       "reminders": [
         {
@@ -8651,29 +8327,6 @@
       ]
     },
     {
-      "id": "478137801490040277",
-      "contact_id": "466639936073761867",
-      "invoice_no": "2026-0454",
-      "company": "Jaleco Totaal Projectafbouw",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": 663.94,
-      "currency": "EUR",
-      "days_overdue": 9,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 9.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "478214147649046285",
       "contact_id": "477492964732437622",
       "invoice_no": "2026-0453",
@@ -8963,29 +8616,6 @@
       "state": "reminded",
       "is_bad_debt": false,
       "score": 12.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-10",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "477965703924680361",
-      "contact_id": "463006006743402409",
-      "invoice_no": "2026-0381",
-      "company": "Schadenberg Dakwerken B.V.",
-      "invoice_date": "2026-02-02",
-      "due_date": "2026-03-04",
-      "amount": 351.81,
-      "currency": "EUR",
-      "days_overdue": 12,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 12.1,
       "level": "Monitor",
       "reminders": [
         {
@@ -11363,23 +10993,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.4,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481121810344052211",
-      "contact_id": "479327957601486840",
-      "invoice_no": "2026-0902",
-      "company": "IMT van Rooijen",
-      "invoice_date": "2026-03-09",
-      "due_date": "2026-04-08",
-      "amount": 3008.18,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.9,
       "level": "Monitor",
       "reminders": []
     },
@@ -14070,23 +13683,6 @@
       "reminders": []
     },
     {
-      "id": "479303740955821875",
-      "contact_id": "452871894096414419",
-      "invoice_no": "2026-0690",
-      "company": "URA PM",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 413.17,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "478879339406951845",
       "contact_id": "413917749490746370",
       "invoice_no": "2026-0689",
@@ -14389,23 +13985,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479303712738640968",
-      "contact_id": "478213313912636568",
-      "invoice_no": "2026-0651",
-      "company": "Fokker Terminal",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 1194.44,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.4,
       "level": "Monitor",
       "reminders": []
     },
@@ -14767,23 +14346,6 @@
       "reminders": []
     },
     {
-      "id": "478764234203727617",
-      "contact_id": "373979318352611285",
-      "invoice_no": "2026-0582",
-      "company": "Office Service Nederland B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 12466.51,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 5.7,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "476796692642924379",
       "contact_id": "379399769169070072",
       "invoice_no": "2026-0572",
@@ -14882,57 +14444,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 4.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478861701955978957",
-      "contact_id": "469452842013295875",
-      "invoice_no": "2026-0623",
-      "company": "Rikkert Afbouw B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 414.38,
-      "currency": "EUR",
-      "days_overdue": 1,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 1.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478861700569761301",
-      "contact_id": "469452842013295875",
-      "invoice_no": "2026-0622",
-      "company": "Rikkert Afbouw B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 1106.38,
-      "currency": "EUR",
-      "days_overdue": 1,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 1.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478764212433192679",
-      "contact_id": "458655648747358060",
-      "invoice_no": "2026-0620",
-      "company": "Caring Fieldmarketing B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 25293.38,
-      "currency": "EUR",
-      "days_overdue": 1,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 8.6,
       "level": "Monitor",
       "reminders": []
     },
@@ -15073,40 +14584,6 @@
       "reminders": []
     },
     {
-      "id": "478223679652627493",
-      "contact_id": "469452842013295875",
-      "invoice_no": "2026-0607",
-      "company": "Rikkert Afbouw B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 624.92,
-      "currency": "EUR",
-      "days_overdue": 1,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 1.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478882603825366898",
-      "contact_id": "373979523751871801",
-      "invoice_no": "2026-0603",
-      "company": "De Projectinrichter B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 980.23,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 2.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "478764266113992495",
       "contact_id": "363348136166425656",
       "invoice_no": "2026-0600",
@@ -15243,23 +14720,6 @@
       "reminders": []
     },
     {
-      "id": "478764235275372409",
-      "contact_id": "444524248842634623",
-      "invoice_no": "2026-0584",
-      "company": "Gommers Nijmegen B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 2055.0,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 2.6,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "478853550856734054",
       "contact_id": "478147658622437314",
       "invoice_no": "2026-0583",
@@ -15290,23 +14750,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 2.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478853552499853291",
-      "contact_id": "478788377460606237",
-      "invoice_no": "2026-0578",
-      "company": "Ditt B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 360.37,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 2.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -15358,74 +14801,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 2.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478861701329978978",
-      "contact_id": "469452842013295875",
-      "invoice_no": "2026-0569",
-      "company": "Rikkert Afbouw B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 1635.97,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 2.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478861703323322181",
-      "contact_id": "469452842013295875",
-      "invoice_no": "2026-0568",
-      "company": "Rikkert Afbouw B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 1029.24,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 2.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478223680631997549",
-      "contact_id": "469452842013295875",
-      "invoice_no": "2026-0566",
-      "company": "Rikkert Afbouw B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 1817.37,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 2.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478857558002501568",
-      "contact_id": "373979523751871801",
-      "invoice_no": "2026-0561",
-      "company": "De Projectinrichter B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 1443.83,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 2.4,
       "level": "Monitor",
       "reminders": []
     },
@@ -15583,23 +14958,6 @@
       "reminders": []
     },
     {
-      "id": "478764215002203347",
-      "contact_id": "454113180204926059",
-      "invoice_no": "2026-0522",
-      "company": "Decoriginals",
-      "invoice_date": "2026-02-11",
-      "due_date": "2026-03-13",
-      "amount": 1728.11,
-      "currency": "EUR",
-      "days_overdue": 3,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 3.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "478764210406294724",
       "contact_id": "473159267005760707",
       "invoice_no": "2026-0520",
@@ -15726,29 +15084,6 @@
         {
           "nr": 1,
           "date": "2026-02-25",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "476414732090214307",
-      "contact_id": "463006006743402409",
-      "invoice_no": "2026-0175",
-      "company": "Schadenberg Dakwerken B.V.",
-      "invoice_date": "2026-01-16",
-      "due_date": "2026-02-15",
-      "amount": 548.67,
-      "currency": "EUR",
-      "days_overdue": 29,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 29.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-02-21",
           "source": "berekend"
         }
       ]
@@ -16352,29 +15687,6 @@
       ]
     },
     {
-      "id": "472515253574304784",
-      "contact_id": "463006006743402409",
-      "invoice_no": "2025-4593",
-      "company": "Schadenberg Dakwerken B.V.",
-      "invoice_date": "2025-12-07",
-      "due_date": "2026-01-06",
-      "amount": 740.29,
-      "currency": "EUR",
-      "days_overdue": 69,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 69.2,
-      "level": "High",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-01-12",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "471342834209785059",
       "contact_id": "467897977202018204",
       "invoice_no": "2025-4493",
@@ -16457,29 +15769,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 82.1,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-12-30",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "471339356485846913",
-      "contact_id": "463006006743402409",
-      "invoice_no": "2025-4397",
-      "company": "Schadenberg Dakwerken B.V.",
-      "invoice_date": "2025-11-24",
-      "due_date": "2025-12-24",
-      "amount": 943.8,
-      "currency": "EUR",
-      "days_overdue": 82,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 82.3,
       "level": "URGENT",
       "reminders": [
         {
@@ -17518,29 +16807,6 @@
       ]
     },
     {
-      "id": "478137801490040277",
-      "contact_id": "466639936073761867",
-      "invoice_no": "2026-0454",
-      "company": "Jaleco Totaal Projectafbouw",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": 663.94,
-      "currency": "EUR",
-      "days_overdue": 9,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 9.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "478214147649046285",
       "contact_id": "477492964732437622",
       "invoice_no": "2026-0453",
@@ -17830,29 +17096,6 @@
       "state": "reminded",
       "is_bad_debt": false,
       "score": 12.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-10",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "477965703924680361",
-      "contact_id": "463006006743402409",
-      "invoice_no": "2026-0381",
-      "company": "Schadenberg Dakwerken B.V.",
-      "invoice_date": "2026-02-02",
-      "due_date": "2026-03-04",
-      "amount": 351.81,
-      "currency": "EUR",
-      "days_overdue": 12,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 12.1,
       "level": "Monitor",
       "reminders": [
         {
@@ -18933,6 +18176,177 @@
     }
   ],
   "customers": {
+    "431018275425486818": {
+      "contact_id": "431018275425486818",
+      "company": "JK Transport Supply B.V.",
+      "invoices": [
+        {
+          "id": "477594967747856068",
+          "contact_id": "431018275425486818",
+          "invoice_no": "2026-0573",
+          "company": "JK Transport Supply B.V.",
+          "invoice_date": "2026-02-12",
+          "due_date": "2026-03-14",
+          "amount": 5388.25,
+          "currency": "EUR",
+          "days_overdue": 2,
+          "bucket": "1-30 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 3.6,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "474683000519394788",
+          "contact_id": "431018275425486818",
+          "invoice_no": "2025-4996",
+          "company": "JK Transport Supply B.V.",
+          "invoice_date": "2025-12-28",
+          "due_date": "2026-01-27",
+          "amount": 1821.85,
+          "currency": "EUR",
+          "days_overdue": 48,
+          "bucket": "31-60 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 48.5,
+          "level": "High",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-02-02",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "465194638479722063",
+          "contact_id": "431018275425486818",
+          "invoice_no": "2025-3246",
+          "company": "JK Transport Supply B.V.",
+          "invoice_date": "2025-09-19",
+          "due_date": "2025-10-19",
+          "amount": 1715.71,
+          "currency": "EUR",
+          "days_overdue": 148,
+          "bucket": ">90 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 148.5,
+          "level": "URGENT",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2025-10-25",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "474683525979703092",
+          "contact_id": "431018275425486818",
+          "invoice_no": "2025-4997",
+          "company": "JK Transport Supply B.V.",
+          "invoice_date": "2025-12-28",
+          "due_date": "2026-01-27",
+          "amount": 814.98,
+          "currency": "EUR",
+          "days_overdue": 48,
+          "bucket": "31-60 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 48.2,
+          "level": "High",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-02-02",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "477673580479383249",
+          "contact_id": "431018275425486818",
+          "invoice_no": "2026-0324",
+          "company": "JK Transport Supply B.V.",
+          "invoice_date": "2026-01-30",
+          "due_date": "2026-03-01",
+          "amount": -88.49,
+          "currency": "EUR",
+          "days_overdue": 15,
+          "bucket": "1-30 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 15.0,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-03-07",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "479303722039510650",
+          "contact_id": "431018275425486818",
+          "invoice_no": "2026-0714",
+          "company": "JK Transport Supply B.V.",
+          "invoice_date": "2026-02-23",
+          "due_date": "2026-03-25",
+          "amount": 496.52,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "480680233098282846",
+          "contact_id": "431018275425486818",
+          "invoice_no": "2026-0901",
+          "company": "JK Transport Supply B.V.",
+          "invoice_date": "2026-03-09",
+          "due_date": "2026-04-08",
+          "amount": 313.83,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "481763064562059109",
+          "contact_id": "431018275425486818",
+          "invoice_no": "2026-1034",
+          "company": "JK Transport Supply B.V.",
+          "invoice_date": "2026-03-16",
+          "due_date": "2026-04-15",
+          "amount": -352.41,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": -0.1,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 10551.14,
+      "total_overdue": 9740.79,
+      "max_days": 148,
+      "invoice_count": 6,
+      "level": "URGENT"
+    },
     "423677100806899084": {
       "contact_id": "423677100806899084",
       "company": "KEK B.V.",
@@ -19181,23 +18595,6 @@
       "company": "Office Service Nederland B.V.",
       "invoices": [
         {
-          "id": "478764234203727617",
-          "contact_id": "373979318352611285",
-          "invoice_no": "2026-0582",
-          "company": "Office Service Nederland B.V.",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 12466.51,
-          "currency": "EUR",
-          "days_overdue": 2,
-          "bucket": "1-30 days",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 5.7,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "479303711862032357",
           "contact_id": "373979318352611285",
           "invoice_no": "2026-0649",
@@ -19317,10 +18714,10 @@
           "reminders": []
         }
       ],
-      "total_open": 40709.11,
-      "total_overdue": 12466.51,
-      "max_days": 2,
-      "invoice_count": 4,
+      "total_open": 28242.6,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 3,
       "level": "Monitor"
     },
     "477596835087647760": {
@@ -21096,23 +20493,6 @@
       "company": "Caring Fieldmarketing B.V.",
       "invoices": [
         {
-          "id": "478764212433192679",
-          "contact_id": "458655648747358060",
-          "invoice_no": "2026-0620",
-          "company": "Caring Fieldmarketing B.V.",
-          "invoice_date": "2026-02-13",
-          "due_date": "2026-03-15",
-          "amount": 25293.38,
-          "currency": "EUR",
-          "days_overdue": 1,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 8.6,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "479303700676871600",
           "contact_id": "458655648747358060",
           "invoice_no": "2026-0635",
@@ -21181,10 +20561,10 @@
           "reminders": []
         }
       ],
-      "total_open": 80537.43,
-      "total_overdue": 25293.38,
-      "max_days": 1,
-      "invoice_count": 5,
+      "total_open": 55244.05,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 4,
       "level": "Monitor"
     },
     "481133163625579540": {
@@ -21325,40 +20705,6 @@
               "source": "berekend"
             }
           ]
-        },
-        {
-          "id": "478857558002501568",
-          "contact_id": "373979523751871801",
-          "invoice_no": "2026-0561",
-          "company": "De Projectinrichter B.V.",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 1443.83,
-          "currency": "EUR",
-          "days_overdue": 2,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 2.4,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "478882603825366898",
-          "contact_id": "373979523751871801",
-          "invoice_no": "2026-0603",
-          "company": "De Projectinrichter B.V.",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 980.23,
-          "currency": "EUR",
-          "days_overdue": 2,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 2.3,
-          "level": "Monitor",
-          "reminders": []
         },
         {
           "id": "468615226839794694",
@@ -21532,10 +20878,10 @@
           "reminders": []
         }
       ],
-      "total_open": 6461.28,
-      "total_overdue": 5328.07,
+      "total_open": 4037.22,
+      "total_overdue": 2904.01,
       "max_days": 130,
-      "invoice_count": 11,
+      "invoice_count": 9,
       "level": "URGENT"
     },
     "457400629303707048": {
@@ -22010,23 +21356,6 @@
       "company": "Decoriginals",
       "invoices": [
         {
-          "id": "478764215002203347",
-          "contact_id": "454113180204926059",
-          "invoice_no": "2026-0522",
-          "company": "Decoriginals",
-          "invoice_date": "2026-02-11",
-          "due_date": "2026-03-13",
-          "amount": 1728.11,
-          "currency": "EUR",
-          "days_overdue": 3,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 3.5,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "479952361246164317",
           "contact_id": "454113180204926059",
           "invoice_no": "2026-0763",
@@ -22078,10 +21407,10 @@
           "reminders": []
         }
       ],
-      "total_open": 3290.0,
-      "total_overdue": 1728.11,
-      "max_days": 3,
-      "invoice_count": 4,
+      "total_open": 1561.89,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 3,
       "level": "Monitor"
     },
     "477965820148843945": {
@@ -24383,188 +23712,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "479327957601486840": {
-      "contact_id": "479327957601486840",
-      "company": "IMT van Rooijen",
-      "invoices": [
-        {
-          "id": "481121810344052211",
-          "contact_id": "479327957601486840",
-          "invoice_no": "2026-0902",
-          "company": "IMT van Rooijen",
-          "invoice_date": "2026-03-09",
-          "due_date": "2026-04-08",
-          "amount": 3008.18,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.9,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 3008.18,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "431018275425486818": {
-      "contact_id": "431018275425486818",
-      "company": "JK Transport Supply B.V.",
-      "invoices": [
-        {
-          "id": "477594967747856068",
-          "contact_id": "431018275425486818",
-          "invoice_no": "2026-0573",
-          "company": "JK Transport Supply B.V.",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 5388.25,
-          "currency": "EUR",
-          "days_overdue": 2,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 3.6,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "474683000519394788",
-          "contact_id": "431018275425486818",
-          "invoice_no": "2025-4996",
-          "company": "JK Transport Supply B.V.",
-          "invoice_date": "2025-12-28",
-          "due_date": "2026-01-27",
-          "amount": 1821.85,
-          "currency": "EUR",
-          "days_overdue": 48,
-          "bucket": "31-60 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 48.5,
-          "level": "High",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-02-02",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "465194638479722063",
-          "contact_id": "431018275425486818",
-          "invoice_no": "2025-3246",
-          "company": "JK Transport Supply B.V.",
-          "invoice_date": "2025-09-19",
-          "due_date": "2025-10-19",
-          "amount": 1715.71,
-          "currency": "EUR",
-          "days_overdue": 148,
-          "bucket": ">90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 148.5,
-          "level": "URGENT",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2025-10-25",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "474683525979703092",
-          "contact_id": "431018275425486818",
-          "invoice_no": "2025-4997",
-          "company": "JK Transport Supply B.V.",
-          "invoice_date": "2025-12-28",
-          "due_date": "2026-01-27",
-          "amount": 814.98,
-          "currency": "EUR",
-          "days_overdue": 48,
-          "bucket": "31-60 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 48.2,
-          "level": "High",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-02-02",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "477673580479383249",
-          "contact_id": "431018275425486818",
-          "invoice_no": "2026-0324",
-          "company": "JK Transport Supply B.V.",
-          "invoice_date": "2026-01-30",
-          "due_date": "2026-03-01",
-          "amount": -88.49,
-          "currency": "EUR",
-          "days_overdue": 15,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 15.0,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-07",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "479303722039510650",
-          "contact_id": "431018275425486818",
-          "invoice_no": "2026-0714",
-          "company": "JK Transport Supply B.V.",
-          "invoice_date": "2026-02-23",
-          "due_date": "2026-03-25",
-          "amount": 496.52,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "480680233098282846",
-          "contact_id": "431018275425486818",
-          "invoice_no": "2026-0901",
-          "company": "JK Transport Supply B.V.",
-          "invoice_date": "2026-03-09",
-          "due_date": "2026-04-08",
-          "amount": 313.83,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 10551.14,
-      "total_overdue": 9740.79,
-      "max_days": 148,
-      "invoice_count": 6,
-      "level": "URGENT"
-    },
     "479399037571695900": {
       "contact_id": "479399037571695900",
       "company": "Langerak Timmerwerken",
@@ -25565,29 +24712,6 @@
       "company": "Jaleco Totaal Projectafbouw",
       "invoices": [
         {
-          "id": "478137801490040277",
-          "contact_id": "466639936073761867",
-          "invoice_no": "2026-0454",
-          "company": "Jaleco Totaal Projectafbouw",
-          "invoice_date": "2026-02-05",
-          "due_date": "2026-03-07",
-          "amount": 663.94,
-          "currency": "EUR",
-          "days_overdue": 9,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 9.2,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-13",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
           "id": "480680232153515401",
           "contact_id": "466639936073761867",
           "invoice_no": "2026-0869",
@@ -25605,10 +24729,10 @@
           "reminders": []
         }
       ],
-      "total_open": 1201.82,
-      "total_overdue": 663.94,
-      "max_days": 9,
-      "invoice_count": 2,
+      "total_open": 537.88,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
       "level": "Monitor"
     },
     "386630704423765218": {
@@ -25931,108 +25055,6 @@
       "company": "Rikkert Afbouw B.V.",
       "invoices": [
         {
-          "id": "478223680631997549",
-          "contact_id": "469452842013295875",
-          "invoice_no": "2026-0566",
-          "company": "Rikkert Afbouw B.V.",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 1817.37,
-          "currency": "EUR",
-          "days_overdue": 2,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 2.5,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "478861701329978978",
-          "contact_id": "469452842013295875",
-          "invoice_no": "2026-0569",
-          "company": "Rikkert Afbouw B.V.",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 1635.97,
-          "currency": "EUR",
-          "days_overdue": 2,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 2.5,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "478861700569761301",
-          "contact_id": "469452842013295875",
-          "invoice_no": "2026-0622",
-          "company": "Rikkert Afbouw B.V.",
-          "invoice_date": "2026-02-13",
-          "due_date": "2026-03-15",
-          "amount": 1106.38,
-          "currency": "EUR",
-          "days_overdue": 1,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 1.3,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "478861703323322181",
-          "contact_id": "469452842013295875",
-          "invoice_no": "2026-0568",
-          "company": "Rikkert Afbouw B.V.",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 1029.24,
-          "currency": "EUR",
-          "days_overdue": 2,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 2.3,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "478223679652627493",
-          "contact_id": "469452842013295875",
-          "invoice_no": "2026-0607",
-          "company": "Rikkert Afbouw B.V.",
-          "invoice_date": "2026-02-13",
-          "due_date": "2026-03-15",
-          "amount": 624.92,
-          "currency": "EUR",
-          "days_overdue": 1,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 1.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "478861701955978957",
-          "contact_id": "469452842013295875",
-          "invoice_no": "2026-0623",
-          "company": "Rikkert Afbouw B.V.",
-          "invoice_date": "2026-02-13",
-          "due_date": "2026-03-15",
-          "amount": 414.38,
-          "currency": "EUR",
-          "days_overdue": 1,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 1.1,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "479952377606047485",
           "contact_id": "469452842013295875",
           "invoice_no": "2026-0849",
@@ -26118,10 +25140,10 @@
           "reminders": []
         }
       ],
-      "total_open": 10966.08,
-      "total_overdue": 6628.26,
-      "max_days": 2,
-      "invoice_count": 11,
+      "total_open": 4337.82,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 5,
       "level": "Monitor"
     },
     "456656981535491709": {
@@ -27433,29 +26455,6 @@
       "company": "Schadenberg Dakwerken B.V.",
       "invoices": [
         {
-          "id": "471339356485846913",
-          "contact_id": "463006006743402409",
-          "invoice_no": "2025-4397",
-          "company": "Schadenberg Dakwerken B.V.",
-          "invoice_date": "2025-11-24",
-          "due_date": "2025-12-24",
-          "amount": 943.8,
-          "currency": "EUR",
-          "days_overdue": 82,
-          "bucket": "61-90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 82.3,
-          "level": "URGENT",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2025-12-30",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
           "id": "479599811938485917",
           "contact_id": "463006006743402409",
           "invoice_no": "2026-0713",
@@ -27474,75 +26473,6 @@
             {
               "nr": 1,
               "date": "2026-03-05",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "472515253574304784",
-          "contact_id": "463006006743402409",
-          "invoice_no": "2025-4593",
-          "company": "Schadenberg Dakwerken B.V.",
-          "invoice_date": "2025-12-07",
-          "due_date": "2026-01-06",
-          "amount": 740.29,
-          "currency": "EUR",
-          "days_overdue": 69,
-          "bucket": "61-90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 69.2,
-          "level": "High",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-01-12",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "476414732090214307",
-          "contact_id": "463006006743402409",
-          "invoice_no": "2026-0175",
-          "company": "Schadenberg Dakwerken B.V.",
-          "invoice_date": "2026-01-16",
-          "due_date": "2026-02-15",
-          "amount": 548.67,
-          "currency": "EUR",
-          "days_overdue": 29,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 29.2,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-02-21",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "477965703924680361",
-          "contact_id": "463006006743402409",
-          "invoice_no": "2026-0381",
-          "company": "Schadenberg Dakwerken B.V.",
-          "invoice_date": "2026-02-02",
-          "due_date": "2026-03-04",
-          "amount": 351.81,
-          "currency": "EUR",
-          "days_overdue": 12,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 12.1,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-10",
               "source": "berekend"
             }
           ]
@@ -27616,11 +26546,11 @@
           "reminders": []
         }
       ],
-      "total_open": 5039.83,
-      "total_overdue": 3364.57,
-      "max_days": 82,
-      "invoice_count": 9,
-      "level": "URGENT"
+      "total_open": 2455.26,
+      "total_overdue": 780.0,
+      "max_days": 17,
+      "invoice_count": 5,
+      "level": "Monitor"
     },
     "479575942602163315": {
       "contact_id": "479575942602163315",
@@ -27706,34 +26636,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "452871894096414419": {
-      "contact_id": "452871894096414419",
-      "company": "URA PM",
-      "invoices": [
-        {
-          "id": "479303740955821875",
-          "contact_id": "452871894096414419",
-          "invoice_no": "2026-0690",
-          "company": "URA PM",
-          "invoice_date": "2026-02-18",
-          "due_date": "2026-03-20",
-          "amount": 413.17,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 413.17,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "435827856135686023": {
       "contact_id": "435827856135686023",
       "company": "Lykele Projectstoffering B.V.",
@@ -27795,23 +26697,6 @@
       "company": "Gommers Nijmegen B.V.",
       "invoices": [
         {
-          "id": "478764235275372409",
-          "contact_id": "444524248842634623",
-          "invoice_no": "2026-0584",
-          "company": "Gommers Nijmegen B.V.",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 2055.0,
-          "currency": "EUR",
-          "days_overdue": 2,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 2.6,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "479303715279341162",
           "contact_id": "444524248842634623",
           "invoice_no": "2026-0656",
@@ -27829,10 +26714,10 @@
           "reminders": []
         }
       ],
-      "total_open": 2831.76,
-      "total_overdue": 2055.0,
-      "max_days": 2,
-      "invoice_count": 2,
+      "total_open": 776.76,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
       "level": "Monitor"
     },
     "477953769106048167": {
@@ -27931,34 +26816,6 @@
         }
       ],
       "total_open": 566.07,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "478213313912636568": {
-      "contact_id": "478213313912636568",
-      "company": "Fokker Terminal",
-      "invoices": [
-        {
-          "id": "479303712738640968",
-          "contact_id": "478213313912636568",
-          "invoice_no": "2026-0651",
-          "company": "Fokker Terminal",
-          "invoice_date": "2026-02-18",
-          "due_date": "2026-03-20",
-          "amount": 1194.44,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.4,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1194.44,
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
@@ -28699,34 +27556,6 @@
       ],
       "total_open": 712.86,
       "total_overdue": 712.86,
-      "max_days": 2,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "478788377460606237": {
-      "contact_id": "478788377460606237",
-      "company": "Ditt B.V.",
-      "invoices": [
-        {
-          "id": "478853552499853291",
-          "contact_id": "478788377460606237",
-          "invoice_no": "2026-0578",
-          "company": "Ditt B.V.",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 360.37,
-          "currency": "EUR",
-          "days_overdue": 2,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 2.1,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 360.37,
-      "total_overdue": 360.37,
       "max_days": 2,
       "invoice_count": 1,
       "level": "Monitor"
@@ -30746,6 +29575,23 @@
     }
   },
   "credit_invoices": [
+    {
+      "id": "481763064562059109",
+      "contact_id": "431018275425486818",
+      "invoice_no": "2026-1034",
+      "company": "JK Transport Supply B.V.",
+      "invoice_date": "2026-03-16",
+      "due_date": "2026-04-15",
+      "amount": -352.41,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": -0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "481480372526253444",
       "contact_id": "423677100806899084",
