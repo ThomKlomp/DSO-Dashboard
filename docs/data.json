@@ -1,18 +1,18 @@
 {
-  "generated": "2026-03-17T07:52:13.236384",
-  "dso": 9.9,
+  "generated": "2026-03-17T09:50:28.970819",
+  "dso": 9.7,
   "dso_6m_avg": 17.4,
   "dso_target": 36,
-  "total_ar": 687944.06,
-  "invoice_count": 469,
-  "overdue_pct": 32.09,
-  "overdue_pct_6m": 29.48,
+  "total_ar": 678672.68,
+  "invoice_count": 471,
+  "overdue_pct": 30.92,
+  "overdue_pct_6m": 28.89,
   "overdue_30": 95328.07,
   "overdue_60": 45143.96,
   "overdue_90": 27482.35,
   "aging": {
-    "Current": 467177.13,
-    "1-30 days": 125438.86,
+    "Current": 468795.75,
+    "1-30 days": 114548.86,
     "31-60 days": 50184.11,
     "61-90 days": 17661.61,
     ">90 days": 27482.35
@@ -41,14 +41,65 @@
     },
     {
       "date": "2026-03-17",
-      "total_ar": 687944.06,
-      "overdue_ar": 220766.93,
-      "overdue_pct": 32.09,
-      "dso": 9.9,
+      "total_ar": 678672.68,
+      "overdue_ar": 209876.93,
+      "overdue_pct": 30.92,
+      "dso": 9.7,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "481841615912044001",
+      "contact_id": "427310925030098025",
+      "invoice_no": "2026-1051",
+      "company": "Koen Kronemeijer",
+      "invoice_date": "2026-03-17",
+      "due_date": "2026-04-16",
+      "amount": 79.86,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "481768900751525832",
+      "contact_id": "446509124900882085",
+      "invoice_no": "2026-1050",
+      "company": "Van Eijk Groep B.V.",
+      "invoice_date": "2026-03-17",
+      "due_date": "2026-04-16",
+      "amount": 1315.88,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.4,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "481768881697850914",
+      "contact_id": "477413071092975524",
+      "invoice_no": "2026-1049",
+      "company": "H\u00fcgge B.V.",
+      "invoice_date": "2026-03-17",
+      "due_date": "2026-04-16",
+      "amount": 222.88,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "481768836155049347",
       "contact_id": "443972141945193786",
@@ -6187,23 +6238,6 @@
       "reminders": []
     },
     {
-      "id": "477609036943984055",
-      "contact_id": "459647100568733553",
-      "invoice_no": "2026-0564",
-      "company": "Cornelius Lifestyle",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 10890.0,
-      "currency": "EUR",
-      "days_overdue": 3,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 6.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "478784350297523394",
       "contact_id": "412263849777956369",
       "invoice_no": "2026-0552",
@@ -9261,6 +9295,57 @@
     }
   ],
   "active_invoices": [
+    {
+      "id": "481841615912044001",
+      "contact_id": "427310925030098025",
+      "invoice_no": "2026-1051",
+      "company": "Koen Kronemeijer",
+      "invoice_date": "2026-03-17",
+      "due_date": "2026-04-16",
+      "amount": 79.86,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "481768900751525832",
+      "contact_id": "446509124900882085",
+      "invoice_no": "2026-1050",
+      "company": "Van Eijk Groep B.V.",
+      "invoice_date": "2026-03-17",
+      "due_date": "2026-04-16",
+      "amount": 1315.88,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.4,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "481768881697850914",
+      "contact_id": "477413071092975524",
+      "invoice_no": "2026-1049",
+      "company": "H\u00fcgge B.V.",
+      "invoice_date": "2026-03-17",
+      "due_date": "2026-04-16",
+      "amount": 222.88,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "481768836155049347",
       "contact_id": "443972141945193786",
@@ -15093,23 +15178,6 @@
       "reminders": []
     },
     {
-      "id": "477609036943984055",
-      "contact_id": "459647100568733553",
-      "invoice_no": "2026-0564",
-      "company": "Cornelius Lifestyle",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 10890.0,
-      "currency": "EUR",
-      "days_overdue": 3,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 6.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "478764211346867684",
       "contact_id": "466901919417238694",
       "invoice_no": "2026-0551",
@@ -18473,6 +18541,124 @@
     }
   ],
   "customers": {
+    "427310925030098025": {
+      "contact_id": "427310925030098025",
+      "company": "Koen Kronemeijer",
+      "invoices": [
+        {
+          "id": "481841615912044001",
+          "contact_id": "427310925030098025",
+          "invoice_no": "2026-1051",
+          "company": "Koen Kronemeijer",
+          "invoice_date": "2026-03-17",
+          "due_date": "2026-04-16",
+          "amount": 79.86,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.0,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 79.86,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
+    "446509124900882085": {
+      "contact_id": "446509124900882085",
+      "company": "Van Eijk Groep B.V.",
+      "invoices": [
+        {
+          "id": "481768900751525832",
+          "contact_id": "446509124900882085",
+          "invoice_no": "2026-1050",
+          "company": "Van Eijk Groep B.V.",
+          "invoice_date": "2026-03-17",
+          "due_date": "2026-04-16",
+          "amount": 1315.88,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.4,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "481295808066487600",
+          "contact_id": "446509124900882085",
+          "invoice_no": "2026-1010",
+          "company": "Van Eijk Groep B.V.",
+          "invoice_date": "2026-03-12",
+          "due_date": "2026-04-11",
+          "amount": 1306.8,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.4,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 2622.68,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 2,
+      "level": "Monitor"
+    },
+    "477413071092975524": {
+      "contact_id": "477413071092975524",
+      "company": "H\u00fcgge B.V.",
+      "invoices": [
+        {
+          "id": "481295788928926833",
+          "contact_id": "477413071092975524",
+          "invoice_no": "2026-1015",
+          "company": "H\u00fcgge B.V.",
+          "invoice_date": "2026-03-12",
+          "due_date": "2026-04-11",
+          "amount": 395.67,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "481768881697850914",
+          "contact_id": "477413071092975524",
+          "invoice_no": "2026-1049",
+          "company": "H\u00fcgge B.V.",
+          "invoice_date": "2026-03-17",
+          "due_date": "2026-04-16",
+          "amount": 222.88,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 618.55,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 2,
+      "level": "Monitor"
+    },
     "443972141945193786": {
       "contact_id": "443972141945193786",
       "company": "De Produktiewinkel B.V.",
@@ -20399,34 +20585,6 @@
       "invoice_count": 2,
       "level": "Monitor"
     },
-    "477413071092975524": {
-      "contact_id": "477413071092975524",
-      "company": "H\u00fcgge B.V.",
-      "invoices": [
-        {
-          "id": "481295788928926833",
-          "contact_id": "477413071092975524",
-          "invoice_no": "2026-1015",
-          "company": "H\u00fcgge B.V.",
-          "invoice_date": "2026-03-12",
-          "due_date": "2026-04-11",
-          "amount": 395.67,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 395.67,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "460558361475155701": {
       "contact_id": "460558361475155701",
       "company": "Wurks B.V.",
@@ -20731,34 +20889,6 @@
       "total_overdue": 4018.36,
       "max_days": 16,
       "invoice_count": 6,
-      "level": "Monitor"
-    },
-    "446509124900882085": {
-      "contact_id": "446509124900882085",
-      "company": "Van Eijk Groep B.V.",
-      "invoices": [
-        {
-          "id": "481295808066487600",
-          "contact_id": "446509124900882085",
-          "invoice_no": "2026-1010",
-          "company": "Van Eijk Groep B.V.",
-          "invoice_date": "2026-03-12",
-          "due_date": "2026-04-11",
-          "amount": 1306.8,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.4,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1306.8,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
       "level": "Monitor"
     },
     "444068570041681177": {
@@ -27943,34 +28073,6 @@
       ],
       "total_open": 712.86,
       "total_overdue": 712.86,
-      "max_days": 3,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "459647100568733553": {
-      "contact_id": "459647100568733553",
-      "company": "Cornelius Lifestyle",
-      "invoices": [
-        {
-          "id": "477609036943984055",
-          "contact_id": "459647100568733553",
-          "invoice_no": "2026-0564",
-          "company": "Cornelius Lifestyle",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 10890.0,
-          "currency": "EUR",
-          "days_overdue": 3,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 6.3,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 10890.0,
-      "total_overdue": 10890.0,
       "max_days": 3,
       "invoice_count": 1,
       "level": "Monitor"
