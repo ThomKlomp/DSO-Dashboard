@@ -1,17 +1,17 @@
 {
-  "generated": "2026-03-17T09:50:28.970819",
+  "generated": "2026-03-17T11:41:28.399654",
   "dso": 9.7,
   "dso_6m_avg": 17.4,
   "dso_target": 36,
-  "total_ar": 678672.68,
-  "invoice_count": 471,
-  "overdue_pct": 30.92,
-  "overdue_pct_6m": 28.89,
+  "total_ar": 678592.82,
+  "invoice_count": 470,
+  "overdue_pct": 30.93,
+  "overdue_pct_6m": 28.9,
   "overdue_30": 95328.07,
   "overdue_60": 45143.96,
   "overdue_90": 27482.35,
   "aging": {
-    "Current": 468795.75,
+    "Current": 468715.89,
     "1-30 days": 114548.86,
     "31-60 days": 50184.11,
     "61-90 days": 17661.61,
@@ -41,31 +41,14 @@
     },
     {
       "date": "2026-03-17",
-      "total_ar": 678672.68,
+      "total_ar": 678592.82,
       "overdue_ar": 209876.93,
-      "overdue_pct": 30.92,
+      "overdue_pct": 30.93,
       "dso": 9.7,
       "target": 36
     }
   ],
   "invoices": [
-    {
-      "id": "481841615912044001",
-      "contact_id": "427310925030098025",
-      "invoice_no": "2026-1051",
-      "company": "Koen Kronemeijer",
-      "invoice_date": "2026-03-17",
-      "due_date": "2026-04-16",
-      "amount": 79.86,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.0,
-      "level": "Monitor",
-      "reminders": []
-    },
     {
       "id": "481768900751525832",
       "contact_id": "446509124900882085",
@@ -9296,23 +9279,6 @@
   ],
   "active_invoices": [
     {
-      "id": "481841615912044001",
-      "contact_id": "427310925030098025",
-      "invoice_no": "2026-1051",
-      "company": "Koen Kronemeijer",
-      "invoice_date": "2026-03-17",
-      "due_date": "2026-04-16",
-      "amount": 79.86,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.0,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481768900751525832",
       "contact_id": "446509124900882085",
       "invoice_no": "2026-1050",
@@ -18541,34 +18507,6 @@
     }
   ],
   "customers": {
-    "427310925030098025": {
-      "contact_id": "427310925030098025",
-      "company": "Koen Kronemeijer",
-      "invoices": [
-        {
-          "id": "481841615912044001",
-          "contact_id": "427310925030098025",
-          "invoice_no": "2026-1051",
-          "company": "Koen Kronemeijer",
-          "invoice_date": "2026-03-17",
-          "due_date": "2026-04-16",
-          "amount": 79.86,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.0,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 79.86,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "446509124900882085": {
       "contact_id": "446509124900882085",
       "company": "Van Eijk Groep B.V.",
