@@ -313,7 +313,7 @@ def build_data(open_invoices, revenue_180_from_report):
         customers[cid]["level"] = "URGENT" if top >= 70 else ("High" if top >= 40 else "Monitor")
 
     return {
-        "generated":       datetime.datetime.now().isoformat(),
+        "generated":       datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=1))).strftime("%Y-%m-%dT%H:%M:%S"),
         "dso":             dso,
         "dso_6m_avg":      avg_dso_6m,
         "dso_target":      DSO_TARGET,
