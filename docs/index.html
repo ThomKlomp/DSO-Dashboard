@@ -115,12 +115,16 @@ body{font-family:var(--serif);background:var(--bg);color:var(--text);min-height:
 .data-table tbody tr:hover td{background:var(--brand-light);}
 .data-table td.mono{font-family:var(--mono);font-size:11px;}
 .data-table td.amount{font-family:var(--mono);font-weight:600;}
-/* TABLE SCROLL - scrollbar direct zichtbaar onder header */
-.table-scroll{overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;}
-.table-scroll .data-table{min-width:600px;}
-/* Main page tables: max height so scrollbar stays in view */
-.card>.table-scroll{max-height:420px;overflow-y:auto;}
-.card>.table-scroll thead th{position:sticky;top:0;z-index:2;background:#fafbfc;}
+/* TABLE SCROLL — scrollbars altijd direct zichtbaar */
+.table-scroll{
+  display:block;
+  overflow-x:auto;      /* horizontale balk altijd zichtbaar als tabel te breed is */
+  overflow-y:auto;
+  max-height:380px;     /* verticale balk: tabel scrollt, niet de pagina */
+  -webkit-overflow-scrolling:touch;
+}
+.table-scroll .data-table{min-width:640px;}
+.table-scroll thead th{position:sticky;top:0;z-index:2;background:#fafbfc;box-shadow:0 1px 0 var(--border);}
 
 /* PILLS */
 .pill{display:inline-flex;align-items:center;padding:2px 7px;border-radius:5px;font-size:10px;font-weight:700;letter-spacing:.3px;white-space:nowrap;}
@@ -159,6 +163,17 @@ body{font-family:var(--serif);background:var(--bg);color:var(--text);min-height:
 .bankrupt-name{font-size:13px;font-weight:600;color:var(--purple);}
 .bankrupt-meta{font-family:var(--mono);font-size:10px;color:var(--text-3);margin-top:2px;}
 
+/* COLLECTOR SIDEBAR CARD */
+.collector-card{border-color:#c2410c;}
+.collector-card .ch{background:#fff7ed;border-color:#fed7aa;}
+.collector-card .ct{color:#c2410c;}
+.collector-list{display:flex;flex-direction:column;}
+.collector-item{display:flex;align-items:center;justify-content:space-between;padding:9px 14px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s;gap:8px;}
+.collector-item:last-child{border-bottom:none;}
+.collector-item:hover{background:#fff7ed;}
+.collector-name{font-size:13px;font-weight:600;color:#c2410c;}
+.collector-meta{font-family:var(--mono);font-size:10px;color:var(--text-3);margin-top:2px;}
+
 /* LOADING */
 #loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:80vh;gap:14px;}
 .spinner{width:28px;height:28px;border:3px solid var(--border);border-top-color:var(--brand);border-radius:50%;animation:spin .7s linear infinite;}
@@ -185,10 +200,9 @@ footer{text-align:center;padding:24px;font-family:var(--mono);font-size:10px;col
 .close-btn:hover{opacity:1;background:rgba(255,255,255,.1);}
 /* CRITICAL: panel-body is the scroll container */
 .panel-body{flex:1;overflow-y:auto;overflow-x:hidden;padding:22px;}
-/* Tables inside panel - horizontal scroll within panel */
-.panel-body .table-scroll{overflow-x:auto;overflow-y:visible;margin:0 -22px;padding:0 22px 4px;}
+/* Tables inside panel: geen max-height, panel scrollt zelf */
+.panel-body .table-scroll{max-height:none;overflow-x:auto;overflow-y:visible;margin:0 -22px;padding:0 22px 4px;}
 .panel-body .data-table{min-width:480px;}
-.panel-body .card>.table-scroll{max-height:none;overflow-y:visible;}
 
 /* PANEL SECTIONS */
 .ps{margin-bottom:22px;}
@@ -307,6 +321,15 @@ footer{text-align:center;padding:24px;font-family:var(--mono);font-size:10px;col
         <span style="font-size:10px;color:var(--purple);font-family:var(--mono)">Uitgesloten uit KPIs</span>
       </div>
       <div class="bankrupt-list" id="bankrupt-list"></div>
+    </div>
+
+    <!-- INCASSO -->
+    <div class="card collector-card" id="collector-card" style="display:none">
+      <div class="ch">
+        <span class="ct">Bij Incassobureau</span>
+        <span style="font-size:10px;color:#c2410c;font-family:var(--mono)" id="collector-total"></span>
+      </div>
+      <div class="collector-list" id="collector-list"></div>
     </div>
 
     <!-- AR AGING -->
@@ -509,11 +532,13 @@ function render(d){
   document.getElementById('loading').style.display='none';
   document.getElementById('dashboard').style.display='block';
   const ts=new Date(d.generated);
+  const nu=new Date();
   const syncStr=ts.toLocaleDateString('nl-NL')+' '+ts.toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
-  document.getElementById('sync-time').textContent='Data: '+syncStr;
+  const laadStr=nu.toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  document.getElementById('sync-time').textContent='Data: '+syncStr+' | Geladen: '+laadStr;
   renderKPIs(d);renderAgingBars(d);renderTrendChart(d);
   renderCustomerChart(d);renderPriorityChart(d);
-  renderTable(d);renderBankruptSidebar();renderCreditTable(d);
+  renderTable(d);renderBankruptSidebar();renderCollectorSidebar();renderCreditTable(d);
   document.getElementById('footer').textContent='Last sync: '+new Date(d.generated).toISOString()+' | '+d.invoice_count+' facturen';
 }
 
@@ -804,6 +829,33 @@ function renderCreditTable(d){
     :'<tr><td colspan="6" style="color:var(--text-3);font-style:italic;font-size:13px;padding:14px">Geen openstaande creditfacturen</td></tr>';
 }
 
+// ── COLLECTOR SIDEBAR ─────────────────────────────────────────────────────
+function renderCollectorSidebar(){
+  const card=document.getElementById('collector-card');
+  const list=document.getElementById('collector-list');
+  const totalEl=document.getElementById('collector-total');
+
+  // Verzamel alle facturen met collector-flag
+  const collectorInvs=(_data.invoices||[]).filter(i=>{
+    const f=getFlags(i.id);
+    return f.collector && i.amount>0 && !i.is_bad_debt;
+  }).sort((a,b)=>b.amount-a.amount);
+
+  if(!collectorInvs.length){card.style.display='none';return;}
+  card.style.display='block';
+  const totaal=collectorInvs.reduce((s,i)=>s+i.amount,0);
+  totalEl.textContent=fmtE(totaal);
+
+  list.innerHTML=collectorInvs.map(inv=>`
+    <div class="collector-item" onclick="openInvoicePanel('${inv.id}')">
+      <div>
+        <div class="collector-name">${esc(inv.company)}</div>
+        <div class="collector-meta">${esc(inv.invoice_no)} | ${inv.days_overdue}d verlopen</div>
+      </div>
+      <span class="mono" style="font-size:12px;font-weight:700;color:#c2410c;white-space:nowrap">${fmtE(inv.amount)}</span>
+    </div>`).join('');
+}
+
 // ── SEARCH ────────────────────────────────────────────────────────────────
 function handleSearch(q){
   const drop=document.getElementById('search-drop');
@@ -923,6 +975,7 @@ function toggleFlag(id,key,cls){
   const el=document.getElementById(`fc-${id}-${key}`);
   if(el){el.classList.toggle(cls,nv);el.querySelector('.fc-box').textContent=nv?'v':'';}
   if(key==='bankrupt'){computeBankruptSet();renderKPIs(_data);renderAgingBars(_data);renderTable(_data);renderBankruptSidebar();renderCustomerChart(_data);renderPriorityChart(_data);}
+  if(key==='collector'){renderCollectorSidebar();}
   const st=document.getElementById(`flag-st-${id}`);
   if(st){st.textContent='Opgeslagen';setTimeout(()=>{if(st)st.textContent='';},2000);}
 }
