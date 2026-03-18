@@ -198,11 +198,14 @@ footer{text-align:center;padding:24px;font-family:var(--mono);font-size:10px;col
 .panel-sub{font-size:10px;opacity:.55;font-family:var(--mono);margin-top:3px;}
 .close-btn{background:none;border:none;color:#fff;font-size:18px;cursor:pointer;padding:3px 7px;line-height:1;opacity:.7;flex-shrink:0;border-radius:4px;}
 .close-btn:hover{opacity:1;background:rgba(255,255,255,.1);}
-/* CRITICAL: panel-body is the scroll container */
-.panel-body{flex:1;overflow-y:auto;overflow-x:hidden;padding:22px;}
-/* Tables inside panel: geen max-height, panel scrollt zelf */
-.panel-body .table-scroll{max-height:none;overflow-x:auto;overflow-y:visible;margin:0 -22px;padding:0 22px 4px;}
-.panel-body .data-table{min-width:480px;}
+/* CRITICAL: panel-body vult resterende hoogte */
+.panel-body{flex:1;overflow:hidden;display:flex;flex-direction:column;}
+/* Scrollbare content voor notities/details */
+.panel-body-scroll{flex:1;overflow-y:auto;overflow-x:hidden;padding:22px;}
+/* Tabel die volledig panel vult — beide scrollbars altijd bovenaan zichtbaar */
+.panel-table-wrap{flex:1;overflow:auto;display:block;}
+.panel-table-wrap .data-table{min-width:520px;}
+.panel-table-wrap thead th{position:sticky;top:0;z-index:2;background:#fafbfc;box-shadow:0 1px 0 var(--border);}
 
 /* PANEL SECTIONS */
 .ps{margin-bottom:22px;}
@@ -534,7 +537,8 @@ function render(d){
   const ts=new Date(d.generated);
   const nu=new Date();
   const tzOpts={timeZone:'Europe/Amsterdam',hour:'2-digit',minute:'2-digit',second:'2-digit'};
-  const syncStr=ts.toLocaleDateString('nl-NL',{timeZone:'Europe/Amsterdam'})+' '+ts.toLocaleTimeString('nl-NL',tzOpts);
+  // generated is al Amsterdam tijd, parse als lokaal
+  const syncStr=d.generated.replace('T',' ').slice(0,19);
   const laadStr=nu.toLocaleTimeString('nl-NL',tzOpts);
   document.getElementById('sync-time').textContent='Data: '+syncStr+' | Geladen: '+laadStr;
   renderKPIs(d);renderAgingBars(d);renderTrendChart(d);
@@ -899,12 +903,18 @@ async function triggerRefresh(){
 }
 
 // ── PANEL ─────────────────────────────────────────────────────────────────
-function openPanel(title,sub,html){
+function openPanel(title,sub,html,isTable){
   document.getElementById('panel-title').textContent=title;
   document.getElementById('panel-sub').textContent=sub||'';
   const body=document.getElementById('panel-body');
-  body.innerHTML=html;
-  body.scrollTop=0;  // always scroll to top
+  // Tabel-panelen: wrap in panel-table-wrap (scrollt op beide assen, balk altijd zichtbaar)
+  // Detail-panelen: wrap in panel-body-scroll (normaal scrollend)
+  if(isTable){
+    body.innerHTML=html;
+  } else {
+    body.innerHTML=`<div class="panel-body-scroll">${html}</div>`;
+  }
+  body.scrollTop=0;
   document.getElementById('panel-overlay').classList.add('open');
   document.body.style.overflow='hidden';
 }
@@ -926,7 +936,7 @@ function openFilteredPanel(filterKey,title){
   };
   const invs=active.filter(fns[filterKey]||fns.all_open).sort((a,b)=>b.score-a.score);
   const total=invs.reduce((s,i)=>s+i.amount,0);
-  openPanel(title,invs.length+' facturen | '+fmtE(total),filteredTableHTML(invs,filterKey,encodeURIComponent(title)));
+  openPanel(title,invs.length+' facturen | '+fmtE(total),filteredTableHTML(invs,filterKey,encodeURIComponent(title)),true);
 }
 
 function openBucketPanel(bucketKey,bucketLabel){
@@ -943,7 +953,7 @@ function openBucketPanel(bucketKey,bucketLabel){
   const label=bucketLabel==='Current'?'Openstaand':bucketLabel;
   // Store bucket key + label in encoded form for back navigation
   openPanel('AR Aging: '+label,invs.length+' facturen | '+fmtE(total),
-    filteredTableHTML(invs,'bucket__'+bucketKey,encodeURIComponent('AR Aging: '+label)));
+    filteredTableHTML(invs,'bucket__'+bucketKey,encodeURIComponent('AR Aging: '+label)),true);
 }
 
 function filteredTableHTML(invs,filterKey,filterLabelEnc){
@@ -958,7 +968,8 @@ function filteredTableHTML(invs,filterKey,filterLabelEnc){
       <td><span class="days-chip ${daysClass(inv.days_overdue)}">${inv.days_overdue===0?'Openstaand':inv.days_overdue+'d'}</span></td>
       <td>${levelPill(inv.level)}</td>
     </tr>`).join('');
-  return `<div class="table-scroll"><table class="data-table">
+  // Gebruik panel-table-wrap: vaste hoogte zodat BEIDE scrollbars in beeld blijven
+  return `<div class="panel-table-wrap"><table class="data-table">
     <thead><tr><th>#</th><th>Klant</th><th>Factuur</th><th>Vervaldatum</th><th>Bedrag</th><th>Verlopen</th><th>Prioriteit</th></tr></thead>
     <tbody>${rows}</tbody>
   </table></div>`;
