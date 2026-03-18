@@ -42,24 +42,38 @@ def fetch_open():
 
 
 def fetch_revenue_180():
-    """Only PAID invoices in last 180 days for DSO denominator (actual revenue received)."""
-    cutoff = (TODAY - datetime.timedelta(days=DAYS_180)).isoformat()
+    """
+    Facturen gefactureerd in de afgelopen 180 dagen, voor DSO-omzetnoemer.
+    Moneybird filter: invoice_date_after werkt alleen met YYYY-MM-DD formaat.
+    We halen paid + open/late/reminded op en filteren daarna op datum in Python
+    om zeker te zijn dat we alleen de juiste periode pakken.
+    """
+    cutoff = TODAY - datetime.timedelta(days=DAYS_180)
     out = []
-    for state in ["paid"]:
+    seen = set()
+    for state in ["paid", "open", "late", "reminded"]:
         try:
-            out.extend(api_get("sales_invoices.json", {
-                "filter": f"state:{state},invoice_date_after:{cutoff}"
-            }))
-        except Exception:
-            pass
-    # Also include late/reminded/open sent in period as credit sales (sent = revenue earned)
-    for state in ["sent", "open", "late", "reminded"]:
-        try:
-            out.extend(api_get("sales_invoices.json", {
-                "filter": f"state:{state},invoice_date_after:{cutoff}"
-            }))
-        except Exception:
-            pass
+            page = api_get("sales_invoices.json", {
+                "filter": f"state:{state}",
+                "per_page": 100,
+            })
+            for inv in page:
+                if inv["id"] in seen:
+                    continue
+                seen.add(inv["id"])
+                # Filter op factuurdatum in Python — betrouwbaarder dan API-filter
+                inv_date_str = inv.get("invoice_date") or ""
+                if not inv_date_str:
+                    continue
+                try:
+                    inv_date = datetime.date.fromisoformat(inv_date_str[:10])
+                except ValueError:
+                    continue
+                if inv_date >= cutoff:
+                    out.append(inv)
+        except Exception as e:
+            print(f"  Waarschuwing: kon {state} facturen niet ophalen: {e}")
+    print(f"  Revenue facturen in 180d: {len(out)} stuks")
     return out
 
 
