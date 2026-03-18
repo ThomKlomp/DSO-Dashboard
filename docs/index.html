@@ -533,8 +533,9 @@ function render(d){
   document.getElementById('dashboard').style.display='block';
   const ts=new Date(d.generated);
   const nu=new Date();
-  const syncStr=ts.toLocaleDateString('nl-NL')+' '+ts.toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
-  const laadStr=nu.toLocaleTimeString('nl-NL',{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  const tzOpts={timeZone:'Europe/Amsterdam',hour:'2-digit',minute:'2-digit',second:'2-digit'};
+  const syncStr=ts.toLocaleDateString('nl-NL',{timeZone:'Europe/Amsterdam'})+' '+ts.toLocaleTimeString('nl-NL',tzOpts);
+  const laadStr=nu.toLocaleTimeString('nl-NL',tzOpts);
   document.getElementById('sync-time').textContent='Data: '+syncStr+' | Geladen: '+laadStr;
   renderKPIs(d);renderAgingBars(d);renderTrendChart(d);
   renderCustomerChart(d);renderPriorityChart(d);
