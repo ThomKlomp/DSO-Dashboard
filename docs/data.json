@@ -1,20 +1,22 @@
 {
-  "generated": "2026-03-18T08:12:31.012034",
-  "dso": 9.9,
-  "dso_6m_avg": 15.9,
+  "generated": "2026-03-18T09:34:16.488759",
+  "dso": 11.4,
+  "dso_6m_avg": 16.2,
   "dso_target": 36,
-  "total_ar": 690685.8,
-  "invoice_count": 477,
-  "overdue_pct": 29.78,
-  "overdue_pct_6m": 28.58,
-  "overdue_30": 92995.94,
-  "overdue_60": 42811.83,
+  "total_ar": 662015.9,
+  "total_ar_gross": 688275.82,
+  "total_ar_credit": -26259.92,
+  "invoice_count": 476,
+  "overdue_pct": 30.7,
+  "overdue_pct_6m": 28.95,
+  "overdue_30": 90585.96,
+  "overdue_60": 40401.85,
   "overdue_90": 27054.01,
   "aging": {
     "Current": 485030.49,
     "1-30 days": 112659.37,
     "31-60 days": 50184.11,
-    "61-90 days": 15757.82,
+    "61-90 days": 13347.84,
     ">90 days": 27054.01
   },
   "history": [
@@ -49,10 +51,10 @@
     },
     {
       "date": "2026-03-18",
-      "total_ar": 690685.8,
-      "overdue_ar": 205655.31,
-      "overdue_pct": 29.78,
-      "dso": 9.9,
+      "total_ar": 662015.9,
+      "overdue_ar": 203245.33,
+      "overdue_pct": 30.7,
+      "dso": 11.4,
       "target": 36
     }
   ],
@@ -648,7 +650,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.1,
+      "score": 0.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -699,7 +701,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.3,
+      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -835,7 +837,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -1.6,
+      "score": 1.6,
       "level": "Monitor",
       "reminders": []
     },
@@ -2314,7 +2316,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.1,
+      "score": 0.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -3436,7 +3438,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.0,
+      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -3640,7 +3642,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.0,
+      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -3691,7 +3693,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.0,
+      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -3878,7 +3880,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.3,
+      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -3895,7 +3897,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.2,
+      "score": 0.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -4643,7 +4645,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.6,
+      "score": 0.6,
       "level": "Monitor",
       "reminders": []
     },
@@ -5068,7 +5070,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.2,
+      "score": 0.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -5408,7 +5410,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.3,
+      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -5425,7 +5427,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.3,
+      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -5442,7 +5444,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.3,
+      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -5459,7 +5461,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.3,
+      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -5918,7 +5920,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.2,
+      "score": 0.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -5986,7 +5988,7 @@
       "bucket": "Current",
       "state": "late",
       "is_bad_debt": false,
-      "score": -0.0,
+      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -6139,7 +6141,7 @@
       "bucket": "1-30 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 2.5,
+      "score": 3.5,
       "level": "Monitor",
       "reminders": []
     },
@@ -6377,7 +6379,7 @@
       "bucket": "1-30 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 4.9,
+      "score": 5.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -6394,7 +6396,7 @@
       "bucket": "1-30 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 5.1,
+      "score": 6.9,
       "level": "Monitor",
       "reminders": [
         {
@@ -6417,7 +6419,7 @@
       "bucket": "1-30 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 5.6,
+      "score": 6.4,
       "level": "Monitor",
       "reminders": [
         {
@@ -6532,7 +6534,7 @@
       "bucket": "1-30 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 25.9,
+      "score": 26.1,
       "level": "Monitor",
       "reminders": [
         {
@@ -6808,7 +6810,7 @@
       "bucket": "31-60 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 38.7,
+      "score": 39.3,
       "level": "Monitor",
       "reminders": [
         {
@@ -6831,7 +6833,7 @@
       "bucket": "31-60 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 41.9,
+      "score": 42.1,
       "level": "High",
       "reminders": [
         {
@@ -7222,7 +7224,7 @@
       "bucket": "61-90 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 60.9,
+      "score": 61.1,
       "level": "High",
       "reminders": [
         {
@@ -7343,29 +7345,6 @@
         {
           "nr": 1,
           "date": "2026-01-17",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "472600800665798100",
-      "contact_id": "466077767697433866",
-      "invoice_no": "2025-4712",
-      "company": "The Usual Hotel Rotterdam",
-      "invoice_date": "2025-12-11",
-      "due_date": "2026-01-10",
-      "amount": 2409.98,
-      "currency": "EUR",
-      "days_overdue": 67,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 67.7,
-      "level": "High",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-01-16",
           "source": "berekend"
         }
       ]
@@ -7889,7 +7868,7 @@
       "bucket": ">90 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 209.7,
+      "score": 210.3,
       "level": "URGENT",
       "reminders": [
         {
@@ -7912,7 +7891,7 @@
       "bucket": ">90 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 220.9,
+      "score": 221.1,
       "level": "URGENT",
       "reminders": [
         {
@@ -16162,29 +16141,6 @@
       ]
     },
     {
-      "id": "472600800665798100",
-      "contact_id": "466077767697433866",
-      "invoice_no": "2025-4712",
-      "company": "The Usual Hotel Rotterdam",
-      "invoice_date": "2025-12-11",
-      "due_date": "2026-01-10",
-      "amount": 2409.98,
-      "currency": "EUR",
-      "days_overdue": 67,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 67.7,
-      "level": "High",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-01-16",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "472148385463272980",
       "contact_id": "434302654430053793",
       "invoice_no": "2025-4700",
@@ -19412,7 +19368,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -0.2,
+          "score": 0.2,
           "level": "Monitor",
           "reminders": []
         },
@@ -19429,7 +19385,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -1.6,
+          "score": 1.6,
           "level": "Monitor",
           "reminders": []
         }
@@ -20573,7 +20529,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -0.1,
+          "score": 0.1,
           "level": "Monitor",
           "reminders": []
         }
@@ -20675,7 +20631,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -0.3,
+          "score": 0.3,
           "level": "Monitor",
           "reminders": []
         }
@@ -20895,7 +20851,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -0.3,
+          "score": 0.3,
           "level": "Monitor",
           "reminders": []
         },
@@ -20912,7 +20868,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -0.3,
+          "score": 0.3,
           "level": "Monitor",
           "reminders": []
         },
@@ -20929,7 +20885,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -0.3,
+          "score": 0.3,
           "level": "Monitor",
           "reminders": []
         },
@@ -20946,7 +20902,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -0.3,
+          "score": 0.3,
           "level": "Monitor",
           "reminders": []
         }
@@ -21241,7 +21197,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -0.6,
+          "score": 0.6,
           "level": "Monitor",
           "reminders": []
         }
@@ -21444,7 +21400,7 @@
           "bucket": "1-30 days",
           "state": "late",
           "is_bad_debt": false,
-          "score": 4.9,
+          "score": 5.1,
           "level": "Monitor",
           "reminders": []
         },
@@ -22691,7 +22647,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -0.0,
+          "score": 0.0,
           "level": "Monitor",
           "reminders": []
         }
@@ -24587,7 +24543,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -0.0,
+          "score": 0.0,
           "level": "Monitor",
           "reminders": []
         }
@@ -24790,7 +24746,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -0.1,
+          "score": 0.1,
           "level": "Monitor",
           "reminders": []
         }
@@ -25653,7 +25609,7 @@
           "bucket": "1-30 days",
           "state": "late",
           "is_bad_debt": false,
-          "score": 25.9,
+          "score": 26.1,
           "level": "Monitor",
           "reminders": [
             {
@@ -26880,7 +26836,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -0.0,
+          "score": 0.0,
           "level": "Monitor",
           "reminders": []
         }
@@ -27038,7 +26994,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -0.2,
+          "score": 0.2,
           "level": "Monitor",
           "reminders": []
         },
@@ -27055,7 +27011,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -0.3,
+          "score": 0.3,
           "level": "Monitor",
           "reminders": []
         }
@@ -28009,7 +27965,7 @@
           "bucket": "1-30 days",
           "state": "late",
           "is_bad_debt": false,
-          "score": 5.1,
+          "score": 6.9,
           "level": "Monitor",
           "reminders": [
             {
@@ -28066,7 +28022,7 @@
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": -0.2,
+          "score": 0.2,
           "level": "Monitor",
           "reminders": []
         }
@@ -28265,7 +28221,7 @@
           "bucket": "Current",
           "state": "late",
           "is_bad_debt": false,
-          "score": -0.0,
+          "score": 0.0,
           "level": "Monitor",
           "reminders": []
         }
@@ -28293,7 +28249,7 @@
           "bucket": "1-30 days",
           "state": "late",
           "is_bad_debt": false,
-          "score": 2.5,
+          "score": 3.5,
           "level": "Monitor",
           "reminders": []
         }
@@ -28435,7 +28391,7 @@
           "bucket": "1-30 days",
           "state": "late",
           "is_bad_debt": false,
-          "score": 5.6,
+          "score": 6.4,
           "level": "Monitor",
           "reminders": [
             {
@@ -28731,7 +28687,7 @@
           "bucket": "31-60 days",
           "state": "late",
           "is_bad_debt": false,
-          "score": 38.7,
+          "score": 39.3,
           "level": "Monitor",
           "reminders": [
             {
@@ -28765,7 +28721,7 @@
           "bucket": "31-60 days",
           "state": "late",
           "is_bad_debt": false,
-          "score": 41.9,
+          "score": 42.1,
           "level": "High",
           "reminders": [
             {
@@ -29010,7 +28966,7 @@
           "bucket": "61-90 days",
           "state": "late",
           "is_bad_debt": false,
-          "score": 60.9,
+          "score": 61.1,
           "level": "High",
           "reminders": [
             {
@@ -29058,40 +29014,6 @@
       "total_open": 791.24,
       "total_overdue": 791.24,
       "max_days": 64,
-      "invoice_count": 1,
-      "level": "High"
-    },
-    "466077767697433866": {
-      "contact_id": "466077767697433866",
-      "company": "The Usual Hotel Rotterdam",
-      "invoices": [
-        {
-          "id": "472600800665798100",
-          "contact_id": "466077767697433866",
-          "invoice_no": "2025-4712",
-          "company": "The Usual Hotel Rotterdam",
-          "invoice_date": "2025-12-11",
-          "due_date": "2026-01-10",
-          "amount": 2409.98,
-          "currency": "EUR",
-          "days_overdue": 67,
-          "bucket": "61-90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 67.7,
-          "level": "High",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-01-16",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 2409.98,
-      "total_overdue": 2409.98,
-      "max_days": 67,
       "invoice_count": 1,
       "level": "High"
     },
@@ -29465,7 +29387,7 @@
           "bucket": ">90 days",
           "state": "late",
           "is_bad_debt": false,
-          "score": 209.7,
+          "score": 210.3,
           "level": "URGENT",
           "reminders": [
             {
@@ -29590,7 +29512,7 @@
           "bucket": ">90 days",
           "state": "late",
           "is_bad_debt": false,
-          "score": 220.9,
+          "score": 221.1,
           "level": "URGENT",
           "reminders": [
             {
@@ -30445,7 +30367,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.1,
+      "score": 0.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -30462,7 +30384,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.3,
+      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -30479,7 +30401,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -1.6,
+      "score": 1.6,
       "level": "Monitor",
       "reminders": []
     },
@@ -30496,7 +30418,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.1,
+      "score": 0.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -30513,7 +30435,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.0,
+      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -30530,7 +30452,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.0,
+      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -30547,7 +30469,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.0,
+      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -30564,7 +30486,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.3,
+      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -30581,7 +30503,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.2,
+      "score": 0.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -30598,7 +30520,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.6,
+      "score": 0.6,
       "level": "Monitor",
       "reminders": []
     },
@@ -30615,7 +30537,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.2,
+      "score": 0.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -30632,7 +30554,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.3,
+      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -30649,7 +30571,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.3,
+      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -30666,7 +30588,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.3,
+      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -30683,7 +30605,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.3,
+      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -30700,7 +30622,7 @@
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": -0.2,
+      "score": 0.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -30717,7 +30639,7 @@
       "bucket": "Current",
       "state": "late",
       "is_bad_debt": false,
-      "score": -0.0,
+      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -30734,7 +30656,7 @@
       "bucket": "1-30 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 2.5,
+      "score": 3.5,
       "level": "Monitor",
       "reminders": []
     },
@@ -30751,7 +30673,7 @@
       "bucket": "1-30 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 4.9,
+      "score": 5.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -30768,7 +30690,7 @@
       "bucket": "1-30 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 5.1,
+      "score": 6.9,
       "level": "Monitor",
       "reminders": [
         {
@@ -30791,7 +30713,7 @@
       "bucket": "1-30 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 5.6,
+      "score": 6.4,
       "level": "Monitor",
       "reminders": [
         {
@@ -30883,7 +30805,7 @@
       "bucket": "1-30 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 25.9,
+      "score": 26.1,
       "level": "Monitor",
       "reminders": [
         {
@@ -30906,7 +30828,7 @@
       "bucket": "31-60 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 38.7,
+      "score": 39.3,
       "level": "Monitor",
       "reminders": [
         {
@@ -30929,7 +30851,7 @@
       "bucket": "31-60 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 41.9,
+      "score": 42.1,
       "level": "High",
       "reminders": [
         {
@@ -30952,7 +30874,7 @@
       "bucket": "61-90 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 60.9,
+      "score": 61.1,
       "level": "High",
       "reminders": [
         {
@@ -30998,7 +30920,7 @@
       "bucket": ">90 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 209.7,
+      "score": 210.3,
       "level": "URGENT",
       "reminders": [
         {
@@ -31021,7 +30943,7 @@
       "bucket": ">90 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 220.9,
+      "score": 221.1,
       "level": "URGENT",
       "reminders": [
         {
