@@ -27,5 +27,13 @@
     "overdue_pct": 29.63,
     "dso": 10.0,
     "target": 36
+  },
+  {
+    "date": "2026-03-18",
+    "total_ar": 697880.74,
+    "overdue_ar": 206282.94,
+    "overdue_pct": 29.56,
+    "dso": 10.0,
+    "target": 36
   }
 ]
