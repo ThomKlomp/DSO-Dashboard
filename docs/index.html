@@ -180,10 +180,12 @@ footer{text-align:center;padding:24px;font-family:var(--mono);font-size:10px;col
 .close-btn{background:none;border:none;color:#fff;font-size:18px;cursor:pointer;padding:3px 7px;line-height:1;opacity:.7;flex-shrink:0;border-radius:4px;}
 .close-btn:hover{opacity:1;background:rgba(255,255,255,.1);}
 /* CRITICAL: panel-body is the scroll container */
-.panel-body{flex:1;overflow-y:auto;overflow-x:hidden;padding:22px;}
-/* Tables inside panel need horizontal scroll too */
-.panel-body .table-scroll{overflow-x:auto;margin:0 -22px;padding:0 22px;}
-.panel-body .data-table{min-width:520px;}
+.panel-body{flex:1;overflow-y:auto;overflow-x:auto;padding:22px;}
+/* Tables inside panel */
+.panel-body .table-scroll{overflow-x:auto;overflow-y:visible;}
+.panel-body .data-table{min-width:480px;}
+/* Make table scroll container behave inside panel */
+.panel-body .table-scroll{margin:0 -22px;padding:0 22px 12px;}
 
 /* PANEL SECTIONS */
 .ps{margin-bottom:22px;}
@@ -366,7 +368,7 @@ footer{text-align:center;padding:24px;font-family:var(--mono);font-size:10px;col
         <table class="data-table">
           <thead><tr>
             <th>#</th><th>Klant</th><th>Factuur</th><th>Vervaldatum</th>
-            <th>Bedrag (EUR)</th><th>Verlopen</th><th>Prioriteit</th><th>Status</th>
+            <th>Bedrag (ex BTW)</th><th>Verlopen</th><th>Prioriteit</th><th>Status</th>
           </tr></thead>
           <tbody id="overdue-tbody"></tbody>
         </table>
@@ -382,7 +384,7 @@ footer{text-align:center;padding:24px;font-family:var(--mono);font-size:10px;col
       <div class="table-scroll">
         <table class="data-table">
           <thead><tr>
-            <th>#</th><th>Klant</th><th>Factuur</th><th>Datum</th><th>Bedrag (EUR)</th><th>Status</th>
+            <th>#</th><th>Klant</th><th>Factuur</th><th>Datum</th><th>Bedrag (ex BTW)</th><th>Status</th>
           </tr></thead>
           <tbody id="credit-tbody"></tbody>
         </table>
@@ -553,16 +555,29 @@ function renderKPIs(d){
      sub:'Target: max '+OVERDUE_PCT_TARGET+'% | Vandaag: '+pctNow.toFixed(1)+'% | '+h6mPct.length+' datapunten',
      badge:pctOk?'ON TARGET':pctClose?'LET OP':'BOVEN TARGET',badgeClass:pctOk?'badge-good':pctClose?'badge-warn':'badge-urgent',
      filter:'overdue_all',filterLabel:'Alle verlopen facturen'},
-    {label:'Totaal AR',value:fmtE(active.reduce((s,i)=>s+i.amount,0)),sub:active.length+' open facturen',
+    {label:'Totaal AR (excl. BTW)',
+     value:fmtE(totalAR),
+     sub:active.length+' facturen | credit: '+fmtE(d.total_ar_credit||0),
      filter:'all_open',filterLabel:'Alle openstaande facturen'},
-    {label:'Verlopen >30d',value:fmtE(active.filter(i=>i.days_overdue>30).reduce((s,i)=>s+i.amount,0)),sub:'Opvolging vereist',
-     badge:active.some(i=>i.days_overdue>30)?'VERLOPEN':null,badgeClass:'badge-warn',
-     filter:'overdue_30',filterLabel:'Verlopen > 30 dagen'},
-    {label:'Verlopen >60d',value:fmtE(active.filter(i=>i.days_overdue>60).reduce((s,i)=>s+i.amount,0)),sub:'Formele aanmaning',
-     badge:active.some(i=>i.days_overdue>60)?'ESCALEER':null,badgeClass:'badge-urgent',
-     filter:'overdue_60',filterLabel:'Verlopen > 60 dagen'},
-    {label:'Verlopen >90d',value:fmtE(active.filter(i=>i.days_overdue>90).reduce((s,i)=>s+i.amount,0)),sub:'Incassofase',
-     badge:active.some(i=>i.days_overdue>90)?'KRITIEK':null,badgeClass:'badge-urgent',
+    {label:'1-30 dagen verlopen',
+     value:fmtE(active.filter(i=>i.days_overdue>0&&i.days_overdue<=30).reduce((s,i)=>s+i.amount,0)),
+     sub:active.filter(i=>i.days_overdue>0&&i.days_overdue<=30).length+' facturen',
+     badge:active.some(i=>i.days_overdue>0&&i.days_overdue<=30)?'VERLOPEN':null,badgeClass:'badge-warn',
+     filter:'overdue_1_30',filterLabel:'1-30 dagen verlopen'},
+    {label:'31-60 dagen verlopen',
+     value:fmtE(active.filter(i=>i.days_overdue>30&&i.days_overdue<=60).reduce((s,i)=>s+i.amount,0)),
+     sub:active.filter(i=>i.days_overdue>30&&i.days_overdue<=60).length+' facturen',
+     badge:active.some(i=>i.days_overdue>30&&i.days_overdue<=60)?'ESCALEER':null,badgeClass:'badge-urgent',
+     filter:'overdue_31_60',filterLabel:'31-60 dagen verlopen'},
+    {label:'61-90 dagen verlopen',
+     value:fmtE(active.filter(i=>i.days_overdue>60&&i.days_overdue<=90).reduce((s,i)=>s+i.amount,0)),
+     sub:active.filter(i=>i.days_overdue>60&&i.days_overdue<=90).length+' facturen',
+     badge:active.some(i=>i.days_overdue>60&&i.days_overdue<=90)?'KRITIEK':null,badgeClass:'badge-urgent',
+     filter:'overdue_61_90',filterLabel:'61-90 dagen verlopen'},
+    {label:'>90 dagen verlopen',
+     value:fmtE(active.filter(i=>i.days_overdue>90).reduce((s,i)=>s+i.amount,0)),
+     sub:active.filter(i=>i.days_overdue>90).length+' facturen',
+     badge:active.some(i=>i.days_overdue>90)?'INCASSO':null,badgeClass:'badge-urgent',
      filter:'overdue_90',filterLabel:'Verlopen > 90 dagen'},
     {label:'1 Juli Target',value:julyOk?'ON TARGET':pctNow.toFixed(1)+'%',
      sub:'Verlopen/Totaal AR nu | Doel: <10% op 1 juli | '+daysToJuly+'d te gaan',
@@ -837,11 +852,14 @@ document.getElementById('panel-overlay').addEventListener('click',e=>{if(e.targe
 function openFilteredPanel(filterKey,title){
   const active=getActiveInvoices();
   const fns={
-    all_open:    i=>i.amount>0,
-    overdue_all: i=>i.days_overdue>0,
-    overdue_30:  i=>i.days_overdue>30,
-    overdue_60:  i=>i.days_overdue>60,
-    overdue_90:  i=>i.days_overdue>90,
+    all_open:      i=>i.amount>0,
+    overdue_all:   i=>i.days_overdue>0,
+    overdue_1_30:  i=>i.days_overdue>0&&i.days_overdue<=30,
+    overdue_31_60: i=>i.days_overdue>30&&i.days_overdue<=60,
+    overdue_61_90: i=>i.days_overdue>60&&i.days_overdue<=90,
+    overdue_30:    i=>i.days_overdue>30,
+    overdue_60:    i=>i.days_overdue>60,
+    overdue_90:    i=>i.days_overdue>90,
   };
   const invs=active.filter(fns[filterKey]||fns.all_open).sort((a,b)=>b.score-a.score);
   const total=invs.reduce((s,i)=>s+i.amount,0);
@@ -1110,7 +1128,7 @@ function openInvoicePanel(invoiceId,returnToCustomer,returnToFilter,returnToFilt
         <div class="df"><label>Factuur Nr.</label><value class="mono">${esc(inv.invoice_no)}</value></div>
         <div class="df"><label>Factuurdatum</label><value class="mono">${inv.invoice_date||'-'}</value></div>
         <div class="df"><label>Vervaldatum</label><value class="mono">${inv.due_date}</value></div>
-        <div class="df"><label>Open bedrag</label><value class="mono" style="font-size:17px;font-weight:700">${fmtE(inv.amount)}</value></div>
+        <div class="df"><label>Open bedrag (ex BTW)</label><value class="mono" style="font-size:17px;font-weight:700">${fmtE(inv.amount)}</value></div>
         <div class="df"><label>Verlopen</label><value><span class="days-chip ${daysClass(inv.days_overdue)}">${daysLabel(inv.days_overdue)}</span></value></div>
         <div class="df"><label>Prioriteit</label><value>${levelPill(inv.level)}</value></div>
         <div class="df" style="grid-column:1/-1"><label>Score</label>
