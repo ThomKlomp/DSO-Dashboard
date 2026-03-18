@@ -43,38 +43,51 @@ def fetch_open():
 
 def fetch_revenue_180():
     """
-    Facturen gefactureerd in de afgelopen 180 dagen, voor DSO-omzetnoemer.
-    Moneybird filter: invoice_date_after werkt alleen met YYYY-MM-DD formaat.
-    We halen paid + open/late/reminded op en filteren daarna op datum in Python
-    om zeker te zijn dat we alleen de juiste periode pakken.
+    Haal omzet op uit de resultatenrekening (profit & loss) van Moneybird.
+    Periode: afgelopen 180 dagen (gesplitst in twee periodes van ~90d als nodig).
+    Moneybird endpoint: GET /financial_reports/profit_and_loss.json?period=...
+    Geeft netto omzet ex BTW terug.
     """
-    cutoff = TODAY - datetime.timedelta(days=DAYS_180)
-    out = []
-    seen = set()
-    for state in ["paid", "open", "late", "reminded"]:
-        try:
-            page = api_get("sales_invoices.json", {
-                "filter": f"state:{state}",
-                "per_page": 100,
-            })
-            for inv in page:
-                if inv["id"] in seen:
-                    continue
-                seen.add(inv["id"])
-                # Filter op factuurdatum in Python — betrouwbaarder dan API-filter
-                inv_date_str = inv.get("invoice_date") or ""
-                if not inv_date_str:
-                    continue
-                try:
-                    inv_date = datetime.date.fromisoformat(inv_date_str[:10])
-                except ValueError:
-                    continue
-                if inv_date >= cutoff:
-                    out.append(inv)
-        except Exception as e:
-            print(f"  Waarschuwing: kon {state} facturen niet ophalen: {e}")
-    print(f"  Revenue facturen in 180d: {len(out)} stuks")
-    return out
+    # Periode: van 180 dagen geleden tot vandaag
+    start = (TODAY - datetime.timedelta(days=DAYS_180)).isoformat()
+    end   = TODAY.isoformat()
+
+    try:
+        report = api_get("financial_reports/profit_and_loss.json", {
+            "period": f"{start}..{end}"
+        })
+        # Moneybird geeft een geneste structuur terug
+        # Omzet staat onder 'revenue' of 'net_revenue' of als eerste sectie
+        revenue = None
+
+        # Probeer directe velden
+        if isinstance(report, dict):
+            revenue = (
+                report.get("net_revenue") or
+                report.get("revenue") or
+                report.get("total_revenue")
+            )
+            # Soms zit het in een 'results' of 'sections' array
+            if revenue is None and "results" in report:
+                for section in report["results"]:
+                    if isinstance(section, dict):
+                        name = (section.get("name") or "").lower()
+                        if "omzet" in name or "revenue" in name or "opbrengst" in name:
+                            revenue = section.get("total") or section.get("amount")
+                            break
+
+        if revenue is not None:
+            revenue_float = float(str(revenue).replace(",", "."))
+            print(f"  Omzet uit resultatenrekening ({start} t/m {end}): {revenue_float:,.0f}")
+            return revenue_float
+
+        # Fallback: log de volledige response zodat we kunnen debuggen
+        print(f"  WAARSCHUWING: kon omzet niet uit rapport halen. Response: {str(report)[:500]}")
+        return None
+
+    except Exception as e:
+        print(f"  WAARSCHUWING: resultatenrekening ophalen mislukt: {e}")
+        return None
 
 
 def parse_reminders(inv):
@@ -180,7 +193,7 @@ def parse(inv):
     }
 
 
-def build_data(open_invoices, revenue_invoices):
+def build_data(open_invoices, revenue_180_from_report):
     # ── History: load ──
     hist_file = os.path.join(OUT_DIR, "history.json")
     history = []
@@ -195,22 +208,14 @@ def build_data(open_invoices, revenue_invoices):
 
     # Netto debiteurenstand ex BTW = bruto open + creditfacturen (credit is negatief)
     total_ar_gross  = round(sum(i["amount"] for i in active), 2)
-    total_ar_credit = round(sum(i["amount"] for i in credit), 2)  # negatief
-    total_ar        = round(total_ar_gross + total_ar_credit, 2)  # netto
+    total_ar_credit = round(sum(i["amount"] for i in credit), 2)
+    total_ar        = round(total_ar_gross + total_ar_credit, 2)
 
     overdue_ar  = round(sum(i["amount"] for i in active if i["days_overdue"] > 0), 2)
     overdue_pct = round(overdue_ar / total_ar * 100, 2) if total_ar else 0.0
 
-    # ── Omzet 180d EX BTW (deduplicated) ──
-    seen_ids    = set()
-    revenue_180 = 0.0
-    for inv in revenue_invoices:
-        if inv["id"] in seen_ids: continue
-        seen_ids.add(inv["id"])
-        # Altijd ex BTW: total_price_excl_tax
-        amt = float(inv.get("total_price_excl_tax") or 0)
-        if amt > 0:
-            revenue_180 += amt
+    # Omzet: gebruik rapport-waarde als beschikbaar, anders 0
+    revenue_180 = float(revenue_180_from_report) if revenue_180_from_report else 0.0
 
     # ── DSO: netto debiteurenstand ex BTW / omzet 180d ex BTW × 180 ──
     dso = round((total_ar / revenue_180 * DAYS_180), 1) if revenue_180 else 0.0
@@ -318,10 +323,10 @@ def main():
 
     def run():
         print(f"\n[{datetime.datetime.now().strftime('%H:%M')}] Fetching from Moneybird...")
-        open_inv = fetch_open()
-        rev_inv  = fetch_revenue_180()
-        parsed   = [parse(i) for i in open_inv]
-        data     = build_data(parsed, rev_inv)
+        open_inv    = fetch_open()
+        revenue_180 = fetch_revenue_180()
+        parsed      = [parse(i) for i in open_inv]
+        data        = build_data(parsed, revenue_180)
         os.makedirs(OUT_DIR, exist_ok=True)
         with open(os.path.join(OUT_DIR, "data.json"), "w") as f:
             json.dump(data, f, indent=2)
