@@ -516,10 +516,13 @@ function render(d){
 // ── KPIs ──────────────────────────────────────────────────────────────────
 function renderKPIs(d){
   const active    = getActiveInvoices();
-  const totalAR   = active.reduce((s,i)=>s+i.amount,0)||1;
+  // Credit facturen ook meenemen in netto AR (worden NIET uitgesloten door failliet-filter)
+  const creditInvs= (_data.invoices||[]).filter(i=>i.amount<0&&!_bankruptContactIds.has(i.contact_id));
+  const totalAR   = active.reduce((s,i)=>s+i.amount,0) + creditInvs.reduce((s,i)=>s+i.amount,0);
+  const totalARpos= active.reduce((s,i)=>s+i.amount,0)||1;  // voor overdue pct berekening
   const overdueAR = active.filter(i=>i.days_overdue>0).reduce((s,i)=>s+i.amount,0);
-  // Juli target = live berekend: verlopen / totaal (dit is de waarde die op 1 juli <= 10% moet zijn)
-  const pctNow    = overdueAR/totalAR*100;
+  // Juli target = verlopen / totaal AR netto
+  const pctNow    = overdueAR / (totalAR||1) * 100;
 
   // 6-month averages from history (alleen echte data, geen nullen meenemen)
   const hist      = d.history||[];
@@ -557,7 +560,7 @@ function renderKPIs(d){
      filter:'overdue_all',filterLabel:'Alle verlopen facturen'},
     {label:'Totaal AR (excl. BTW)',
      value:fmtE(totalAR),
-     sub:active.length+' facturen | credit: '+fmtE(d.total_ar_credit||0),
+     sub:active.length+' facturen | credit: '+fmtE(creditInvs.reduce((s,i)=>s+i.amount,0)),
      filter:'all_open',filterLabel:'Alle openstaande facturen'},
     {label:'1-30 dagen verlopen',
      value:fmtE(active.filter(i=>i.days_overdue>0&&i.days_overdue<=30).reduce((s,i)=>s+i.amount,0)),
