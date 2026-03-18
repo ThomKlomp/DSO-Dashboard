@@ -108,14 +108,28 @@ def parse(inv):
     days       = max(0, (TODAY - due).days)
 
     # Openstaand bedrag EX BTW
-    # total_unpaid_base = openstaand ex btw (voorkeur)
-    # total_price_excl_tax = factuurbedrag ex btw (fallback)
-    amount_raw = (
-        inv.get("total_unpaid_base") or
-        inv.get("total_price_excl_tax") or
-        inv.get("total_price_incl_tax") or 0
-    )
-    amount = float(amount_raw)
+    # Moneybird velden:
+    #   total_price_excl_tax  = factuurbedrag ex btw
+    #   total_price_incl_tax  = factuurbedrag incl btw
+    #   total_unpaid          = openstaand incl btw (meest betrouwbaar voor openstaand)
+    #   total_unpaid_base     = openstaand in basismunt, maar INCL BTW (misleidende naam)
+    #
+    # Juiste formule ex BTW openstaand:
+    #   Als factuur volledig open: gebruik total_price_excl_tax
+    #   Als deels betaald: total_price_excl_tax * (total_unpaid / total_price_incl_tax)
+
+    excl  = float(inv.get("total_price_excl_tax") or 0)
+    incl  = float(inv.get("total_price_incl_tax") or 0)
+    unpaid_incl = float(inv.get("total_unpaid") or inv.get("total_unpaid_base") or incl or 0)
+
+    if incl and incl != 0:
+        # Proportioneel openstaand ex BTW
+        amount = excl * (unpaid_incl / incl)
+    else:
+        amount = excl or unpaid_incl
+
+    # Afronden op 2 decimalen
+    amount = round(amount, 2)
 
     company    = (c.get("company_name") or
                   f"{c.get('firstname','')} {c.get('lastname','')}".strip() or "Unknown")
@@ -130,7 +144,6 @@ def parse(inv):
         if d <= 90:  return "61-90 days"
         return ">90 days"
 
-    # Score: days_overdue * 1.0 + (amount / 1000) * 0.3
     score = round(days * 1.0 + (abs(amount) / 1000) * 0.3, 1)
     level = "URGENT" if score >= 70 else ("High" if score >= 40 else "Monitor")
 
@@ -141,7 +154,7 @@ def parse(inv):
         "company":      company,
         "invoice_date": inv.get("invoice_date", ""),
         "due_date":     due.isoformat(),
-        "amount":       round(amount, 2),
+        "amount":       amount,
         "currency":     inv.get("currency", "EUR"),
         "days_overdue": days,
         "bucket":       bucket(days),
@@ -161,31 +174,31 @@ def build_data(open_invoices, revenue_invoices):
         with open(hist_file) as f:
             history = json.load(f)
 
-    # Active = exclude bad_debt. Credits (negatief) worden WEL meegenomen in totaal AR.
-    active      = [i for i in open_invoices if not i["is_bad_debt"] and i["amount"] > 0]
-    credit      = [i for i in open_invoices if i["amount"] < 0]
-    active_excl_credit = active  # voor KPIs en aging alleen positieve facturen
+    # Active = positieve facturen excl. bad_debt
+    active  = [i for i in open_invoices if not i["is_bad_debt"] and i["amount"] > 0]
+    # Credit = negatieve facturen (al ex BTW door parse())
+    credit  = [i for i in open_invoices if i["amount"] < 0]
 
-    # Totaal AR incl. creditfacturen (netto debiteurenstand)
-    total_ar_gross = round(sum(i["amount"] for i in active), 2)
-    total_ar_credit = round(sum(i["amount"] for i in credit), 2)   # negatief getal
-    total_ar       = round(total_ar_gross + total_ar_credit, 2)    # netto
+    # Netto debiteurenstand ex BTW = bruto open + creditfacturen (credit is negatief)
+    total_ar_gross  = round(sum(i["amount"] for i in active), 2)
+    total_ar_credit = round(sum(i["amount"] for i in credit), 2)  # negatief
+    total_ar        = round(total_ar_gross + total_ar_credit, 2)  # netto
 
     overdue_ar  = round(sum(i["amount"] for i in active if i["days_overdue"] > 0), 2)
     overdue_pct = round(overdue_ar / total_ar * 100, 2) if total_ar else 0.0
 
-    # ── Revenue 180d ex BTW (deduplicated) ──
+    # ── Omzet 180d EX BTW (deduplicated) ──
     seen_ids    = set()
     revenue_180 = 0.0
     for inv in revenue_invoices:
         if inv["id"] in seen_ids: continue
         seen_ids.add(inv["id"])
-        # Gebruik ex-btw bedrag
-        amt = float(inv.get("total_price_excl_tax") or inv.get("total_price_incl_tax") or 0)
+        # Altijd ex BTW: total_price_excl_tax
+        amt = float(inv.get("total_price_excl_tax") or 0)
         if amt > 0:
             revenue_180 += amt
 
-    # ── DSO vandaag: (netto debiteurenstand ex BTW / omzet 180d ex BTW) * 180 ──
+    # ── DSO: netto debiteurenstand ex BTW / omzet 180d ex BTW × 180 ──
     dso = round((total_ar / revenue_180 * DAYS_180), 1) if revenue_180 else 0.0
 
     # ── Update history with today's snapshot ──
@@ -252,6 +265,7 @@ def build_data(open_invoices, revenue_invoices):
         "invoice_count":   len(active),
         "overdue_pct":     overdue_pct,
         "overdue_pct_6m":  avg_pct_6m,
+        "revenue_180":     round(revenue_180, 2),
         "overdue_30":      round(sum(i["amount"] for i in active if i["days_overdue"] > 30), 2),
         "overdue_60":      round(sum(i["amount"] for i in active if i["days_overdue"] > 60), 2),
         "overdue_90":      round(sum(i["amount"] for i in active if i["days_overdue"] > 90), 2),
@@ -296,7 +310,9 @@ def main():
         os.makedirs(OUT_DIR, exist_ok=True)
         with open(os.path.join(OUT_DIR, "data.json"), "w") as f:
             json.dump(data, f, indent=2)
-        print(f"  data.json: {len(parsed)} invoices, DSO {data['dso']}d (6m avg: {data['dso_6m_avg']}d), overdue {data['overdue_pct']}%")
+        print(f"  AR bruto: {data['total_ar_gross']:,.0f} | credit: {data['total_ar_credit']:,.0f} | netto: {data['total_ar']:,.0f}")
+        print(f"  Omzet 180d ex BTW: {data['revenue_180']:,.0f} | DSO: {data['dso']}d (6m avg: {data['dso_6m_avg']}d)")
+        print(f"  Verlopen: {data['overdue_pct']}% | {len(parsed)} facturen")
         if args.push:
             git_push()
 
