@@ -55,58 +55,77 @@ def api_get_safe(path, params=None):
 
 def fetch_revenue_180():
     """
-    Omzet ex BTW uit de Moneybird Winst & Verliesrekening.
-    Endpoint: GET /{admin_id}/reports/profit_loss.json
-    Period formaat: YYYYMMDD..YYYYMMDD (geen streepjes)
+    Omzet ex BTW uit Moneybird W&V rekening.
+    Endpoint: GET /reports/profit_loss.json?period=YYYYMMDD..YYYYMMDD
+    Let op: Moneybird accepteert maximaal 1 maand per request.
+    We halen daarom de afgelopen 6 maanden maand voor maand op.
     """
-    start = (TODAY - datetime.timedelta(days=DAYS_180)).strftime("%Y%m%d")
-    end   = TODAY.strftime("%Y%m%d")
-    period = f"{start}..{end}"
+    total_revenue = 0.0
+    months_fetched = 0
 
-    try:
-        report = api_get_safe(f"reports/profit_loss.json", {"period": period})
-        if report is None:
-            print(f"  WAARSCHUWING: profit_loss endpoint niet bereikbaar")
-            return None
+    # Bouw lijst van maanden: van 6 maanden geleden tot huidige maand
+    for months_back in range(6, -1, -1):
+        # Eerste dag van de maand
+        ref = TODAY.replace(day=1) - datetime.timedelta(days=months_back * 28)
+        month_start = ref.replace(day=1)
+        # Laatste dag van de maand
+        if month_start.month == 12:
+            month_end = month_start.replace(year=month_start.year+1, month=1, day=1) - datetime.timedelta(days=1)
+        else:
+            month_end = month_start.replace(month=month_start.month+1, day=1) - datetime.timedelta(days=1)
 
-        print(f"  Profit & Loss response keys: {list(report.keys()) if isinstance(report, dict) else type(report)}")
+        # Niet verder dan vandaag
+        month_end = min(month_end, TODAY)
+        # Niet verder terug dan 180 dagen
+        cutoff = TODAY - datetime.timedelta(days=DAYS_180)
+        if month_end < cutoff:
+            continue
 
-        # Response structuur: zoek naar omzet / revenue sectie
-        revenue = None
-        if isinstance(report, dict):
-            # Directe velden
-            for key in ["revenue", "net_revenue", "total_revenue", "omzet", "turnover"]:
-                if key in report and report[key] is not None:
-                    revenue = report[key]
-                    print(f"  Omzet gevonden onder '{key}': {revenue}")
-                    break
+        period = f"{month_start.strftime('%Y%m%d')}..{month_end.strftime('%Y%m%d')}"
 
-            # Geneste secties
-            if revenue is None:
-                for key in ["results", "sections", "rows", "data", "lines"]:
-                    if key in report and isinstance(report[key], list):
+        try:
+            report = api_get_safe(f"reports/profit_loss.json", {"period": period})
+            if report is None:
+                print(f"  W&V {period}: geen response")
+                continue
+
+            # Zoek omzet in response
+            revenue = None
+            if isinstance(report, dict):
+                # Directe velden
+                for key in ["revenue", "net_revenue", "total_revenue", "omzet", "turnover"]:
+                    if key in report and report[key] is not None:
+                        revenue = report[key]
+                        break
+                # Geneste secties
+                if revenue is None:
+                    for key in ["results", "sections", "rows", "data", "lines"]:
+                        if key not in report or not isinstance(report[key], list):
+                            continue
                         for section in report[key]:
                             if not isinstance(section, dict): continue
                             name = str(section.get("name") or section.get("label") or "").lower()
                             if any(w in name for w in ["omzet","revenue","opbrengst","turnover","verkoop"]):
                                 revenue = section.get("total") or section.get("amount") or section.get("value")
-                                print(f"  Omzet gevonden in '{key}' sectie '{name}': {revenue}")
                                 break
                         if revenue is not None:
                             break
 
-        if revenue is not None:
-            rev_float = abs(float(str(revenue).replace(",",".")))
-            print(f"  Omzet W&V ({start}..{end}): {rev_float:,.0f}")
-            return rev_float
+            if revenue is not None:
+                rev_float = abs(float(str(revenue).replace(",",".")))
+                print(f"  W&V {period}: {rev_float:,.0f}")
+                total_revenue += rev_float
+                months_fetched += 1
+            else:
+                # Log eerste onbekende response voor debugging
+                if months_fetched == 0:
+                    print(f"  W&V {period} onbekende structuur: {str(report)[:300]}")
 
-        # Log volledige response voor debugging
-        print(f"  WAARSCHUWING: kon omzet niet vinden. Volledige response: {str(report)[:800]}")
-        return None
+        except Exception as e:
+            print(f"  FOUT W&V {period}: {e}")
 
-    except Exception as e:
-        print(f"  FOUT bij ophalen W&V: {e}")
-        return None
+    print(f"  Totaal omzet 180d ({months_fetched} maanden): {total_revenue:,.0f}")
+    return total_revenue if total_revenue > 0 else None
 
 
 def parse_reminders(inv):
