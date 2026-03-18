@@ -55,38 +55,58 @@ def api_get_safe(path, params=None):
 
 def fetch_revenue_180():
     """
-    Omzet ex BTW over afgelopen 180 dagen uit Moneybird.
-
-    Strategie: gebruik de 'documents/sales_invoices' filter op invoice_date.
-    Moneybird ondersteunt: filter=invoice_date_after:YYYY-MM-DD
-    We tellen total_price_excl_tax op van alle facturen met invoice_date >= cutoff,
-    exclusief creditnota's (amount < 0) en exclusief bad_debt.
-    Alleen facturen die daadwerkelijk in de periode zijn verstuurd (sent/paid/open/late/reminded).
+    Omzet ex BTW uit de Moneybird Winst & Verliesrekening.
+    Endpoint: GET /{admin_id}/reports/profit_loss.json
+    Period formaat: YYYYMMDD..YYYYMMDD (geen streepjes)
     """
-    cutoff     = (TODAY - datetime.timedelta(days=DAYS_180)).isoformat()
-    seen_ids   = set()
-    revenue    = 0.0
-    count      = 0
+    start = (TODAY - datetime.timedelta(days=DAYS_180)).strftime("%Y%m%d")
+    end   = TODAY.strftime("%Y%m%d")
+    period = f"{start}..{end}"
 
-    for state in ["paid", "open", "late", "reminded"]:
-        try:
-            # Gebruik invoice_date_after filter — werkt betrouwbaar in Moneybird v2
-            invs = api_get("sales_invoices.json", {
-                "filter": f"state:{state},invoice_date_after:{cutoff}"
-            })
-            for inv in invs:
-                if inv["id"] in seen_ids:
-                    continue
-                seen_ids.add(inv["id"])
-                amt = float(inv.get("total_price_excl_tax") or 0)
-                if amt > 0:  # geen creditnota's
-                    revenue += amt
-                    count   += 1
-        except Exception as e:
-            print(f"  Waarschuwing revenue {state}: {e}")
+    try:
+        report = api_get_safe(f"reports/profit_loss.json", {"period": period})
+        if report is None:
+            print(f"  WAARSCHUWING: profit_loss endpoint niet bereikbaar")
+            return None
 
-    print(f"  Omzet 180d ex BTW: {revenue:,.0f} ({count} facturen, cutoff: {cutoff})")
-    return revenue
+        print(f"  Profit & Loss response keys: {list(report.keys()) if isinstance(report, dict) else type(report)}")
+
+        # Response structuur: zoek naar omzet / revenue sectie
+        revenue = None
+        if isinstance(report, dict):
+            # Directe velden
+            for key in ["revenue", "net_revenue", "total_revenue", "omzet", "turnover"]:
+                if key in report and report[key] is not None:
+                    revenue = report[key]
+                    print(f"  Omzet gevonden onder '{key}': {revenue}")
+                    break
+
+            # Geneste secties
+            if revenue is None:
+                for key in ["results", "sections", "rows", "data", "lines"]:
+                    if key in report and isinstance(report[key], list):
+                        for section in report[key]:
+                            if not isinstance(section, dict): continue
+                            name = str(section.get("name") or section.get("label") or "").lower()
+                            if any(w in name for w in ["omzet","revenue","opbrengst","turnover","verkoop"]):
+                                revenue = section.get("total") or section.get("amount") or section.get("value")
+                                print(f"  Omzet gevonden in '{key}' sectie '{name}': {revenue}")
+                                break
+                        if revenue is not None:
+                            break
+
+        if revenue is not None:
+            rev_float = abs(float(str(revenue).replace(",",".")))
+            print(f"  Omzet W&V ({start}..{end}): {rev_float:,.0f}")
+            return rev_float
+
+        # Log volledige response voor debugging
+        print(f"  WAARSCHUWING: kon omzet niet vinden. Volledige response: {str(report)[:800]}")
+        return None
+
+    except Exception as e:
+        print(f"  FOUT bij ophalen W&V: {e}")
+        return None
 
 
 def parse_reminders(inv):
