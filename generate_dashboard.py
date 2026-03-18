@@ -106,7 +106,17 @@ def parse(inv):
     due_str    = inv.get("due_date") or inv.get("invoice_date")
     due        = datetime.date.fromisoformat(due_str) if due_str else TODAY
     days       = max(0, (TODAY - due).days)
-    amount     = float(inv.get("total_unpaid_base") or inv.get("total_price_incl_tax") or 0)
+
+    # Openstaand bedrag EX BTW
+    # total_unpaid_base = openstaand ex btw (voorkeur)
+    # total_price_excl_tax = factuurbedrag ex btw (fallback)
+    amount_raw = (
+        inv.get("total_unpaid_base") or
+        inv.get("total_price_excl_tax") or
+        inv.get("total_price_incl_tax") or 0
+    )
+    amount = float(amount_raw)
+
     company    = (c.get("company_name") or
                   f"{c.get('firstname','')} {c.get('lastname','')}".strip() or "Unknown")
     contact_id = str(inv.get("contact_id") or (c.get("id") if c else None) or "")
@@ -121,7 +131,7 @@ def parse(inv):
         return ">90 days"
 
     # Score: days_overdue * 1.0 + (amount / 1000) * 0.3
-    score = round(days * 1.0 + (amount / 1000) * 0.3, 1)
+    score = round(days * 1.0 + (abs(amount) / 1000) * 0.3, 1)
     level = "URGENT" if score >= 70 else ("High" if score >= 40 else "Monitor")
 
     return {
@@ -151,25 +161,31 @@ def build_data(open_invoices, revenue_invoices):
         with open(hist_file) as f:
             history = json.load(f)
 
-    # Active = exclude bad_debt and credit invoices
-    active = [i for i in open_invoices if not i["is_bad_debt"] and i["amount"] > 0]
-    credit = [i for i in open_invoices if i["amount"] < 0]
+    # Active = exclude bad_debt. Credits (negatief) worden WEL meegenomen in totaal AR.
+    active      = [i for i in open_invoices if not i["is_bad_debt"] and i["amount"] > 0]
+    credit      = [i for i in open_invoices if i["amount"] < 0]
+    active_excl_credit = active  # voor KPIs en aging alleen positieve facturen
 
-    total_ar   = round(sum(i["amount"] for i in active), 2)
-    overdue_ar = round(sum(i["amount"] for i in active if i["days_overdue"] > 0), 2)
+    # Totaal AR incl. creditfacturen (netto debiteurenstand)
+    total_ar_gross = round(sum(i["amount"] for i in active), 2)
+    total_ar_credit = round(sum(i["amount"] for i in credit), 2)   # negatief getal
+    total_ar       = round(total_ar_gross + total_ar_credit, 2)    # netto
+
+    overdue_ar  = round(sum(i["amount"] for i in active if i["days_overdue"] > 0), 2)
     overdue_pct = round(overdue_ar / total_ar * 100, 2) if total_ar else 0.0
 
-    # ── Revenue 180d (deduplicated) ──
-    seen_ids = set()
+    # ── Revenue 180d ex BTW (deduplicated) ──
+    seen_ids    = set()
     revenue_180 = 0.0
     for inv in revenue_invoices:
         if inv["id"] in seen_ids: continue
         seen_ids.add(inv["id"])
-        amt = float(inv.get("total_price_incl_tax") or 0)
+        # Gebruik ex-btw bedrag
+        amt = float(inv.get("total_price_excl_tax") or inv.get("total_price_incl_tax") or 0)
         if amt > 0:
             revenue_180 += amt
 
-    # ── DSO vandaag: (huidig debiteurensaldo / omzet 180d) * 180 ──
+    # ── DSO vandaag: (netto debiteurenstand ex BTW / omzet 180d ex BTW) * 180 ──
     dso = round((total_ar / revenue_180 * DAYS_180), 1) if revenue_180 else 0.0
 
     # ── Update history with today's snapshot ──
@@ -188,7 +204,8 @@ def build_data(open_invoices, revenue_invoices):
     # ── 6-month averages ──
     cutoff_6m = (TODAY - datetime.timedelta(days=180)).isoformat()
     hist_6m   = [h for h in history if h["date"] >= cutoff_6m]
-    avg_dso_6m = round(sum(h.get("dso", dso) for h in hist_6m) / len(hist_6m), 1) if hist_6m else dso
+    hist_6m_dso = [h for h in hist_6m if h.get("dso", 0) > 0]
+    avg_dso_6m = round(sum(h["dso"] for h in hist_6m_dso) / len(hist_6m_dso), 1) if hist_6m_dso else dso
     avg_pct_6m = round(sum(h.get("overdue_pct", overdue_pct) for h in hist_6m) / len(hist_6m), 2) if hist_6m else overdue_pct
 
     # ── Write history.json separately ──
@@ -196,7 +213,7 @@ def build_data(open_invoices, revenue_invoices):
     with open(hist_file, "w") as f:
         json.dump(history, f, indent=2)
 
-    # ── Aging ──
+    # ── Aging (alleen actieve, positieve facturen) ──
     buckets = ["Current","1-30 days","31-60 days","61-90 days",">90 days"]
     aging   = {b: round(sum(i["amount"] for i in active if i["bucket"]==b), 2) for b in buckets}
 
@@ -230,6 +247,8 @@ def build_data(open_invoices, revenue_invoices):
         "dso_6m_avg":      avg_dso_6m,
         "dso_target":      DSO_TARGET,
         "total_ar":        total_ar,
+        "total_ar_gross":  total_ar_gross,
+        "total_ar_credit": total_ar_credit,
         "invoice_count":   len(active),
         "overdue_pct":     overdue_pct,
         "overdue_pct_6m":  avg_pct_6m,
