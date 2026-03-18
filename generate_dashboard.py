@@ -41,53 +41,52 @@ def fetch_open():
     return out
 
 
+def api_get_safe(path, params=None):
+    """Zoals api_get maar geeft None terug bij 404 i.p.v. sys.exit."""
+    url = f"{BASE_URL}/{path}"
+    r = requests.get(url, headers=HEADERS, params=params or {})
+    if r.status_code == 404:
+        return None
+    if r.status_code == 401:
+        sys.exit("Invalid Moneybird token.")
+    r.raise_for_status()
+    return r.json()
+
+
 def fetch_revenue_180():
     """
-    Haal omzet op uit de resultatenrekening (profit & loss) van Moneybird.
-    Periode: afgelopen 180 dagen (gesplitst in twee periodes van ~90d als nodig).
-    Moneybird endpoint: GET /financial_reports/profit_and_loss.json?period=...
-    Geeft netto omzet ex BTW terug.
+    Omzet ex BTW over afgelopen 180 dagen uit Moneybird.
+
+    Strategie: gebruik de 'documents/sales_invoices' filter op invoice_date.
+    Moneybird ondersteunt: filter=invoice_date_after:YYYY-MM-DD
+    We tellen total_price_excl_tax op van alle facturen met invoice_date >= cutoff,
+    exclusief creditnota's (amount < 0) en exclusief bad_debt.
+    Alleen facturen die daadwerkelijk in de periode zijn verstuurd (sent/paid/open/late/reminded).
     """
-    # Periode: van 180 dagen geleden tot vandaag
-    start = (TODAY - datetime.timedelta(days=DAYS_180)).isoformat()
-    end   = TODAY.isoformat()
+    cutoff     = (TODAY - datetime.timedelta(days=DAYS_180)).isoformat()
+    seen_ids   = set()
+    revenue    = 0.0
+    count      = 0
 
-    try:
-        report = api_get("financial_reports/profit_and_loss.json", {
-            "period": f"{start}..{end}"
-        })
-        # Moneybird geeft een geneste structuur terug
-        # Omzet staat onder 'revenue' of 'net_revenue' of als eerste sectie
-        revenue = None
+    for state in ["paid", "open", "late", "reminded"]:
+        try:
+            # Gebruik invoice_date_after filter — werkt betrouwbaar in Moneybird v2
+            invs = api_get("sales_invoices.json", {
+                "filter": f"state:{state},invoice_date_after:{cutoff}"
+            })
+            for inv in invs:
+                if inv["id"] in seen_ids:
+                    continue
+                seen_ids.add(inv["id"])
+                amt = float(inv.get("total_price_excl_tax") or 0)
+                if amt > 0:  # geen creditnota's
+                    revenue += amt
+                    count   += 1
+        except Exception as e:
+            print(f"  Waarschuwing revenue {state}: {e}")
 
-        # Probeer directe velden
-        if isinstance(report, dict):
-            revenue = (
-                report.get("net_revenue") or
-                report.get("revenue") or
-                report.get("total_revenue")
-            )
-            # Soms zit het in een 'results' of 'sections' array
-            if revenue is None and "results" in report:
-                for section in report["results"]:
-                    if isinstance(section, dict):
-                        name = (section.get("name") or "").lower()
-                        if "omzet" in name or "revenue" in name or "opbrengst" in name:
-                            revenue = section.get("total") or section.get("amount")
-                            break
-
-        if revenue is not None:
-            revenue_float = float(str(revenue).replace(",", "."))
-            print(f"  Omzet uit resultatenrekening ({start} t/m {end}): {revenue_float:,.0f}")
-            return revenue_float
-
-        # Fallback: log de volledige response zodat we kunnen debuggen
-        print(f"  WAARSCHUWING: kon omzet niet uit rapport halen. Response: {str(report)[:500]}")
-        return None
-
-    except Exception as e:
-        print(f"  WAARSCHUWING: resultatenrekening ophalen mislukt: {e}")
-        return None
+    print(f"  Omzet 180d ex BTW: {revenue:,.0f} ({count} facturen, cutoff: {cutoff})")
+    return revenue
 
 
 def parse_reminders(inv):
