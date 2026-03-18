@@ -1,20 +1,20 @@
 {
-  "generated": "2026-03-18T10:39:12.650034",
-  "dso": 9.6,
-  "dso_6m_avg": 15.9,
+  "generated": "2026-03-18T10:55:31.939724",
+  "dso": 32.1,
+  "dso_6m_avg": 20.4,
   "dso_target": 36,
-  "total_ar": 554835.95,
-  "total_ar_gross": 576321.71,
+  "total_ar": 557051.7,
+  "total_ar_gross": 578537.46,
   "total_ar_credit": -21485.76,
-  "invoice_count": 472,
-  "overdue_pct": 30.6,
-  "overdue_pct_6m": 28.91,
-  "revenue_180": 10444636.49,
+  "invoice_count": 473,
+  "overdue_pct": 30.47,
+  "overdue_pct_6m": 28.86,
+  "revenue_180": 3124323.61,
   "overdue_30": 75251.07,
   "overdue_60": 33430.94,
   "overdue_90": 23171.69,
   "aging": {
-    "Current": 406568.56,
+    "Current": 408784.31,
     "1-30 days": 94502.08,
     "31-60 days": 41820.13,
     "61-90 days": 10259.25,
@@ -52,15 +52,32 @@
     },
     {
       "date": "2026-03-18",
-      "total_ar": 554835.95,
+      "total_ar": 557051.7,
       "overdue_ar": 169753.15,
-      "overdue_pct": 30.6,
-      "dso": 9.6,
-      "revenue_180": 10444636.49,
+      "overdue_pct": 30.47,
+      "dso": 32.1,
+      "revenue_180": 3124323.61,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "481768885956117523",
+      "contact_id": "467351969797768506",
+      "invoice_no": "2026-1080",
+      "company": "Kitchen Create B.V.",
+      "invoice_date": "2026-03-18",
+      "due_date": "2026-04-17",
+      "amount": 2215.75,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.7,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "481768900016473904",
       "contact_id": "478956097340704105",
@@ -9268,6 +9285,23 @@
     }
   ],
   "active_invoices": [
+    {
+      "id": "481768885956117523",
+      "contact_id": "467351969797768506",
+      "invoice_no": "2026-1080",
+      "company": "Kitchen Create B.V.",
+      "invoice_date": "2026-03-18",
+      "due_date": "2026-04-17",
+      "amount": 2215.75,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.7,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "481768900016473904",
       "contact_id": "478956097340704105",
@@ -18493,6 +18527,68 @@
     }
   ],
   "customers": {
+    "467351969797768506": {
+      "contact_id": "467351969797768506",
+      "company": "Kitchen Create B.V.",
+      "invoices": [
+        {
+          "id": "481768885956117523",
+          "contact_id": "467351969797768506",
+          "invoice_no": "2026-1080",
+          "company": "Kitchen Create B.V.",
+          "invoice_date": "2026-03-18",
+          "due_date": "2026-04-17",
+          "amount": 2215.75,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.7,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "479952370772477243",
+          "contact_id": "467351969797768506",
+          "invoice_no": "2026-0775",
+          "company": "Kitchen Create B.V.",
+          "invoice_date": "2026-02-25",
+          "due_date": "2026-03-27",
+          "amount": 914.73,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.3,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "481295791662564841",
+          "contact_id": "467351969797768506",
+          "invoice_no": "2026-1030",
+          "company": "Kitchen Create B.V.",
+          "invoice_date": "2026-03-13",
+          "due_date": "2026-04-12",
+          "amount": 629.95,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 3760.43,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 3,
+      "level": "Monitor"
+    },
     "478956097340704105": {
       "contact_id": "478956097340704105",
       "company": "Thuis in Bouwen B.V.",
@@ -20698,51 +20794,6 @@
       "max_days": 63,
       "invoice_count": 4,
       "level": "High"
-    },
-    "467351969797768506": {
-      "contact_id": "467351969797768506",
-      "company": "Kitchen Create B.V.",
-      "invoices": [
-        {
-          "id": "479952370772477243",
-          "contact_id": "467351969797768506",
-          "invoice_no": "2026-0775",
-          "company": "Kitchen Create B.V.",
-          "invoice_date": "2026-02-25",
-          "due_date": "2026-03-27",
-          "amount": 914.73,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.3,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "481295791662564841",
-          "contact_id": "467351969797768506",
-          "invoice_no": "2026-1030",
-          "company": "Kitchen Create B.V.",
-          "invoice_date": "2026-03-13",
-          "due_date": "2026-04-12",
-          "amount": 629.95,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1544.68,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 2,
-      "level": "Monitor"
     },
     "481484963369191196": {
       "contact_id": "481484963369191196",
