@@ -206,10 +206,11 @@ def build_data(open_invoices, revenue_invoices):
     history = [h for h in history if h["date"] != today_str]
     history.append({
         "date":        today_str,
-        "total_ar":    total_ar,
+        "total_ar":    total_ar,       # netto debiteurenstand ex BTW
         "overdue_ar":  overdue_ar,
         "overdue_pct": overdue_pct,
         "dso":         dso,
+        "revenue_180": round(revenue_180, 2),  # omzet 180d ex BTW op dit moment
         "target":      DSO_TARGET,
     })
     history = sorted(history, key=lambda h: h["date"])[-365:]
