@@ -1,7 +1,7 @@
 {
-  "generated": "2026-03-19T11:39:56",
-  "dso": 36.2,
-  "dso_6m_avg": 24.1,
+  "generated": "2026-03-19T11:49:54",
+  "dso": 48.4,
+  "dso_6m_avg": 26.2,
   "dso_target": 36,
   "total_ar": 641584.61,
   "total_ar_gross": 657358.54,
@@ -9,7 +9,7 @@
   "invoice_count": 528,
   "overdue_pct": 25.58,
   "overdue_pct_6m": 26.98,
-  "revenue_180": 3193414.94,
+  "revenue_180": 2384915.91,
   "overdue_30": 73145.6,
   "overdue_60": 33317.19,
   "overdue_90": 23057.94,
@@ -64,8 +64,8 @@
       "total_ar": 641584.61,
       "overdue_ar": 164121.77,
       "overdue_pct": 25.58,
-      "dso": 36.2,
-      "revenue_180": 3193414.94,
+      "dso": 48.4,
+      "revenue_180": 2384915.91,
       "target": 36
     }
   ],
