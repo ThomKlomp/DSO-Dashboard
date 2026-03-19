@@ -55,82 +55,32 @@ def api_get_safe(path, params=None):
 
 def fetch_revenue_180():
     """
-    Omzet EX BTW over afgelopen 180 dagen.
-    Alleen open/late/reminded facturen gefactureerd in de periode.
-    Betaalde facturen worden apart opgehaald met API-datumfilter.
+    Omzet ex BTW via profit_loss rapport.
+    Endpoint: GET /reports/profit_loss.json?period=YYYYMM..YYYYMM
+    Max 12 maanden, period moet hele maanden zijn.
+    Response bevat 'total_revenue' (ex BTW).
     """
-    cutoff   = TODAY - datetime.timedelta(days=DAYS_180)
-    cutoff_str = cutoff.isoformat()
-    seen_ids = set()
-    revenue  = 0.0
-    count    = 0
-    skipped  = 0
+    start_month = (TODAY.replace(day=1) - datetime.timedelta(days=150)).replace(day=1)
+    period = f"{start_month.strftime('%Y%m')}..{TODAY.strftime('%Y%m')}"
 
-    # Open/late/reminded: haal op en filter op invoice_date in Python
-    for state in ["open", "late", "reminded"]:
-        state_rev = 0.0
-        state_count = 0
-        try:
-            invs = api_get("sales_invoices.json", {"filter": f"state:{state}"})
-            for inv in invs:
-                if inv["id"] in seen_ids:
-                    continue
-                inv_date_str = (inv.get("invoice_date") or "")[:10]
-                if not inv_date_str:
-                    skipped += 1
-                    continue
-                try:
-                    inv_date = datetime.date.fromisoformat(inv_date_str)
-                except ValueError:
-                    skipped += 1
-                    continue
-                if inv_date < cutoff:
-                    skipped += 1
-                    continue
-                seen_ids.add(inv["id"])
-                amt = float(inv.get("total_price_excl_tax") or 0)
-                if amt > 0:
-                    revenue += amt
-                    state_rev += amt
-                    count += 1
-                    state_count += 1
-        except Exception as e:
-            print(f"  Waarschuwing revenue {state}: {e}")
-        print(f"  State '{state}': {state_count} facturen, {state_rev:,.0f} ex BTW")
-
-    # Betaalde facturen: gebruik API invoice_date filter (werkt alleen voor paid)
-    state_rev = 0.0
-    state_count = 0
     try:
-        invs = api_get("sales_invoices.json", {
-            "filter": f"state:paid,invoice_date_after:{cutoff_str}"
-        })
-        for inv in invs:
-            if inv["id"] in seen_ids:
-                continue
-            # Extra check in Python
-            inv_date_str = (inv.get("invoice_date") or "")[:10]
-            try:
-                inv_date = datetime.date.fromisoformat(inv_date_str) if inv_date_str else None
-            except ValueError:
-                inv_date = None
-            if inv_date and inv_date < cutoff:
-                skipped += 1
-                continue
-            seen_ids.add(inv["id"])
-            amt = float(inv.get("total_price_excl_tax") or 0)
-            if amt > 0:
-                revenue += amt
-                state_rev += amt
-                count += 1
-                state_count += 1
+        report = api_get_safe(f"reports/profit_loss.json", {"period": period})
+        if report is None:
+            print(f"  WAARSCHUWING: profit_loss niet bereikbaar")
+            return None
+
+        total_revenue = report.get("total_revenue")
+        if total_revenue is not None:
+            rev = abs(float(str(total_revenue).replace(",", ".")))
+            print(f"  Omzet W&V ({period}): {rev:,.0f} ex BTW")
+            return rev
+
+        print(f"  WAARSCHUWING: geen total_revenue. Keys: {list(report.keys()) if isinstance(report, dict) else type(report)}")
+        return None
+
     except Exception as e:
-        print(f"  Waarschuwing revenue paid: {e}")
-    print(f"  State 'paid': {state_count} facturen, {state_rev:,.0f} ex BTW")
-
-    print(f"  Totaal omzet 180d ex BTW: {revenue:,.0f} ({count} facturen, {skipped} overgeslagen, cutoff: {cutoff})")
-    return revenue if revenue > 0 else None
-
+        print(f"  FOUT profit_loss: {e}")
+        return None
 
 def parse_reminders(inv):
     """
