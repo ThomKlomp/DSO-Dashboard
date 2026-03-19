@@ -74,8 +74,10 @@ body{font-family:var(--serif);background:var(--bg);color:var(--text);min-height:
 .click-hint{font-size:10px;color:var(--text-3);font-family:var(--mono);}
 
 /* KPI */
-.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);margin-bottom:16px;}
-.kpi{background:var(--surface);padding:12px 14px 16px;position:relative;transition:background .15s;display:flex;flex-direction:column;}
+.kpi-grid{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);margin-bottom:16px;}
+.kpi-row{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--border);}
+.kpi-row-ar{border-top:2px solid var(--border-strong);}
+.kpi{background:var(--surface);padding:12px 14px 16px;transition:background .15s;display:flex;flex-direction:column;min-width:0;}
 .kpi.clickable{cursor:pointer;}
 .kpi.clickable:hover{background:var(--brand-light);}
 .kpi-label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--text-3);margin-bottom:5px;margin-top:2px;}
@@ -584,19 +586,30 @@ function renderKPIs(d){
   const julyOk     = pctNow<=OVERDUE_PCT_TARGET;
   const julyProg   = Math.min(100,Math.max(2, pctNow<=0?100:(OVERDUE_PCT_TARGET/pctNow*100)));
 
-  const items=[
+  // Rij 1: analyse/trend datapunten (5 stuks)
+  const row1=[
+    {label:'Omzet 180d',value:fmtE(d.revenue_180||0),
+     sub:h6m.length+' datapunten'},
     {label:'DSO (6m gem.)',value:fmtD(dsoVal)+'d',
-     sub:'Target: '+DSO_TARGET+'d | Vandaag: '+fmtD(d.dso)+'d | '+h6m.length+' datapunten',
+     sub:'Target: '+DSO_TARGET+'d | '+h6m.length+' datapunten',
      badge:dsoOk?'ON TARGET':dsoClose?'LET OP':'ACTIE',badgeClass:dsoOk?'badge-good':dsoClose?'badge-warn':'badge-urgent'},
-    {label:'Omzet 180d (ex BTW)',
-     value:fmtE(d.revenue_180||0),
-     sub:'Basis voor DSO | AR: '+fmtE(totalAR)},
     {label:'% Verlopen (6m gem.)',value:avgPct6m+'%',
-     sub:'Target: max '+OVERDUE_PCT_TARGET+'% | Vandaag: '+pctNow.toFixed(1)+'% | '+h6mPct.length+' datapunten',
+     sub:'Target: max '+OVERDUE_PCT_TARGET+'% | '+h6mPct.length+' datapunten',
      badge:pctOk?'ON TARGET':pctClose?'LET OP':'BOVEN TARGET',badgeClass:pctOk?'badge-good':pctClose?'badge-warn':'badge-urgent',
      filter:'overdue_all',filterLabel:'Alle verlopen facturen'},
-    {label:'Totaal AR (excl. BTW)',
-     value:fmtE(totalAR),
+    {label:'DSO Realtime',value:fmtD(d.dso)+'d',
+     sub:'AR '+fmtE(totalAR)+' / Omzet '+fmtE(d.revenue_180||0),
+     badge:d.dso<=DSO_TARGET?'ON TARGET':d.dso<=DSO_TARGET*1.1?'LET OP':'ACTIE',
+     badgeClass:d.dso<=DSO_TARGET?'badge-good':d.dso<=DSO_TARGET*1.1?'badge-warn':'badge-urgent'},
+    {label:'1 Juli Target',value:julyOk?'ON TARGET':pctNow.toFixed(1)+'%',
+     sub:'Doel: <10% verlopen op 1 juli | '+daysToJuly+'d te gaan',
+     badge:julyOk?'GEHAALD':null,badgeClass:'badge-good',
+     extra:`<div class="kpi-prog"><div style="display:flex;justify-content:space-between;font-size:9px;color:var(--text-3)"><span>${fmtE(overdueAR)} / ${fmtE(totalAR)}</span><span>10%</span></div><div class="kpi-prog-bar"><div class="kpi-prog-fill" style="width:${julyProg}%;background:${julyOk?'#16a34a':'#dc2626'}"></div></div></div>`},
+  ];
+
+  // Rij 2: AR aging (5 stuks)
+  const row2=[
+    {label:'Totaal AR',value:fmtE(totalAR),
      sub:active.length+' facturen | credit: '+fmtE(creditInvs.reduce((s,i)=>s+i.amount,0)),
      filter:'all_open',filterLabel:'Alle openstaande facturen'},
     {label:'1-30 dagen verlopen',
@@ -619,20 +632,22 @@ function renderKPIs(d){
      sub:active.filter(i=>i.days_overdue>90).length+' facturen',
      badge:active.some(i=>i.days_overdue>90)?'INCASSO':null,badgeClass:'badge-urgent',
      filter:'overdue_90',filterLabel:'Verlopen > 90 dagen'},
-    {label:'1 Juli Target',value:julyOk?'ON TARGET':pctNow.toFixed(1)+'%',
-     sub:'Verlopen/Totaal AR nu | Doel: <10% op 1 juli | '+daysToJuly+'d te gaan',
-     badge:julyOk?'GEHAALD':null,badgeClass:'badge-good',
-     extra:`<div class="kpi-prog"><div style="display:flex;justify-content:space-between;font-size:9px;color:var(--text-3)"><span>${fmtE(overdueAR)} / ${fmtE(totalAR)}</span><span>10%</span></div><div class="kpi-prog-bar"><div class="kpi-prog-fill" style="width:${julyProg}%;background:${julyOk?'#16a34a':'#dc2626'}"></div></div></div>`},
   ];
 
-  document.getElementById('kpi-grid').innerHTML=items.map(k=>`
-    <div class="kpi${k.filter?' clickable':''}" ${k.filter?`onclick="openFilteredPanel('${k.filter}','${k.filterLabel}')"`:''}>
-      <div class="kpi-label">${k.label}</div>
-      ${k.badge?`<span class="kpi-badge ${k.badgeClass}">${k.badge}</span>`:''}
-      <div class="kpi-value">${k.value}</div>
-      <div class="kpi-sub">${k.sub}</div>
-      ${k.extra||''}
-    </div>`).join('');
+  function kpiHTML(items){
+    return items.map(k=>`
+      <div class="kpi${k.filter?' clickable':''}" ${k.filter?`onclick="openFilteredPanel('${k.filter}','${k.filterLabel}')"`:''}>
+        <div class="kpi-label">${k.label}</div>
+        ${k.badge?`<span class="kpi-badge ${k.badgeClass}">${k.badge}</span>`:''}
+        <div class="kpi-value">${k.value}</div>
+        <div class="kpi-sub">${k.sub||''}</div>
+        ${k.extra||''}
+      </div>`).join('');
+  }
+
+  document.getElementById('kpi-grid').innerHTML=
+    `<div class="kpi-row">${kpiHTML(row1)}</div>
+     <div class="kpi-row kpi-row-ar">${kpiHTML(row2)}</div>`;
 }
 
 // ── AGING ─────────────────────────────────────────────────────────────────
