@@ -1,24 +1,24 @@
 {
-  "generated": "2026-03-19T10:33:21",
-  "dso": 40.0,
-  "dso_6m_avg": 24.8,
+  "generated": "2026-03-19T11:27:15",
+  "dso": 36.2,
+  "dso_6m_avg": 24.1,
   "dso_target": 36,
-  "total_ar": 641944.61,
-  "total_ar_gross": 662202.39,
-  "total_ar_credit": -20257.78,
-  "invoice_count": 529,
-  "overdue_pct": 25.89,
-  "overdue_pct_6m": 27.08,
-  "revenue_180": 2891892.13,
-  "overdue_30": 75251.07,
-  "overdue_60": 33430.94,
-  "overdue_90": 23171.69,
+  "total_ar": 641584.61,
+  "total_ar_gross": 657358.54,
+  "total_ar_credit": -15773.93,
+  "invoice_count": 528,
+  "overdue_pct": 25.58,
+  "overdue_pct_6m": 26.98,
+  "revenue_180": 3193414.94,
+  "overdue_30": 73145.6,
+  "overdue_60": 33317.19,
+  "overdue_90": 23057.94,
   "aging": {
-    "Current": 495975.15,
+    "Current": 493236.77,
     "1-30 days": 90976.17,
-    "31-60 days": 41820.13,
+    "31-60 days": 39828.41,
     "61-90 days": 10259.25,
-    ">90 days": 23171.69
+    ">90 days": 23057.94
   },
   "history": [
     {
@@ -61,15 +61,32 @@
     },
     {
       "date": "2026-03-19",
-      "total_ar": 641944.61,
-      "overdue_ar": 166227.24,
-      "overdue_pct": 25.89,
-      "dso": 40.0,
-      "revenue_180": 2891892.13,
+      "total_ar": 641584.61,
+      "overdue_ar": 164121.77,
+      "overdue_pct": 25.58,
+      "dso": 36.2,
+      "revenue_180": 3193414.94,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "481862736671671945",
+      "contact_id": "476340871084639846",
+      "invoice_no": "2026-1155",
+      "company": "TUH OpCo Brussels",
+      "invoice_date": "2026-03-19",
+      "due_date": "2026-04-18",
+      "amount": 1631.72,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.5,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "481768897702266290",
       "contact_id": "443723672063050993",
@@ -2111,23 +2128,6 @@
       "reminders": []
     },
     {
-      "id": "481413423995815161",
-      "contact_id": "441530679613720565",
-      "invoice_no": "2026-1022",
-      "company": "DeFabrique Evenementen B.V.",
-      "invoice_date": "2026-03-12",
-      "due_date": "2026-04-11",
-      "amount": -4370.1,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 1.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481229928471201721",
       "contact_id": "441530679613720565",
       "invoice_no": "2026-1021",
@@ -2549,23 +2549,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481295772324726296",
-      "contact_id": "441530679613720565",
-      "invoice_no": "2026-0994",
-      "company": "DeFabrique Evenementen B.V.",
-      "invoice_date": "2026-03-12",
-      "due_date": "2026-04-11",
-      "amount": 4370.1,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 1.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -7459,29 +7442,6 @@
       ]
     },
     {
-      "id": "476341156024682480",
-      "contact_id": "476340871084639846",
-      "invoice_no": "2026-0170",
-      "company": "TUH OpCo Brussels",
-      "invoice_date": "2026-01-15",
-      "due_date": "2026-02-14",
-      "amount": 1991.72,
-      "currency": "EUR",
-      "days_overdue": 33,
-      "bucket": "31-60 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 33.6,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-02-20",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "476244043715577552",
       "contact_id": "473159267005760707",
       "invoice_no": "2026-0126",
@@ -8172,29 +8132,6 @@
       ]
     },
     {
-      "id": "472877414049908244",
-      "contact_id": "463456482532262961",
-      "invoice_no": "2025-4680",
-      "company": "MHO Bouwonderneming B.V.",
-      "invoice_date": "2025-12-08",
-      "due_date": "2025-12-22",
-      "amount": -113.75,
-      "currency": "EUR",
-      "days_overdue": 87,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 87.0,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-12-28",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "472160696318035384",
       "contact_id": "352506046257825134",
       "invoice_no": "2025-4522",
@@ -8351,52 +8288,6 @@
         {
           "nr": 1,
           "date": "2025-11-29",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "468533853429958232",
-      "contact_id": "463456482532262961",
-      "invoice_no": "2025-3983",
-      "company": "MHO Bouwonderneming B.V.",
-      "invoice_date": "2025-10-24",
-      "due_date": "2025-11-07",
-      "amount": 339.45,
-      "currency": "EUR",
-      "days_overdue": 132,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 132.1,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-11-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "468377230566753816",
-      "contact_id": "463456482532262961",
-      "invoice_no": "2025-3982",
-      "company": "MHO Bouwonderneming B.V.",
-      "invoice_date": "2025-10-24",
-      "due_date": "2025-11-07",
-      "amount": 657.13,
-      "currency": "EUR",
-      "days_overdue": 132,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 132.2,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-11-13",
           "source": "berekend"
         }
       ]
@@ -10327,9 +10218,92 @@
           "source": "berekend"
         }
       ]
+    },
+    {
+      "id": "468533853429958232",
+      "contact_id": "463456482532262961",
+      "invoice_no": "2025-3983",
+      "company": "MHO Bouwonderneming B.V.",
+      "invoice_date": "2025-10-24",
+      "due_date": "2025-11-07",
+      "amount": 225.7,
+      "currency": "EUR",
+      "days_overdue": 132,
+      "bucket": ">90 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 132.1,
+      "level": "URGENT",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2025-11-13",
+          "source": "berekend"
+        },
+        {
+          "nr": 2,
+          "date": "2025-12-07",
+          "source": "berekend"
+        },
+        {
+          "nr": 3,
+          "date": "2026-01-06",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "468377230566753816",
+      "contact_id": "463456482532262961",
+      "invoice_no": "2025-3982",
+      "company": "MHO Bouwonderneming B.V.",
+      "invoice_date": "2025-10-24",
+      "due_date": "2025-11-07",
+      "amount": 657.13,
+      "currency": "EUR",
+      "days_overdue": 132,
+      "bucket": ">90 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 132.2,
+      "level": "URGENT",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2025-11-13",
+          "source": "berekend"
+        },
+        {
+          "nr": 2,
+          "date": "2025-12-07",
+          "source": "berekend"
+        },
+        {
+          "nr": 3,
+          "date": "2026-01-06",
+          "source": "berekend"
+        }
+      ]
     }
   ],
   "active_invoices": [
+    {
+      "id": "481862736671671945",
+      "contact_id": "476340871084639846",
+      "invoice_no": "2026-1155",
+      "company": "TUH OpCo Brussels",
+      "invoice_date": "2026-03-19",
+      "due_date": "2026-04-18",
+      "amount": 1631.72,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.5,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "481768897702266290",
       "contact_id": "443723672063050993",
@@ -12741,23 +12715,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481295772324726296",
-      "contact_id": "441530679613720565",
-      "invoice_no": "2026-0994",
-      "company": "DeFabrique Evenementen B.V.",
-      "invoice_date": "2026-03-12",
-      "due_date": "2026-04-11",
-      "amount": 4370.1,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 1.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -17292,29 +17249,6 @@
       ]
     },
     {
-      "id": "476341156024682480",
-      "contact_id": "476340871084639846",
-      "invoice_no": "2026-0170",
-      "company": "TUH OpCo Brussels",
-      "invoice_date": "2026-01-15",
-      "due_date": "2026-02-14",
-      "amount": 1991.72,
-      "currency": "EUR",
-      "days_overdue": 33,
-      "bucket": "31-60 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 33.6,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-02-20",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "476244043715577552",
       "contact_id": "473159267005760707",
       "invoice_no": "2026-0126",
@@ -18092,52 +18026,6 @@
         {
           "nr": 1,
           "date": "2025-11-29",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "468533853429958232",
-      "contact_id": "463456482532262961",
-      "invoice_no": "2025-3983",
-      "company": "MHO Bouwonderneming B.V.",
-      "invoice_date": "2025-10-24",
-      "due_date": "2025-11-07",
-      "amount": 339.45,
-      "currency": "EUR",
-      "days_overdue": 132,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 132.1,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-11-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "468377230566753816",
-      "contact_id": "463456482532262961",
-      "invoice_no": "2025-3982",
-      "company": "MHO Bouwonderneming B.V.",
-      "invoice_date": "2025-10-24",
-      "due_date": "2025-11-07",
-      "amount": 657.13,
-      "currency": "EUR",
-      "days_overdue": 132,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 132.2,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-11-13",
           "source": "berekend"
         }
       ]
@@ -20022,6 +19910,72 @@
           "source": "berekend"
         }
       ]
+    },
+    {
+      "id": "468533853429958232",
+      "contact_id": "463456482532262961",
+      "invoice_no": "2025-3983",
+      "company": "MHO Bouwonderneming B.V.",
+      "invoice_date": "2025-10-24",
+      "due_date": "2025-11-07",
+      "amount": 225.7,
+      "currency": "EUR",
+      "days_overdue": 132,
+      "bucket": ">90 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 132.1,
+      "level": "URGENT",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2025-11-13",
+          "source": "berekend"
+        },
+        {
+          "nr": 2,
+          "date": "2025-12-07",
+          "source": "berekend"
+        },
+        {
+          "nr": 3,
+          "date": "2026-01-06",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "468377230566753816",
+      "contact_id": "463456482532262961",
+      "invoice_no": "2025-3982",
+      "company": "MHO Bouwonderneming B.V.",
+      "invoice_date": "2025-10-24",
+      "due_date": "2025-11-07",
+      "amount": 657.13,
+      "currency": "EUR",
+      "days_overdue": 132,
+      "bucket": ">90 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 132.2,
+      "level": "URGENT",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2025-11-13",
+          "source": "berekend"
+        },
+        {
+          "nr": 2,
+          "date": "2025-12-07",
+          "source": "berekend"
+        },
+        {
+          "nr": 3,
+          "date": "2026-01-06",
+          "source": "berekend"
+        }
+      ]
     }
   ],
   "overdue_top": [
@@ -20496,7 +20450,7 @@
       "currency": "EUR",
       "days_overdue": 132,
       "bucket": ">90 days",
-      "state": "late",
+      "state": "reminded",
       "is_bad_debt": false,
       "score": 132.2,
       "level": "URGENT",
@@ -20504,6 +20458,16 @@
         {
           "nr": 1,
           "date": "2025-11-13",
+          "source": "berekend"
+        },
+        {
+          "nr": 2,
+          "date": "2025-12-07",
+          "source": "berekend"
+        },
+        {
+          "nr": 3,
+          "date": "2026-01-06",
           "source": "berekend"
         }
       ]
@@ -20515,11 +20479,11 @@
       "company": "MHO Bouwonderneming B.V.",
       "invoice_date": "2025-10-24",
       "due_date": "2025-11-07",
-      "amount": 339.45,
+      "amount": 225.7,
       "currency": "EUR",
       "days_overdue": 132,
       "bucket": ">90 days",
-      "state": "late",
+      "state": "reminded",
       "is_bad_debt": false,
       "score": 132.1,
       "level": "URGENT",
@@ -20527,6 +20491,16 @@
         {
           "nr": 1,
           "date": "2025-11-13",
+          "source": "berekend"
+        },
+        {
+          "nr": 2,
+          "date": "2025-12-07",
+          "source": "berekend"
+        },
+        {
+          "nr": 3,
+          "date": "2026-01-06",
           "source": "berekend"
         }
       ]
@@ -20602,6 +20576,34 @@
     }
   ],
   "customers": {
+    "476340871084639846": {
+      "contact_id": "476340871084639846",
+      "company": "TUH OpCo Brussels",
+      "invoices": [
+        {
+          "id": "481862736671671945",
+          "contact_id": "476340871084639846",
+          "invoice_no": "2026-1155",
+          "company": "TUH OpCo Brussels",
+          "invoice_date": "2026-03-19",
+          "due_date": "2026-04-18",
+          "amount": 1631.72,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.5,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 1631.72,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
     "443723672063050993": {
       "contact_id": "443723672063050993",
       "company": "Sony Benelux, a branch of Sony Europe",
@@ -24629,23 +24631,6 @@
           ]
         },
         {
-          "id": "481295772324726296",
-          "contact_id": "441530679613720565",
-          "invoice_no": "2026-0994",
-          "company": "DeFabrique Evenementen B.V.",
-          "invoice_date": "2026-03-12",
-          "due_date": "2026-04-11",
-          "amount": 4370.1,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 1.3,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "481222561918617134",
           "contact_id": "441530679613720565",
           "invoice_no": "2026-1020",
@@ -24763,29 +24748,12 @@
           "score": 0.1,
           "level": "Monitor",
           "reminders": []
-        },
-        {
-          "id": "481413423995815161",
-          "contact_id": "441530679613720565",
-          "invoice_no": "2026-1022",
-          "company": "DeFabrique Evenementen B.V.",
-          "invoice_date": "2026-03-12",
-          "due_date": "2026-04-11",
-          "amount": -4370.1,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 1.3,
-          "level": "Monitor",
-          "reminders": []
         }
       ],
-      "total_open": 17794.23,
+      "total_open": 13424.13,
       "total_overdue": 4250.13,
       "max_days": 13,
-      "invoice_count": 8,
+      "invoice_count": 7,
       "level": "Monitor"
     },
     "481854608920020299": {
@@ -31532,40 +31500,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "476340871084639846": {
-      "contact_id": "476340871084639846",
-      "company": "TUH OpCo Brussels",
-      "invoices": [
-        {
-          "id": "476341156024682480",
-          "contact_id": "476340871084639846",
-          "invoice_no": "2026-0170",
-          "company": "TUH OpCo Brussels",
-          "invoice_date": "2026-01-15",
-          "due_date": "2026-02-14",
-          "amount": 1991.72,
-          "currency": "EUR",
-          "days_overdue": 33,
-          "bucket": "31-60 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 33.6,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-02-20",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 1991.72,
-      "total_overdue": 1991.72,
-      "max_days": 33,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "471617898275669620": {
       "contact_id": "471617898275669620",
       "company": "Jaarbeurs B.V.",
@@ -32015,86 +31949,6 @@
       "max_days": 69,
       "invoice_count": 1,
       "level": "High"
-    },
-    "463456482532262961": {
-      "contact_id": "463456482532262961",
-      "company": "MHO Bouwonderneming B.V.",
-      "invoices": [
-        {
-          "id": "468377230566753816",
-          "contact_id": "463456482532262961",
-          "invoice_no": "2025-3982",
-          "company": "MHO Bouwonderneming B.V.",
-          "invoice_date": "2025-10-24",
-          "due_date": "2025-11-07",
-          "amount": 657.13,
-          "currency": "EUR",
-          "days_overdue": 132,
-          "bucket": ">90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 132.2,
-          "level": "URGENT",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2025-11-13",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "468533853429958232",
-          "contact_id": "463456482532262961",
-          "invoice_no": "2025-3983",
-          "company": "MHO Bouwonderneming B.V.",
-          "invoice_date": "2025-10-24",
-          "due_date": "2025-11-07",
-          "amount": 339.45,
-          "currency": "EUR",
-          "days_overdue": 132,
-          "bucket": ">90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 132.1,
-          "level": "URGENT",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2025-11-13",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "472877414049908244",
-          "contact_id": "463456482532262961",
-          "invoice_no": "2025-4680",
-          "company": "MHO Bouwonderneming B.V.",
-          "invoice_date": "2025-12-08",
-          "due_date": "2025-12-22",
-          "amount": -113.75,
-          "currency": "EUR",
-          "days_overdue": 87,
-          "bucket": "61-90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 87.0,
-          "level": "URGENT",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2025-12-28",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 996.58,
-      "total_overdue": 996.58,
-      "max_days": 132,
-      "invoice_count": 2,
-      "level": "URGENT"
     },
     "455137444859217344": {
       "contact_id": "455137444859217344",
@@ -33334,6 +33188,83 @@
       "max_days": 75,
       "invoice_count": 1,
       "level": "URGENT"
+    },
+    "463456482532262961": {
+      "contact_id": "463456482532262961",
+      "company": "MHO Bouwonderneming B.V.",
+      "invoices": [
+        {
+          "id": "468377230566753816",
+          "contact_id": "463456482532262961",
+          "invoice_no": "2025-3982",
+          "company": "MHO Bouwonderneming B.V.",
+          "invoice_date": "2025-10-24",
+          "due_date": "2025-11-07",
+          "amount": 657.13,
+          "currency": "EUR",
+          "days_overdue": 132,
+          "bucket": ">90 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 132.2,
+          "level": "URGENT",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2025-11-13",
+              "source": "berekend"
+            },
+            {
+              "nr": 2,
+              "date": "2025-12-07",
+              "source": "berekend"
+            },
+            {
+              "nr": 3,
+              "date": "2026-01-06",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "468533853429958232",
+          "contact_id": "463456482532262961",
+          "invoice_no": "2025-3983",
+          "company": "MHO Bouwonderneming B.V.",
+          "invoice_date": "2025-10-24",
+          "due_date": "2025-11-07",
+          "amount": 225.7,
+          "currency": "EUR",
+          "days_overdue": 132,
+          "bucket": ">90 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 132.1,
+          "level": "URGENT",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2025-11-13",
+              "source": "berekend"
+            },
+            {
+              "nr": 2,
+              "date": "2025-12-07",
+              "source": "berekend"
+            },
+            {
+              "nr": 3,
+              "date": "2026-01-06",
+              "source": "berekend"
+            }
+          ]
+        }
+      ],
+      "total_open": 882.83,
+      "total_overdue": 882.83,
+      "max_days": 132,
+      "invoice_count": 2,
+      "level": "URGENT"
     }
   },
   "credit_invoices": [
@@ -33385,23 +33316,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481413423995815161",
-      "contact_id": "441530679613720565",
-      "invoice_no": "2026-1022",
-      "company": "DeFabrique Evenementen B.V.",
-      "invoice_date": "2026-03-12",
-      "due_date": "2026-04-11",
-      "amount": -4370.1,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 1.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -33829,29 +33743,6 @@
         {
           "nr": 1,
           "date": "2026-01-22",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "472877414049908244",
-      "contact_id": "463456482532262961",
-      "invoice_no": "2025-4680",
-      "company": "MHO Bouwonderneming B.V.",
-      "invoice_date": "2025-12-08",
-      "due_date": "2025-12-22",
-      "amount": -113.75,
-      "currency": "EUR",
-      "days_overdue": 87,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 87.0,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-12-28",
           "source": "berekend"
         }
       ]
