@@ -1,22 +1,22 @@
 {
-  "generated": "2026-03-19T12:39:29",
-  "dso": 48.4,
-  "dso_6m_avg": 26.2,
+  "generated": "2026-03-19T15:02:00",
+  "dso": 47.4,
+  "dso_6m_avg": 26.0,
   "dso_target": 36,
-  "total_ar": 641584.61,
-  "total_ar_gross": 657358.54,
-  "total_ar_credit": -15773.93,
-  "invoice_count": 528,
-  "overdue_pct": 25.58,
-  "overdue_pct_6m": 26.98,
-  "revenue_180": 2384915.91,
-  "overdue_30": 73145.6,
+  "total_ar": 630106.77,
+  "total_ar_gross": 644473.59,
+  "total_ar_credit": -14366.82,
+  "invoice_count": 519,
+  "overdue_pct": 25.48,
+  "overdue_pct_6m": 26.94,
+  "revenue_180": 2392915.27,
+  "overdue_30": 72517.64,
   "overdue_60": 33317.19,
   "overdue_90": 23057.94,
   "aging": {
-    "Current": 493236.77,
-    "1-30 days": 90976.17,
-    "31-60 days": 39828.41,
+    "Current": 483947.39,
+    "1-30 days": 88008.56,
+    "31-60 days": 39200.45,
     "61-90 days": 10259.25,
     ">90 days": 23057.94
   },
@@ -61,15 +61,32 @@
     },
     {
       "date": "2026-03-19",
-      "total_ar": 641584.61,
-      "overdue_ar": 164121.77,
-      "overdue_pct": 25.58,
-      "dso": 48.4,
-      "revenue_180": 2384915.91,
+      "total_ar": 630106.77,
+      "overdue_ar": 160526.2,
+      "overdue_pct": 25.48,
+      "dso": 47.4,
+      "revenue_180": 2392915.27,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "481295779280979348",
+      "contact_id": "373979318352611285",
+      "invoice_no": "2026-1157",
+      "company": "Office Service Nederland B.V.",
+      "invoice_date": "2026-03-19",
+      "due_date": "2026-04-18",
+      "amount": 7999.36,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 2.4,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "481862736671671945",
       "contact_id": "476340871084639846",
@@ -5018,40 +5035,6 @@
       "reminders": []
     },
     {
-      "id": "480140819437716681",
-      "contact_id": "473159267005760707",
-      "invoice_no": "2026-0810",
-      "company": "Brugmans Groep B.V.",
-      "invoice_date": "2026-02-26",
-      "due_date": "2026-03-28",
-      "amount": -779.15,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "480140768972900156",
-      "contact_id": "473159267005760707",
-      "invoice_no": "2026-0809",
-      "company": "Brugmans Groep B.V.",
-      "invoice_date": "2026-02-26",
-      "due_date": "2026-03-28",
-      "amount": -627.96,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "479952396329420632",
       "contact_id": "440618485536523334",
       "invoice_no": "2026-0806",
@@ -5320,23 +5303,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479952375300228422",
-      "contact_id": "408366522894910788",
-      "invoice_no": "2026-0782",
-      "company": "Office Projects B.V.",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 2374.67,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.7,
       "level": "Monitor",
       "reminders": []
     },
@@ -6191,23 +6157,6 @@
       "reminders": []
     },
     {
-      "id": "479475188244678584",
-      "contact_id": "377769911610508515",
-      "invoice_no": "2026-0706",
-      "company": "Stichting Woonin",
-      "invoice_date": "2026-02-19",
-      "due_date": "2026-03-21",
-      "amount": 825.0,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "479303750082627404",
       "contact_id": "440618485536523334",
       "invoice_no": "2026-0703",
@@ -6221,40 +6170,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479303749438801597",
-      "contact_id": "377769911610508515",
-      "invoice_no": "2026-0702",
-      "company": "Stichting Woonin",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 260.0,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479303748732061088",
-      "contact_id": "341331018868852448",
-      "invoice_no": "2026-0701",
-      "company": "Mondial VSN Verhuizingen B.V.",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 637.88,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -6701,23 +6616,6 @@
       "reminders": []
     },
     {
-      "id": "479307978231514262",
-      "contact_id": "457947454327752383",
-      "invoice_no": "2026-0647",
-      "company": "DOP Projects B.V.",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 11158.58,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 3.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "479307947785061944",
       "contact_id": "477051418214138983",
       "invoice_no": "2026-0646",
@@ -6782,40 +6680,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479303703625467811",
-      "contact_id": "454768348108948971",
-      "invoice_no": "2026-0638",
-      "company": "De Arend Projecten B.V.",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 1136.53,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479303704371004424",
-      "contact_id": "442164130156119169",
-      "invoice_no": "2026-0637",
-      "company": "De Arend Waardenburg B.V.",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 896.08,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -7437,29 +7301,6 @@
         {
           "nr": 1,
           "date": "2026-02-25",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "476244043715577552",
-      "contact_id": "473159267005760707",
-      "invoice_no": "2026-0126",
-      "company": "Brugmans Groep B.V.",
-      "invoice_date": "2026-01-15",
-      "due_date": "2026-02-14",
-      "amount": 627.96,
-      "currency": "EUR",
-      "days_overdue": 33,
-      "bucket": "31-60 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 33.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-02-20",
           "source": "berekend"
         }
       ]
@@ -8925,23 +8766,6 @@
       "reminders": []
     },
     {
-      "id": "478214149101323897",
-      "contact_id": "363348136166425656",
-      "invoice_no": "2026-0599",
-      "company": "NewKantoor B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 2188.46,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 5.7,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "478764284706293543",
       "contact_id": "434550579709084705",
       "invoice_no": "2026-0597",
@@ -9372,29 +9196,6 @@
       "state": "reminded",
       "is_bad_debt": false,
       "score": 6.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-19",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478764210406294724",
-      "contact_id": "473159267005760707",
-      "invoice_no": "2026-0520",
-      "company": "Brugmans Groep B.V.",
-      "invoice_date": "2026-02-11",
-      "due_date": "2026-03-13",
-      "amount": 779.15,
-      "currency": "EUR",
-      "days_overdue": 6,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 6.2,
       "level": "Monitor",
       "reminders": [
         {
@@ -10287,6 +10088,23 @@
     }
   ],
   "active_invoices": [
+    {
+      "id": "481295779280979348",
+      "contact_id": "373979318352611285",
+      "invoice_no": "2026-1157",
+      "company": "Office Service Nederland B.V.",
+      "invoice_date": "2026-03-19",
+      "due_date": "2026-04-18",
+      "amount": 7999.36,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 2.4,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "481862736671671945",
       "contact_id": "476340871084639846",
@@ -15405,23 +15223,6 @@
       "reminders": []
     },
     {
-      "id": "479952375300228422",
-      "contact_id": "408366522894910788",
-      "invoice_no": "2026-0782",
-      "company": "Office Projects B.V.",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 2374.67,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.7,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "479952374322955422",
       "contact_id": "473058978161493541",
       "invoice_no": "2026-0781",
@@ -16238,23 +16039,6 @@
       "reminders": []
     },
     {
-      "id": "479475188244678584",
-      "contact_id": "377769911610508515",
-      "invoice_no": "2026-0706",
-      "company": "Stichting Woonin",
-      "invoice_date": "2026-02-19",
-      "due_date": "2026-03-21",
-      "amount": 825.0,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "479303750082627404",
       "contact_id": "440618485536523334",
       "invoice_no": "2026-0703",
@@ -16268,40 +16052,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479303749438801597",
-      "contact_id": "377769911610508515",
-      "invoice_no": "2026-0702",
-      "company": "Stichting Woonin",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 260.0,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479303748732061088",
-      "contact_id": "341331018868852448",
-      "invoice_no": "2026-0701",
-      "company": "Mondial VSN Verhuizingen B.V.",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 637.88,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -16680,23 +16430,6 @@
       "reminders": []
     },
     {
-      "id": "479307978231514262",
-      "contact_id": "457947454327752383",
-      "invoice_no": "2026-0647",
-      "company": "DOP Projects B.V.",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 11158.58,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 3.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "479307947785061944",
       "contact_id": "477051418214138983",
       "invoice_no": "2026-0646",
@@ -16761,40 +16494,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479303703625467811",
-      "contact_id": "454768348108948971",
-      "invoice_no": "2026-0638",
-      "company": "De Arend Projecten B.V.",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 1136.53,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479303704371004424",
-      "contact_id": "442164130156119169",
-      "invoice_no": "2026-0637",
-      "company": "De Arend Waardenburg B.V.",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 896.08,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -17244,29 +16943,6 @@
         {
           "nr": 1,
           "date": "2026-02-25",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "476244043715577552",
-      "contact_id": "473159267005760707",
-      "invoice_no": "2026-0126",
-      "company": "Brugmans Groep B.V.",
-      "invoice_date": "2026-01-15",
-      "due_date": "2026-02-14",
-      "amount": 627.96,
-      "currency": "EUR",
-      "days_overdue": 33,
-      "bucket": "31-60 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 33.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-02-20",
           "source": "berekend"
         }
       ]
@@ -18617,23 +18293,6 @@
       "reminders": []
     },
     {
-      "id": "478214149101323897",
-      "contact_id": "363348136166425656",
-      "invoice_no": "2026-0599",
-      "company": "NewKantoor B.V.",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 2188.46,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 5.7,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "478764284706293543",
       "contact_id": "434550579709084705",
       "invoice_no": "2026-0597",
@@ -19064,29 +18723,6 @@
       "state": "reminded",
       "is_bad_debt": false,
       "score": 6.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-19",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478764210406294724",
-      "contact_id": "473159267005760707",
-      "invoice_no": "2026-0520",
-      "company": "Brugmans Groep B.V.",
-      "invoice_date": "2026-02-11",
-      "due_date": "2026-03-13",
-      "amount": 779.15,
-      "currency": "EUR",
-      "days_overdue": 6,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 6.2,
       "level": "Monitor",
       "reminders": [
         {
@@ -20576,6 +20212,153 @@
     }
   ],
   "customers": {
+    "373979318352611285": {
+      "contact_id": "373979318352611285",
+      "company": "Office Service Nederland B.V.",
+      "invoices": [
+        {
+          "id": "479303711862032357",
+          "contact_id": "373979318352611285",
+          "invoice_no": "2026-0649",
+          "company": "Office Service Nederland B.V.",
+          "invoice_date": "2026-02-18",
+          "due_date": "2026-03-20",
+          "amount": 8502.84,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 2.6,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "481295779280979348",
+          "contact_id": "373979318352611285",
+          "invoice_no": "2026-1157",
+          "company": "Office Service Nederland B.V.",
+          "invoice_date": "2026-03-19",
+          "due_date": "2026-04-18",
+          "amount": 7999.36,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 2.4,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "480680221803022059",
+          "contact_id": "373979318352611285",
+          "invoice_no": "2026-1026",
+          "company": "Office Service Nederland B.V.",
+          "invoice_date": "2026-03-13",
+          "due_date": "2026-04-12",
+          "amount": 7967.39,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 2.4,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "479952364127651739",
+          "contact_id": "373979318352611285",
+          "invoice_no": "2026-0826",
+          "company": "Office Service Nederland B.V.",
+          "invoice_date": "2026-02-27",
+          "due_date": "2026-03-29",
+          "amount": 6870.76,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 2.1,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "479419127805510815",
+          "contact_id": "373979318352611285",
+          "invoice_no": "2026-0673",
+          "company": "Office Service Nederland B.V.",
+          "invoice_date": "2026-02-18",
+          "due_date": "2026-03-20",
+          "amount": -717.0,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "479419338487498513",
+          "contact_id": "373979318352611285",
+          "invoice_no": "2026-0675",
+          "company": "Office Service Nederland B.V.",
+          "invoice_date": "2026-02-18",
+          "due_date": "2026-03-20",
+          "amount": -730.32,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "479419387817756276",
+          "contact_id": "373979318352611285",
+          "invoice_no": "2026-0676",
+          "company": "Office Service Nederland B.V.",
+          "invoice_date": "2026-02-18",
+          "due_date": "2026-03-20",
+          "amount": -908.68,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.3,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "479419420557445009",
+          "contact_id": "373979318352611285",
+          "invoice_no": "2026-0677",
+          "company": "Office Service Nederland B.V.",
+          "invoice_date": "2026-02-18",
+          "due_date": "2026-03-20",
+          "amount": -952.0,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.3,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 31340.35,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 4,
+      "level": "Monitor"
+    },
     "476340871084639846": {
       "contact_id": "476340871084639846",
       "company": "TUH OpCo Brussels",
@@ -22075,23 +21858,6 @@
           "reminders": []
         },
         {
-          "id": "479303748732061088",
-          "contact_id": "341331018868852448",
-          "invoice_no": "2026-0701",
-          "company": "Mondial VSN Verhuizingen B.V.",
-          "invoice_date": "2026-02-18",
-          "due_date": "2026-03-20",
-          "amount": 637.88,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "481295813724603734",
           "contact_id": "341331018868852448",
           "invoice_no": "2026-1023",
@@ -22126,10 +21892,10 @@
           "reminders": []
         }
       ],
-      "total_open": 16598.36,
+      "total_open": 15960.48,
       "total_overdue": 6227.66,
       "max_days": 86,
-      "invoice_count": 11,
+      "invoice_count": 10,
       "level": "URGENT"
     },
     "480770938927842878": {
@@ -22565,23 +22331,6 @@
           "reminders": []
         },
         {
-          "id": "479303703625467811",
-          "contact_id": "454768348108948971",
-          "invoice_no": "2026-0638",
-          "company": "De Arend Projecten B.V.",
-          "invoice_date": "2026-02-18",
-          "due_date": "2026-03-20",
-          "amount": 1136.53,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.3,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "479952358444369160",
           "contact_id": "454768348108948971",
           "invoice_no": "2026-0760",
@@ -22616,10 +22365,10 @@
           "reminders": []
         }
       ],
-      "total_open": 4149.74,
+      "total_open": 3013.21,
       "total_overdue": 0,
       "max_days": 0,
-      "invoice_count": 4,
+      "invoice_count": 3,
       "level": "Monitor"
     },
     "478147658622437314": {
@@ -23745,23 +23494,6 @@
           "reminders": []
         },
         {
-          "id": "478214149101323897",
-          "contact_id": "363348136166425656",
-          "invoice_no": "2026-0599",
-          "company": "NewKantoor B.V.",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 2188.46,
-          "currency": "EUR",
-          "days_overdue": 5,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 5.7,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "481768892101822288",
           "contact_id": "363348136166425656",
           "invoice_no": "2026-1081",
@@ -23779,10 +23511,10 @@
           "reminders": []
         }
       ],
-      "total_open": 9390.03,
-      "total_overdue": 5093.33,
+      "total_open": 7201.57,
+      "total_overdue": 2904.87,
       "max_days": 5,
-      "invoice_count": 3,
+      "invoice_count": 2,
       "level": "Monitor"
     },
     "467351969797768506": {
@@ -24789,23 +24521,6 @@
       "company": "Stichting Woonin",
       "invoices": [
         {
-          "id": "479475188244678584",
-          "contact_id": "377769911610508515",
-          "invoice_no": "2026-0706",
-          "company": "Stichting Woonin",
-          "invoice_date": "2026-02-19",
-          "due_date": "2026-03-21",
-          "amount": 825.0,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "481854325702788288",
           "contact_id": "377769911610508515",
           "invoice_no": "2026-1058",
@@ -24872,29 +24587,12 @@
           "score": 0.1,
           "level": "Monitor",
           "reminders": []
-        },
-        {
-          "id": "479303749438801597",
-          "contact_id": "377769911610508515",
-          "invoice_no": "2026-0702",
-          "company": "Stichting Woonin",
-          "invoice_date": "2026-02-18",
-          "due_date": "2026-03-20",
-          "amount": 260.0,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
         }
       ],
-      "total_open": 2816.78,
+      "total_open": 1731.78,
       "total_overdue": 0,
       "max_days": 0,
-      "invoice_count": 6,
+      "invoice_count": 4,
       "level": "Monitor"
     },
     "449695638840411574": {
@@ -26070,136 +25768,6 @@
       "invoice_count": 3,
       "level": "High"
     },
-    "373979318352611285": {
-      "contact_id": "373979318352611285",
-      "company": "Office Service Nederland B.V.",
-      "invoices": [
-        {
-          "id": "479303711862032357",
-          "contact_id": "373979318352611285",
-          "invoice_no": "2026-0649",
-          "company": "Office Service Nederland B.V.",
-          "invoice_date": "2026-02-18",
-          "due_date": "2026-03-20",
-          "amount": 8502.84,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 2.6,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "480680221803022059",
-          "contact_id": "373979318352611285",
-          "invoice_no": "2026-1026",
-          "company": "Office Service Nederland B.V.",
-          "invoice_date": "2026-03-13",
-          "due_date": "2026-04-12",
-          "amount": 7967.39,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 2.4,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "479952364127651739",
-          "contact_id": "373979318352611285",
-          "invoice_no": "2026-0826",
-          "company": "Office Service Nederland B.V.",
-          "invoice_date": "2026-02-27",
-          "due_date": "2026-03-29",
-          "amount": 6870.76,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 2.1,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "479419127805510815",
-          "contact_id": "373979318352611285",
-          "invoice_no": "2026-0673",
-          "company": "Office Service Nederland B.V.",
-          "invoice_date": "2026-02-18",
-          "due_date": "2026-03-20",
-          "amount": -717.0,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "479419338487498513",
-          "contact_id": "373979318352611285",
-          "invoice_no": "2026-0675",
-          "company": "Office Service Nederland B.V.",
-          "invoice_date": "2026-02-18",
-          "due_date": "2026-03-20",
-          "amount": -730.32,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "479419387817756276",
-          "contact_id": "373979318352611285",
-          "invoice_no": "2026-0676",
-          "company": "Office Service Nederland B.V.",
-          "invoice_date": "2026-02-18",
-          "due_date": "2026-03-20",
-          "amount": -908.68,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.3,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "479419420557445009",
-          "contact_id": "373979318352611285",
-          "invoice_no": "2026-0677",
-          "company": "Office Service Nederland B.V.",
-          "invoice_date": "2026-02-18",
-          "due_date": "2026-03-20",
-          "amount": -952.0,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.3,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 23340.99,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 3,
-      "level": "Monitor"
-    },
     "476238119020004913": {
       "contact_id": "476238119020004913",
       "company": "Interflow B.V.",
@@ -26934,23 +26502,6 @@
       "company": "Office Projects B.V.",
       "invoices": [
         {
-          "id": "479952375300228422",
-          "contact_id": "408366522894910788",
-          "invoice_no": "2026-0782",
-          "company": "Office Projects B.V.",
-          "invoice_date": "2026-02-25",
-          "due_date": "2026-03-27",
-          "amount": 2374.67,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.7,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "481295797057488316",
           "contact_id": "408366522894910788",
           "invoice_no": "2026-1001",
@@ -26968,10 +26519,10 @@
           "reminders": []
         }
       ],
-      "total_open": 2614.67,
+      "total_open": 240.0,
       "total_overdue": 0,
       "max_days": 0,
-      "invoice_count": 2,
+      "invoice_count": 1,
       "level": "Monitor"
     },
     "446507406289012553": {
@@ -27689,23 +27240,6 @@
           "reminders": []
         },
         {
-          "id": "479303704371004424",
-          "contact_id": "442164130156119169",
-          "invoice_no": "2026-0637",
-          "company": "De Arend Waardenburg B.V.",
-          "invoice_date": "2026-02-18",
-          "due_date": "2026-03-20",
-          "amount": 896.08,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.3,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "481222549319976923",
           "contact_id": "442164130156119169",
           "invoice_no": "2026-0962",
@@ -27723,10 +27257,10 @@
           "reminders": []
         }
       ],
-      "total_open": 8032.76,
+      "total_open": 7136.68,
       "total_overdue": 0,
       "max_days": 0,
-      "invoice_count": 6,
+      "invoice_count": 5,
       "level": "Monitor"
     },
     "460214790013322624": {
@@ -30088,52 +29622,6 @@
       "company": "Brugmans Groep B.V.",
       "invoices": [
         {
-          "id": "478764210406294724",
-          "contact_id": "473159267005760707",
-          "invoice_no": "2026-0520",
-          "company": "Brugmans Groep B.V.",
-          "invoice_date": "2026-02-11",
-          "due_date": "2026-03-13",
-          "amount": 779.15,
-          "currency": "EUR",
-          "days_overdue": 6,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 6.2,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-19",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "476244043715577552",
-          "contact_id": "473159267005760707",
-          "invoice_no": "2026-0126",
-          "company": "Brugmans Groep B.V.",
-          "invoice_date": "2026-01-15",
-          "due_date": "2026-02-14",
-          "amount": 627.96,
-          "currency": "EUR",
-          "days_overdue": 33,
-          "bucket": "31-60 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 33.2,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-02-20",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
           "id": "480140812028479106",
           "contact_id": "473159267005760707",
           "invoice_no": "2026-0811",
@@ -30166,46 +29654,12 @@
           "score": 0.2,
           "level": "Monitor",
           "reminders": []
-        },
-        {
-          "id": "480140768972900156",
-          "contact_id": "473159267005760707",
-          "invoice_no": "2026-0809",
-          "company": "Brugmans Groep B.V.",
-          "invoice_date": "2026-02-26",
-          "due_date": "2026-03-28",
-          "amount": -627.96,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "480140819437716681",
-          "contact_id": "473159267005760707",
-          "invoice_no": "2026-0810",
-          "company": "Brugmans Groep B.V.",
-          "invoice_date": "2026-02-26",
-          "due_date": "2026-03-28",
-          "amount": -779.15,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
         }
       ],
-      "total_open": 2814.22,
-      "total_overdue": 1407.11,
-      "max_days": 33,
-      "invoice_count": 4,
+      "total_open": 1407.11,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 2,
       "level": "Monitor"
     },
     "425310279195166318": {
@@ -30899,34 +30353,6 @@
         }
       ],
       "total_open": 326.79,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "457947454327752383": {
-      "contact_id": "457947454327752383",
-      "company": "DOP Projects B.V.",
-      "invoices": [
-        {
-          "id": "479307978231514262",
-          "contact_id": "457947454327752383",
-          "invoice_no": "2026-0647",
-          "company": "DOP Projects B.V.",
-          "invoice_date": "2026-02-18",
-          "due_date": "2026-03-20",
-          "amount": 11158.58,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 3.3,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 11158.58,
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
@@ -33367,40 +32793,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.0,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "480140819437716681",
-      "contact_id": "473159267005760707",
-      "invoice_no": "2026-0810",
-      "company": "Brugmans Groep B.V.",
-      "invoice_date": "2026-02-26",
-      "due_date": "2026-03-28",
-      "amount": -779.15,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "480140768972900156",
-      "contact_id": "473159267005760707",
-      "invoice_no": "2026-0809",
-      "company": "Brugmans Groep B.V.",
-      "invoice_date": "2026-02-26",
-      "due_date": "2026-03-28",
-      "amount": -627.96,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
       "level": "Monitor",
       "reminders": []
     },
