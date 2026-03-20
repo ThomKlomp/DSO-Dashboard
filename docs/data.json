@@ -1,21 +1,21 @@
 {
-  "generated": "2026-03-20T14:53:52",
-  "dso": 44.7,
+  "generated": "2026-03-20T16:33:12",
+  "dso": 44.8,
   "dso_6m_avg": 28.7,
   "dso_target": 36,
-  "total_ar": 594762.37,
-  "total_ar_gross": 608788.78,
-  "total_ar_credit": -14026.41,
-  "invoice_count": 493,
-  "overdue_pct": 25.16,
-  "overdue_pct_6m": 26.64,
-  "revenue_180": 2395906.22,
+  "total_ar": 596300.74,
+  "total_ar_gross": 610135.98,
+  "total_ar_credit": -13835.24,
+  "invoice_count": 494,
+  "overdue_pct": 25.06,
+  "overdue_pct_6m": 26.61,
+  "revenue_180": 2397246.19,
   "overdue_30": 67112.61,
   "overdue_60": 32354.33,
   "overdue_90": 23057.94,
   "aging": {
-    "Current": 459138.47,
-    "1-30 days": 82537.7,
+    "Current": 460676.84,
+    "1-30 days": 82346.53,
     "31-60 days": 34758.28,
     "61-90 days": 9296.39,
     ">90 days": 23057.94
@@ -70,15 +70,66 @@
     },
     {
       "date": "2026-03-20",
-      "total_ar": 594762.37,
-      "overdue_ar": 149650.31,
-      "overdue_pct": 25.16,
-      "dso": 44.7,
-      "revenue_180": 2395906.22,
+      "total_ar": 596300.74,
+      "overdue_ar": 149459.14,
+      "overdue_pct": 25.06,
+      "dso": 44.8,
+      "revenue_180": 2397246.19,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "482126887201539942",
+      "contact_id": "477596161619789346",
+      "invoice_no": "2026-1173",
+      "company": "HSB Bouw B.V.",
+      "invoice_date": "2026-03-20",
+      "due_date": "2026-04-19",
+      "amount": 713.17,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "482127138366948806",
+      "contact_id": "477596161619789346",
+      "invoice_no": "2026-1172",
+      "company": "HSB Bouw B.V.",
+      "invoice_date": "2026-03-20",
+      "due_date": "2026-04-19",
+      "amount": 626.8,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "482129531147125963",
+      "contact_id": "392618775969531265",
+      "invoice_no": "2026-1171",
+      "company": "Van der Grift Vastgoedonderhoud B.V.",
+      "invoice_date": "2026-03-20",
+      "due_date": "2026-04-19",
+      "amount": 498.8,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "481858866524456434",
       "contact_id": "466710236893283661",
@@ -1759,23 +1810,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481222669810795784",
-      "contact_id": "377769911610508515",
-      "invoice_no": "2026-1057",
-      "company": "Stichting Woonin",
-      "invoice_date": "2026-03-17",
-      "due_date": "2026-04-16",
-      "amount": 300.4,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -6682,29 +6716,6 @@
       "reminders": []
     },
     {
-      "id": "478784350297523394",
-      "contact_id": "412263849777956369",
-      "invoice_no": "2026-0552",
-      "company": "Select Grand Caf\u00e9 B.V.",
-      "invoice_date": "2026-02-11",
-      "due_date": "2026-03-13",
-      "amount": -191.17,
-      "currency": "EUR",
-      "days_overdue": 7,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 7.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-19",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "478682142011819412",
       "contact_id": "471266444919703248",
       "invoice_no": "2026-0499",
@@ -8744,29 +8755,6 @@
       ]
     },
     {
-      "id": "478764282437174654",
-      "contact_id": "412263849777956369",
-      "invoice_no": "2026-0542",
-      "company": "Select Grand Caf\u00e9 B.V.",
-      "invoice_date": "2026-02-11",
-      "due_date": "2026-03-13",
-      "amount": 191.17,
-      "currency": "EUR",
-      "days_overdue": 7,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 7.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-19",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "478764280681858078",
       "contact_id": "471893339712521237",
       "invoice_no": "2026-0541",
@@ -9649,6 +9637,57 @@
     }
   ],
   "active_invoices": [
+    {
+      "id": "482126887201539942",
+      "contact_id": "477596161619789346",
+      "invoice_no": "2026-1173",
+      "company": "HSB Bouw B.V.",
+      "invoice_date": "2026-03-20",
+      "due_date": "2026-04-19",
+      "amount": 713.17,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "482127138366948806",
+      "contact_id": "477596161619789346",
+      "invoice_no": "2026-1172",
+      "company": "HSB Bouw B.V.",
+      "invoice_date": "2026-03-20",
+      "due_date": "2026-04-19",
+      "amount": 626.8,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "482129531147125963",
+      "contact_id": "392618775969531265",
+      "invoice_no": "2026-1171",
+      "company": "Van der Grift Vastgoedonderhoud B.V.",
+      "invoice_date": "2026-03-20",
+      "due_date": "2026-04-19",
+      "amount": 498.8,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "481858866524456434",
       "contact_id": "466710236893283661",
@@ -11295,23 +11334,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481222669810795784",
-      "contact_id": "377769911610508515",
-      "invoice_no": "2026-1057",
-      "company": "Stichting Woonin",
-      "invoice_date": "2026-03-17",
-      "due_date": "2026-04-16",
-      "amount": 300.4,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -17823,29 +17845,6 @@
       ]
     },
     {
-      "id": "478764282437174654",
-      "contact_id": "412263849777956369",
-      "invoice_no": "2026-0542",
-      "company": "Select Grand Caf\u00e9 B.V.",
-      "invoice_date": "2026-02-11",
-      "due_date": "2026-03-13",
-      "amount": 191.17,
-      "currency": "EUR",
-      "days_overdue": 7,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 7.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-19",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "478764280681858078",
       "contact_id": "471893339712521237",
       "invoice_no": "2026-0541",
@@ -19325,6 +19324,79 @@
     }
   ],
   "customers": {
+    "477596161619789346": {
+      "contact_id": "477596161619789346",
+      "company": "HSB Bouw B.V.",
+      "invoices": [
+        {
+          "id": "482126887201539942",
+          "contact_id": "477596161619789346",
+          "invoice_no": "2026-1173",
+          "company": "HSB Bouw B.V.",
+          "invoice_date": "2026-03-20",
+          "due_date": "2026-04-19",
+          "amount": 713.17,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "482127138366948806",
+          "contact_id": "477596161619789346",
+          "invoice_no": "2026-1172",
+          "company": "HSB Bouw B.V.",
+          "invoice_date": "2026-03-20",
+          "due_date": "2026-04-19",
+          "amount": 626.8,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 1339.97,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 2,
+      "level": "Monitor"
+    },
+    "392618775969531265": {
+      "contact_id": "392618775969531265",
+      "company": "Van der Grift Vastgoedonderhoud B.V.",
+      "invoices": [
+        {
+          "id": "482129531147125963",
+          "contact_id": "392618775969531265",
+          "invoice_no": "2026-1171",
+          "company": "Van der Grift Vastgoedonderhoud B.V.",
+          "invoice_date": "2026-03-20",
+          "due_date": "2026-04-19",
+          "amount": 498.8,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 498.8,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
     "466710236893283661": {
       "contact_id": "466710236893283661",
       "company": "DAT afbouw B.V.",
@@ -23970,23 +24042,6 @@
           "reminders": []
         },
         {
-          "id": "481222669810795784",
-          "contact_id": "377769911610508515",
-          "invoice_no": "2026-1057",
-          "company": "Stichting Woonin",
-          "invoice_date": "2026-03-17",
-          "due_date": "2026-04-16",
-          "amount": 300.4,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "481222668971935402",
           "contact_id": "377769911610508515",
           "invoice_no": "2026-1056",
@@ -24004,10 +24059,10 @@
           "reminders": []
         }
       ],
-      "total_open": 2032.18,
+      "total_open": 1731.78,
       "total_overdue": 0,
       "max_days": 0,
-      "invoice_count": 5,
+      "invoice_count": 4,
       "level": "Monitor"
     },
     "449695638840411574": {
@@ -25023,52 +25078,6 @@
       "company": "Select Grand Caf\u00e9 B.V.",
       "invoices": [
         {
-          "id": "478764282437174654",
-          "contact_id": "412263849777956369",
-          "invoice_no": "2026-0542",
-          "company": "Select Grand Caf\u00e9 B.V.",
-          "invoice_date": "2026-02-11",
-          "due_date": "2026-03-13",
-          "amount": 191.17,
-          "currency": "EUR",
-          "days_overdue": 7,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 7.1,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-19",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "478784350297523394",
-          "contact_id": "412263849777956369",
-          "invoice_no": "2026-0552",
-          "company": "Select Grand Caf\u00e9 B.V.",
-          "invoice_date": "2026-02-11",
-          "due_date": "2026-03-13",
-          "amount": -191.17,
-          "currency": "EUR",
-          "days_overdue": 7,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 7.1,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-19",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
           "id": "478764281690588421",
           "contact_id": "412263849777956369",
           "invoice_no": "2026-1016",
@@ -25086,10 +25095,10 @@
           "reminders": []
         }
       ],
-      "total_open": 382.34,
-      "total_overdue": 191.17,
-      "max_days": 7,
-      "invoice_count": 2,
+      "total_open": 191.17,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
       "level": "Monitor"
     },
     "460558361475155701": {
@@ -31486,29 +31495,6 @@
       "score": 2.0,
       "level": "Monitor",
       "reminders": []
-    },
-    {
-      "id": "478784350297523394",
-      "contact_id": "412263849777956369",
-      "invoice_no": "2026-0552",
-      "company": "Select Grand Caf\u00e9 B.V.",
-      "invoice_date": "2026-02-11",
-      "due_date": "2026-03-13",
-      "amount": -191.17,
-      "currency": "EUR",
-      "days_overdue": 7,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 7.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-19",
-          "source": "berekend"
-        }
-      ]
     },
     {
       "id": "478682142011819412",
