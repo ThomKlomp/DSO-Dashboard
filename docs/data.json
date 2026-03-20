@@ -1,21 +1,21 @@
 {
-  "generated": "2026-03-20T06:43:31",
-  "dso": 47.3,
-  "dso_6m_avg": 29.1,
+  "generated": "2026-03-20T08:38:53",
+  "dso": 47.2,
+  "dso_6m_avg": 29.0,
   "dso_target": 36,
-  "total_ar": 628553.55,
-  "total_ar_gross": 643018.39,
+  "total_ar": 628149.98,
+  "total_ar_gross": 642614.82,
   "total_ar_credit": -14464.84,
-  "invoice_count": 517,
-  "overdue_pct": 25.2,
-  "overdue_pct_6m": 26.65,
+  "invoice_count": 516,
+  "overdue_pct": 25.16,
+  "overdue_pct_6m": 26.64,
   "revenue_180": 2393860.03,
   "overdue_30": 71185.23,
   "overdue_60": 33298.85,
   "overdue_90": 23057.94,
   "aging": {
     "Current": 484599.24,
-    "1-30 days": 87233.92,
+    "1-30 days": 86830.35,
     "31-60 days": 37886.38,
     "61-90 days": 10240.91,
     ">90 days": 23057.94
@@ -70,10 +70,10 @@
     },
     {
       "date": "2026-03-20",
-      "total_ar": 628553.55,
-      "overdue_ar": 158419.15,
-      "overdue_pct": 25.2,
-      "dso": 47.3,
+      "total_ar": 628149.98,
+      "overdue_ar": 158015.58,
+      "overdue_pct": 25.16,
+      "dso": 47.2,
       "revenue_180": 2393860.03,
       "target": 36
     }
@@ -6750,23 +6750,6 @@
       "reminders": []
     },
     {
-      "id": "479303701415069335",
-      "contact_id": "436110617984632400",
-      "invoice_no": "2026-0636",
-      "company": "City Hub Utrecht B.V.",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 204.48,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "479303700676871600",
       "contact_id": "458655648747358060",
       "invoice_no": "2026-0635",
@@ -6903,176 +6886,6 @@
       "reminders": []
     },
     {
-      "id": "478764269393937577",
-      "contact_id": "473058978161493541",
-      "invoice_no": "2026-0619",
-      "company": "OCFS B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 515.25,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478137818297664525",
-      "contact_id": "473058978161493541",
-      "invoice_no": "2026-0618",
-      "company": "OCFS B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 1266.89,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.4,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478137823158862985",
-      "contact_id": "476328328507164550",
-      "invoice_no": "2026-0617",
-      "company": "Ahrend Support B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 2326.5,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.7,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "477594976481445484",
-      "contact_id": "476328328507164550",
-      "invoice_no": "2026-0616",
-      "company": "Ahrend Support B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 528.0,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "476796701195110181",
-      "contact_id": "476328328507164550",
-      "invoice_no": "2026-0615",
-      "company": "Ahrend Support B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 775.5,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "476223726572013056",
-      "contact_id": "476328328507164550",
-      "invoice_no": "2026-0614",
-      "company": "Ahrend Support B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 792.0,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478137815639525025",
-      "contact_id": "379399769169070072",
-      "invoice_no": "2026-0612",
-      "company": "M.G. Facility B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 8594.74,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 7.6,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "477594972907898306",
-      "contact_id": "379399769169070072",
-      "invoice_no": "2026-0611",
-      "company": "M.G. Facility B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 6321.83,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 6.9,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478875886623393032",
-      "contact_id": "472526373273994296",
-      "invoice_no": "2026-0609",
-      "company": "CNSTRCT Projects B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 757.78,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478875887344813771",
-      "contact_id": "472526373273994296",
-      "invoice_no": "2026-0608",
-      "company": "CNSTRCT Projects B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 1687.08,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "478784350297523394",
       "contact_id": "412263849777956369",
       "invoice_no": "2026-0552",
@@ -7142,52 +6955,6 @@
       ]
     },
     {
-      "id": "477594942561060054",
-      "contact_id": "472526373273994296",
-      "invoice_no": "2026-0396",
-      "company": "CNSTRCT Projects B.V.",
-      "invoice_date": "2026-02-03",
-      "due_date": "2026-03-05",
-      "amount": 1845.78,
-      "currency": "EUR",
-      "days_overdue": 15,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 15.6,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-11",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478040543942674301",
-      "contact_id": "436112091071382644",
-      "invoice_no": "2026-0389",
-      "company": "Dutch Interior Group International B.V.",
-      "invoice_date": "2026-02-03",
-      "due_date": "2026-03-05",
-      "amount": 195.0,
-      "currency": "EUR",
-      "days_overdue": 15,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 15.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-11",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "477961456650814691",
       "contact_id": "450499877786355246",
       "invoice_no": "2026-0380",
@@ -7229,75 +6996,6 @@
         {
           "nr": 1,
           "date": "2026-03-07",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "477594958027556848",
-      "contact_id": "360816065795589490",
-      "invoice_no": "2026-0323",
-      "company": "Global Newspace B.V.",
-      "invoice_date": "2026-01-29",
-      "due_date": "2026-02-28",
-      "amount": 901.97,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.3,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-06",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "477594954901751090",
-      "contact_id": "442817966116963895",
-      "invoice_no": "2026-0319",
-      "company": "FC Utrecht",
-      "invoice_date": "2026-01-29",
-      "due_date": "2026-02-28",
-      "amount": 1001.98,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.3,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-06",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "477594936932304373",
-      "contact_id": "464988369501292197",
-      "invoice_no": "2026-0299",
-      "company": "2Shift B.V.",
-      "invoice_date": "2026-01-29",
-      "due_date": "2026-02-28",
-      "amount": 1520.76,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.5,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-06",
           "source": "berekend"
         }
       ]
@@ -8861,6 +8559,193 @@
       "reminders": []
     },
     {
+      "id": "479303701415069335",
+      "contact_id": "436110617984632400",
+      "invoice_no": "2026-0636",
+      "company": "City Hub Utrecht B.V.",
+      "invoice_date": "2026-02-18",
+      "due_date": "2026-03-20",
+      "amount": 204.48,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "478764269393937577",
+      "contact_id": "473058978161493541",
+      "invoice_no": "2026-0619",
+      "company": "OCFS B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 515.25,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "478137818297664525",
+      "contact_id": "473058978161493541",
+      "invoice_no": "2026-0618",
+      "company": "OCFS B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 1266.89,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.4,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "478137823158862985",
+      "contact_id": "476328328507164550",
+      "invoice_no": "2026-0617",
+      "company": "Ahrend Support B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 2326.5,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.7,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "477594976481445484",
+      "contact_id": "476328328507164550",
+      "invoice_no": "2026-0616",
+      "company": "Ahrend Support B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 528.0,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "476796701195110181",
+      "contact_id": "476328328507164550",
+      "invoice_no": "2026-0615",
+      "company": "Ahrend Support B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 775.5,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "476223726572013056",
+      "contact_id": "476328328507164550",
+      "invoice_no": "2026-0614",
+      "company": "Ahrend Support B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 792.0,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "478137815639525025",
+      "contact_id": "379399769169070072",
+      "invoice_no": "2026-0612",
+      "company": "M.G. Facility B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 8594.74,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 7.6,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "477594972907898306",
+      "contact_id": "379399769169070072",
+      "invoice_no": "2026-0611",
+      "company": "M.G. Facility B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 6321.83,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 6.9,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "478875886623393032",
+      "contact_id": "472526373273994296",
+      "invoice_no": "2026-0609",
+      "company": "CNSTRCT Projects B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 757.78,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "478875887344813771",
+      "contact_id": "472526373273994296",
+      "invoice_no": "2026-0608",
+      "company": "CNSTRCT Projects B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 1687.08,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.5,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
       "id": "478764266113992495",
       "contact_id": "363348136166425656",
       "invoice_no": "2026-0600",
@@ -9311,29 +9196,6 @@
       "state": "reminded",
       "is_bad_debt": false,
       "score": 7.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-19",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478764250025690446",
-      "contact_id": "470716284994061434",
-      "invoice_no": "2026-0526",
-      "company": "ISSOS B.V.",
-      "invoice_date": "2026-02-11",
-      "due_date": "2026-03-13",
-      "amount": 403.57,
-      "currency": "EUR",
-      "days_overdue": 7,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 7.1,
       "level": "Monitor",
       "reminders": [
         {
@@ -9873,6 +9735,52 @@
       ]
     },
     {
+      "id": "477594942561060054",
+      "contact_id": "472526373273994296",
+      "invoice_no": "2026-0396",
+      "company": "CNSTRCT Projects B.V.",
+      "invoice_date": "2026-02-03",
+      "due_date": "2026-03-05",
+      "amount": 1845.78,
+      "currency": "EUR",
+      "days_overdue": 15,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 15.6,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-11",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "478040543942674301",
+      "contact_id": "436112091071382644",
+      "invoice_no": "2026-0389",
+      "company": "Dutch Interior Group International B.V.",
+      "invoice_date": "2026-02-03",
+      "due_date": "2026-03-05",
+      "amount": 195.0,
+      "currency": "EUR",
+      "days_overdue": 15,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 15.1,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-11",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
       "id": "477971376406267048",
       "contact_id": "472526373273994296",
       "invoice_no": "2026-0384",
@@ -10006,6 +9914,75 @@
         {
           "nr": 1,
           "date": "2026-03-07",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "477594958027556848",
+      "contact_id": "360816065795589490",
+      "invoice_no": "2026-0323",
+      "company": "Global Newspace B.V.",
+      "invoice_date": "2026-01-29",
+      "due_date": "2026-02-28",
+      "amount": 901.97,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.3,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-06",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "477594954901751090",
+      "contact_id": "442817966116963895",
+      "invoice_no": "2026-0319",
+      "company": "FC Utrecht",
+      "invoice_date": "2026-01-29",
+      "due_date": "2026-02-28",
+      "amount": 1001.98,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.3,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-06",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "477594936932304373",
+      "contact_id": "464988369501292197",
+      "invoice_no": "2026-0299",
+      "company": "2Shift B.V.",
+      "invoice_date": "2026-01-29",
+      "due_date": "2026-02-28",
+      "amount": 1520.76,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.5,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-06",
           "source": "berekend"
         }
       ]
@@ -16584,23 +16561,6 @@
       "reminders": []
     },
     {
-      "id": "479303701415069335",
-      "contact_id": "436110617984632400",
-      "invoice_no": "2026-0636",
-      "company": "City Hub Utrecht B.V.",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 204.48,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "479303700676871600",
       "contact_id": "458655648747358060",
       "invoice_no": "2026-0635",
@@ -16701,291 +16661,6 @@
       "score": 0.6,
       "level": "Monitor",
       "reminders": []
-    },
-    {
-      "id": "478764269393937577",
-      "contact_id": "473058978161493541",
-      "invoice_no": "2026-0619",
-      "company": "OCFS B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 515.25,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478137818297664525",
-      "contact_id": "473058978161493541",
-      "invoice_no": "2026-0618",
-      "company": "OCFS B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 1266.89,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.4,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478137823158862985",
-      "contact_id": "476328328507164550",
-      "invoice_no": "2026-0617",
-      "company": "Ahrend Support B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 2326.5,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.7,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "477594976481445484",
-      "contact_id": "476328328507164550",
-      "invoice_no": "2026-0616",
-      "company": "Ahrend Support B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 528.0,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "476796701195110181",
-      "contact_id": "476328328507164550",
-      "invoice_no": "2026-0615",
-      "company": "Ahrend Support B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 775.5,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "476223726572013056",
-      "contact_id": "476328328507164550",
-      "invoice_no": "2026-0614",
-      "company": "Ahrend Support B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 792.0,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478137815639525025",
-      "contact_id": "379399769169070072",
-      "invoice_no": "2026-0612",
-      "company": "M.G. Facility B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 8594.74,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 7.6,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "477594972907898306",
-      "contact_id": "379399769169070072",
-      "invoice_no": "2026-0611",
-      "company": "M.G. Facility B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 6321.83,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 6.9,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478875886623393032",
-      "contact_id": "472526373273994296",
-      "invoice_no": "2026-0609",
-      "company": "CNSTRCT Projects B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 757.78,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "478875887344813771",
-      "contact_id": "472526373273994296",
-      "invoice_no": "2026-0608",
-      "company": "CNSTRCT Projects B.V.",
-      "invoice_date": "2026-02-13",
-      "due_date": "2026-03-15",
-      "amount": 1687.08,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 5.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "477594942561060054",
-      "contact_id": "472526373273994296",
-      "invoice_no": "2026-0396",
-      "company": "CNSTRCT Projects B.V.",
-      "invoice_date": "2026-02-03",
-      "due_date": "2026-03-05",
-      "amount": 1845.78,
-      "currency": "EUR",
-      "days_overdue": 15,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 15.6,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-11",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478040543942674301",
-      "contact_id": "436112091071382644",
-      "invoice_no": "2026-0389",
-      "company": "Dutch Interior Group International B.V.",
-      "invoice_date": "2026-02-03",
-      "due_date": "2026-03-05",
-      "amount": 195.0,
-      "currency": "EUR",
-      "days_overdue": 15,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 15.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-11",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "477594958027556848",
-      "contact_id": "360816065795589490",
-      "invoice_no": "2026-0323",
-      "company": "Global Newspace B.V.",
-      "invoice_date": "2026-01-29",
-      "due_date": "2026-02-28",
-      "amount": 901.97,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.3,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-06",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "477594954901751090",
-      "contact_id": "442817966116963895",
-      "invoice_no": "2026-0319",
-      "company": "FC Utrecht",
-      "invoice_date": "2026-01-29",
-      "due_date": "2026-02-28",
-      "amount": 1001.98,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.3,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-06",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "477594936932304373",
-      "contact_id": "464988369501292197",
-      "invoice_no": "2026-0299",
-      "company": "2Shift B.V.",
-      "invoice_date": "2026-01-29",
-      "due_date": "2026-02-28",
-      "amount": 1520.76,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.5,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-06",
-          "source": "berekend"
-        }
-      ]
     },
     {
       "id": "474333006124812014",
@@ -18408,6 +18083,193 @@
       "reminders": []
     },
     {
+      "id": "479303701415069335",
+      "contact_id": "436110617984632400",
+      "invoice_no": "2026-0636",
+      "company": "City Hub Utrecht B.V.",
+      "invoice_date": "2026-02-18",
+      "due_date": "2026-03-20",
+      "amount": 204.48,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "478764269393937577",
+      "contact_id": "473058978161493541",
+      "invoice_no": "2026-0619",
+      "company": "OCFS B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 515.25,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "478137818297664525",
+      "contact_id": "473058978161493541",
+      "invoice_no": "2026-0618",
+      "company": "OCFS B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 1266.89,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.4,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "478137823158862985",
+      "contact_id": "476328328507164550",
+      "invoice_no": "2026-0617",
+      "company": "Ahrend Support B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 2326.5,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.7,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "477594976481445484",
+      "contact_id": "476328328507164550",
+      "invoice_no": "2026-0616",
+      "company": "Ahrend Support B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 528.0,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "476796701195110181",
+      "contact_id": "476328328507164550",
+      "invoice_no": "2026-0615",
+      "company": "Ahrend Support B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 775.5,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "476223726572013056",
+      "contact_id": "476328328507164550",
+      "invoice_no": "2026-0614",
+      "company": "Ahrend Support B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 792.0,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "478137815639525025",
+      "contact_id": "379399769169070072",
+      "invoice_no": "2026-0612",
+      "company": "M.G. Facility B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 8594.74,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 7.6,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "477594972907898306",
+      "contact_id": "379399769169070072",
+      "invoice_no": "2026-0611",
+      "company": "M.G. Facility B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 6321.83,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 6.9,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "478875886623393032",
+      "contact_id": "472526373273994296",
+      "invoice_no": "2026-0609",
+      "company": "CNSTRCT Projects B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 757.78,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "478875887344813771",
+      "contact_id": "472526373273994296",
+      "invoice_no": "2026-0608",
+      "company": "CNSTRCT Projects B.V.",
+      "invoice_date": "2026-02-13",
+      "due_date": "2026-03-15",
+      "amount": 1687.08,
+      "currency": "EUR",
+      "days_overdue": 5,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 5.5,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
       "id": "478764266113992495",
       "contact_id": "363348136166425656",
       "invoice_no": "2026-0600",
@@ -18858,29 +18720,6 @@
       "state": "reminded",
       "is_bad_debt": false,
       "score": 7.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-19",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478764250025690446",
-      "contact_id": "470716284994061434",
-      "invoice_no": "2026-0526",
-      "company": "ISSOS B.V.",
-      "invoice_date": "2026-02-11",
-      "due_date": "2026-03-13",
-      "amount": 403.57,
-      "currency": "EUR",
-      "days_overdue": 7,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 7.1,
       "level": "Monitor",
       "reminders": [
         {
@@ -19420,6 +19259,52 @@
       ]
     },
     {
+      "id": "477594942561060054",
+      "contact_id": "472526373273994296",
+      "invoice_no": "2026-0396",
+      "company": "CNSTRCT Projects B.V.",
+      "invoice_date": "2026-02-03",
+      "due_date": "2026-03-05",
+      "amount": 1845.78,
+      "currency": "EUR",
+      "days_overdue": 15,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 15.6,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-11",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "478040543942674301",
+      "contact_id": "436112091071382644",
+      "invoice_no": "2026-0389",
+      "company": "Dutch Interior Group International B.V.",
+      "invoice_date": "2026-02-03",
+      "due_date": "2026-03-05",
+      "amount": 195.0,
+      "currency": "EUR",
+      "days_overdue": 15,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 15.1,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-11",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
       "id": "477971376406267048",
       "contact_id": "472526373273994296",
       "invoice_no": "2026-0384",
@@ -19553,6 +19438,75 @@
         {
           "nr": 1,
           "date": "2026-03-07",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "477594958027556848",
+      "contact_id": "360816065795589490",
+      "invoice_no": "2026-0323",
+      "company": "Global Newspace B.V.",
+      "invoice_date": "2026-01-29",
+      "due_date": "2026-02-28",
+      "amount": 901.97,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.3,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-06",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "477594954901751090",
+      "contact_id": "442817966116963895",
+      "invoice_no": "2026-0319",
+      "company": "FC Utrecht",
+      "invoice_date": "2026-01-29",
+      "due_date": "2026-02-28",
+      "amount": 1001.98,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.3,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-06",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "477594936932304373",
+      "contact_id": "464988369501292197",
+      "invoice_no": "2026-0299",
+      "company": "2Shift B.V.",
+      "invoice_date": "2026-01-29",
+      "due_date": "2026-02-28",
+      "amount": 1520.76,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.5,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-06",
           "source": "berekend"
         }
       ]
@@ -21655,7 +21609,7 @@
           "currency": "EUR",
           "days_overdue": 20,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 20.3,
           "level": "Monitor",
@@ -22858,7 +22812,7 @@
           "currency": "EUR",
           "days_overdue": 15,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 15.6,
           "level": "Monitor",
@@ -22881,7 +22835,7 @@
           "currency": "EUR",
           "days_overdue": 5,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 5.5,
           "level": "Monitor",
@@ -22898,7 +22852,7 @@
           "currency": "EUR",
           "days_overdue": 5,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 5.2,
           "level": "Monitor",
@@ -23300,7 +23254,7 @@
           "currency": "EUR",
           "days_overdue": 0,
           "bucket": "Current",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 0.1,
           "level": "Monitor",
@@ -23802,7 +23756,7 @@
           "currency": "EUR",
           "days_overdue": 5,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 7.6,
           "level": "Monitor",
@@ -23819,7 +23773,7 @@
           "currency": "EUR",
           "days_overdue": 5,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 6.9,
           "level": "Monitor",
@@ -24271,7 +24225,7 @@
           "currency": "EUR",
           "days_overdue": 5,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 5.4,
           "level": "Monitor",
@@ -24288,7 +24242,7 @@
           "currency": "EUR",
           "days_overdue": 5,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 5.2,
           "level": "Monitor",
@@ -25289,7 +25243,7 @@
           "currency": "EUR",
           "days_overdue": 20,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 20.3,
           "level": "Monitor",
@@ -28224,7 +28178,7 @@
           "currency": "EUR",
           "days_overdue": 20,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 20.5,
           "level": "Monitor",
@@ -30653,177 +30607,6 @@
       "invoice_count": 0,
       "level": "Monitor"
     },
-    "476328328507164550": {
-      "contact_id": "476328328507164550",
-      "company": "Ahrend Support B.V.",
-      "invoices": [
-        {
-          "id": "474957093530502782",
-          "contact_id": "476328328507164550",
-          "invoice_no": "2026-0105",
-          "company": "Ahrend Support B.V.",
-          "invoice_date": "2026-01-14",
-          "due_date": "2026-02-13",
-          "amount": 9751.5,
-          "currency": "EUR",
-          "days_overdue": 35,
-          "bucket": "31-60 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 37.9,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-02-19",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "475602953644803626",
-          "contact_id": "476328328507164550",
-          "invoice_no": "2026-0106",
-          "company": "Ahrend Support B.V.",
-          "invoice_date": "2026-01-14",
-          "due_date": "2026-02-13",
-          "amount": 9091.5,
-          "currency": "EUR",
-          "days_overdue": 35,
-          "bucket": "31-60 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 37.7,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-02-19",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "476238698107635642",
-          "contact_id": "476328328507164550",
-          "invoice_no": "2026-0103",
-          "company": "Ahrend Support B.V.",
-          "invoice_date": "2026-01-14",
-          "due_date": "2026-02-13",
-          "amount": 2461.8,
-          "currency": "EUR",
-          "days_overdue": 35,
-          "bucket": "31-60 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 35.7,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-02-19",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "478137823158862985",
-          "contact_id": "476328328507164550",
-          "invoice_no": "2026-0617",
-          "company": "Ahrend Support B.V.",
-          "invoice_date": "2026-02-13",
-          "due_date": "2026-03-15",
-          "amount": 2326.5,
-          "currency": "EUR",
-          "days_overdue": 5,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 5.7,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "474333008681240499",
-          "contact_id": "476328328507164550",
-          "invoice_no": "2026-0104",
-          "company": "Ahrend Support B.V.",
-          "invoice_date": "2026-01-14",
-          "due_date": "2026-02-13",
-          "amount": 2023.89,
-          "currency": "EUR",
-          "days_overdue": 35,
-          "bucket": "31-60 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 35.6,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-02-19",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "476223726572013056",
-          "contact_id": "476328328507164550",
-          "invoice_no": "2026-0614",
-          "company": "Ahrend Support B.V.",
-          "invoice_date": "2026-02-13",
-          "due_date": "2026-03-15",
-          "amount": 792.0,
-          "currency": "EUR",
-          "days_overdue": 5,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 5.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "476796701195110181",
-          "contact_id": "476328328507164550",
-          "invoice_no": "2026-0615",
-          "company": "Ahrend Support B.V.",
-          "invoice_date": "2026-02-13",
-          "due_date": "2026-03-15",
-          "amount": 775.5,
-          "currency": "EUR",
-          "days_overdue": 5,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 5.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "477594976481445484",
-          "contact_id": "476328328507164550",
-          "invoice_no": "2026-0616",
-          "company": "Ahrend Support B.V.",
-          "invoice_date": "2026-02-13",
-          "due_date": "2026-03-15",
-          "amount": 528.0,
-          "currency": "EUR",
-          "days_overdue": 5,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 5.2,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 27750.69,
-      "total_overdue": 27750.69,
-      "max_days": 35,
-      "invoice_count": 8,
-      "level": "Monitor"
-    },
     "468157939306202351": {
       "contact_id": "468157939306202351",
       "company": "Building Retail",
@@ -30927,40 +30710,6 @@
       "invoice_count": 3,
       "level": "Monitor"
     },
-    "436112091071382644": {
-      "contact_id": "436112091071382644",
-      "company": "Dutch Interior Group International B.V.",
-      "invoices": [
-        {
-          "id": "478040543942674301",
-          "contact_id": "436112091071382644",
-          "invoice_no": "2026-0389",
-          "company": "Dutch Interior Group International B.V.",
-          "invoice_date": "2026-02-03",
-          "due_date": "2026-03-05",
-          "amount": 195.0,
-          "currency": "EUR",
-          "days_overdue": 15,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 15.1,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-11",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 195.0,
-      "total_overdue": 195.0,
-      "max_days": 15,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "450499877786355246": {
       "contact_id": "450499877786355246",
       "company": "Marinus Montage- en Timmerwerken",
@@ -31061,6 +30810,177 @@
       "total_overdue": 398.95,
       "max_days": 28,
       "invoice_count": 1,
+      "level": "Monitor"
+    },
+    "476328328507164550": {
+      "contact_id": "476328328507164550",
+      "company": "Ahrend Support B.V.",
+      "invoices": [
+        {
+          "id": "474957093530502782",
+          "contact_id": "476328328507164550",
+          "invoice_no": "2026-0105",
+          "company": "Ahrend Support B.V.",
+          "invoice_date": "2026-01-14",
+          "due_date": "2026-02-13",
+          "amount": 9751.5,
+          "currency": "EUR",
+          "days_overdue": 35,
+          "bucket": "31-60 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 37.9,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-02-19",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "475602953644803626",
+          "contact_id": "476328328507164550",
+          "invoice_no": "2026-0106",
+          "company": "Ahrend Support B.V.",
+          "invoice_date": "2026-01-14",
+          "due_date": "2026-02-13",
+          "amount": 9091.5,
+          "currency": "EUR",
+          "days_overdue": 35,
+          "bucket": "31-60 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 37.7,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-02-19",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "476238698107635642",
+          "contact_id": "476328328507164550",
+          "invoice_no": "2026-0103",
+          "company": "Ahrend Support B.V.",
+          "invoice_date": "2026-01-14",
+          "due_date": "2026-02-13",
+          "amount": 2461.8,
+          "currency": "EUR",
+          "days_overdue": 35,
+          "bucket": "31-60 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 35.7,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-02-19",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "478137823158862985",
+          "contact_id": "476328328507164550",
+          "invoice_no": "2026-0617",
+          "company": "Ahrend Support B.V.",
+          "invoice_date": "2026-02-13",
+          "due_date": "2026-03-15",
+          "amount": 2326.5,
+          "currency": "EUR",
+          "days_overdue": 5,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 5.7,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "474333008681240499",
+          "contact_id": "476328328507164550",
+          "invoice_no": "2026-0104",
+          "company": "Ahrend Support B.V.",
+          "invoice_date": "2026-01-14",
+          "due_date": "2026-02-13",
+          "amount": 2023.89,
+          "currency": "EUR",
+          "days_overdue": 35,
+          "bucket": "31-60 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 35.6,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-02-19",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "476223726572013056",
+          "contact_id": "476328328507164550",
+          "invoice_no": "2026-0614",
+          "company": "Ahrend Support B.V.",
+          "invoice_date": "2026-02-13",
+          "due_date": "2026-03-15",
+          "amount": 792.0,
+          "currency": "EUR",
+          "days_overdue": 5,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 5.2,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "476796701195110181",
+          "contact_id": "476328328507164550",
+          "invoice_no": "2026-0615",
+          "company": "Ahrend Support B.V.",
+          "invoice_date": "2026-02-13",
+          "due_date": "2026-03-15",
+          "amount": 775.5,
+          "currency": "EUR",
+          "days_overdue": 5,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 5.2,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "477594976481445484",
+          "contact_id": "476328328507164550",
+          "invoice_no": "2026-0616",
+          "company": "Ahrend Support B.V.",
+          "invoice_date": "2026-02-13",
+          "due_date": "2026-03-15",
+          "amount": 528.0,
+          "currency": "EUR",
+          "days_overdue": 5,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 5.2,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 27750.69,
+      "total_overdue": 27750.69,
+      "max_days": 35,
+      "invoice_count": 8,
       "level": "Monitor"
     },
     "471617898275669620": {
@@ -32356,40 +32276,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "470716284994061434": {
-      "contact_id": "470716284994061434",
-      "company": "ISSOS B.V.",
-      "invoices": [
-        {
-          "id": "478764250025690446",
-          "contact_id": "470716284994061434",
-          "invoice_no": "2026-0526",
-          "company": "ISSOS B.V.",
-          "invoice_date": "2026-02-11",
-          "due_date": "2026-03-13",
-          "amount": 403.57,
-          "currency": "EUR",
-          "days_overdue": 7,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 7.1,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-19",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 403.57,
-      "total_overdue": 403.57,
-      "max_days": 7,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "477492964732437622": {
       "contact_id": "477492964732437622",
       "company": "Stichting ICTU",
@@ -32603,6 +32489,40 @@
       "total_open": 1153.75,
       "total_overdue": 1153.75,
       "max_days": 13,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
+    "436112091071382644": {
+      "contact_id": "436112091071382644",
+      "company": "Dutch Interior Group International B.V.",
+      "invoices": [
+        {
+          "id": "478040543942674301",
+          "contact_id": "436112091071382644",
+          "invoice_no": "2026-0389",
+          "company": "Dutch Interior Group International B.V.",
+          "invoice_date": "2026-02-03",
+          "due_date": "2026-03-05",
+          "amount": 195.0,
+          "currency": "EUR",
+          "days_overdue": 15,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 15.1,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-03-11",
+              "source": "berekend"
+            }
+          ]
+        }
+      ],
+      "total_open": 195.0,
+      "total_overdue": 195.0,
+      "max_days": 15,
       "invoice_count": 1,
       "level": "Monitor"
     },
