@@ -1,21 +1,21 @@
 {
-  "generated": "2026-03-23T15:07:02",
+  "generated": "2026-03-23T16:51:23",
   "dso": 43.6,
   "dso_6m_avg": 30.6,
   "dso_target": 36,
-  "total_ar": 580723.65,
-  "total_ar_gross": 594618.88,
-  "total_ar_credit": -13895.23,
-  "invoice_count": 477,
-  "overdue_pct": 28.37,
+  "total_ar": 580503.93,
+  "total_ar_gross": 594472.91,
+  "total_ar_credit": -13968.98,
+  "invoice_count": 476,
+  "overdue_pct": 28.35,
   "overdue_pct_6m": 27.24,
-  "revenue_180": 2398016.05,
+  "revenue_180": 2397942.3,
   "overdue_30": 69652.1,
   "overdue_60": 30065.74,
   "overdue_90": 21423.27,
   "aging": {
     "Current": 429885.62,
-    "1-30 days": 95081.16,
+    "1-30 days": 94935.19,
     "31-60 days": 39586.36,
     "61-90 days": 8642.47,
     ">90 days": 21423.27
@@ -79,15 +79,100 @@
     },
     {
       "date": "2026-03-23",
-      "total_ar": 580723.65,
-      "overdue_ar": 164733.26,
-      "overdue_pct": 28.37,
+      "total_ar": 580503.93,
+      "overdue_ar": 164587.29,
+      "overdue_pct": 28.35,
       "dso": 43.6,
-      "revenue_180": 2398016.05,
+      "revenue_180": 2397942.3,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "481226987782800784",
+      "contact_id": "371405759913658123",
+      "invoice_no": "2026-1182",
+      "company": "Beurs van Berlage C.V.",
+      "invoice_date": "2026-03-23",
+      "due_date": "2026-04-22",
+      "amount": -8.2,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "481227150031062183",
+      "contact_id": "371405759913658123",
+      "invoice_no": "2026-1181",
+      "company": "Beurs van Berlage C.V.",
+      "invoice_date": "2026-03-23",
+      "due_date": "2026-04-22",
+      "amount": -35.91,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "481227364096804244",
+      "contact_id": "371405759913658123",
+      "invoice_no": "2026-1180",
+      "company": "Beurs van Berlage C.V.",
+      "invoice_date": "2026-03-23",
+      "due_date": "2026-04-22",
+      "amount": -3.28,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "481227431190988283",
+      "contact_id": "371405759913658123",
+      "invoice_no": "2026-1179",
+      "company": "Beurs van Berlage C.V.",
+      "invoice_date": "2026-03-23",
+      "due_date": "2026-04-22",
+      "amount": -3.28,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "482047415948412354",
+      "contact_id": "459099031989126710",
+      "invoice_no": "2026-1178",
+      "company": "Woodiez",
+      "invoice_date": "2026-03-23",
+      "due_date": "2026-04-22",
+      "amount": -23.08,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "482397772859835686",
       "contact_id": "449781079864248294",
@@ -8309,29 +8394,6 @@
       "state": "reminded",
       "is_bad_debt": false,
       "score": 9.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-20",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478853550856734054",
-      "contact_id": "478147658622437314",
-      "invoice_no": "2026-0583",
-      "company": "Fiti\u00e9 Verhuis, Klus & Event Service",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 145.97,
-      "currency": "EUR",
-      "days_overdue": 9,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 9.0,
       "level": "Monitor",
       "reminders": [
         {
@@ -17108,29 +17170,6 @@
       ]
     },
     {
-      "id": "478853550856734054",
-      "contact_id": "478147658622437314",
-      "invoice_no": "2026-0583",
-      "company": "Fiti\u00e9 Verhuis, Klus & Event Service",
-      "invoice_date": "2026-02-12",
-      "due_date": "2026-03-14",
-      "amount": 145.97,
-      "currency": "EUR",
-      "days_overdue": 9,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 9.0,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-20",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "478764233236940473",
       "contact_id": "442817966116963895",
       "invoice_no": "2026-0581",
@@ -18725,6 +18764,325 @@
     }
   ],
   "customers": {
+    "371405759913658123": {
+      "contact_id": "371405759913658123",
+      "company": "Beurs van Berlage C.V.",
+      "invoices": [
+        {
+          "id": "476765599387617092",
+          "contact_id": "371405759913658123",
+          "invoice_no": "2026-0182",
+          "company": "Beurs van Berlage C.V.",
+          "invoice_date": "2026-01-20",
+          "due_date": "2026-02-19",
+          "amount": 2060.62,
+          "currency": "EUR",
+          "days_overdue": 32,
+          "bucket": "31-60 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 32.6,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-02-25",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "477594940108440752",
+          "contact_id": "371405759913658123",
+          "invoice_no": "2026-0490",
+          "company": "Beurs van Berlage C.V.",
+          "invoice_date": "2026-02-06",
+          "due_date": "2026-03-08",
+          "amount": 1836.34,
+          "currency": "EUR",
+          "days_overdue": 15,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 15.6,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-03-14",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "478764207366473235",
+          "contact_id": "371405759913658123",
+          "invoice_no": "2026-0574",
+          "company": "Beurs van Berlage C.V.",
+          "invoice_date": "2026-02-12",
+          "due_date": "2026-03-14",
+          "amount": 1383.81,
+          "currency": "EUR",
+          "days_overdue": 9,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 9.4,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-03-20",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "476763967837963872",
+          "contact_id": "371405759913658123",
+          "invoice_no": "2026-0404",
+          "company": "Beurs van Berlage C.V.",
+          "invoice_date": "2026-02-04",
+          "due_date": "2026-03-06",
+          "amount": 1124.28,
+          "currency": "EUR",
+          "days_overdue": 17,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 17.3,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-03-12",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "478141801387001345",
+          "contact_id": "371405759913658123",
+          "invoice_no": "2026-0491",
+          "company": "Beurs van Berlage C.V.",
+          "invoice_date": "2026-02-06",
+          "due_date": "2026-03-08",
+          "amount": 1049.08,
+          "currency": "EUR",
+          "days_overdue": 15,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 15.3,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-03-14",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "478141769705326137",
+          "contact_id": "371405759913658123",
+          "invoice_no": "2026-0492",
+          "company": "Beurs van Berlage C.V.",
+          "invoice_date": "2026-02-06",
+          "due_date": "2026-03-08",
+          "amount": 816.66,
+          "currency": "EUR",
+          "days_overdue": 15,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 15.2,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-03-14",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "479952350046323813",
+          "contact_id": "371405759913658123",
+          "invoice_no": "2026-0750",
+          "company": "Beurs van Berlage C.V.",
+          "invoice_date": "2026-02-25",
+          "due_date": "2026-03-27",
+          "amount": 2450.92,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.7,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "481768828748957384",
+          "contact_id": "371405759913658123",
+          "invoice_no": "2026-1047",
+          "company": "Beurs van Berlage C.V.",
+          "invoice_date": "2026-03-17",
+          "due_date": "2026-04-16",
+          "amount": 1038.11,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.3,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "481222536423540087",
+          "contact_id": "371405759913658123",
+          "invoice_no": "2026-0948",
+          "company": "Beurs van Berlage C.V.",
+          "invoice_date": "2026-03-10",
+          "due_date": "2026-04-09",
+          "amount": 697.17,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "481227364096804244",
+          "contact_id": "371405759913658123",
+          "invoice_no": "2026-1180",
+          "company": "Beurs van Berlage C.V.",
+          "invoice_date": "2026-03-23",
+          "due_date": "2026-04-22",
+          "amount": -3.28,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.0,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "481227431190988283",
+          "contact_id": "371405759913658123",
+          "invoice_no": "2026-1179",
+          "company": "Beurs van Berlage C.V.",
+          "invoice_date": "2026-03-23",
+          "due_date": "2026-04-22",
+          "amount": -3.28,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.0,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "481226987782800784",
+          "contact_id": "371405759913658123",
+          "invoice_no": "2026-1182",
+          "company": "Beurs van Berlage C.V.",
+          "invoice_date": "2026-03-23",
+          "due_date": "2026-04-22",
+          "amount": -8.2,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.0,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "481227150031062183",
+          "contact_id": "371405759913658123",
+          "invoice_no": "2026-1181",
+          "company": "Beurs van Berlage C.V.",
+          "invoice_date": "2026-03-23",
+          "due_date": "2026-04-22",
+          "amount": -35.91,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.0,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 12456.99,
+      "total_overdue": 8270.79,
+      "max_days": 32,
+      "invoice_count": 9,
+      "level": "Monitor"
+    },
+    "459099031989126710": {
+      "contact_id": "459099031989126710",
+      "company": "Woodiez",
+      "invoices": [
+        {
+          "id": "478764290261648996",
+          "contact_id": "459099031989126710",
+          "invoice_no": "2026-0548",
+          "company": "Woodiez",
+          "invoice_date": "2026-02-11",
+          "due_date": "2026-03-13",
+          "amount": 283.08,
+          "currency": "EUR",
+          "days_overdue": 10,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 10.1,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-03-19",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "482047415948412354",
+          "contact_id": "459099031989126710",
+          "invoice_no": "2026-1178",
+          "company": "Woodiez",
+          "invoice_date": "2026-03-23",
+          "due_date": "2026-04-22",
+          "amount": -23.08,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.0,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 283.08,
+      "total_overdue": 283.08,
+      "max_days": 10,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
     "449781079864248294": {
       "contact_id": "449781079864248294",
       "company": "Endevoets Montage",
@@ -21413,29 +21771,6 @@
       "company": "Fiti\u00e9 Verhuis, Klus & Event Service",
       "invoices": [
         {
-          "id": "478853550856734054",
-          "contact_id": "478147658622437314",
-          "invoice_no": "2026-0583",
-          "company": "Fiti\u00e9 Verhuis, Klus & Event Service",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 145.97,
-          "currency": "EUR",
-          "days_overdue": 9,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 9.0,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-20",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
           "id": "481768869066704884",
           "contact_id": "478147658622437314",
           "invoice_no": "2026-1101",
@@ -21487,10 +21822,10 @@
           "reminders": []
         }
       ],
-      "total_open": 747.49,
-      "total_overdue": 145.97,
-      "max_days": 9,
-      "invoice_count": 4,
+      "total_open": 601.52,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 3,
       "level": "Monitor"
     },
     "436456590931919993": {
@@ -23604,206 +23939,6 @@
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "371405759913658123": {
-      "contact_id": "371405759913658123",
-      "company": "Beurs van Berlage C.V.",
-      "invoices": [
-        {
-          "id": "476765599387617092",
-          "contact_id": "371405759913658123",
-          "invoice_no": "2026-0182",
-          "company": "Beurs van Berlage C.V.",
-          "invoice_date": "2026-01-20",
-          "due_date": "2026-02-19",
-          "amount": 2060.62,
-          "currency": "EUR",
-          "days_overdue": 32,
-          "bucket": "31-60 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 32.6,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-02-25",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "477594940108440752",
-          "contact_id": "371405759913658123",
-          "invoice_no": "2026-0490",
-          "company": "Beurs van Berlage C.V.",
-          "invoice_date": "2026-02-06",
-          "due_date": "2026-03-08",
-          "amount": 1836.34,
-          "currency": "EUR",
-          "days_overdue": 15,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 15.6,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-14",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "478764207366473235",
-          "contact_id": "371405759913658123",
-          "invoice_no": "2026-0574",
-          "company": "Beurs van Berlage C.V.",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 1383.81,
-          "currency": "EUR",
-          "days_overdue": 9,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 9.4,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-20",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "476763967837963872",
-          "contact_id": "371405759913658123",
-          "invoice_no": "2026-0404",
-          "company": "Beurs van Berlage C.V.",
-          "invoice_date": "2026-02-04",
-          "due_date": "2026-03-06",
-          "amount": 1124.28,
-          "currency": "EUR",
-          "days_overdue": 17,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 17.3,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-12",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "478141801387001345",
-          "contact_id": "371405759913658123",
-          "invoice_no": "2026-0491",
-          "company": "Beurs van Berlage C.V.",
-          "invoice_date": "2026-02-06",
-          "due_date": "2026-03-08",
-          "amount": 1049.08,
-          "currency": "EUR",
-          "days_overdue": 15,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 15.3,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-14",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "478141769705326137",
-          "contact_id": "371405759913658123",
-          "invoice_no": "2026-0492",
-          "company": "Beurs van Berlage C.V.",
-          "invoice_date": "2026-02-06",
-          "due_date": "2026-03-08",
-          "amount": 816.66,
-          "currency": "EUR",
-          "days_overdue": 15,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 15.2,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-14",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "479952350046323813",
-          "contact_id": "371405759913658123",
-          "invoice_no": "2026-0750",
-          "company": "Beurs van Berlage C.V.",
-          "invoice_date": "2026-02-25",
-          "due_date": "2026-03-27",
-          "amount": 2450.92,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.7,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "481768828748957384",
-          "contact_id": "371405759913658123",
-          "invoice_no": "2026-1047",
-          "company": "Beurs van Berlage C.V.",
-          "invoice_date": "2026-03-17",
-          "due_date": "2026-04-16",
-          "amount": 1038.11,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.3,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "481222536423540087",
-          "contact_id": "371405759913658123",
-          "invoice_no": "2026-0948",
-          "company": "Beurs van Berlage C.V.",
-          "invoice_date": "2026-03-10",
-          "due_date": "2026-04-09",
-          "amount": 697.17,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 12456.99,
-      "total_overdue": 8270.79,
-      "max_days": 32,
-      "invoice_count": 9,
       "level": "Monitor"
     },
     "424322345976464908": {
@@ -29913,40 +30048,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "459099031989126710": {
-      "contact_id": "459099031989126710",
-      "company": "Woodiez",
-      "invoices": [
-        {
-          "id": "478764290261648996",
-          "contact_id": "459099031989126710",
-          "invoice_no": "2026-0548",
-          "company": "Woodiez",
-          "invoice_date": "2026-02-11",
-          "due_date": "2026-03-13",
-          "amount": 283.08,
-          "currency": "EUR",
-          "days_overdue": 10,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 10.1,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-19",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 283.08,
-      "total_overdue": 283.08,
-      "max_days": 10,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "477492964732437622": {
       "contact_id": "477492964732437622",
       "company": "Stichting ICTU",
@@ -30297,6 +30398,91 @@
     }
   },
   "credit_invoices": [
+    {
+      "id": "481226987782800784",
+      "contact_id": "371405759913658123",
+      "invoice_no": "2026-1182",
+      "company": "Beurs van Berlage C.V.",
+      "invoice_date": "2026-03-23",
+      "due_date": "2026-04-22",
+      "amount": -8.2,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "481227150031062183",
+      "contact_id": "371405759913658123",
+      "invoice_no": "2026-1181",
+      "company": "Beurs van Berlage C.V.",
+      "invoice_date": "2026-03-23",
+      "due_date": "2026-04-22",
+      "amount": -35.91,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "481227364096804244",
+      "contact_id": "371405759913658123",
+      "invoice_no": "2026-1180",
+      "company": "Beurs van Berlage C.V.",
+      "invoice_date": "2026-03-23",
+      "due_date": "2026-04-22",
+      "amount": -3.28,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "481227431190988283",
+      "contact_id": "371405759913658123",
+      "invoice_no": "2026-1179",
+      "company": "Beurs van Berlage C.V.",
+      "invoice_date": "2026-03-23",
+      "due_date": "2026-04-22",
+      "amount": -3.28,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "482047415948412354",
+      "contact_id": "459099031989126710",
+      "invoice_no": "2026-1178",
+      "company": "Woodiez",
+      "invoice_date": "2026-03-23",
+      "due_date": "2026-04-22",
+      "amount": -23.08,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "482397772859835686",
       "contact_id": "449781079864248294",
