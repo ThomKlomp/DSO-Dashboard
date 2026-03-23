@@ -1,20 +1,20 @@
 {
-  "generated": "2026-03-23T10:52:49",
-  "dso": 44.5,
+  "generated": "2026-03-23T12:36:46",
+  "dso": 44.6,
   "dso_6m_avg": 30.7,
   "dso_target": 36,
-  "total_ar": 593142.39,
-  "total_ar_gross": 606977.63,
-  "total_ar_credit": -13835.24,
-  "invoice_count": 489,
-  "overdue_pct": 29.41,
-  "overdue_pct_6m": 27.5,
-  "revenue_180": 2397246.19,
+  "total_ar": 593647.96,
+  "total_ar_gross": 607543.2,
+  "total_ar_credit": -13895.24,
+  "invoice_count": 490,
+  "overdue_pct": 29.38,
+  "overdue_pct_6m": 27.49,
+  "revenue_180": 2397751.76,
   "overdue_30": 71286.77,
   "overdue_60": 31700.41,
   "overdue_90": 23057.94,
   "aging": {
-    "Current": 432555.53,
+    "Current": 433121.1,
     "1-30 days": 103135.33,
     "31-60 days": 39586.36,
     "61-90 days": 8642.47,
@@ -79,15 +79,49 @@
     },
     {
       "date": "2026-03-23",
-      "total_ar": 593142.39,
+      "total_ar": 593647.96,
       "overdue_ar": 174422.1,
-      "overdue_pct": 29.41,
-      "dso": 44.5,
-      "revenue_180": 2397246.19,
+      "overdue_pct": 29.38,
+      "dso": 44.6,
+      "revenue_180": 2397751.76,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "480680228311532979",
+      "contact_id": "423679869693462023",
+      "invoice_no": "2026-1175",
+      "company": "Hutten Catering B.V.",
+      "invoice_date": "2026-03-23",
+      "due_date": "2026-04-22",
+      "amount": 565.57,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "482388713575286045",
+      "contact_id": "431738863135754199",
+      "invoice_no": "2026-1174",
+      "company": "Brandwacht & Meijer B.V.",
+      "invoice_date": "2026-03-23",
+      "due_date": "2026-04-22",
+      "amount": -60.0,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "482126887201539942",
       "contact_id": "477596161619789346",
@@ -9585,6 +9619,23 @@
     }
   ],
   "active_invoices": [
+    {
+      "id": "480680228311532979",
+      "contact_id": "423679869693462023",
+      "invoice_no": "2026-1175",
+      "company": "Hutten Catering B.V.",
+      "invoice_date": "2026-03-23",
+      "due_date": "2026-04-22",
+      "amount": 565.57,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "482126887201539942",
       "contact_id": "477596161619789346",
@@ -19211,6 +19262,119 @@
     }
   ],
   "customers": {
+    "423679869693462023": {
+      "contact_id": "423679869693462023",
+      "company": "Hutten Catering B.V.",
+      "invoices": [
+        {
+          "id": "478764242485380140",
+          "contact_id": "423679869693462023",
+          "invoice_no": "2026-0591",
+          "company": "Hutten Catering B.V.",
+          "invoice_date": "2026-02-12",
+          "due_date": "2026-03-14",
+          "amount": 594.89,
+          "currency": "EUR",
+          "days_overdue": 9,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 9.2,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-03-20",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "480680228311532979",
+          "contact_id": "423679869693462023",
+          "invoice_no": "2026-1175",
+          "company": "Hutten Catering B.V.",
+          "invoice_date": "2026-03-23",
+          "due_date": "2026-04-22",
+          "amount": 565.57,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "481768881126376926",
+          "contact_id": "423679869693462023",
+          "invoice_no": "2026-1064",
+          "company": "Hutten Catering B.V.",
+          "invoice_date": "2026-03-17",
+          "due_date": "2026-04-16",
+          "amount": 230.64,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 1391.1,
+      "total_overdue": 594.89,
+      "max_days": 9,
+      "invoice_count": 3,
+      "level": "Monitor"
+    },
+    "431738863135754199": {
+      "contact_id": "431738863135754199",
+      "company": "Brandwacht & Meijer B.V.",
+      "invoices": [
+        {
+          "id": "481768830727619762",
+          "contact_id": "431738863135754199",
+          "invoice_no": "2026-1112",
+          "company": "Brandwacht & Meijer B.V.",
+          "invoice_date": "2026-03-18",
+          "due_date": "2026-04-17",
+          "amount": 1339.22,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.4,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "482388713575286045",
+          "contact_id": "431738863135754199",
+          "invoice_no": "2026-1174",
+          "company": "Brandwacht & Meijer B.V.",
+          "invoice_date": "2026-03-23",
+          "due_date": "2026-04-22",
+          "amount": -60.0,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.0,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 1339.22,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
     "477596161619789346": {
       "contact_id": "477596161619789346",
       "company": "HSB Bouw B.V.",
@@ -21406,34 +21570,6 @@
         }
       ],
       "total_open": 260.0,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "431738863135754199": {
-      "contact_id": "431738863135754199",
-      "company": "Brandwacht & Meijer B.V.",
-      "invoices": [
-        {
-          "id": "481768830727619762",
-          "contact_id": "431738863135754199",
-          "invoice_no": "2026-1112",
-          "company": "Brandwacht & Meijer B.V.",
-          "invoice_date": "2026-03-18",
-          "due_date": "2026-04-17",
-          "amount": 1339.22,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.4,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1339.22,
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
@@ -23663,57 +23799,6 @@
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "423679869693462023": {
-      "contact_id": "423679869693462023",
-      "company": "Hutten Catering B.V.",
-      "invoices": [
-        {
-          "id": "478764242485380140",
-          "contact_id": "423679869693462023",
-          "invoice_no": "2026-0591",
-          "company": "Hutten Catering B.V.",
-          "invoice_date": "2026-02-12",
-          "due_date": "2026-03-14",
-          "amount": 594.89,
-          "currency": "EUR",
-          "days_overdue": 9,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 9.2,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-20",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "481768881126376926",
-          "contact_id": "423679869693462023",
-          "invoice_no": "2026-1064",
-          "company": "Hutten Catering B.V.",
-          "invoice_date": "2026-03-17",
-          "due_date": "2026-04-16",
-          "amount": 230.64,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 825.53,
-      "total_overdue": 594.89,
-      "max_days": 9,
-      "invoice_count": 2,
       "level": "Monitor"
     },
     "441530679613720565": {
@@ -31062,6 +31147,23 @@
     }
   },
   "credit_invoices": [
+    {
+      "id": "482388713575286045",
+      "contact_id": "431738863135754199",
+      "invoice_no": "2026-1174",
+      "company": "Brandwacht & Meijer B.V.",
+      "invoice_date": "2026-03-23",
+      "due_date": "2026-04-22",
+      "amount": -60.0,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "482037277148578830",
       "contact_id": "373979318352611285",
