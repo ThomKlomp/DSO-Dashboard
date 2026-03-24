@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-24T06:53:09",
+  "generated": "2026-03-24T08:46:40",
   "dso": 43.4,
   "dso_6m_avg": 32.0,
   "dso_target": 36,
@@ -6718,29 +6718,6 @@
       ]
     },
     {
-      "id": "477971376406267048",
-      "contact_id": "472526373273994296",
-      "invoice_no": "2026-0384",
-      "company": "CNSTRCT Projects B.V.",
-      "invoice_date": "2026-02-02",
-      "due_date": "2026-03-04",
-      "amount": 557.39,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-10",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "477961456650814691",
       "contact_id": "450499877786355246",
       "invoice_no": "2026-0380",
@@ -6754,29 +6731,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 20.0,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-10",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "477963913413002541",
-      "contact_id": "460214790013322624",
-      "invoice_no": "2026-0378",
-      "company": "Aannemersbedrijf Van Zoelen B.V.",
-      "invoice_date": "2026-02-02",
-      "due_date": "2026-03-04",
-      "amount": 2138.68,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.6,
       "level": "Monitor",
       "reminders": [
         {
@@ -9076,6 +9030,52 @@
         {
           "nr": 1,
           "date": "2026-03-11",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "477971376406267048",
+      "contact_id": "472526373273994296",
+      "invoice_no": "2026-0384",
+      "company": "CNSTRCT Projects B.V.",
+      "invoice_date": "2026-02-02",
+      "due_date": "2026-03-04",
+      "amount": 557.39,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.2,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-10",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "477963913413002541",
+      "contact_id": "460214790013322624",
+      "invoice_no": "2026-0378",
+      "company": "Aannemersbedrijf Van Zoelen B.V.",
+      "invoice_date": "2026-02-02",
+      "due_date": "2026-03-04",
+      "amount": 2138.68,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.6,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-10",
           "source": "berekend"
         }
       ]
@@ -15538,52 +15538,6 @@
       "reminders": []
     },
     {
-      "id": "477971376406267048",
-      "contact_id": "472526373273994296",
-      "invoice_no": "2026-0384",
-      "company": "CNSTRCT Projects B.V.",
-      "invoice_date": "2026-02-02",
-      "due_date": "2026-03-04",
-      "amount": 557.39,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-10",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "477963913413002541",
-      "contact_id": "460214790013322624",
-      "invoice_no": "2026-0378",
-      "company": "Aannemersbedrijf Van Zoelen B.V.",
-      "invoice_date": "2026-02-02",
-      "due_date": "2026-03-04",
-      "amount": 2138.68,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.6,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-10",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "474333006124812014",
       "contact_id": "474325256554678255",
       "invoice_no": "2026-0248",
@@ -17735,6 +17689,52 @@
         {
           "nr": 1,
           "date": "2026-03-11",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "477971376406267048",
+      "contact_id": "472526373273994296",
+      "invoice_no": "2026-0384",
+      "company": "CNSTRCT Projects B.V.",
+      "invoice_date": "2026-02-02",
+      "due_date": "2026-03-04",
+      "amount": 557.39,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.2,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-10",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "477963913413002541",
+      "contact_id": "460214790013322624",
+      "invoice_no": "2026-0378",
+      "company": "Aannemersbedrijf Van Zoelen B.V.",
+      "invoice_date": "2026-02-02",
+      "due_date": "2026-03-04",
+      "amount": 2138.68,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.6,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-10",
           "source": "berekend"
         }
       ]
@@ -21934,7 +21934,7 @@
           "currency": "EUR",
           "days_overdue": 20,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 20.2,
           "level": "Monitor",
@@ -25649,7 +25649,7 @@
           "currency": "EUR",
           "days_overdue": 20,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 20.6,
           "level": "Monitor",
