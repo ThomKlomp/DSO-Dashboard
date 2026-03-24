@@ -63,5 +63,14 @@
     "dso": 43.6,
     "revenue_180": 2397942.3,
     "target": 36
+  },
+  {
+    "date": "2026-03-24",
+    "total_ar": 577570.38,
+    "overdue_ar": 162999.7,
+    "overdue_pct": 28.22,
+    "dso": 43.4,
+    "revenue_180": 2397942.3,
+    "target": 36
   }
 ]
