@@ -1,24 +1,24 @@
 {
-  "generated": "2026-03-25T12:34:04",
-  "dso": 40.1,
+  "generated": "2026-03-25T15:10:48",
+  "dso": 40.0,
   "dso_6m_avg": 32.6,
   "dso_target": 36,
-  "total_ar": 528187.67,
-  "total_ar_gross": 546659.67,
+  "total_ar": 526996.49,
+  "total_ar_gross": 545468.49,
   "total_ar_credit": -18472.0,
-  "invoice_count": 443,
-  "overdue_pct": 23.59,
-  "overdue_pct_6m": 26.11,
+  "invoice_count": 440,
+  "overdue_pct": 23.42,
+  "overdue_pct_6m": 26.08,
   "revenue_180": 2371040.17,
-  "overdue_30": 44008.16,
-  "overdue_60": 27750.49,
-  "overdue_90": 22445.31,
+  "overdue_30": 43125.33,
+  "overdue_60": 26867.66,
+  "overdue_90": 21562.48,
   "aging": {
     "Current": 422054.44,
-    "1-30 days": 80597.07,
+    "1-30 days": 80288.72,
     "31-60 days": 16257.67,
     "61-90 days": 5305.18,
-    ">90 days": 22445.31
+    ">90 days": 21562.48
   },
   "history": [
     {
@@ -97,10 +97,10 @@
     },
     {
       "date": "2026-03-25",
-      "total_ar": 528187.67,
-      "overdue_ar": 124605.23,
-      "overdue_pct": 23.59,
-      "dso": 40.1,
+      "total_ar": 526996.49,
+      "overdue_ar": 123414.05,
+      "overdue_pct": 23.42,
+      "dso": 40.0,
       "revenue_180": 2371040.17,
       "target": 36
     }
@@ -6965,52 +6965,6 @@
       ]
     },
     {
-      "id": "468533853429958232",
-      "contact_id": "463456482532262961",
-      "invoice_no": "2025-3983",
-      "company": "MHO Bouwonderneming B.V.",
-      "invoice_date": "2025-10-24",
-      "due_date": "2025-11-07",
-      "amount": 225.7,
-      "currency": "EUR",
-      "days_overdue": 138,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 138.1,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-11-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "468377230566753816",
-      "contact_id": "463456482532262961",
-      "invoice_no": "2025-3982",
-      "company": "MHO Bouwonderneming B.V.",
-      "invoice_date": "2025-10-24",
-      "due_date": "2025-11-07",
-      "amount": 657.13,
-      "currency": "EUR",
-      "days_overdue": 138,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 138.2,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-11-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "468615226839794694",
       "contact_id": "373979523751871801",
       "invoice_no": "2025-3899",
@@ -8307,29 +8261,6 @@
       "state": "reminded",
       "is_bad_debt": false,
       "score": 17.0,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-14",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478137829905401321",
-      "contact_id": "473799641896322520",
-      "invoice_no": "2026-0479",
-      "company": "Stichting Grote Kerk Naarden",
-      "invoice_date": "2026-02-06",
-      "due_date": "2026-03-08",
-      "amount": 308.35,
-      "currency": "EUR",
-      "days_overdue": 17,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 17.1,
       "level": "Monitor",
       "reminders": [
         {
@@ -15100,52 +15031,6 @@
       ]
     },
     {
-      "id": "468533853429958232",
-      "contact_id": "463456482532262961",
-      "invoice_no": "2025-3983",
-      "company": "MHO Bouwonderneming B.V.",
-      "invoice_date": "2025-10-24",
-      "due_date": "2025-11-07",
-      "amount": 225.7,
-      "currency": "EUR",
-      "days_overdue": 138,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 138.1,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-11-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "468377230566753816",
-      "contact_id": "463456482532262961",
-      "invoice_no": "2025-3982",
-      "company": "MHO Bouwonderneming B.V.",
-      "invoice_date": "2025-10-24",
-      "due_date": "2025-11-07",
-      "amount": 657.13,
-      "currency": "EUR",
-      "days_overdue": 138,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 138.2,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-11-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "468615226839794694",
       "contact_id": "373979523751871801",
       "invoice_no": "2025-3899",
@@ -16406,29 +16291,6 @@
       ]
     },
     {
-      "id": "478137829905401321",
-      "contact_id": "473799641896322520",
-      "invoice_no": "2026-0479",
-      "company": "Stichting Grote Kerk Naarden",
-      "invoice_date": "2026-02-06",
-      "due_date": "2026-03-08",
-      "amount": 308.35,
-      "currency": "EUR",
-      "days_overdue": 17,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 17.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-14",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "478137819882063081",
       "contact_id": "475586299122681088",
       "invoice_no": "2026-0478",
@@ -17246,52 +17108,6 @@
       ]
     },
     {
-      "id": "468377230566753816",
-      "contact_id": "463456482532262961",
-      "invoice_no": "2025-3982",
-      "company": "MHO Bouwonderneming B.V.",
-      "invoice_date": "2025-10-24",
-      "due_date": "2025-11-07",
-      "amount": 657.13,
-      "currency": "EUR",
-      "days_overdue": 138,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 138.2,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-11-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "468533853429958232",
-      "contact_id": "463456482532262961",
-      "invoice_no": "2025-3983",
-      "company": "MHO Bouwonderneming B.V.",
-      "invoice_date": "2025-10-24",
-      "due_date": "2025-11-07",
-      "amount": 225.7,
-      "currency": "EUR",
-      "days_overdue": 138,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 138.1,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-11-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "466721723535853465",
       "contact_id": "455952620571329671",
       "invoice_no": "2025-3804",
@@ -17425,6 +17241,52 @@
         {
           "nr": 1,
           "date": "2025-12-29",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "471254863851816540",
+      "contact_id": "464988369501292197",
+      "invoice_no": "2025-4347",
+      "company": "2Shift B.V.",
+      "invoice_date": "2025-11-23",
+      "due_date": "2025-12-23",
+      "amount": 339.79,
+      "currency": "EUR",
+      "days_overdue": 92,
+      "bucket": ">90 days",
+      "state": "late",
+      "is_bad_debt": false,
+      "score": 92.1,
+      "level": "URGENT",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2025-12-29",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "471353985245119795",
+      "contact_id": "455137444859217344",
+      "invoice_no": "2025-4409",
+      "company": "'t Afbouwhuys B.V.",
+      "invoice_date": "2025-11-24",
+      "due_date": "2025-12-24",
+      "amount": 337.42,
+      "currency": "EUR",
+      "days_overdue": 91,
+      "bucket": ">90 days",
+      "state": "late",
+      "is_bad_debt": false,
+      "score": 91.1,
+      "level": "URGENT",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2025-12-30",
           "source": "berekend"
         }
       ]
@@ -27198,63 +27060,6 @@
       "invoice_count": 1,
       "level": "URGENT"
     },
-    "463456482532262961": {
-      "contact_id": "463456482532262961",
-      "company": "MHO Bouwonderneming B.V.",
-      "invoices": [
-        {
-          "id": "468377230566753816",
-          "contact_id": "463456482532262961",
-          "invoice_no": "2025-3982",
-          "company": "MHO Bouwonderneming B.V.",
-          "invoice_date": "2025-10-24",
-          "due_date": "2025-11-07",
-          "amount": 657.13,
-          "currency": "EUR",
-          "days_overdue": 138,
-          "bucket": ">90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 138.2,
-          "level": "URGENT",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2025-11-13",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "468533853429958232",
-          "contact_id": "463456482532262961",
-          "invoice_no": "2025-3983",
-          "company": "MHO Bouwonderneming B.V.",
-          "invoice_date": "2025-10-24",
-          "due_date": "2025-11-07",
-          "amount": 225.7,
-          "currency": "EUR",
-          "days_overdue": 138,
-          "bucket": ">90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 138.1,
-          "level": "URGENT",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2025-11-13",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 882.83,
-      "total_overdue": 882.83,
-      "max_days": 138,
-      "invoice_count": 2,
-      "level": "URGENT"
-    },
     "455952620571329671": {
       "contact_id": "455952620571329671",
       "company": "Habets Event Support",
@@ -28047,40 +27852,6 @@
       ],
       "total_open": 19.25,
       "total_overdue": 19.25,
-      "max_days": 17,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "473799641896322520": {
-      "contact_id": "473799641896322520",
-      "company": "Stichting Grote Kerk Naarden",
-      "invoices": [
-        {
-          "id": "478137829905401321",
-          "contact_id": "473799641896322520",
-          "invoice_no": "2026-0479",
-          "company": "Stichting Grote Kerk Naarden",
-          "invoice_date": "2026-02-06",
-          "due_date": "2026-03-08",
-          "amount": 308.35,
-          "currency": "EUR",
-          "days_overdue": 17,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 17.1,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-14",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 308.35,
-      "total_overdue": 308.35,
       "max_days": 17,
       "invoice_count": 1,
       "level": "Monitor"
