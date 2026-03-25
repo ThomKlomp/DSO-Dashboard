@@ -1,24 +1,24 @@
 {
-  "generated": "2026-03-25T15:10:48",
+  "generated": "2026-03-25T16:58:45",
   "dso": 40.0,
   "dso_6m_avg": 32.6,
   "dso_target": 36,
-  "total_ar": 526996.49,
-  "total_ar_gross": 545468.49,
+  "total_ar": 526901.98,
+  "total_ar_gross": 545373.98,
   "total_ar_credit": -18472.0,
   "invoice_count": 440,
-  "overdue_pct": 23.42,
-  "overdue_pct_6m": 26.08,
+  "overdue_pct": 23.4,
+  "overdue_pct_6m": 26.07,
   "revenue_180": 2371040.17,
-  "overdue_30": 43125.33,
-  "overdue_60": 26867.66,
-  "overdue_90": 21562.48,
+  "overdue_30": 43030.82,
+  "overdue_60": 26773.15,
+  "overdue_90": 21467.97,
   "aging": {
     "Current": 422054.44,
     "1-30 days": 80288.72,
     "31-60 days": 16257.67,
     "61-90 days": 5305.18,
-    ">90 days": 21562.48
+    ">90 days": 21467.97
   },
   "history": [
     {
@@ -97,9 +97,9 @@
     },
     {
       "date": "2026-03-25",
-      "total_ar": 526996.49,
-      "overdue_ar": 123414.05,
-      "overdue_pct": 23.42,
+      "total_ar": 526901.98,
+      "overdue_ar": 123319.54,
+      "overdue_pct": 23.4,
       "dso": 40.0,
       "revenue_180": 2371040.17,
       "target": 36
@@ -6971,7 +6971,7 @@
       "company": "De Projectinrichter B.V.",
       "invoice_date": "2025-10-22",
       "due_date": "2025-11-21",
-      "amount": 472.63,
+      "amount": 378.12,
       "currency": "EUR",
       "days_overdue": 124,
       "bucket": ">90 days",
@@ -15037,7 +15037,7 @@
       "company": "De Projectinrichter B.V.",
       "invoice_date": "2025-10-22",
       "due_date": "2025-11-21",
-      "amount": 472.63,
+      "amount": 378.12,
       "currency": "EUR",
       "days_overdue": 124,
       "bucket": ">90 days",
@@ -17137,7 +17137,7 @@
       "company": "De Projectinrichter B.V.",
       "invoice_date": "2025-10-22",
       "due_date": "2025-11-21",
-      "amount": 472.63,
+      "amount": 378.12,
       "currency": "EUR",
       "days_overdue": 124,
       "bucket": ">90 days",
@@ -23683,7 +23683,7 @@
           "company": "De Projectinrichter B.V.",
           "invoice_date": "2025-10-22",
           "due_date": "2025-11-21",
-          "amount": 472.63,
+          "amount": 378.12,
           "currency": "EUR",
           "days_overdue": 124,
           "bucket": ">90 days",
@@ -23802,8 +23802,8 @@
           "reminders": []
         }
       ],
-      "total_open": 1409.18,
-      "total_overdue": 567.15,
+      "total_open": 1314.67,
+      "total_overdue": 472.64,
       "max_days": 124,
       "invoice_count": 6,
       "level": "URGENT"
