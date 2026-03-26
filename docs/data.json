@@ -1,15 +1,15 @@
 {
-  "generated": "2026-03-26T10:51:28",
+  "generated": "2026-03-26T12:41:12",
   "dso": 39.4,
   "dso_6m_avg": 33.2,
   "dso_target": 36,
-  "total_ar": 519419.64,
+  "total_ar": 519224.64,
   "total_ar_gross": 537891.64,
-  "total_ar_credit": -18472.0,
+  "total_ar_credit": -18667.0,
   "invoice_count": 436,
-  "overdue_pct": 23.79,
+  "overdue_pct": 23.8,
   "overdue_pct_6m": 25.9,
-  "revenue_180": 2371239.01,
+  "revenue_180": 2371044.01,
   "overdue_30": 43030.82,
   "overdue_60": 26773.15,
   "overdue_90": 21467.97,
@@ -106,15 +106,32 @@
     },
     {
       "date": "2026-03-26",
-      "total_ar": 519419.64,
+      "total_ar": 519224.64,
       "overdue_ar": 123595.53,
-      "overdue_pct": 23.79,
+      "overdue_pct": 23.8,
       "dso": 39.4,
-      "revenue_180": 2371239.01,
+      "revenue_180": 2371044.01,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "482658907054933066",
+      "contact_id": "476229978512426317",
+      "invoice_no": "2026-1198",
+      "company": "DeVloer.nl",
+      "invoice_date": "2026-03-26",
+      "due_date": "2026-04-25",
+      "amount": -195.0,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "482651166159668514",
       "contact_id": "429205742448280868",
@@ -17406,6 +17423,80 @@
     }
   ],
   "customers": {
+    "476229978512426317": {
+      "contact_id": "476229978512426317",
+      "company": "DeVloer.nl",
+      "invoices": [
+        {
+          "id": "479303709688333969",
+          "contact_id": "476229978512426317",
+          "invoice_no": "2026-0645",
+          "company": "DeVloer.nl",
+          "invoice_date": "2026-02-18",
+          "due_date": "2026-03-20",
+          "amount": 599.36,
+          "currency": "EUR",
+          "days_overdue": 6,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 6.2,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-03-26",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "478137780735575758",
+          "contact_id": "476229978512426317",
+          "invoice_no": "2026-0439",
+          "company": "DeVloer.nl",
+          "invoice_date": "2026-02-05",
+          "due_date": "2026-03-07",
+          "amount": 164.13,
+          "currency": "EUR",
+          "days_overdue": 19,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 19.0,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-03-13",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "482658907054933066",
+          "contact_id": "476229978512426317",
+          "invoice_no": "2026-1198",
+          "company": "DeVloer.nl",
+          "invoice_date": "2026-03-26",
+          "due_date": "2026-04-25",
+          "amount": -195.0,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 763.49,
+      "total_overdue": 763.49,
+      "max_days": 19,
+      "invoice_count": 2,
+      "level": "Monitor"
+    },
     "429205742448280868": {
       "contact_id": "429205742448280868",
       "company": "Thomas Smits",
@@ -28022,63 +28113,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "476229978512426317": {
-      "contact_id": "476229978512426317",
-      "company": "DeVloer.nl",
-      "invoices": [
-        {
-          "id": "479303709688333969",
-          "contact_id": "476229978512426317",
-          "invoice_no": "2026-0645",
-          "company": "DeVloer.nl",
-          "invoice_date": "2026-02-18",
-          "due_date": "2026-03-20",
-          "amount": 599.36,
-          "currency": "EUR",
-          "days_overdue": 6,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 6.2,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-26",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "478137780735575758",
-          "contact_id": "476229978512426317",
-          "invoice_no": "2026-0439",
-          "company": "DeVloer.nl",
-          "invoice_date": "2026-02-05",
-          "due_date": "2026-03-07",
-          "amount": 164.13,
-          "currency": "EUR",
-          "days_overdue": 19,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 19.0,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-13",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 763.49,
-      "total_overdue": 763.49,
-      "max_days": 19,
-      "invoice_count": 2,
-      "level": "Monitor"
-    },
     "477492964732437622": {
       "contact_id": "477492964732437622",
       "company": "Stichting ICTU",
@@ -28227,6 +28261,23 @@
     }
   },
   "credit_invoices": [
+    {
+      "id": "482658907054933066",
+      "contact_id": "476229978512426317",
+      "invoice_no": "2026-1198",
+      "company": "DeVloer.nl",
+      "invoice_date": "2026-03-26",
+      "due_date": "2026-04-25",
+      "amount": -195.0,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "482496072672871706",
       "contact_id": "413917749490746370",
