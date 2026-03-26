@@ -1,5 +1,5 @@
 {
-  "generated": "2026-03-26T07:05:44",
+  "generated": "2026-03-26T08:54:19",
   "dso": 39.4,
   "dso_6m_avg": 33.2,
   "dso_target": 36,
@@ -6148,52 +6148,6 @@
       ]
     },
     {
-      "id": "476763967837963872",
-      "contact_id": "371405759913658123",
-      "invoice_no": "2026-0404",
-      "company": "Beurs van Berlage C.V.",
-      "invoice_date": "2026-02-04",
-      "due_date": "2026-03-06",
-      "amount": 1124.28,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.3,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-12",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478137779308463625",
-      "contact_id": "441530679613720565",
-      "invoice_no": "2026-0402",
-      "company": "DeFabrique Evenementen B.V.",
-      "invoice_date": "2026-02-04",
-      "due_date": "2026-03-06",
-      "amount": 4250.13,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 21.3,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-12",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "477961456650814691",
       "contact_id": "450499877786355246",
       "invoice_no": "2026-0380",
@@ -8627,6 +8581,52 @@
         {
           "nr": 1,
           "date": "2026-03-13",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "476763967837963872",
+      "contact_id": "371405759913658123",
+      "invoice_no": "2026-0404",
+      "company": "Beurs van Berlage C.V.",
+      "invoice_date": "2026-02-04",
+      "due_date": "2026-03-06",
+      "amount": 1124.28,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.3,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-12",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "478137779308463625",
+      "contact_id": "441530679613720565",
+      "invoice_no": "2026-0402",
+      "company": "DeFabrique Evenementen B.V.",
+      "invoice_date": "2026-02-04",
+      "due_date": "2026-03-06",
+      "amount": 4250.13,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 21.3,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-12",
           "source": "berekend"
         }
       ]
@@ -14335,52 +14335,6 @@
       ]
     },
     {
-      "id": "476763967837963872",
-      "contact_id": "371405759913658123",
-      "invoice_no": "2026-0404",
-      "company": "Beurs van Berlage C.V.",
-      "invoice_date": "2026-02-04",
-      "due_date": "2026-03-06",
-      "amount": 1124.28,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.3,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-12",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478137779308463625",
-      "contact_id": "441530679613720565",
-      "invoice_no": "2026-0402",
-      "company": "DeFabrique Evenementen B.V.",
-      "invoice_date": "2026-02-04",
-      "due_date": "2026-03-06",
-      "amount": 4250.13,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 21.3,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-12",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "477597149907912208",
       "contact_id": "476403879088489835",
       "invoice_no": "2026-0362",
@@ -16658,6 +16612,52 @@
       ]
     },
     {
+      "id": "476763967837963872",
+      "contact_id": "371405759913658123",
+      "invoice_no": "2026-0404",
+      "company": "Beurs van Berlage C.V.",
+      "invoice_date": "2026-02-04",
+      "due_date": "2026-03-06",
+      "amount": 1124.28,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.3,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-12",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "478137779308463625",
+      "contact_id": "441530679613720565",
+      "invoice_no": "2026-0402",
+      "company": "DeFabrique Evenementen B.V.",
+      "invoice_date": "2026-02-04",
+      "due_date": "2026-03-06",
+      "amount": 4250.13,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 21.3,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-12",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
       "id": "477594942561060054",
       "contact_id": "472526373273994296",
       "invoice_no": "2026-0396",
@@ -17825,7 +17825,7 @@
           "currency": "EUR",
           "days_overdue": 20,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 20.3,
           "level": "Monitor",
@@ -22048,7 +22048,7 @@
           "currency": "EUR",
           "days_overdue": 20,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 21.3,
           "level": "Monitor",
