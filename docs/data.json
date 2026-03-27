@@ -1,20 +1,20 @@
 {
-  "generated": "2026-03-27T07:05:57",
-  "dso": 38.8,
+  "generated": "2026-03-27T08:53:02",
+  "dso": 38.5,
   "dso_6m_avg": 33.6,
   "dso_target": 36,
-  "total_ar": 517628.64,
-  "total_ar_gross": 536295.64,
+  "total_ar": 513693.84,
+  "total_ar_gross": 532360.84,
   "total_ar_credit": -18667.0,
-  "invoice_count": 423,
-  "overdue_pct": 20.78,
-  "overdue_pct_6m": 25.03,
+  "invoice_count": 422,
+  "overdue_pct": 20.94,
+  "overdue_pct_6m": 25.05,
   "revenue_180": 2398574.42,
   "overdue_30": 43125.33,
   "overdue_60": 26867.66,
   "overdue_90": 21562.48,
   "aging": {
-    "Current": 428753.12,
+    "Current": 424818.32,
     "1-30 days": 64417.19,
     "31-60 days": 16257.67,
     "61-90 days": 5305.18,
@@ -115,10 +115,10 @@
     },
     {
       "date": "2026-03-27",
-      "total_ar": 517628.64,
+      "total_ar": 513693.84,
       "overdue_ar": 107542.52,
-      "overdue_pct": 20.78,
-      "dso": 38.8,
+      "overdue_pct": 20.94,
+      "dso": 38.5,
       "revenue_180": 2398574.42,
       "target": 36
     }
@@ -223,23 +223,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 1.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "482503505556276434",
-      "contact_id": "477514367202494410",
-      "invoice_no": "2026-1201",
-      "company": "MBL PROMIT",
-      "invoice_date": "2026-03-26",
-      "due_date": "2026-04-25",
-      "amount": 3934.8,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 1.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -5650,23 +5633,6 @@
       "reminders": []
     },
     {
-      "id": "479952355686614700",
-      "contact_id": "436110617984632400",
-      "invoice_no": "2026-0756",
-      "company": "City Hub Utrecht B.V.",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 433.34,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "479952350772987122",
       "contact_id": "419691676013954973",
       "invoice_no": "2026-0754",
@@ -6175,121 +6141,6 @@
         {
           "nr": 1,
           "date": "2026-03-18",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478137785906103451",
-      "contact_id": "472440478415980449",
-      "invoice_no": "2026-0443",
-      "company": "Gr8 Roofs",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": 272.0,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478137780735575758",
-      "contact_id": "476229978512426317",
-      "invoice_no": "2026-0439",
-      "company": "DeVloer.nl",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": 164.13,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.0,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478137772566119567",
-      "contact_id": "472526373273994296",
-      "invoice_no": "2026-0433",
-      "company": "CNSTRCT Projects B.V.",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": 285.39,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478137769975088694",
-      "contact_id": "468157939306202351",
-      "invoice_no": "2026-0428",
-      "company": "Building Retail",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": 1082.86,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.3,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "477597141664007689",
-      "contact_id": "476309138583848312",
-      "invoice_no": "2026-0420",
-      "company": "Fong Shou B.V.",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": 1153.75,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.3,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
           "source": "berekend"
         }
       ]
@@ -7606,6 +7457,23 @@
       ]
     },
     {
+      "id": "479952355686614700",
+      "contact_id": "436110617984632400",
+      "invoice_no": "2026-0756",
+      "company": "City Hub Utrecht B.V.",
+      "invoice_date": "2026-02-25",
+      "due_date": "2026-03-27",
+      "amount": 433.34,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
       "id": "479952071043318880",
       "contact_id": "474319056859563278",
       "invoice_no": "2026-0730",
@@ -8365,6 +8233,121 @@
       ]
     },
     {
+      "id": "478137785906103451",
+      "contact_id": "472440478415980449",
+      "invoice_no": "2026-0443",
+      "company": "Gr8 Roofs",
+      "invoice_date": "2026-02-05",
+      "due_date": "2026-03-07",
+      "amount": 272.0,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.1,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-13",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "478137780735575758",
+      "contact_id": "476229978512426317",
+      "invoice_no": "2026-0439",
+      "company": "DeVloer.nl",
+      "invoice_date": "2026-02-05",
+      "due_date": "2026-03-07",
+      "amount": 164.13,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.0,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-13",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "478137772566119567",
+      "contact_id": "472526373273994296",
+      "invoice_no": "2026-0433",
+      "company": "CNSTRCT Projects B.V.",
+      "invoice_date": "2026-02-05",
+      "due_date": "2026-03-07",
+      "amount": 285.39,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.1,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-13",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "478137769975088694",
+      "contact_id": "468157939306202351",
+      "invoice_no": "2026-0428",
+      "company": "Building Retail",
+      "invoice_date": "2026-02-05",
+      "due_date": "2026-03-07",
+      "amount": 1082.86,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.3,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-13",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "477597141664007689",
+      "contact_id": "476309138583848312",
+      "invoice_no": "2026-0420",
+      "company": "Fong Shou B.V.",
+      "invoice_date": "2026-02-05",
+      "due_date": "2026-03-07",
+      "amount": 1153.75,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.3,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-13",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
       "id": "476763967837963872",
       "contact_id": "371405759913658123",
       "invoice_no": "2026-0404",
@@ -8613,23 +8596,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 1.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "482503505556276434",
-      "contact_id": "477514367202494410",
-      "invoice_no": "2026-1201",
-      "company": "MBL PROMIT",
-      "invoice_date": "2026-03-26",
-      "due_date": "2026-04-25",
-      "amount": 3934.8,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 1.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -13785,23 +13751,6 @@
       "reminders": []
     },
     {
-      "id": "479952355686614700",
-      "contact_id": "436110617984632400",
-      "invoice_no": "2026-0756",
-      "company": "City Hub Utrecht B.V.",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 433.34,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "479952350772987122",
       "contact_id": "419691676013954973",
       "invoice_no": "2026-0754",
@@ -14109,121 +14058,6 @@
         {
           "nr": 1,
           "date": "2026-03-05",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478137785906103451",
-      "contact_id": "472440478415980449",
-      "invoice_no": "2026-0443",
-      "company": "Gr8 Roofs",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": 272.0,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478137780735575758",
-      "contact_id": "476229978512426317",
-      "invoice_no": "2026-0439",
-      "company": "DeVloer.nl",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": 164.13,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.0,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478137772566119567",
-      "contact_id": "472526373273994296",
-      "invoice_no": "2026-0433",
-      "company": "CNSTRCT Projects B.V.",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": 285.39,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478137769975088694",
-      "contact_id": "468157939306202351",
-      "invoice_no": "2026-0428",
-      "company": "Building Retail",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": 1082.86,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.3,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "477597141664007689",
-      "contact_id": "476309138583848312",
-      "invoice_no": "2026-0420",
-      "company": "Fong Shou B.V.",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": 1153.75,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 20.3,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
           "source": "berekend"
         }
       ]
@@ -15379,6 +15213,23 @@
       ]
     },
     {
+      "id": "479952355686614700",
+      "contact_id": "436110617984632400",
+      "invoice_no": "2026-0756",
+      "company": "City Hub Utrecht B.V.",
+      "invoice_date": "2026-02-25",
+      "due_date": "2026-03-27",
+      "amount": 433.34,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
       "id": "479952071043318880",
       "contact_id": "474319056859563278",
       "invoice_no": "2026-0730",
@@ -16133,6 +15984,121 @@
         {
           "nr": 1,
           "date": "2026-03-14",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "478137785906103451",
+      "contact_id": "472440478415980449",
+      "invoice_no": "2026-0443",
+      "company": "Gr8 Roofs",
+      "invoice_date": "2026-02-05",
+      "due_date": "2026-03-07",
+      "amount": 272.0,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.1,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-13",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "478137780735575758",
+      "contact_id": "476229978512426317",
+      "invoice_no": "2026-0439",
+      "company": "DeVloer.nl",
+      "invoice_date": "2026-02-05",
+      "due_date": "2026-03-07",
+      "amount": 164.13,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.0,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-13",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "478137772566119567",
+      "contact_id": "472526373273994296",
+      "invoice_no": "2026-0433",
+      "company": "CNSTRCT Projects B.V.",
+      "invoice_date": "2026-02-05",
+      "due_date": "2026-03-07",
+      "amount": 285.39,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.1,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-13",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "478137769975088694",
+      "contact_id": "468157939306202351",
+      "invoice_no": "2026-0428",
+      "company": "Building Retail",
+      "invoice_date": "2026-02-05",
+      "due_date": "2026-03-07",
+      "amount": 1082.86,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.3,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-13",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "477597141664007689",
+      "contact_id": "476309138583848312",
+      "invoice_no": "2026-0420",
+      "company": "Fong Shou B.V.",
+      "invoice_date": "2026-02-05",
+      "due_date": "2026-03-07",
+      "amount": 1153.75,
+      "currency": "EUR",
+      "days_overdue": 20,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 20.3,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-03-13",
           "source": "berekend"
         }
       ]
@@ -17221,34 +17187,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "477514367202494410": {
-      "contact_id": "477514367202494410",
-      "company": "MBL PROMIT",
-      "invoices": [
-        {
-          "id": "482503505556276434",
-          "contact_id": "477514367202494410",
-          "invoice_no": "2026-1201",
-          "company": "MBL PROMIT",
-          "invoice_date": "2026-03-26",
-          "due_date": "2026-04-25",
-          "amount": 3934.8,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 1.2,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 3934.8,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "467817658972112380": {
       "contact_id": "467817658972112380",
       "company": "Baljet Groep Events & Facility Management",
@@ -17383,7 +17321,7 @@
           "currency": "EUR",
           "days_overdue": 20,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 20.0,
           "level": "Monitor",
@@ -20755,7 +20693,7 @@
           "currency": "EUR",
           "days_overdue": 20,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 20.1,
           "level": "Monitor",
@@ -21066,7 +21004,7 @@
           "currency": "EUR",
           "days_overdue": 0,
           "bucket": "Current",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 0.1,
           "level": "Monitor",
@@ -21721,7 +21659,7 @@
           "currency": "EUR",
           "days_overdue": 20,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 20.1,
           "level": "Monitor",
@@ -26081,7 +26019,7 @@
           "currency": "EUR",
           "days_overdue": 20,
           "bucket": "1-30 days",
-          "state": "late",
+          "state": "reminded",
           "is_bad_debt": false,
           "score": 20.3,
           "level": "Monitor",
@@ -26119,40 +26057,6 @@
       ],
       "total_open": 1082.86,
       "total_overdue": 1082.86,
-      "max_days": 20,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "476309138583848312": {
-      "contact_id": "476309138583848312",
-      "company": "Fong Shou B.V.",
-      "invoices": [
-        {
-          "id": "477597141664007689",
-          "contact_id": "476309138583848312",
-          "invoice_no": "2026-0420",
-          "company": "Fong Shou B.V.",
-          "invoice_date": "2026-02-05",
-          "due_date": "2026-03-07",
-          "amount": 1153.75,
-          "currency": "EUR",
-          "days_overdue": 20,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 20.3,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-13",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 1153.75,
-      "total_overdue": 1153.75,
       "max_days": 20,
       "invoice_count": 1,
       "level": "Monitor"
@@ -27372,6 +27276,40 @@
       "total_open": 857.0,
       "total_overdue": 857.0,
       "max_days": 19,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
+    "476309138583848312": {
+      "contact_id": "476309138583848312",
+      "company": "Fong Shou B.V.",
+      "invoices": [
+        {
+          "id": "477597141664007689",
+          "contact_id": "476309138583848312",
+          "invoice_no": "2026-0420",
+          "company": "Fong Shou B.V.",
+          "invoice_date": "2026-02-05",
+          "due_date": "2026-03-07",
+          "amount": 1153.75,
+          "currency": "EUR",
+          "days_overdue": 20,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 20.3,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-03-13",
+              "source": "berekend"
+            }
+          ]
+        }
+      ],
+      "total_open": 1153.75,
+      "total_overdue": 1153.75,
+      "max_days": 20,
       "invoice_count": 1,
       "level": "Monitor"
     },
