@@ -1,20 +1,20 @@
 {
-  "generated": "2026-03-27T15:03:42",
+  "generated": "2026-03-27T16:41:19",
   "dso": 39.9,
   "dso_6m_avg": 33.7,
   "dso_target": 36,
-  "total_ar": 544092.31,
-  "total_ar_gross": 564689.26,
+  "total_ar": 545474.47,
+  "total_ar_gross": 566071.42,
   "total_ar_credit": -20596.95,
-  "invoice_count": 473,
-  "overdue_pct": 17.29,
-  "overdue_pct_6m": 24.45,
-  "revenue_180": 2457616.73,
+  "invoice_count": 474,
+  "overdue_pct": 17.24,
+  "overdue_pct_6m": 24.44,
+  "revenue_180": 2458998.89,
   "overdue_30": 42785.54,
   "overdue_60": 26527.87,
   "overdue_90": 21222.69,
   "aging": {
-    "Current": 470636.91,
+    "Current": 472019.07,
     "1-30 days": 51266.81,
     "31-60 days": 16257.67,
     "61-90 days": 5305.18,
@@ -115,15 +115,32 @@
     },
     {
       "date": "2026-03-27",
-      "total_ar": 544092.31,
+      "total_ar": 545474.47,
       "overdue_ar": 94052.35,
-      "overdue_pct": 17.29,
+      "overdue_pct": 17.24,
       "dso": 39.9,
-      "revenue_180": 2457616.73,
+      "revenue_180": 2458998.89,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "482668151386932248",
+      "contact_id": "457388790837675815",
+      "invoice_no": "2026-1282",
+      "company": "SIRVA B.V.",
+      "invoice_date": "2026-03-27",
+      "due_date": "2026-04-26",
+      "amount": 1382.16,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.4,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "482756302010845020",
       "contact_id": "479407577584633110",
@@ -9305,6 +9322,23 @@
   ],
   "active_invoices": [
     {
+      "id": "482668151386932248",
+      "contact_id": "457388790837675815",
+      "invoice_no": "2026-1282",
+      "company": "SIRVA B.V.",
+      "invoice_date": "2026-03-27",
+      "due_date": "2026-04-26",
+      "amount": 1382.16,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.4,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
       "id": "482756302010845020",
       "contact_id": "479407577584633110",
       "invoice_no": "2026-1280",
@@ -18460,6 +18494,34 @@
     }
   ],
   "customers": {
+    "457388790837675815": {
+      "contact_id": "457388790837675815",
+      "company": "SIRVA B.V.",
+      "invoices": [
+        {
+          "id": "482668151386932248",
+          "contact_id": "457388790837675815",
+          "invoice_no": "2026-1282",
+          "company": "SIRVA B.V.",
+          "invoice_date": "2026-03-27",
+          "due_date": "2026-04-26",
+          "amount": 1382.16,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.4,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 1382.16,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
     "479407577584633110": {
       "contact_id": "479407577584633110",
       "company": "Hutten Interieurbouw B.V.",
