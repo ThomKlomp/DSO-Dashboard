@@ -1,21 +1,21 @@
 {
-  "generated": "2026-03-30T07:23:54",
-  "dso": 39.5,
-  "dso_6m_avg": 34.2,
+  "generated": "2026-03-30T09:16:20",
+  "dso": 39.3,
+  "dso_6m_avg": 34.1,
   "dso_target": 36,
-  "total_ar": 540058.43,
-  "total_ar_gross": 560655.38,
-  "total_ar_credit": -20596.95,
-  "invoice_count": 467,
-  "overdue_pct": 28.74,
-  "overdue_pct_6m": 25.65,
-  "revenue_180": 2458998.89,
+  "total_ar": 536362.09,
+  "total_ar_gross": 556933.24,
+  "total_ar_credit": -20571.15,
+  "invoice_count": 462,
+  "overdue_pct": 28.51,
+  "overdue_pct_6m": 25.62,
+  "revenue_180": 2459030.11,
   "overdue_30": 42073.57,
   "overdue_60": 28707.07,
   "overdue_90": 21222.69,
   "aging": {
-    "Current": 405450.37,
-    "1-30 days": 113131.44,
+    "Current": 404024.21,
+    "1-30 days": 110835.46,
     "31-60 days": 13366.5,
     "61-90 days": 7484.38,
     ">90 days": 21222.69
@@ -124,11 +124,11 @@
     },
     {
       "date": "2026-03-30",
-      "total_ar": 540058.43,
-      "overdue_ar": 155205.01,
-      "overdue_pct": 28.74,
-      "dso": 39.5,
-      "revenue_180": 2458998.89,
+      "total_ar": 536362.09,
+      "overdue_ar": 152909.03,
+      "overdue_pct": 28.51,
+      "dso": 39.3,
+      "revenue_180": 2459030.11,
       "target": 36
     }
   ],
@@ -4537,23 +4537,6 @@
       "reminders": []
     },
     {
-      "id": "481222559320246024",
-      "contact_id": "455864659047614017",
-      "invoice_no": "2026-0955",
-      "company": "De Vree en Sliepen B.V.",
-      "invoice_date": "2026-03-11",
-      "due_date": "2026-04-10",
-      "amount": 997.86,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481222550007842007",
       "contact_id": "442164130156119169",
       "invoice_no": "2026-0954",
@@ -5104,13 +5087,13 @@
       "company": "Endevoets Montage",
       "invoice_date": "2026-03-09",
       "due_date": "2026-04-08",
-      "amount": 525.8,
+      "amount": 97.5,
       "currency": "EUR",
       "days_overdue": 0,
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": 0.2,
+      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -6135,23 +6118,6 @@
       "reminders": []
     },
     {
-      "id": "480497336932369855",
-      "contact_id": "373979523751871801",
-      "invoice_no": "2026-0829",
-      "company": "De Projectinrichter B.V.",
-      "invoice_date": "2026-03-02",
-      "due_date": "2026-04-01",
-      "amount": -25.8,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.0,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "479952364127651739",
       "contact_id": "373979318352611285",
       "invoice_no": "2026-0826",
@@ -6328,7 +6294,7 @@
       "company": "Rikkert Afbouw B.V.",
       "invoice_date": "2026-02-26",
       "due_date": "2026-03-28",
-      "amount": 264.47,
+      "amount": 224.8,
       "currency": "EUR",
       "days_overdue": 2,
       "bucket": "1-30 days",
@@ -6454,23 +6420,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 3.0,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479952384828638979",
-      "contact_id": "453870471498171983",
-      "invoice_no": "2026-0794",
-      "company": "Svedex Deuren B.V.",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 545.69,
-      "currency": "EUR",
-      "days_overdue": 3,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 3.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -6794,23 +6743,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 3.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479303702849521475",
-      "contact_id": "466710236893283661",
-      "invoice_no": "2026-0736",
-      "company": "DAT afbouw B.V.",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 123.97,
-      "currency": "EUR",
-      "days_overdue": 3,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 3.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -8429,23 +8361,6 @@
       "reminders": []
     },
     {
-      "id": "479865761857275275",
-      "contact_id": "479575942602163315",
-      "invoice_no": "2026-0715",
-      "company": "Facadec Plafond- en Wandsystemen B.V.",
-      "invoice_date": "2026-02-23",
-      "due_date": "2026-03-25",
-      "amount": 1314.65,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 5.4,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "479303722039510650",
       "contact_id": "431018275425486818",
       "invoice_no": "2026-0714",
@@ -9056,29 +8971,6 @@
         {
           "nr": 1,
           "date": "2026-03-14",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478137785906103451",
-      "contact_id": "472440478415980449",
-      "invoice_no": "2026-0443",
-      "company": "Gr8 Roofs",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": 272.0,
-      "currency": "EUR",
-      "days_overdue": 23,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 23.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
           "source": "berekend"
         }
       ]
@@ -13370,23 +13262,6 @@
       "reminders": []
     },
     {
-      "id": "481222559320246024",
-      "contact_id": "455864659047614017",
-      "invoice_no": "2026-0955",
-      "company": "De Vree en Sliepen B.V.",
-      "invoice_date": "2026-03-11",
-      "due_date": "2026-04-10",
-      "amount": 997.86,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481222550007842007",
       "contact_id": "442164130156119169",
       "invoice_no": "2026-0954",
@@ -13920,13 +13795,13 @@
       "company": "Endevoets Montage",
       "invoice_date": "2026-03-09",
       "due_date": "2026-04-08",
-      "amount": 525.8,
+      "amount": 97.5,
       "currency": "EUR",
       "days_overdue": 0,
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": 0.2,
+      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -15127,7 +15002,7 @@
       "company": "Rikkert Afbouw B.V.",
       "invoice_date": "2026-02-26",
       "due_date": "2026-03-28",
-      "amount": 264.47,
+      "amount": 224.8,
       "currency": "EUR",
       "days_overdue": 2,
       "bucket": "1-30 days",
@@ -15253,23 +15128,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 3.0,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479952384828638979",
-      "contact_id": "453870471498171983",
-      "invoice_no": "2026-0794",
-      "company": "Svedex Deuren B.V.",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 545.69,
-      "currency": "EUR",
-      "days_overdue": 3,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 3.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -15559,23 +15417,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 3.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479303702849521475",
-      "contact_id": "466710236893283661",
-      "invoice_no": "2026-0736",
-      "company": "DAT afbouw B.V.",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 123.97,
-      "currency": "EUR",
-      "days_overdue": 3,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 3.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -16872,23 +16713,6 @@
       "reminders": []
     },
     {
-      "id": "479865761857275275",
-      "contact_id": "479575942602163315",
-      "invoice_no": "2026-0715",
-      "company": "Facadec Plafond- en Wandsystemen B.V.",
-      "invoice_date": "2026-02-23",
-      "due_date": "2026-03-25",
-      "amount": 1314.65,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 5.4,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "479303722039510650",
       "contact_id": "431018275425486818",
       "invoice_no": "2026-0714",
@@ -17499,29 +17323,6 @@
         {
           "nr": 1,
           "date": "2026-03-14",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478137785906103451",
-      "contact_id": "472440478415980449",
-      "invoice_no": "2026-0443",
-      "company": "Gr8 Roofs",
-      "invoice_date": "2026-02-05",
-      "due_date": "2026-03-07",
-      "amount": 272.0,
-      "currency": "EUR",
-      "days_overdue": 23,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 23.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-13",
           "source": "berekend"
         }
       ]
@@ -18916,7 +18717,7 @@
           "company": "Rikkert Afbouw B.V.",
           "invoice_date": "2026-02-26",
           "due_date": "2026-03-28",
-          "amount": 264.47,
+          "amount": 224.8,
           "currency": "EUR",
           "days_overdue": 2,
           "bucket": "1-30 days",
@@ -19012,8 +18813,8 @@
           "reminders": []
         }
       ],
-      "total_open": 6537.52,
-      "total_overdue": 264.47,
+      "total_open": 6497.85,
+      "total_overdue": 224.8,
       "max_days": 2,
       "invoice_count": 6,
       "level": "Monitor"
@@ -19321,29 +19122,6 @@
       "company": "Gr8 Roofs",
       "invoices": [
         {
-          "id": "478137785906103451",
-          "contact_id": "472440478415980449",
-          "invoice_no": "2026-0443",
-          "company": "Gr8 Roofs",
-          "invoice_date": "2026-02-05",
-          "due_date": "2026-03-07",
-          "amount": 272.0,
-          "currency": "EUR",
-          "days_overdue": 23,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 23.1,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-13",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
           "id": "481222595844244982",
           "contact_id": "472440478415980449",
           "invoice_no": "2026-0981",
@@ -19395,10 +19173,10 @@
           "reminders": []
         }
       ],
-      "total_open": 4079.78,
-      "total_overdue": 272.0,
-      "max_days": 23,
-      "invoice_count": 4,
+      "total_open": 3807.78,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 3,
       "level": "Monitor"
     },
     "459760534268413535": {
@@ -20763,29 +20541,12 @@
           "score": 0.4,
           "level": "Monitor",
           "reminders": []
-        },
-        {
-          "id": "481222559320246024",
-          "contact_id": "455864659047614017",
-          "invoice_no": "2026-0955",
-          "company": "De Vree en Sliepen B.V.",
-          "invoice_date": "2026-03-11",
-          "due_date": "2026-04-10",
-          "amount": 997.86,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.3,
-          "level": "Monitor",
-          "reminders": []
         }
       ],
-      "total_open": 4130.81,
+      "total_open": 3132.95,
       "total_overdue": 0,
       "max_days": 0,
-      "invoice_count": 3,
+      "invoice_count": 2,
       "level": "Monitor"
     },
     "424218904387126380": {
@@ -22938,13 +22699,13 @@
           "company": "Endevoets Montage",
           "invoice_date": "2026-03-09",
           "due_date": "2026-04-08",
-          "amount": 525.8,
+          "amount": 97.5,
           "currency": "EUR",
           "days_overdue": 0,
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": 0.2,
+          "score": 0.0,
           "level": "Monitor",
           "reminders": []
         },
@@ -22966,7 +22727,7 @@
           "reminders": []
         }
       ],
-      "total_open": 525.8,
+      "total_open": 97.5,
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
@@ -23095,23 +22856,6 @@
       "company": "DAT afbouw B.V.",
       "invoices": [
         {
-          "id": "479303702849521475",
-          "contact_id": "466710236893283661",
-          "invoice_no": "2026-0736",
-          "company": "DAT afbouw B.V.",
-          "invoice_date": "2026-02-25",
-          "due_date": "2026-03-27",
-          "amount": 123.97,
-          "currency": "EUR",
-          "days_overdue": 3,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 3.0,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "481858866524456434",
           "contact_id": "466710236893283661",
           "invoice_no": "2026-1166",
@@ -23129,10 +22873,10 @@
           "reminders": []
         }
       ],
-      "total_open": 253.97,
-      "total_overdue": 123.97,
-      "max_days": 3,
-      "invoice_count": 2,
+      "total_open": 130.0,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
       "level": "Monitor"
     },
     "443723672063050993": {
@@ -26282,23 +26026,6 @@
           "score": 0.0,
           "level": "Monitor",
           "reminders": []
-        },
-        {
-          "id": "480497336932369855",
-          "contact_id": "373979523751871801",
-          "invoice_no": "2026-0829",
-          "company": "De Projectinrichter B.V.",
-          "invoice_date": "2026-03-02",
-          "due_date": "2026-04-01",
-          "amount": -25.8,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.0,
-          "level": "Monitor",
-          "reminders": []
         }
       ],
       "total_open": 1020.77,
@@ -27757,23 +27484,6 @@
       "company": "Svedex Deuren B.V.",
       "invoices": [
         {
-          "id": "479952384828638979",
-          "contact_id": "453870471498171983",
-          "invoice_no": "2026-0794",
-          "company": "Svedex Deuren B.V.",
-          "invoice_date": "2026-02-25",
-          "due_date": "2026-03-27",
-          "amount": 545.69,
-          "currency": "EUR",
-          "days_overdue": 3,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 3.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "480680253607380801",
           "contact_id": "453870471498171983",
           "invoice_no": "2026-0841",
@@ -27791,10 +27501,10 @@
           "reminders": []
         }
       ],
-      "total_open": 2835.92,
-      "total_overdue": 545.69,
-      "max_days": 3,
-      "invoice_count": 2,
+      "total_open": 2290.23,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
       "level": "Monitor"
     },
     "457933730203305786": {
@@ -29459,34 +29169,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "479575942602163315": {
-      "contact_id": "479575942602163315",
-      "company": "Facadec Plafond- en Wandsystemen B.V.",
-      "invoices": [
-        {
-          "id": "479865761857275275",
-          "contact_id": "479575942602163315",
-          "invoice_no": "2026-0715",
-          "company": "Facadec Plafond- en Wandsystemen B.V.",
-          "invoice_date": "2026-02-23",
-          "due_date": "2026-03-25",
-          "amount": 1314.65,
-          "currency": "EUR",
-          "days_overdue": 5,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 5.4,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1314.65,
-      "total_overdue": 1314.65,
-      "max_days": 5,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "467908261430953581": {
       "contact_id": "467908261430953581",
       "company": "Vissers Totaal Afbouw B.V.",
@@ -29904,23 +29586,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "480497336932369855",
-      "contact_id": "373979523751871801",
-      "invoice_no": "2026-0829",
-      "company": "De Projectinrichter B.V.",
-      "invoice_date": "2026-03-02",
-      "due_date": "2026-04-01",
-      "amount": -25.8,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
