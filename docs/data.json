@@ -1,24 +1,24 @@
 {
-  "generated": "2026-03-31T12:39:55",
-  "dso": 40.6,
-  "dso_6m_avg": 34.6,
+  "generated": "2026-03-31T14:41:10",
+  "dso": 39.7,
+  "dso_6m_avg": 34.5,
   "dso_target": 36,
-  "total_ar": 563888.66,
-  "total_ar_gross": 588757.26,
+  "total_ar": 551256.17,
+  "total_ar_gross": 576124.77,
   "total_ar_credit": -24868.6,
-  "invoice_count": 458,
-  "overdue_pct": 24.96,
-  "overdue_pct_6m": 25.23,
+  "invoice_count": 454,
+  "overdue_pct": 23.56,
+  "overdue_pct_6m": 25.03,
   "revenue_180": 2500591.6,
-  "overdue_30": 44554.99,
-  "overdue_60": 29252.47,
-  "overdue_90": 21181.37,
+  "overdue_30": 44082.36,
+  "overdue_60": 28779.84,
+  "overdue_90": 20708.74,
   "aging": {
-    "Current": 448008.48,
-    "1-30 days": 96193.79,
+    "Current": 446237.58,
+    "1-30 days": 85804.83,
     "31-60 days": 15302.52,
     "61-90 days": 8071.1,
-    ">90 days": 21181.37
+    ">90 days": 20708.74
   },
   "history": [
     {
@@ -133,10 +133,10 @@
     },
     {
       "date": "2026-03-31",
-      "total_ar": 563888.66,
-      "overdue_ar": 140748.78,
-      "overdue_pct": 24.96,
-      "dso": 40.6,
+      "total_ar": 551256.17,
+      "overdue_ar": 129887.19,
+      "overdue_pct": 23.56,
+      "dso": 39.7,
       "revenue_180": 2500591.6,
       "target": 36
     }
@@ -2767,13 +2767,13 @@
       "company": "Brandwacht & Meijer B.V.",
       "invoice_date": "2026-03-18",
       "due_date": "2026-04-17",
-      "amount": 1339.22,
+      "amount": 60.0,
       "currency": "EUR",
       "days_overdue": 0,
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": 0.4,
+      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -4750,23 +4750,6 @@
       "reminders": []
     },
     {
-      "id": "481222539972969852",
-      "contact_id": "447879674033342072",
-      "invoice_no": "2026-0952",
-      "company": "Brokx projectinrichting",
-      "invoice_date": "2026-03-10",
-      "due_date": "2026-04-09",
-      "amount": 270.67,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481222594964489409",
       "contact_id": "360816065795589490",
       "invoice_no": "2026-0951",
@@ -5052,23 +5035,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "480680215288218635",
-      "contact_id": "373979523751871801",
-      "invoice_no": "2026-0929",
-      "company": "De Projectinrichter B.V.",
-      "invoice_date": "2026-03-10",
-      "due_date": "2026-04-09",
-      "amount": 221.01,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -6688,23 +6654,6 @@
       "reminders": []
     },
     {
-      "id": "479952353986872831",
-      "contact_id": "458655648747358060",
-      "invoice_no": "2026-0753",
-      "company": "Caring Fieldmarketing B.V.",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 10388.96,
-      "currency": "EUR",
-      "days_overdue": 4,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 7.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "480052426201630403",
       "contact_id": "341331018868852448",
       "invoice_no": "2026-0748",
@@ -7865,29 +7814,6 @@
         {
           "nr": 1,
           "date": "2025-11-29",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "468615226839794694",
-      "contact_id": "373979523751871801",
-      "invoice_no": "2025-3899",
-      "company": "De Projectinrichter B.V.",
-      "invoice_date": "2025-10-22",
-      "due_date": "2025-11-21",
-      "amount": 472.63,
-      "currency": "EUR",
-      "days_overdue": 130,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 130.1,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-11-27",
           "source": "berekend"
         }
       ]
@@ -11464,13 +11390,13 @@
       "company": "Brandwacht & Meijer B.V.",
       "invoice_date": "2026-03-18",
       "due_date": "2026-04-17",
-      "amount": 1339.22,
+      "amount": 60.0,
       "currency": "EUR",
       "days_overdue": 0,
       "bucket": "Current",
       "state": "open",
       "is_bad_debt": false,
-      "score": 0.4,
+      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -13413,23 +13339,6 @@
       "reminders": []
     },
     {
-      "id": "481222539972969852",
-      "contact_id": "447879674033342072",
-      "invoice_no": "2026-0952",
-      "company": "Brokx projectinrichting",
-      "invoice_date": "2026-03-10",
-      "due_date": "2026-04-09",
-      "amount": 270.67,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481222594964489409",
       "contact_id": "360816065795589490",
       "invoice_no": "2026-0951",
@@ -13715,23 +13624,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "480680215288218635",
-      "contact_id": "373979523751871801",
-      "invoice_no": "2026-0929",
-      "company": "De Projectinrichter B.V.",
-      "invoice_date": "2026-03-10",
-      "due_date": "2026-04-09",
-      "amount": 221.01,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -15317,23 +15209,6 @@
       "reminders": []
     },
     {
-      "id": "479952353986872831",
-      "contact_id": "458655648747358060",
-      "invoice_no": "2026-0753",
-      "company": "Caring Fieldmarketing B.V.",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 10388.96,
-      "currency": "EUR",
-      "days_overdue": 4,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 7.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "480052040108606981",
       "contact_id": "341331018868852448",
       "invoice_no": "2026-0746",
@@ -16201,29 +16076,6 @@
         {
           "nr": 1,
           "date": "2025-11-29",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "468615226839794694",
-      "contact_id": "373979523751871801",
-      "invoice_no": "2025-3899",
-      "company": "De Projectinrichter B.V.",
-      "invoice_date": "2025-10-22",
-      "due_date": "2025-11-21",
-      "amount": 472.63,
-      "currency": "EUR",
-      "days_overdue": 130,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 130.1,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-11-27",
           "source": "berekend"
         }
       ]
@@ -17833,29 +17685,6 @@
       ]
     },
     {
-      "id": "468615226839794694",
-      "contact_id": "373979523751871801",
-      "invoice_no": "2025-3899",
-      "company": "De Projectinrichter B.V.",
-      "invoice_date": "2025-10-22",
-      "due_date": "2025-11-21",
-      "amount": 472.63,
-      "currency": "EUR",
-      "days_overdue": 130,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 130.1,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2025-11-27",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "468375646751426488",
       "contact_id": "456663796985890790",
       "invoice_no": "2025-4013",
@@ -17999,6 +17828,29 @@
         {
           "nr": 3,
           "date": "2026-03-04",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "472148385463272980",
+      "contact_id": "434302654430053793",
+      "invoice_no": "2025-4700",
+      "company": "Tom Veldhuis",
+      "invoice_date": "2025-12-10",
+      "due_date": "2026-01-09",
+      "amount": 372.68,
+      "currency": "EUR",
+      "days_overdue": 81,
+      "bucket": "61-90 days",
+      "state": "late",
+      "is_bad_debt": false,
+      "score": 81.1,
+      "level": "URGENT",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-01-15",
           "source": "berekend"
         }
       ]
@@ -22308,23 +22160,6 @@
       "company": "Caring Fieldmarketing B.V.",
       "invoices": [
         {
-          "id": "479952353986872831",
-          "contact_id": "458655648747358060",
-          "invoice_no": "2026-0753",
-          "company": "Caring Fieldmarketing B.V.",
-          "invoice_date": "2026-02-25",
-          "due_date": "2026-03-27",
-          "amount": 10388.96,
-          "currency": "EUR",
-          "days_overdue": 4,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 7.1,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "481295761903978430",
           "contact_id": "458655648747358060",
           "invoice_no": "2026-0993",
@@ -22393,10 +22228,10 @@
           "reminders": []
         }
       ],
-      "total_open": 31702.87,
-      "total_overdue": 10388.96,
-      "max_days": 4,
-      "invoice_count": 5,
+      "total_open": 21313.91,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 4,
       "level": "Monitor"
     },
     "481227460142172005": {
@@ -23419,13 +23254,13 @@
           "company": "Brandwacht & Meijer B.V.",
           "invoice_date": "2026-03-18",
           "due_date": "2026-04-17",
-          "amount": 1339.22,
+          "amount": 60.0,
           "currency": "EUR",
           "days_overdue": 0,
           "bucket": "Current",
           "state": "open",
           "is_bad_debt": false,
-          "score": 0.4,
+          "score": 0.0,
           "level": "Monitor",
           "reminders": []
         },
@@ -23447,7 +23282,7 @@
           "reminders": []
         }
       ],
-      "total_open": 1339.22,
+      "total_open": 60.0,
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
@@ -25977,46 +25812,6 @@
       "company": "De Projectinrichter B.V.",
       "invoices": [
         {
-          "id": "468615226839794694",
-          "contact_id": "373979523751871801",
-          "invoice_no": "2025-3899",
-          "company": "De Projectinrichter B.V.",
-          "invoice_date": "2025-10-22",
-          "due_date": "2025-11-21",
-          "amount": 472.63,
-          "currency": "EUR",
-          "days_overdue": 130,
-          "bucket": ">90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 130.1,
-          "level": "URGENT",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2025-11-27",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "480680215288218635",
-          "contact_id": "373979523751871801",
-          "invoice_no": "2026-0929",
-          "company": "De Projectinrichter B.V.",
-          "invoice_date": "2026-03-10",
-          "due_date": "2026-04-09",
-          "amount": 221.01,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "481222557028059024",
           "contact_id": "373979523751871801",
           "invoice_no": "2026-0987",
@@ -26051,11 +25846,11 @@
           "reminders": []
         }
       ],
-      "total_open": 1020.77,
-      "total_overdue": 472.63,
-      "max_days": 130,
-      "invoice_count": 4,
-      "level": "URGENT"
+      "total_open": 327.13,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 2,
+      "level": "Monitor"
     },
     "457400629303707048": {
       "contact_id": "457400629303707048",
@@ -26378,34 +26173,6 @@
         }
       ],
       "total_open": 1235.0,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "447879674033342072": {
-      "contact_id": "447879674033342072",
-      "company": "Brokx projectinrichting",
-      "invoices": [
-        {
-          "id": "481222539972969852",
-          "contact_id": "447879674033342072",
-          "invoice_no": "2026-0952",
-          "company": "Brokx projectinrichting",
-          "invoice_date": "2026-03-10",
-          "due_date": "2026-04-09",
-          "amount": 270.67,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 270.67,
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
