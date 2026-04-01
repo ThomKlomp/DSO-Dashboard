@@ -1,23 +1,23 @@
 {
-  "generated": "2026-04-01T15:24:52",
-  "dso": 47.4,
+  "generated": "2026-04-01T17:00:58",
+  "dso": 47.5,
   "dso_6m_avg": 35.4,
   "dso_target": 36,
-  "total_ar": 543886.44,
-  "total_ar_gross": 567527.16,
-  "total_ar_credit": -23640.72,
-  "invoice_count": 448,
-  "overdue_pct": 22.28,
-  "overdue_pct_6m": 24.75,
-  "revenue_180": 2063816.48,
-  "overdue_30": 45674.25,
-  "overdue_60": 32737.36,
+  "total_ar": 544361.34,
+  "total_ar_gross": 567553.92,
+  "total_ar_credit": -23192.58,
+  "invoice_count": 447,
+  "overdue_pct": 21.87,
+  "overdue_pct_6m": 24.7,
+  "revenue_180": 2064272.13,
+  "overdue_30": 43603.64,
+  "overdue_60": 30666.75,
   "overdue_90": 20708.74,
   "aging": {
-    "Current": 446371.04,
-    "1-30 days": 75481.87,
+    "Current": 448487.66,
+    "1-30 days": 75462.62,
     "31-60 days": 12936.89,
-    "61-90 days": 12028.62,
+    "61-90 days": 9958.01,
     ">90 days": 20708.74
   },
   "history": [
@@ -142,15 +142,83 @@
     },
     {
       "date": "2026-04-01",
-      "total_ar": 543886.44,
-      "overdue_ar": 121156.12,
-      "overdue_pct": 22.28,
-      "dso": 47.4,
-      "revenue_180": 2063816.48,
+      "total_ar": 544361.34,
+      "overdue_ar": 119066.26,
+      "overdue_pct": 21.87,
+      "dso": 47.5,
+      "revenue_180": 2064272.13,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "483222670455867142",
+      "contact_id": "475694046479648573",
+      "invoice_no": "2026-1314",
+      "company": "EH Netherlands B.V.",
+      "invoice_date": "2026-04-01",
+      "due_date": "2026-05-01",
+      "amount": -396.86,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "483222298826900992",
+      "contact_id": "475694046479648573",
+      "invoice_no": "2026-1313",
+      "company": "EH Netherlands B.V.",
+      "invoice_date": "2026-04-01",
+      "due_date": "2026-05-01",
+      "amount": 396.86,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "483222314976019606",
+      "contact_id": "475694046479648573",
+      "invoice_no": "2026-1312",
+      "company": "EH Netherlands B.V.",
+      "invoice_date": "2026-04-01",
+      "due_date": "2026-05-01",
+      "amount": 828.75,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "483220712053540138",
+      "contact_id": "478134396996551941",
+      "invoice_no": "2026-1309",
+      "company": "Accompli Afbouw B.V.",
+      "invoice_date": "2026-04-01",
+      "due_date": "2026-05-01",
+      "amount": 891.01,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.3,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "483099958713517148",
       "contact_id": "471893339712521237",
@@ -6857,29 +6925,6 @@
       ]
     },
     {
-      "id": "475694131290572742",
-      "contact_id": "471617898275669620",
-      "invoice_no": "2026-0060",
-      "company": "Jaarbeurs B.V.",
-      "invoice_date": "2026-01-08",
-      "due_date": "2026-02-07",
-      "amount": -845.0,
-      "currency": "EUR",
-      "days_overdue": 53,
-      "bucket": "31-60 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 53.3,
-      "level": "High",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-02-13",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "475429158543950962",
       "contact_id": "471968504050877852",
       "invoice_no": "2026-0023",
@@ -6949,29 +6994,6 @@
       ]
     },
     {
-      "id": "474957062618482086",
-      "contact_id": "471617898275669620",
-      "invoice_no": "2025-5212",
-      "company": "Jaarbeurs B.V.",
-      "invoice_date": "2025-12-31",
-      "due_date": "2026-01-30",
-      "amount": 396.86,
-      "currency": "EUR",
-      "days_overdue": 61,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 61.1,
-      "level": "High",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-02-05",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "474957095766067192",
       "contact_id": "341331018868852448",
       "invoice_no": "2025-5205",
@@ -6985,52 +7007,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 61.6,
-      "level": "High",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-02-05",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "474327713741539326",
-      "contact_id": "471617898275669620",
-      "invoice_no": "2025-5172",
-      "company": "Jaarbeurs B.V.",
-      "invoice_date": "2025-12-31",
-      "due_date": "2026-01-30",
-      "amount": 828.75,
-      "currency": "EUR",
-      "days_overdue": 61,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 61.2,
-      "level": "High",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-02-05",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "474867743056725123",
-      "contact_id": "471617898275669620",
-      "invoice_no": "2025-5171",
-      "company": "Jaarbeurs B.V.",
-      "invoice_date": "2025-12-31",
-      "due_date": "2026-01-30",
-      "amount": 845.0,
-      "currency": "EUR",
-      "days_overdue": 61,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 61.3,
       "level": "High",
       "reminders": [
         {
@@ -8835,29 +8811,6 @@
       ]
     },
     {
-      "id": "478310593385727578",
-      "contact_id": "477492964732437622",
-      "invoice_no": "2026-0487",
-      "company": "Stichting ICTU",
-      "invoice_date": "2026-02-06",
-      "due_date": "2026-03-08",
-      "amount": 19.25,
-      "currency": "EUR",
-      "days_overdue": 24,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 24.0,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-14",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "478137819882063081",
       "contact_id": "475586299122681088",
       "invoice_no": "2026-0478",
@@ -8961,6 +8914,57 @@
     }
   ],
   "active_invoices": [
+    {
+      "id": "483222298826900992",
+      "contact_id": "475694046479648573",
+      "invoice_no": "2026-1313",
+      "company": "EH Netherlands B.V.",
+      "invoice_date": "2026-04-01",
+      "due_date": "2026-05-01",
+      "amount": 396.86,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "483222314976019606",
+      "contact_id": "475694046479648573",
+      "invoice_no": "2026-1312",
+      "company": "EH Netherlands B.V.",
+      "invoice_date": "2026-04-01",
+      "due_date": "2026-05-01",
+      "amount": 828.75,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "483220712053540138",
+      "contact_id": "478134396996551941",
+      "invoice_no": "2026-1309",
+      "company": "Accompli Afbouw B.V.",
+      "invoice_date": "2026-04-01",
+      "due_date": "2026-05-01",
+      "amount": 891.01,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.3,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "483099958713517148",
       "contact_id": "471893339712521237",
@@ -15132,29 +15136,6 @@
       ]
     },
     {
-      "id": "474957062618482086",
-      "contact_id": "471617898275669620",
-      "invoice_no": "2025-5212",
-      "company": "Jaarbeurs B.V.",
-      "invoice_date": "2025-12-31",
-      "due_date": "2026-01-30",
-      "amount": 396.86,
-      "currency": "EUR",
-      "days_overdue": 61,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 61.1,
-      "level": "High",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-02-05",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "474957095766067192",
       "contact_id": "341331018868852448",
       "invoice_no": "2025-5205",
@@ -15168,52 +15149,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 61.6,
-      "level": "High",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-02-05",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "474327713741539326",
-      "contact_id": "471617898275669620",
-      "invoice_no": "2025-5172",
-      "company": "Jaarbeurs B.V.",
-      "invoice_date": "2025-12-31",
-      "due_date": "2026-01-30",
-      "amount": 828.75,
-      "currency": "EUR",
-      "days_overdue": 61,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 61.2,
-      "level": "High",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-02-05",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "474867743056725123",
-      "contact_id": "471617898275669620",
-      "invoice_no": "2025-5171",
-      "company": "Jaarbeurs B.V.",
-      "invoice_date": "2025-12-31",
-      "due_date": "2026-01-30",
-      "amount": 845.0,
-      "currency": "EUR",
-      "days_overdue": 61,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 61.3,
       "level": "High",
       "reminders": [
         {
@@ -16949,29 +16884,6 @@
       ]
     },
     {
-      "id": "478310593385727578",
-      "contact_id": "477492964732437622",
-      "invoice_no": "2026-0487",
-      "company": "Stichting ICTU",
-      "invoice_date": "2026-02-06",
-      "due_date": "2026-03-08",
-      "amount": 19.25,
-      "currency": "EUR",
-      "days_overdue": 24,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 24.0,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-14",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "478137819882063081",
       "contact_id": "475586299122681088",
       "invoice_no": "2026-0478",
@@ -17662,6 +17574,176 @@
     }
   ],
   "customers": {
+    "475694046479648573": {
+      "contact_id": "475694046479648573",
+      "company": "EH Netherlands B.V.",
+      "invoices": [
+        {
+          "id": "472600791288383375",
+          "contact_id": "475694046479648573",
+          "invoice_no": "2025-4780",
+          "company": "EH Netherlands B.V.",
+          "invoice_date": "2025-12-12",
+          "due_date": "2026-01-11",
+          "amount": 747.5,
+          "currency": "EUR",
+          "days_overdue": 80,
+          "bucket": "61-90 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 80.2,
+          "level": "URGENT",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-01-17",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "479596044694324403",
+          "contact_id": "475694046479648573",
+          "invoice_no": "2026-0726",
+          "company": "EH Netherlands B.V.",
+          "invoice_date": "2026-02-24",
+          "due_date": "2026-03-26",
+          "amount": 396.86,
+          "currency": "EUR",
+          "days_overdue": 6,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 6.1,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-04-01",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "483222314976019606",
+          "contact_id": "475694046479648573",
+          "invoice_no": "2026-1312",
+          "company": "EH Netherlands B.V.",
+          "invoice_date": "2026-04-01",
+          "due_date": "2026-05-01",
+          "amount": 828.75,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "483222298826900992",
+          "contact_id": "475694046479648573",
+          "invoice_no": "2026-1313",
+          "company": "EH Netherlands B.V.",
+          "invoice_date": "2026-04-01",
+          "due_date": "2026-05-01",
+          "amount": 396.86,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "481487356389492385",
+          "contact_id": "475694046479648573",
+          "invoice_no": "2026-1028",
+          "company": "EH Netherlands B.V.",
+          "invoice_date": "2026-03-13",
+          "due_date": "2026-04-12",
+          "amount": 396.86,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "483222670455867142",
+          "contact_id": "475694046479648573",
+          "invoice_no": "2026-1314",
+          "company": "EH Netherlands B.V.",
+          "invoice_date": "2026-04-01",
+          "due_date": "2026-05-01",
+          "amount": -396.86,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 2766.83,
+      "total_overdue": 1144.36,
+      "max_days": 80,
+      "invoice_count": 5,
+      "level": "URGENT"
+    },
+    "478134396996551941": {
+      "contact_id": "478134396996551941",
+      "company": "Accompli Afbouw B.V.",
+      "invoices": [
+        {
+          "id": "478853554178622722",
+          "contact_id": "478134396996551941",
+          "invoice_no": "2026-0914",
+          "company": "Accompli Afbouw B.V.",
+          "invoice_date": "2026-03-10",
+          "due_date": "2026-04-09",
+          "amount": 1070.27,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.3,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "483220712053540138",
+          "contact_id": "478134396996551941",
+          "invoice_no": "2026-1309",
+          "company": "Accompli Afbouw B.V.",
+          "invoice_date": "2026-04-01",
+          "due_date": "2026-05-01",
+          "amount": 891.01,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.3,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 1961.28,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 2,
+      "level": "Monitor"
+    },
     "471893339712521237": {
       "contact_id": "471893339712521237",
       "company": "SB Afbouw",
@@ -25116,80 +25198,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "475694046479648573": {
-      "contact_id": "475694046479648573",
-      "company": "EH Netherlands B.V.",
-      "invoices": [
-        {
-          "id": "472600791288383375",
-          "contact_id": "475694046479648573",
-          "invoice_no": "2025-4780",
-          "company": "EH Netherlands B.V.",
-          "invoice_date": "2025-12-12",
-          "due_date": "2026-01-11",
-          "amount": 747.5,
-          "currency": "EUR",
-          "days_overdue": 80,
-          "bucket": "61-90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 80.2,
-          "level": "URGENT",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-01-17",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "479596044694324403",
-          "contact_id": "475694046479648573",
-          "invoice_no": "2026-0726",
-          "company": "EH Netherlands B.V.",
-          "invoice_date": "2026-02-24",
-          "due_date": "2026-03-26",
-          "amount": 396.86,
-          "currency": "EUR",
-          "days_overdue": 6,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 6.1,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-04-01",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "481487356389492385",
-          "contact_id": "475694046479648573",
-          "invoice_no": "2026-1028",
-          "company": "EH Netherlands B.V.",
-          "invoice_date": "2026-03-13",
-          "due_date": "2026-04-12",
-          "amount": 396.86,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1541.22,
-      "total_overdue": 1144.36,
-      "max_days": 80,
-      "invoice_count": 3,
-      "level": "URGENT"
-    },
     "476238119020004913": {
       "contact_id": "476238119020004913",
       "company": "Interflow B.V.",
@@ -26056,34 +26064,6 @@
         }
       ],
       "total_open": 870.99,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "478134396996551941": {
-      "contact_id": "478134396996551941",
-      "company": "Accompli Afbouw B.V.",
-      "invoices": [
-        {
-          "id": "478853554178622722",
-          "contact_id": "478134396996551941",
-          "invoice_no": "2026-0914",
-          "company": "Accompli Afbouw B.V.",
-          "invoice_date": "2026-03-10",
-          "due_date": "2026-04-09",
-          "amount": 1070.27,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.3,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1070.27,
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
@@ -27448,109 +27428,6 @@
       "invoice_count": 1,
       "level": "High"
     },
-    "471617898275669620": {
-      "contact_id": "471617898275669620",
-      "company": "Jaarbeurs B.V.",
-      "invoices": [
-        {
-          "id": "474867743056725123",
-          "contact_id": "471617898275669620",
-          "invoice_no": "2025-5171",
-          "company": "Jaarbeurs B.V.",
-          "invoice_date": "2025-12-31",
-          "due_date": "2026-01-30",
-          "amount": 845.0,
-          "currency": "EUR",
-          "days_overdue": 61,
-          "bucket": "61-90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 61.3,
-          "level": "High",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-02-05",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "474327713741539326",
-          "contact_id": "471617898275669620",
-          "invoice_no": "2025-5172",
-          "company": "Jaarbeurs B.V.",
-          "invoice_date": "2025-12-31",
-          "due_date": "2026-01-30",
-          "amount": 828.75,
-          "currency": "EUR",
-          "days_overdue": 61,
-          "bucket": "61-90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 61.2,
-          "level": "High",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-02-05",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "474957062618482086",
-          "contact_id": "471617898275669620",
-          "invoice_no": "2025-5212",
-          "company": "Jaarbeurs B.V.",
-          "invoice_date": "2025-12-31",
-          "due_date": "2026-01-30",
-          "amount": 396.86,
-          "currency": "EUR",
-          "days_overdue": 61,
-          "bucket": "61-90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 61.1,
-          "level": "High",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-02-05",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "475694131290572742",
-          "contact_id": "471617898275669620",
-          "invoice_no": "2026-0060",
-          "company": "Jaarbeurs B.V.",
-          "invoice_date": "2026-01-08",
-          "due_date": "2026-02-07",
-          "amount": -845.0,
-          "currency": "EUR",
-          "days_overdue": 53,
-          "bucket": "31-60 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 53.3,
-          "level": "High",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-02-13",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 2070.61,
-      "total_overdue": 2070.61,
-      "max_days": 61,
-      "invoice_count": 3,
-      "level": "High"
-    },
     "471968504050877852": {
       "contact_id": "471968504050877852",
       "company": "Swan Vastgoed B.V.",
@@ -28624,40 +28501,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "477492964732437622": {
-      "contact_id": "477492964732437622",
-      "company": "Stichting ICTU",
-      "invoices": [
-        {
-          "id": "478310593385727578",
-          "contact_id": "477492964732437622",
-          "invoice_no": "2026-0487",
-          "company": "Stichting ICTU",
-          "invoice_date": "2026-02-06",
-          "due_date": "2026-03-08",
-          "amount": 19.25,
-          "currency": "EUR",
-          "days_overdue": 24,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 24.0,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-14",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 19.25,
-      "total_overdue": 19.25,
-      "max_days": 24,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "477684703443289774": {
       "contact_id": "477684703443289774",
       "company": "Van Nek Vastgoed I B.V.",
@@ -28738,6 +28581,23 @@
     }
   },
   "credit_invoices": [
+    {
+      "id": "483222670455867142",
+      "contact_id": "475694046479648573",
+      "invoice_no": "2026-1314",
+      "company": "EH Netherlands B.V.",
+      "invoice_date": "2026-04-01",
+      "due_date": "2026-05-01",
+      "amount": -396.86,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "483125991909099374",
       "contact_id": "458655648747358060",
@@ -29315,29 +29175,6 @@
         {
           "nr": 1,
           "date": "2026-02-26",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "475694131290572742",
-      "contact_id": "471617898275669620",
-      "invoice_no": "2026-0060",
-      "company": "Jaarbeurs B.V.",
-      "invoice_date": "2026-01-08",
-      "due_date": "2026-02-07",
-      "amount": -845.0,
-      "currency": "EUR",
-      "days_overdue": 53,
-      "bucket": "31-60 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 53.3,
-      "level": "High",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-02-13",
           "source": "berekend"
         }
       ]
