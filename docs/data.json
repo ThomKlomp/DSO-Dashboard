@@ -1,21 +1,21 @@
 {
-  "generated": "2026-04-01T12:42:44",
-  "dso": 47.9,
+  "generated": "2026-04-01T15:24:52",
+  "dso": 47.4,
   "dso_6m_avg": 35.4,
   "dso_target": 36,
-  "total_ar": 548794.56,
-  "total_ar_gross": 572435.28,
+  "total_ar": 543886.44,
+  "total_ar_gross": 567527.16,
   "total_ar_credit": -23640.72,
-  "invoice_count": 453,
-  "overdue_pct": 22.47,
-  "overdue_pct_6m": 24.78,
+  "invoice_count": 448,
+  "overdue_pct": 22.28,
+  "overdue_pct_6m": 24.75,
   "revenue_180": 2063816.48,
   "overdue_30": 45674.25,
   "overdue_60": 32737.36,
   "overdue_90": 20708.74,
   "aging": {
-    "Current": 449094.91,
-    "1-30 days": 77666.12,
+    "Current": 446371.04,
+    "1-30 days": 75481.87,
     "31-60 days": 12936.89,
     "61-90 days": 12028.62,
     ">90 days": 20708.74
@@ -142,10 +142,10 @@
     },
     {
       "date": "2026-04-01",
-      "total_ar": 548794.56,
-      "overdue_ar": 123340.37,
-      "overdue_pct": 22.47,
-      "dso": 47.9,
+      "total_ar": 543886.44,
+      "overdue_ar": 121156.12,
+      "overdue_pct": 22.28,
+      "dso": 47.4,
       "revenue_180": 2063816.48,
       "target": 36
     }
@@ -5745,23 +5745,6 @@
       "reminders": []
     },
     {
-      "id": "480680230550243177",
-      "contact_id": "457856940060444466",
-      "invoice_no": "2026-0871",
-      "company": "Interieurbouw Heusden B.V.",
-      "invoice_date": "2026-03-05",
-      "due_date": "2026-04-04",
-      "amount": 1321.82,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.4,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "480680231238108295",
       "contact_id": "452664811526817652",
       "invoice_no": "2026-0870",
@@ -6115,40 +6098,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.7,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "480680255940461776",
-      "contact_id": "457933730203305786",
-      "invoice_no": "2026-0838",
-      "company": "Van Ginkel Afbouwbedrijf B.V.",
-      "invoice_date": "2026-03-04",
-      "due_date": "2026-04-03",
-      "amount": 508.74,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479303741640542102",
-      "contact_id": "457933730203305786",
-      "invoice_no": "2026-0837",
-      "company": "Van Ginkel Afbouwbedrijf B.V.",
-      "invoice_date": "2026-03-04",
-      "due_date": "2026-04-03",
-      "amount": 893.31,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -8067,23 +8016,6 @@
       "reminders": []
     },
     {
-      "id": "479952368101754688",
-      "contact_id": "467750699387586406",
-      "invoice_no": "2026-0771",
-      "company": "Instore Supplies",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 542.34,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 5.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "479952364927714498",
       "contact_id": "360816065795589490",
       "invoice_no": "2026-0767",
@@ -8571,29 +8503,6 @@
       "state": "reminded",
       "is_bad_debt": false,
       "score": 12.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-26",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "479303706611811371",
-      "contact_id": "474326144833815590",
-      "invoice_no": "2026-0640",
-      "company": "De projectgroep B.V.",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 1641.91,
-      "currency": "EUR",
-      "days_overdue": 12,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 12.5,
       "level": "Monitor",
       "reminders": [
         {
@@ -14289,23 +14198,6 @@
       "reminders": []
     },
     {
-      "id": "480680230550243177",
-      "contact_id": "457856940060444466",
-      "invoice_no": "2026-0871",
-      "company": "Interieurbouw Heusden B.V.",
-      "invoice_date": "2026-03-05",
-      "due_date": "2026-04-04",
-      "amount": 1321.82,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.4,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "480680231238108295",
       "contact_id": "452664811526817652",
       "invoice_no": "2026-0870",
@@ -14659,40 +14551,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.7,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "480680255940461776",
-      "contact_id": "457933730203305786",
-      "invoice_no": "2026-0838",
-      "company": "Van Ginkel Afbouwbedrijf B.V.",
-      "invoice_date": "2026-03-04",
-      "due_date": "2026-04-03",
-      "amount": 508.74,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "479303741640542102",
-      "contact_id": "457933730203305786",
-      "invoice_no": "2026-0837",
-      "company": "Van Ginkel Afbouwbedrijf B.V.",
-      "invoice_date": "2026-03-04",
-      "due_date": "2026-04-03",
-      "amount": 893.31,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -16272,23 +16130,6 @@
       "reminders": []
     },
     {
-      "id": "479952368101754688",
-      "contact_id": "467750699387586406",
-      "invoice_no": "2026-0771",
-      "company": "Instore Supplies",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 542.34,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 5.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "479952364927714498",
       "contact_id": "360816065795589490",
       "invoice_no": "2026-0767",
@@ -16776,29 +16617,6 @@
       "state": "reminded",
       "is_bad_debt": false,
       "score": 12.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-26",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "479303706611811371",
-      "contact_id": "474326144833815590",
-      "invoice_no": "2026-0640",
-      "company": "De projectgroep B.V.",
-      "invoice_date": "2026-02-18",
-      "due_date": "2026-03-20",
-      "amount": 1641.91,
-      "currency": "EUR",
-      "days_overdue": 12,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 12.5,
       "level": "Monitor",
       "reminders": [
         {
@@ -24560,29 +24378,6 @@
       "company": "De projectgroep B.V.",
       "invoices": [
         {
-          "id": "479303706611811371",
-          "contact_id": "474326144833815590",
-          "invoice_no": "2026-0640",
-          "company": "De projectgroep B.V.",
-          "invoice_date": "2026-02-18",
-          "due_date": "2026-03-20",
-          "amount": 1641.91,
-          "currency": "EUR",
-          "days_overdue": 12,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 12.5,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-26",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
           "id": "481228170153952488",
           "contact_id": "474326144833815590",
           "invoice_no": "2026-0964",
@@ -24634,10 +24429,10 @@
           "reminders": []
         }
       ],
-      "total_open": 9985.45,
-      "total_overdue": 1641.91,
-      "max_days": 12,
-      "invoice_count": 4,
+      "total_open": 8343.54,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 3,
       "level": "Monitor"
     },
     "440618485536523334": {
@@ -26761,23 +26556,6 @@
       "company": "Instore Supplies",
       "invoices": [
         {
-          "id": "479952368101754688",
-          "contact_id": "467750699387586406",
-          "invoice_no": "2026-0771",
-          "company": "Instore Supplies",
-          "invoice_date": "2026-02-25",
-          "due_date": "2026-03-27",
-          "amount": 542.34,
-          "currency": "EUR",
-          "days_overdue": 5,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 5.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "480680229183948396",
           "contact_id": "467750699387586406",
           "invoice_no": "2026-0872",
@@ -26795,35 +26573,7 @@
           "reminders": []
         }
       ],
-      "total_open": 922.18,
-      "total_overdue": 542.34,
-      "max_days": 5,
-      "invoice_count": 2,
-      "level": "Monitor"
-    },
-    "457856940060444466": {
-      "contact_id": "457856940060444466",
-      "company": "Interieurbouw Heusden B.V.",
-      "invoices": [
-        {
-          "id": "480680230550243177",
-          "contact_id": "457856940060444466",
-          "invoice_no": "2026-0871",
-          "company": "Interieurbouw Heusden B.V.",
-          "invoice_date": "2026-03-05",
-          "due_date": "2026-04-04",
-          "amount": 1321.82,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.4,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1321.82,
+      "total_open": 379.84,
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
@@ -27147,51 +26897,6 @@
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "457933730203305786": {
-      "contact_id": "457933730203305786",
-      "company": "Van Ginkel Afbouwbedrijf B.V.",
-      "invoices": [
-        {
-          "id": "479303741640542102",
-          "contact_id": "457933730203305786",
-          "invoice_no": "2026-0837",
-          "company": "Van Ginkel Afbouwbedrijf B.V.",
-          "invoice_date": "2026-03-04",
-          "due_date": "2026-04-03",
-          "amount": 893.31,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.3,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "480680255940461776",
-          "contact_id": "457933730203305786",
-          "invoice_no": "2026-0838",
-          "company": "Van Ginkel Afbouwbedrijf B.V.",
-          "invoice_date": "2026-03-04",
-          "due_date": "2026-04-03",
-          "amount": 508.74,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1402.05,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 2,
       "level": "Monitor"
     },
     "473506831172371964": {
