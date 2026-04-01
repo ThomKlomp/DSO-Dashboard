@@ -1,21 +1,21 @@
 {
-  "generated": "2026-04-01T07:20:57",
-  "dso": 48.2,
+  "generated": "2026-04-01T09:08:48",
+  "dso": 47.9,
   "dso_6m_avg": 35.4,
   "dso_target": 36,
-  "total_ar": 553044.69,
-  "total_ar_gross": 578246.79,
+  "total_ar": 548794.56,
+  "total_ar_gross": 573996.66,
   "total_ar_credit": -25202.1,
-  "invoice_count": 455,
-  "overdue_pct": 23.35,
-  "overdue_pct_6m": 24.89,
+  "invoice_count": 454,
+  "overdue_pct": 22.76,
+  "overdue_pct_6m": 24.82,
   "revenue_180": 2063816.48,
   "overdue_30": 45674.25,
   "overdue_60": 32737.36,
   "overdue_90": 20708.74,
   "aging": {
     "Current": 449094.91,
-    "1-30 days": 83477.63,
+    "1-30 days": 79227.5,
     "31-60 days": 12936.89,
     "61-90 days": 12028.62,
     ">90 days": 20708.74
@@ -142,10 +142,10 @@
     },
     {
       "date": "2026-04-01",
-      "total_ar": 553044.69,
-      "overdue_ar": 129151.88,
-      "overdue_pct": 23.35,
-      "dso": 48.2,
+      "total_ar": 548794.56,
+      "overdue_ar": 124901.75,
+      "overdue_pct": 22.76,
+      "dso": 47.9,
       "revenue_180": 2063816.48,
       "target": 36
     }
@@ -6662,29 +6662,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 26.3,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-12",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "478137779308463625",
-      "contact_id": "441530679613720565",
-      "invoice_no": "2026-0402",
-      "company": "DeFabrique Evenementen B.V.",
-      "invoice_date": "2026-02-04",
-      "due_date": "2026-03-06",
-      "amount": 4250.13,
-      "currency": "EUR",
-      "days_overdue": 26,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 27.3,
       "level": "Monitor",
       "reminders": [
         {
@@ -15078,29 +15055,6 @@
       ]
     },
     {
-      "id": "478137779308463625",
-      "contact_id": "441530679613720565",
-      "invoice_no": "2026-0402",
-      "company": "DeFabrique Evenementen B.V.",
-      "invoice_date": "2026-02-04",
-      "due_date": "2026-03-06",
-      "amount": 4250.13,
-      "currency": "EUR",
-      "days_overdue": 26,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 27.3,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-12",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "477963913413002541",
       "contact_id": "460214790013322624",
       "invoice_no": "2026-0378",
@@ -18727,29 +18681,6 @@
       "company": "DeFabrique Evenementen B.V.",
       "invoices": [
         {
-          "id": "478137779308463625",
-          "contact_id": "441530679613720565",
-          "invoice_no": "2026-0402",
-          "company": "DeFabrique Evenementen B.V.",
-          "invoice_date": "2026-02-04",
-          "due_date": "2026-03-06",
-          "amount": 4250.13,
-          "currency": "EUR",
-          "days_overdue": 26,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 27.3,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-12",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
           "id": "479478269584868753",
           "contact_id": "441530679613720565",
           "invoice_no": "2026-0708",
@@ -18892,10 +18823,10 @@
           "reminders": []
         }
       ],
-      "total_open": 13424.13,
-      "total_overdue": 4250.13,
-      "max_days": 26,
-      "invoice_count": 7,
+      "total_open": 9174.0,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 6,
       "level": "Monitor"
     },
     "473058978161493541": {
