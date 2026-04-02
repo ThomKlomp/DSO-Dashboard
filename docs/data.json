@@ -1,20 +1,20 @@
 {
-  "generated": "2026-04-02T07:05:22",
-  "dso": 47.6,
-  "dso_6m_avg": 36.2,
+  "generated": "2026-04-02T08:57:57",
+  "dso": 47.4,
+  "dso_6m_avg": 36.1,
   "dso_target": 36,
-  "total_ar": 546091.16,
-  "total_ar_gross": 569283.74,
+  "total_ar": 543540.93,
+  "total_ar_gross": 566733.51,
   "total_ar_credit": -23192.58,
-  "invoice_count": 447,
-  "overdue_pct": 21.8,
-  "overdue_pct_6m": 24.51,
+  "invoice_count": 445,
+  "overdue_pct": 21.91,
+  "overdue_pct_6m": 24.52,
   "revenue_180": 2064272.13,
   "overdue_30": 43603.64,
   "overdue_60": 30666.75,
   "overdue_90": 20708.74,
   "aging": {
-    "Current": 450217.48,
+    "Current": 447667.25,
     "1-30 days": 75462.62,
     "31-60 days": 12936.89,
     "61-90 days": 9958.01,
@@ -151,10 +151,10 @@
     },
     {
       "date": "2026-04-02",
-      "total_ar": 546091.16,
+      "total_ar": 543540.93,
       "overdue_ar": 119066.26,
-      "overdue_pct": 21.8,
-      "dso": 47.6,
+      "overdue_pct": 21.91,
+      "dso": 47.4,
       "revenue_180": 2064272.13,
       "target": 36
     }
@@ -2911,23 +2911,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481856043379328855",
-      "contact_id": "480675069286155732",
-      "invoice_no": "2026-1113",
-      "company": "Creon B.V.",
-      "invoice_date": "2026-03-18",
-      "due_date": "2026-04-17",
-      "amount": 260.0,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -6141,23 +6124,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "480680253607380801",
-      "contact_id": "453870471498171983",
-      "invoice_no": "2026-0841",
-      "company": "Svedex Deuren B.V.",
-      "invoice_date": "2026-03-04",
-      "due_date": "2026-04-03",
-      "amount": 2290.23,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.7,
       "level": "Monitor",
       "reminders": []
     },
@@ -11499,23 +11465,6 @@
       "reminders": []
     },
     {
-      "id": "481856043379328855",
-      "contact_id": "480675069286155732",
-      "invoice_no": "2026-1113",
-      "company": "Creon B.V.",
-      "invoice_date": "2026-03-18",
-      "due_date": "2026-04-17",
-      "amount": 260.0,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481768830727619762",
       "contact_id": "431738863135754199",
       "invoice_no": "2026-1112",
@@ -14674,23 +14623,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "480680253607380801",
-      "contact_id": "453870471498171983",
-      "invoice_no": "2026-0841",
-      "company": "Svedex Deuren B.V.",
-      "invoice_date": "2026-03-04",
-      "due_date": "2026-04-03",
-      "amount": 2290.23,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.7,
       "level": "Monitor",
       "reminders": []
     },
@@ -24581,34 +24513,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "480675069286155732": {
-      "contact_id": "480675069286155732",
-      "company": "Creon B.V.",
-      "invoices": [
-        {
-          "id": "481856043379328855",
-          "contact_id": "480675069286155732",
-          "invoice_no": "2026-1113",
-          "company": "Creon B.V.",
-          "invoice_date": "2026-03-18",
-          "due_date": "2026-04-17",
-          "amount": 260.0,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 260.0,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "462359546390643790": {
       "contact_id": "462359546390643790",
       "company": "Interior Design Concepts B.V.",
@@ -27242,34 +27146,6 @@
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 2,
-      "level": "Monitor"
-    },
-    "453870471498171983": {
-      "contact_id": "453870471498171983",
-      "company": "Svedex Deuren B.V.",
-      "invoices": [
-        {
-          "id": "480680253607380801",
-          "contact_id": "453870471498171983",
-          "invoice_no": "2026-0841",
-          "company": "Svedex Deuren B.V.",
-          "invoice_date": "2026-03-04",
-          "due_date": "2026-04-03",
-          "amount": 2290.23,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.7,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 2290.23,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
       "level": "Monitor"
     },
     "473506831172371964": {
