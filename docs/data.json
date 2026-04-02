@@ -1,21 +1,21 @@
 {
-  "generated": "2026-04-02T15:15:54",
-  "dso": 48.5,
+  "generated": "2026-04-02T16:50:16",
+  "dso": 48.6,
   "dso_6m_avg": 36.2,
   "dso_target": 36,
-  "total_ar": 568825.91,
-  "total_ar_gross": 592018.49,
+  "total_ar": 571030.49,
+  "total_ar_gross": 594223.07,
   "total_ar_credit": -23192.58,
-  "invoice_count": 443,
-  "overdue_pct": 19.98,
-  "overdue_pct_6m": 24.28,
-  "revenue_180": 2111696.42,
+  "invoice_count": 445,
+  "overdue_pct": 19.82,
+  "overdue_pct_6m": 24.26,
+  "revenue_180": 2114341.88,
   "overdue_30": 41617.07,
   "overdue_60": 30069.56,
   "overdue_90": 20708.74,
   "aging": {
-    "Current": 478375.24,
-    "1-30 days": 72026.18,
+    "Current": 481020.7,
+    "1-30 days": 71585.3,
     "31-60 days": 11547.51,
     "61-90 days": 9360.82,
     ">90 days": 20708.74
@@ -151,15 +151,66 @@
     },
     {
       "date": "2026-04-02",
-      "total_ar": 568825.91,
-      "overdue_ar": 113643.25,
-      "overdue_pct": 19.98,
-      "dso": 48.5,
-      "revenue_180": 2111696.42,
+      "total_ar": 571030.49,
+      "overdue_ar": 113202.37,
+      "overdue_pct": 19.82,
+      "dso": 48.6,
+      "revenue_180": 2114341.88,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "482503490126480496",
+      "contact_id": "477946339176482069",
+      "invoice_no": "2026-1335",
+      "company": "Gerko Afbouw B.V.",
+      "invoice_date": "2026-04-02",
+      "due_date": "2026-05-02",
+      "amount": 776.82,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "479303714545337740",
+      "contact_id": "477946339176482069",
+      "invoice_no": "2026-1334",
+      "company": "Gerko Afbouw B.V.",
+      "invoice_date": "2026-04-02",
+      "due_date": "2026-05-02",
+      "amount": 566.82,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "478853550131119315",
+      "contact_id": "477946339176482069",
+      "invoice_no": "2026-1333",
+      "company": "Gerko Afbouw B.V.",
+      "invoice_date": "2026-04-02",
+      "due_date": "2026-05-02",
+      "amount": 1301.82,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.4,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "483111682067924444",
       "contact_id": "434300583732577911",
@@ -8101,29 +8152,6 @@
       ]
     },
     {
-      "id": "479952350772987122",
-      "contact_id": "419691676013954973",
-      "invoice_no": "2026-0754",
-      "company": "Afbouw- en montagebedrijf Boom & Zonen BV",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 440.88,
-      "currency": "EUR",
-      "days_overdue": 6,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 6.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-02",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "479952350046323813",
       "contact_id": "371405759913658123",
       "invoice_no": "2026-0750",
@@ -8963,6 +8991,57 @@
     }
   ],
   "active_invoices": [
+    {
+      "id": "482503490126480496",
+      "contact_id": "477946339176482069",
+      "invoice_no": "2026-1335",
+      "company": "Gerko Afbouw B.V.",
+      "invoice_date": "2026-04-02",
+      "due_date": "2026-05-02",
+      "amount": 776.82,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "479303714545337740",
+      "contact_id": "477946339176482069",
+      "invoice_no": "2026-1334",
+      "company": "Gerko Afbouw B.V.",
+      "invoice_date": "2026-04-02",
+      "due_date": "2026-05-02",
+      "amount": 566.82,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "478853550131119315",
+      "contact_id": "477946339176482069",
+      "invoice_no": "2026-1333",
+      "company": "Gerko Afbouw B.V.",
+      "invoice_date": "2026-04-02",
+      "due_date": "2026-05-02",
+      "amount": 1301.82,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.4,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "483111682067924444",
       "contact_id": "434300583732577911",
@@ -16208,29 +16287,6 @@
       ]
     },
     {
-      "id": "479952350772987122",
-      "contact_id": "419691676013954973",
-      "invoice_no": "2026-0754",
-      "company": "Afbouw- en montagebedrijf Boom & Zonen BV",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 440.88,
-      "currency": "EUR",
-      "days_overdue": 6,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 6.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-02",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "479952350046323813",
       "contact_id": "371405759913658123",
       "invoice_no": "2026-0750",
@@ -17657,6 +17713,68 @@
     }
   ],
   "customers": {
+    "477946339176482069": {
+      "contact_id": "477946339176482069",
+      "company": "Gerko Afbouw B.V.",
+      "invoices": [
+        {
+          "id": "478853550131119315",
+          "contact_id": "477946339176482069",
+          "invoice_no": "2026-1333",
+          "company": "Gerko Afbouw B.V.",
+          "invoice_date": "2026-04-02",
+          "due_date": "2026-05-02",
+          "amount": 1301.82,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.4,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "482503490126480496",
+          "contact_id": "477946339176482069",
+          "invoice_no": "2026-1335",
+          "company": "Gerko Afbouw B.V.",
+          "invoice_date": "2026-04-02",
+          "due_date": "2026-05-02",
+          "amount": 776.82,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "479303714545337740",
+          "contact_id": "477946339176482069",
+          "invoice_no": "2026-1334",
+          "company": "Gerko Afbouw B.V.",
+          "invoice_date": "2026-04-02",
+          "due_date": "2026-05-02",
+          "amount": 566.82,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 2645.46,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 3,
+      "level": "Monitor"
+    },
     "434300583732577911": {
       "contact_id": "434300583732577911",
       "company": "BBM Montage B.V.",
@@ -28363,40 +28481,6 @@
       "total_overdue": 1783.8,
       "max_days": 20,
       "invoice_count": 2,
-      "level": "Monitor"
-    },
-    "419691676013954973": {
-      "contact_id": "419691676013954973",
-      "company": "Afbouw- en montagebedrijf Boom & Zonen BV",
-      "invoices": [
-        {
-          "id": "479952350772987122",
-          "contact_id": "419691676013954973",
-          "invoice_no": "2026-0754",
-          "company": "Afbouw- en montagebedrijf Boom & Zonen BV",
-          "invoice_date": "2026-02-25",
-          "due_date": "2026-03-27",
-          "amount": 440.88,
-          "currency": "EUR",
-          "days_overdue": 6,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 6.1,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-04-02",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 440.88,
-      "total_overdue": 440.88,
-      "max_days": 6,
-      "invoice_count": 1,
       "level": "Monitor"
     },
     "473048745125086391": {
