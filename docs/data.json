@@ -1,22 +1,22 @@
 {
-  "generated": "2026-04-07T07:12:40",
-  "dso": 47.9,
+  "generated": "2026-04-07T09:04:43",
+  "dso": 47.7,
   "dso_6m_avg": 38.1,
   "dso_target": 36,
-  "total_ar": 562568.74,
-  "total_ar_gross": 585891.32,
+  "total_ar": 560687.12,
+  "total_ar_gross": 584009.7,
   "total_ar_credit": -23322.58,
-  "invoice_count": 435,
-  "overdue_pct": 24.36,
-  "overdue_pct_6m": 24.28,
+  "invoice_count": 433,
+  "overdue_pct": 24.11,
+  "overdue_pct_6m": 24.25,
   "revenue_180": 2114341.88,
-  "overdue_30": 42626.82,
+  "overdue_30": 42346.02,
   "overdue_60": 33496.71,
   "overdue_90": 21153.5,
   "aging": {
     "Current": 448836.46,
-    "1-30 days": 94428.04,
-    "31-60 days": 9130.11,
+    "1-30 days": 92827.22,
+    "31-60 days": 8849.31,
     "61-90 days": 12343.21,
     ">90 days": 21153.5
   },
@@ -178,10 +178,10 @@
     },
     {
       "date": "2026-04-07",
-      "total_ar": 562568.74,
-      "overdue_ar": 137054.86,
-      "overdue_pct": 24.36,
-      "dso": 47.9,
+      "total_ar": 560687.12,
+      "overdue_ar": 135173.24,
+      "overdue_pct": 24.11,
+      "dso": 47.7,
       "revenue_180": 2114341.88,
       "target": 36
     }
@@ -6224,13 +6224,13 @@
       "company": "Rikkert Afbouw B.V.",
       "invoice_date": "2026-03-05",
       "due_date": "2026-04-04",
-      "amount": 1437.22,
+      "amount": 904.78,
       "currency": "EUR",
       "days_overdue": 3,
       "bucket": "1-30 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 3.4,
+      "score": 3.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -6486,13 +6486,13 @@
       "company": "Schadenberg Dakwerken B.V.",
       "invoice_date": "2026-02-20",
       "due_date": "2026-02-27",
-      "amount": 780.0,
+      "amount": 499.2,
       "currency": "EUR",
       "days_overdue": 39,
       "bucket": "31-60 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 39.2,
+      "score": 39.1,
       "level": "Monitor",
       "reminders": [
         {
@@ -8320,29 +8320,6 @@
       ]
     },
     {
-      "id": "480032742853051991",
-      "contact_id": "477596835087647760",
-      "invoice_no": "2026-0741",
-      "company": "VolkerWessels Materieel & Logistiek",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 465.29,
-      "currency": "EUR",
-      "days_overdue": 11,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 11.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-02",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "479952346140378199",
       "contact_id": "464988369501292197",
       "invoice_no": "2026-0737",
@@ -8412,42 +8389,19 @@
       ]
     },
     {
-      "id": "478137825864189228",
-      "contact_id": "463006006743402409",
-      "invoice_no": "2026-0731",
-      "company": "Schadenberg Dakwerken B.V.",
-      "invoice_date": "2026-02-24",
-      "due_date": "2026-03-26",
-      "amount": 162.97,
-      "currency": "EUR",
-      "days_overdue": 12,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 12.0,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-01",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "479601420293637756",
       "contact_id": "463006006743402409",
       "invoice_no": "2026-0721",
       "company": "Schadenberg Dakwerken B.V.",
       "invoice_date": "2026-02-23",
       "due_date": "2026-03-25",
-      "amount": 611.81,
+      "amount": 171.69,
       "currency": "EUR",
       "days_overdue": 13,
       "bucket": "1-30 days",
       "state": "reminded",
       "is_bad_debt": false,
-      "score": 13.2,
+      "score": 13.1,
       "level": "Monitor",
       "reminders": [
         {
@@ -14529,13 +14483,13 @@
       "company": "Rikkert Afbouw B.V.",
       "invoice_date": "2026-03-05",
       "due_date": "2026-04-04",
-      "amount": 1437.22,
+      "amount": 904.78,
       "currency": "EUR",
       "days_overdue": 3,
       "bucket": "1-30 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 3.4,
+      "score": 3.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -14768,13 +14722,13 @@
       "company": "Schadenberg Dakwerken B.V.",
       "invoice_date": "2026-02-20",
       "due_date": "2026-02-27",
-      "amount": 780.0,
+      "amount": 499.2,
       "currency": "EUR",
       "days_overdue": 39,
       "bucket": "31-60 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 39.2,
+      "score": 39.1,
       "level": "Monitor",
       "reminders": [
         {
@@ -16303,29 +16257,6 @@
       ]
     },
     {
-      "id": "480032742853051991",
-      "contact_id": "477596835087647760",
-      "invoice_no": "2026-0741",
-      "company": "VolkerWessels Materieel & Logistiek",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 465.29,
-      "currency": "EUR",
-      "days_overdue": 11,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 11.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-02",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "479952346140378199",
       "contact_id": "464988369501292197",
       "invoice_no": "2026-0737",
@@ -16395,42 +16326,19 @@
       ]
     },
     {
-      "id": "478137825864189228",
-      "contact_id": "463006006743402409",
-      "invoice_no": "2026-0731",
-      "company": "Schadenberg Dakwerken B.V.",
-      "invoice_date": "2026-02-24",
-      "due_date": "2026-03-26",
-      "amount": 162.97,
-      "currency": "EUR",
-      "days_overdue": 12,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 12.0,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-01",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "479601420293637756",
       "contact_id": "463006006743402409",
       "invoice_no": "2026-0721",
       "company": "Schadenberg Dakwerken B.V.",
       "invoice_date": "2026-02-23",
       "due_date": "2026-03-25",
-      "amount": 611.81,
+      "amount": 171.69,
       "currency": "EUR",
       "days_overdue": 13,
       "bucket": "1-30 days",
       "state": "reminded",
       "is_bad_debt": false,
-      "score": 13.2,
+      "score": 13.1,
       "level": "Monitor",
       "reminders": [
         {
@@ -19071,23 +18979,6 @@
       "company": "Rikkert Afbouw B.V.",
       "invoices": [
         {
-          "id": "479952377606047485",
-          "contact_id": "469452842013295875",
-          "invoice_no": "2026-0849",
-          "company": "Rikkert Afbouw B.V.",
-          "invoice_date": "2026-03-05",
-          "due_date": "2026-04-04",
-          "amount": 1437.22,
-          "currency": "EUR",
-          "days_overdue": 3,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 3.4,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "479303735826188139",
           "contact_id": "469452842013295875",
           "invoice_no": "2026-0860",
@@ -19112,6 +19003,23 @@
           "invoice_date": "2026-03-05",
           "due_date": "2026-04-04",
           "amount": 1053.61,
+          "currency": "EUR",
+          "days_overdue": 3,
+          "bucket": "1-30 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 3.3,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "479952377606047485",
+          "contact_id": "469452842013295875",
+          "invoice_no": "2026-0849",
+          "company": "Rikkert Afbouw B.V.",
+          "invoice_date": "2026-03-05",
+          "due_date": "2026-04-04",
+          "amount": 904.78,
           "currency": "EUR",
           "days_overdue": 3,
           "bucket": "1-30 days",
@@ -19173,8 +19081,8 @@
           "reminders": []
         }
       ],
-      "total_open": 8223.3,
-      "total_overdue": 3549.64,
+      "total_open": 7690.86,
+      "total_overdue": 3017.2,
       "max_days": 3,
       "invoice_count": 6,
       "level": "Monitor"
@@ -21783,29 +21691,6 @@
       "company": "VolkerWessels Materieel & Logistiek",
       "invoices": [
         {
-          "id": "480032742853051991",
-          "contact_id": "477596835087647760",
-          "invoice_no": "2026-0741",
-          "company": "VolkerWessels Materieel & Logistiek",
-          "invoice_date": "2026-02-25",
-          "due_date": "2026-03-27",
-          "amount": 465.29,
-          "currency": "EUR",
-          "days_overdue": 11,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 11.1,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-04-02",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
           "id": "479952394914891207",
           "contact_id": "477596835087647760",
           "invoice_no": "2026-0873",
@@ -21925,10 +21810,10 @@
           "reminders": []
         }
       ],
-      "total_open": 4009.85,
-      "total_overdue": 877.58,
-      "max_days": 11,
-      "invoice_count": 8,
+      "total_open": 3544.56,
+      "total_overdue": 412.29,
+      "max_days": 2,
+      "invoice_count": 7,
       "level": "Monitor"
     },
     "483028843060266134": {
@@ -26848,13 +26733,13 @@
           "company": "Schadenberg Dakwerken B.V.",
           "invoice_date": "2026-02-20",
           "due_date": "2026-02-27",
-          "amount": 780.0,
+          "amount": 499.2,
           "currency": "EUR",
           "days_overdue": 39,
           "bucket": "31-60 days",
           "state": "late",
           "is_bad_debt": false,
-          "score": 39.2,
+          "score": 39.1,
           "level": "Monitor",
           "reminders": [
             {
@@ -26871,13 +26756,13 @@
           "company": "Schadenberg Dakwerken B.V.",
           "invoice_date": "2026-02-23",
           "due_date": "2026-03-25",
-          "amount": 611.81,
+          "amount": 171.69,
           "currency": "EUR",
           "days_overdue": 13,
           "bucket": "1-30 days",
           "state": "reminded",
           "is_bad_debt": false,
-          "score": 13.2,
+          "score": 13.1,
           "level": "Monitor",
           "reminders": [
             {
@@ -26886,35 +26771,12 @@
               "source": "berekend"
             }
           ]
-        },
-        {
-          "id": "478137825864189228",
-          "contact_id": "463006006743402409",
-          "invoice_no": "2026-0731",
-          "company": "Schadenberg Dakwerken B.V.",
-          "invoice_date": "2026-02-24",
-          "due_date": "2026-03-26",
-          "amount": 162.97,
-          "currency": "EUR",
-          "days_overdue": 12,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 12.0,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-04-01",
-              "source": "berekend"
-            }
-          ]
         }
       ],
-      "total_open": 1554.78,
-      "total_overdue": 1554.78,
+      "total_open": 670.89,
+      "total_overdue": 670.89,
       "max_days": 39,
-      "invoice_count": 3,
+      "invoice_count": 2,
       "level": "Monitor"
     },
     "403758974173710006": {
