@@ -1,23 +1,23 @@
 {
-  "generated": "2026-04-07T10:57:34",
-  "dso": 47.5,
+  "generated": "2026-04-07T12:44:16",
+  "dso": 47.9,
   "dso_6m_avg": 38.1,
   "dso_target": 36,
-  "total_ar": 558525.4,
-  "total_ar_gross": 581847.98,
-  "total_ar_credit": -23322.58,
-  "invoice_count": 431,
-  "overdue_pct": 23.81,
-  "overdue_pct_6m": 24.22,
-  "revenue_180": 2114341.88,
-  "overdue_30": 40184.3,
-  "overdue_60": 31334.99,
+  "total_ar": 564070.27,
+  "total_ar_gross": 586451.46,
+  "total_ar_credit": -22381.19,
+  "invoice_count": 430,
+  "overdue_pct": 23.41,
+  "overdue_pct_6m": 24.18,
+  "revenue_180": 2119886.75,
+  "overdue_30": 39242.91,
+  "overdue_60": 30393.6,
   "overdue_90": 18991.78,
   "aging": {
-    "Current": 448836.46,
+    "Current": 454381.33,
     "1-30 days": 92827.22,
     "31-60 days": 8849.31,
-    "61-90 days": 12343.21,
+    "61-90 days": 11401.82,
     ">90 days": 18991.78
   },
   "history": [
@@ -178,15 +178,32 @@
     },
     {
       "date": "2026-04-07",
-      "total_ar": 558525.4,
-      "overdue_ar": 133011.52,
-      "overdue_pct": 23.81,
-      "dso": 47.5,
-      "revenue_180": 2114341.88,
+      "total_ar": 564070.27,
+      "overdue_ar": 132070.13,
+      "overdue_pct": 23.41,
+      "dso": 47.9,
+      "revenue_180": 2119886.75,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "483111763194152941",
+      "contact_id": "438259027773753188",
+      "invoice_no": "2026-1336",
+      "company": "House of Sports",
+      "invoice_date": "2026-04-07",
+      "due_date": "2026-05-07",
+      "amount": 6168.25,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 1.9,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "482503490126480496",
       "contact_id": "477946339176482069",
@@ -2122,23 +2139,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "482683892074021991",
-      "contact_id": "463991453647898614",
-      "invoice_no": "2026-1205",
-      "company": "Floris Marsman Marsman Rental Gww",
-      "invoice_date": "2026-03-26",
-      "due_date": "2026-04-25",
-      "amount": 623.38,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -4315,23 +4315,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481480372526253444",
-      "contact_id": "423677100806899084",
-      "invoice_no": "2026-1031",
-      "company": "KEK B.V.",
-      "invoice_date": "2026-03-13",
-      "due_date": "2026-04-12",
-      "amount": -941.39,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
@@ -7262,29 +7245,6 @@
       ]
     },
     {
-      "id": "473522438845498867",
-      "contact_id": "423677100806899084",
-      "invoice_no": "2025-4839",
-      "company": "KEK B.V.",
-      "invoice_date": "2025-12-15",
-      "due_date": "2026-01-14",
-      "amount": 941.39,
-      "currency": "EUR",
-      "days_overdue": 83,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 83.3,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-01-20",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "472600791288383375",
       "contact_id": "475694046479648573",
       "invoice_no": "2025-4780",
@@ -7326,29 +7286,6 @@
         {
           "nr": 1,
           "date": "2026-01-17",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "472148385463272980",
-      "contact_id": "434302654430053793",
-      "invoice_no": "2025-4700",
-      "company": "Tom Veldhuis",
-      "invoice_date": "2025-12-10",
-      "due_date": "2026-01-09",
-      "amount": 372.68,
-      "currency": "EUR",
-      "days_overdue": 88,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 88.1,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-01-15",
           "source": "berekend"
         }
       ]
@@ -8757,6 +8694,39 @@
       ]
     },
     {
+      "id": "472148385463272980",
+      "contact_id": "434302654430053793",
+      "invoice_no": "2025-4700",
+      "company": "Tom Veldhuis",
+      "invoice_date": "2025-12-10",
+      "due_date": "2026-01-09",
+      "amount": 372.68,
+      "currency": "EUR",
+      "days_overdue": 88,
+      "bucket": "61-90 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 88.1,
+      "level": "URGENT",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-01-15",
+          "source": "berekend"
+        },
+        {
+          "nr": 2,
+          "date": "2026-02-08",
+          "source": "berekend"
+        },
+        {
+          "nr": 3,
+          "date": "2026-03-10",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
       "id": "472160473506121043",
       "contact_id": "472160408892868534",
       "invoice_no": "2025-4504",
@@ -8791,6 +8761,23 @@
     }
   ],
   "active_invoices": [
+    {
+      "id": "483111763194152941",
+      "contact_id": "438259027773753188",
+      "invoice_no": "2026-1336",
+      "company": "House of Sports",
+      "invoice_date": "2026-04-07",
+      "due_date": "2026-05-07",
+      "amount": 6168.25,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 1.9,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "482503490126480496",
       "contact_id": "477946339176482069",
@@ -10590,23 +10577,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "482683892074021991",
-      "contact_id": "463991453647898614",
-      "invoice_no": "2026-1205",
-      "company": "Floris Marsman Marsman Rental Gww",
-      "invoice_date": "2026-03-26",
-      "due_date": "2026-04-25",
-      "amount": 623.38,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -15199,29 +15169,6 @@
       ]
     },
     {
-      "id": "473522438845498867",
-      "contact_id": "423677100806899084",
-      "invoice_no": "2025-4839",
-      "company": "KEK B.V.",
-      "invoice_date": "2025-12-15",
-      "due_date": "2026-01-14",
-      "amount": 941.39,
-      "currency": "EUR",
-      "days_overdue": 83,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 83.3,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-01-20",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "472600791288383375",
       "contact_id": "475694046479648573",
       "invoice_no": "2025-4780",
@@ -15263,29 +15210,6 @@
         {
           "nr": 1,
           "date": "2026-01-17",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "472148385463272980",
-      "contact_id": "434302654430053793",
-      "invoice_no": "2025-4700",
-      "company": "Tom Veldhuis",
-      "invoice_date": "2025-12-10",
-      "due_date": "2026-01-09",
-      "amount": 372.68,
-      "currency": "EUR",
-      "days_overdue": 88,
-      "bucket": "61-90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 88.1,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-01-15",
           "source": "berekend"
         }
       ]
@@ -16648,6 +16572,39 @@
       ]
     },
     {
+      "id": "472148385463272980",
+      "contact_id": "434302654430053793",
+      "invoice_no": "2025-4700",
+      "company": "Tom Veldhuis",
+      "invoice_date": "2025-12-10",
+      "due_date": "2026-01-09",
+      "amount": 372.68,
+      "currency": "EUR",
+      "days_overdue": 88,
+      "bucket": "61-90 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 88.1,
+      "level": "URGENT",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-01-15",
+          "source": "berekend"
+        },
+        {
+          "nr": 2,
+          "date": "2026-02-08",
+          "source": "berekend"
+        },
+        {
+          "nr": 3,
+          "date": "2026-03-10",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
       "id": "472160473506121043",
       "contact_id": "472160408892868534",
       "invoice_no": "2025-4504",
@@ -17186,7 +17143,7 @@
       "currency": "EUR",
       "days_overdue": 88,
       "bucket": "61-90 days",
-      "state": "late",
+      "state": "reminded",
       "is_bad_debt": false,
       "score": 88.1,
       "level": "URGENT",
@@ -17194,6 +17151,16 @@
         {
           "nr": 1,
           "date": "2026-01-15",
+          "source": "berekend"
+        },
+        {
+          "nr": 2,
+          "date": "2026-02-08",
+          "source": "berekend"
+        },
+        {
+          "nr": 3,
+          "date": "2026-03-10",
           "source": "berekend"
         }
       ]
@@ -17245,30 +17212,58 @@
       ]
     },
     {
-      "id": "473522438845498867",
-      "contact_id": "423677100806899084",
-      "invoice_no": "2025-4839",
-      "company": "KEK B.V.",
-      "invoice_date": "2025-12-15",
-      "due_date": "2026-01-14",
-      "amount": 941.39,
+      "id": "473779138086307827",
+      "contact_id": "360816065795589490",
+      "invoice_no": "2025-4973",
+      "company": "Global Newspace B.V.",
+      "invoice_date": "2025-12-19",
+      "due_date": "2026-01-18",
+      "amount": 716.88,
       "currency": "EUR",
-      "days_overdue": 83,
+      "days_overdue": 79,
       "bucket": "61-90 days",
       "state": "late",
       "is_bad_debt": false,
-      "score": 83.3,
+      "score": 79.2,
       "level": "URGENT",
       "reminders": [
         {
           "nr": 1,
-          "date": "2026-01-20",
+          "date": "2026-01-24",
           "source": "berekend"
         }
       ]
     }
   ],
   "customers": {
+    "438259027773753188": {
+      "contact_id": "438259027773753188",
+      "company": "House of Sports",
+      "invoices": [
+        {
+          "id": "483111763194152941",
+          "contact_id": "438259027773753188",
+          "invoice_no": "2026-1336",
+          "company": "House of Sports",
+          "invoice_date": "2026-04-07",
+          "due_date": "2026-05-07",
+          "amount": 6168.25,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 1.9,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 6168.25,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
     "477946339176482069": {
       "contact_id": "477946339176482069",
       "company": "Gerko Afbouw B.V.",
@@ -20916,29 +20911,6 @@
       "company": "KEK B.V.",
       "invoices": [
         {
-          "id": "473522438845498867",
-          "contact_id": "423677100806899084",
-          "invoice_no": "2025-4839",
-          "company": "KEK B.V.",
-          "invoice_date": "2025-12-15",
-          "due_date": "2026-01-14",
-          "amount": 941.39,
-          "currency": "EUR",
-          "days_overdue": 83,
-          "bucket": "61-90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 83.3,
-          "level": "URGENT",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-01-20",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
           "id": "481480399958050416",
           "contact_id": "423677100806899084",
           "invoice_no": "2026-1033",
@@ -20988,30 +20960,13 @@
           "score": 0.1,
           "level": "Monitor",
           "reminders": []
-        },
-        {
-          "id": "481480372526253444",
-          "contact_id": "423677100806899084",
-          "invoice_no": "2026-1031",
-          "company": "KEK B.V.",
-          "invoice_date": "2026-03-13",
-          "due_date": "2026-04-12",
-          "amount": -941.39,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.3,
-          "level": "Monitor",
-          "reminders": []
         }
       ],
-      "total_open": 2256.53,
-      "total_overdue": 941.39,
-      "max_days": 83,
-      "invoice_count": 4,
-      "level": "URGENT"
+      "total_open": 1315.14,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 3,
+      "level": "Monitor"
     },
     "387554093780960567": {
       "contact_id": "387554093780960567",
@@ -22944,57 +22899,6 @@
       "max_days": 38,
       "invoice_count": 6,
       "level": "Monitor"
-    },
-    "463991453647898614": {
-      "contact_id": "463991453647898614",
-      "company": "Floris Marsman Marsman Rental Gww",
-      "invoices": [
-        {
-          "id": "466089602998863500",
-          "contact_id": "463991453647898614",
-          "invoice_no": "2025-3435",
-          "company": "Floris Marsman Marsman Rental Gww",
-          "invoice_date": "2025-09-24",
-          "due_date": "2025-10-24",
-          "amount": 623.38,
-          "currency": "EUR",
-          "days_overdue": 165,
-          "bucket": ">90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 165.2,
-          "level": "URGENT",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2025-10-30",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "482683892074021991",
-          "contact_id": "463991453647898614",
-          "invoice_no": "2026-1205",
-          "company": "Floris Marsman Marsman Rental Gww",
-          "invoice_date": "2026-03-26",
-          "due_date": "2026-04-25",
-          "amount": 623.38,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1246.76,
-      "total_overdue": 623.38,
-      "max_days": 165,
-      "invoice_count": 2,
-      "level": "URGENT"
     },
     "351934999737402848": {
       "contact_id": "351934999737402848",
@@ -27073,40 +26977,6 @@
       "invoice_count": 1,
       "level": "High"
     },
-    "434302654430053793": {
-      "contact_id": "434302654430053793",
-      "company": "Tom Veldhuis",
-      "invoices": [
-        {
-          "id": "472148385463272980",
-          "contact_id": "434302654430053793",
-          "invoice_no": "2025-4700",
-          "company": "Tom Veldhuis",
-          "invoice_date": "2025-12-10",
-          "due_date": "2026-01-09",
-          "amount": 372.68,
-          "currency": "EUR",
-          "days_overdue": 88,
-          "bucket": "61-90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 88.1,
-          "level": "URGENT",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-01-15",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 372.68,
-      "total_overdue": 372.68,
-      "max_days": 88,
-      "invoice_count": 1,
-      "level": "URGENT"
-    },
     "455137444859217344": {
       "contact_id": "455137444859217344",
       "company": "'t Afbouwhuys B.V.",
@@ -27195,6 +27065,40 @@
       "total_open": 1682.59,
       "total_overdue": 1682.59,
       "max_days": 138,
+      "invoice_count": 1,
+      "level": "URGENT"
+    },
+    "463991453647898614": {
+      "contact_id": "463991453647898614",
+      "company": "Floris Marsman Marsman Rental Gww",
+      "invoices": [
+        {
+          "id": "466089602998863500",
+          "contact_id": "463991453647898614",
+          "invoice_no": "2025-3435",
+          "company": "Floris Marsman Marsman Rental Gww",
+          "invoice_date": "2025-09-24",
+          "due_date": "2025-10-24",
+          "amount": 623.38,
+          "currency": "EUR",
+          "days_overdue": 165,
+          "bucket": ">90 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 165.2,
+          "level": "URGENT",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2025-10-30",
+              "source": "berekend"
+            }
+          ]
+        }
+      ],
+      "total_open": 623.38,
+      "total_overdue": 623.38,
+      "max_days": 165,
       "invoice_count": 1,
       "level": "URGENT"
     },
@@ -27961,6 +27865,50 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
+    "434302654430053793": {
+      "contact_id": "434302654430053793",
+      "company": "Tom Veldhuis",
+      "invoices": [
+        {
+          "id": "472148385463272980",
+          "contact_id": "434302654430053793",
+          "invoice_no": "2025-4700",
+          "company": "Tom Veldhuis",
+          "invoice_date": "2025-12-10",
+          "due_date": "2026-01-09",
+          "amount": 372.68,
+          "currency": "EUR",
+          "days_overdue": 88,
+          "bucket": "61-90 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 88.1,
+          "level": "URGENT",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-01-15",
+              "source": "berekend"
+            },
+            {
+              "nr": 2,
+              "date": "2026-02-08",
+              "source": "berekend"
+            },
+            {
+              "nr": 3,
+              "date": "2026-03-10",
+              "source": "berekend"
+            }
+          ]
+        }
+      ],
+      "total_open": 372.68,
+      "total_overdue": 372.68,
+      "max_days": 88,
+      "invoice_count": 1,
+      "level": "URGENT"
+    },
     "472160408892868534": {
       "contact_id": "472160408892868534",
       "company": "Verwol Projectafbouw B.V.",
@@ -28344,23 +28292,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481480372526253444",
-      "contact_id": "423677100806899084",
-      "invoice_no": "2026-1031",
-      "company": "KEK B.V.",
-      "invoice_date": "2026-03-13",
-      "due_date": "2026-04-12",
-      "amount": -941.39,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.3,
       "level": "Monitor",
       "reminders": []
     },
