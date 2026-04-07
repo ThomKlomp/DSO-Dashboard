@@ -1,20 +1,20 @@
 {
-  "generated": "2026-04-07T15:25:43",
+  "generated": "2026-04-07T17:03:51",
   "dso": 47.5,
   "dso_6m_avg": 38.1,
   "dso_target": 36,
-  "total_ar": 562647.68,
-  "total_ar_gross": 585028.87,
+  "total_ar": 562712.18,
+  "total_ar_gross": 585093.37,
   "total_ar_credit": -22381.19,
-  "invoice_count": 430,
+  "invoice_count": 431,
   "overdue_pct": 22.16,
   "overdue_pct_6m": 24.05,
-  "revenue_180": 2133606.92,
+  "revenue_180": 2133671.42,
   "overdue_30": 39242.91,
   "overdue_60": 30393.6,
   "overdue_90": 18991.78,
   "aging": {
-    "Current": 460333.13,
+    "Current": 460397.63,
     "1-30 days": 85452.83,
     "31-60 days": 8849.31,
     "61-90 days": 11401.82,
@@ -178,15 +178,32 @@
     },
     {
       "date": "2026-04-07",
-      "total_ar": 562647.68,
+      "total_ar": 562712.18,
       "overdue_ar": 124695.74,
       "overdue_pct": 22.16,
       "dso": 47.5,
-      "revenue_180": 2133606.92,
+      "revenue_180": 2133671.42,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "483762669358154985",
+      "contact_id": "473606107526333771",
+      "invoice_no": "2026-1355",
+      "company": "Jannes Bos",
+      "invoice_date": "2026-04-07",
+      "due_date": "2026-04-14",
+      "amount": 64.5,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "483111709964240114",
       "contact_id": "474326144833815590",
@@ -8738,6 +8755,23 @@
   ],
   "active_invoices": [
     {
+      "id": "483762669358154985",
+      "contact_id": "473606107526333771",
+      "invoice_no": "2026-1355",
+      "company": "Jannes Bos",
+      "invoice_date": "2026-04-07",
+      "due_date": "2026-04-14",
+      "amount": 64.5,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.0,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
       "id": "483111709964240114",
       "contact_id": "474326144833815590",
       "invoice_no": "2026-1354",
@@ -17188,6 +17222,34 @@
     }
   ],
   "customers": {
+    "473606107526333771": {
+      "contact_id": "473606107526333771",
+      "company": "Jannes Bos",
+      "invoices": [
+        {
+          "id": "483762669358154985",
+          "contact_id": "473606107526333771",
+          "invoice_no": "2026-1355",
+          "company": "Jannes Bos",
+          "invoice_date": "2026-04-07",
+          "due_date": "2026-04-14",
+          "amount": 64.5,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.0,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 64.5,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
     "474326144833815590": {
       "contact_id": "474326144833815590",
       "company": "De projectgroep B.V.",
