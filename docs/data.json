@@ -1,24 +1,24 @@
 {
-  "generated": "2026-04-07T09:04:43",
-  "dso": 47.7,
+  "generated": "2026-04-07T10:57:34",
+  "dso": 47.5,
   "dso_6m_avg": 38.1,
   "dso_target": 36,
-  "total_ar": 560687.12,
-  "total_ar_gross": 584009.7,
+  "total_ar": 558525.4,
+  "total_ar_gross": 581847.98,
   "total_ar_credit": -23322.58,
-  "invoice_count": 433,
-  "overdue_pct": 24.11,
-  "overdue_pct_6m": 24.25,
+  "invoice_count": 431,
+  "overdue_pct": 23.81,
+  "overdue_pct_6m": 24.22,
   "revenue_180": 2114341.88,
-  "overdue_30": 42346.02,
-  "overdue_60": 33496.71,
-  "overdue_90": 21153.5,
+  "overdue_30": 40184.3,
+  "overdue_60": 31334.99,
+  "overdue_90": 18991.78,
   "aging": {
     "Current": 448836.46,
     "1-30 days": 92827.22,
     "31-60 days": 8849.31,
     "61-90 days": 12343.21,
-    ">90 days": 21153.5
+    ">90 days": 18991.78
   },
   "history": [
     {
@@ -178,10 +178,10 @@
     },
     {
       "date": "2026-04-07",
-      "total_ar": 560687.12,
-      "overdue_ar": 135173.24,
-      "overdue_pct": 24.11,
-      "dso": 47.7,
+      "total_ar": 558525.4,
+      "overdue_ar": 133011.52,
+      "overdue_pct": 23.81,
+      "dso": 47.5,
       "revenue_180": 2114341.88,
       "target": 36
     }
@@ -7855,52 +7855,6 @@
         {
           "nr": 1,
           "date": "2025-04-12",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "432374079192827139",
-      "contact_id": "412804908486493966",
-      "invoice_no": "2024-1584",
-      "company": "Flexstage Crew B.V.",
-      "invoice_date": "2024-09-27",
-      "due_date": "2024-10-27",
-      "amount": 710.58,
-      "currency": "EUR",
-      "days_overdue": 527,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 527.2,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2024-11-02",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "422226573100320661",
-      "contact_id": "412804908486493966",
-      "invoice_no": "2024-0860",
-      "company": "Flexstage Crew B.V.",
-      "invoice_date": "2024-07-02",
-      "due_date": "2024-08-01",
-      "amount": 1451.14,
-      "currency": "EUR",
-      "days_overdue": 614,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 614.4,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2024-08-07",
           "source": "berekend"
         }
       ]
@@ -15797,52 +15751,6 @@
       ]
     },
     {
-      "id": "432374079192827139",
-      "contact_id": "412804908486493966",
-      "invoice_no": "2024-1584",
-      "company": "Flexstage Crew B.V.",
-      "invoice_date": "2024-09-27",
-      "due_date": "2024-10-27",
-      "amount": 710.58,
-      "currency": "EUR",
-      "days_overdue": 527,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 527.2,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2024-11-02",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "422226573100320661",
-      "contact_id": "412804908486493966",
-      "invoice_no": "2024-0860",
-      "company": "Flexstage Crew B.V.",
-      "invoice_date": "2024-07-02",
-      "due_date": "2024-08-01",
-      "amount": 1451.14,
-      "currency": "EUR",
-      "days_overdue": 614,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 614.4,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2024-08-07",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "479952364127651739",
       "contact_id": "373979318352611285",
       "invoice_no": "2026-0826",
@@ -16775,52 +16683,6 @@
   ],
   "overdue_top": [
     {
-      "id": "422226573100320661",
-      "contact_id": "412804908486493966",
-      "invoice_no": "2024-0860",
-      "company": "Flexstage Crew B.V.",
-      "invoice_date": "2024-07-02",
-      "due_date": "2024-08-01",
-      "amount": 1451.14,
-      "currency": "EUR",
-      "days_overdue": 614,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 614.4,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2024-08-07",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "432374079192827139",
-      "contact_id": "412804908486493966",
-      "invoice_no": "2024-1584",
-      "company": "Flexstage Crew B.V.",
-      "invoice_date": "2024-09-27",
-      "due_date": "2024-10-27",
-      "amount": 710.58,
-      "currency": "EUR",
-      "days_overdue": 527,
-      "bucket": ">90 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 527.2,
-      "level": "URGENT",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2024-11-02",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "447787937196673006",
       "contact_id": "446336713801860723",
       "invoice_no": "2025-0649",
@@ -17355,6 +17217,52 @@
         {
           "nr": 1,
           "date": "2026-01-17",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "472600791288383375",
+      "contact_id": "475694046479648573",
+      "invoice_no": "2025-4780",
+      "company": "EH Netherlands B.V.",
+      "invoice_date": "2025-12-12",
+      "due_date": "2026-01-11",
+      "amount": 747.5,
+      "currency": "EUR",
+      "days_overdue": 86,
+      "bucket": "61-90 days",
+      "state": "late",
+      "is_bad_debt": false,
+      "score": 86.2,
+      "level": "URGENT",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-01-17",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
+      "id": "473522438845498867",
+      "contact_id": "423677100806899084",
+      "invoice_no": "2025-4839",
+      "company": "KEK B.V.",
+      "invoice_date": "2025-12-15",
+      "due_date": "2026-01-14",
+      "amount": 941.39,
+      "currency": "EUR",
+      "days_overdue": 83,
+      "bucket": "61-90 days",
+      "state": "late",
+      "is_bad_debt": false,
+      "score": 83.3,
+      "level": "URGENT",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-01-20",
           "source": "berekend"
         }
       ]
@@ -27722,63 +27630,6 @@
       "total_overdue": 4061.09,
       "max_days": 366,
       "invoice_count": 9,
-      "level": "URGENT"
-    },
-    "412804908486493966": {
-      "contact_id": "412804908486493966",
-      "company": "Flexstage Crew B.V.",
-      "invoices": [
-        {
-          "id": "422226573100320661",
-          "contact_id": "412804908486493966",
-          "invoice_no": "2024-0860",
-          "company": "Flexstage Crew B.V.",
-          "invoice_date": "2024-07-02",
-          "due_date": "2024-08-01",
-          "amount": 1451.14,
-          "currency": "EUR",
-          "days_overdue": 614,
-          "bucket": ">90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 614.4,
-          "level": "URGENT",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2024-08-07",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "432374079192827139",
-          "contact_id": "412804908486493966",
-          "invoice_no": "2024-1584",
-          "company": "Flexstage Crew B.V.",
-          "invoice_date": "2024-09-27",
-          "due_date": "2024-10-27",
-          "amount": 710.58,
-          "currency": "EUR",
-          "days_overdue": 527,
-          "bucket": ">90 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 527.2,
-          "level": "URGENT",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2024-11-02",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 2161.72,
-      "total_overdue": 2161.72,
-      "max_days": 614,
-      "invoice_count": 2,
       "level": "URGENT"
     },
     "473159267005760707": {
