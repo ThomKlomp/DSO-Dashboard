@@ -174,10 +174,10 @@
   },
   {
     "date": "2026-04-09",
-    "total_ar": 589971.74,
+    "total_ar": 578079.29,
     "overdue_ar": 120574.44,
-    "overdue_pct": 20.44,
-    "dso": 48.7,
+    "overdue_pct": 20.86,
+    "dso": 47.7,
     "revenue_180": 2182355.51,
     "target": 36
   }
