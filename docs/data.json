@@ -1,21 +1,21 @@
 {
-  "generated": "2026-04-10T07:25:43",
-  "dso": 45.8,
+  "generated": "2026-04-10T09:15:35",
+  "dso": 45.6,
   "dso_6m_avg": 39.3,
   "dso_target": 36,
-  "total_ar": 560380.15,
-  "total_ar_gross": 590349.12,
-  "total_ar_credit": -29968.97,
-  "invoice_count": 427,
-  "overdue_pct": 19.79,
+  "total_ar": 557830.57,
+  "total_ar_gross": 588000.09,
+  "total_ar_credit": -30169.52,
+  "invoice_count": 423,
+  "overdue_pct": 19.86,
   "overdue_pct_6m": 23.23,
   "revenue_180": 2200106.6,
   "overdue_30": 42406.78,
   "overdue_60": 27465.94,
   "overdue_90": 18641.04,
   "aging": {
-    "Current": 479446.76,
-    "1-30 days": 68495.58,
+    "Current": 477227.73,
+    "1-30 days": 68365.58,
     "31-60 days": 14940.84,
     "61-90 days": 8824.9,
     ">90 days": 18641.04
@@ -205,10 +205,10 @@
     },
     {
       "date": "2026-04-10",
-      "total_ar": 560380.15,
-      "overdue_ar": 110902.36,
-      "overdue_pct": 19.79,
-      "dso": 45.8,
+      "total_ar": 557830.57,
+      "overdue_ar": 110772.36,
+      "overdue_pct": 19.86,
+      "dso": 45.6,
       "revenue_180": 2200106.6,
       "target": 36
     }
@@ -2119,23 +2119,6 @@
       "reminders": []
     },
     {
-      "id": "482503501328418326",
-      "contact_id": "433295382831694995",
-      "invoice_no": "2026-1277",
-      "company": "Kegro Deuren B.V.",
-      "invoice_date": "2026-03-27",
-      "due_date": "2026-04-26",
-      "amount": 644.33,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "482503500095292779",
       "contact_id": "386630704423765218",
       "invoice_no": "2026-1276",
@@ -3836,6 +3819,23 @@
       "reminders": []
     },
     {
+      "id": "481768834053703012",
+      "contact_id": "409005437841573107",
+      "invoice_no": "2026-1124",
+      "company": "Compleet in Stijl B.V.",
+      "invoice_date": "2026-03-18",
+      "due_date": "2026-04-17",
+      "amount": -330.55,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
       "id": "481946111331796349",
       "contact_id": "481111903814289037",
       "invoice_no": "2026-1120",
@@ -4975,23 +4975,6 @@
       "reminders": []
     },
     {
-      "id": "481293223406339741",
-      "contact_id": "470718947251979380",
-      "invoice_no": "2026-0983",
-      "company": "de uitblinkers",
-      "invoice_date": "2026-03-11",
-      "due_date": "2026-04-10",
-      "amount": -130.0,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.0,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481299602462475875",
       "contact_id": "477965820148843945",
       "invoice_no": "2026-0966",
@@ -5391,40 +5374,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481205555542623586",
-      "contact_id": "460214790013322624",
-      "invoice_no": "2026-0958",
-      "company": "Aannemersbedrijf Van Zoelen B.V.",
-      "invoice_date": "2026-03-11",
-      "due_date": "2026-04-10",
-      "amount": 1057.45,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 0.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481205554662868215",
-      "contact_id": "460214790013322624",
-      "invoice_no": "2026-0957",
-      "company": "Aannemersbedrijf Van Zoelen B.V.",
-      "invoice_date": "2026-03-11",
-      "due_date": "2026-04-10",
-      "amount": 517.25,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 0.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -7158,23 +7107,6 @@
       "state": "reminded",
       "is_bad_debt": false,
       "score": 2.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "480680215979230333",
-      "contact_id": "470718947251979380",
-      "invoice_no": "2026-0890",
-      "company": "de uitblinkers",
-      "invoice_date": "2026-03-09",
-      "due_date": "2026-04-08",
-      "amount": 130.0,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 2.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -10650,23 +10582,6 @@
       "reminders": []
     },
     {
-      "id": "482503501328418326",
-      "contact_id": "433295382831694995",
-      "invoice_no": "2026-1277",
-      "company": "Kegro Deuren B.V.",
-      "invoice_date": "2026-03-27",
-      "due_date": "2026-04-26",
-      "amount": 644.33,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "482503500095292779",
       "contact_id": "386630704423765218",
       "invoice_no": "2026-1276",
@@ -13688,40 +13603,6 @@
       "reminders": []
     },
     {
-      "id": "481205555542623586",
-      "contact_id": "460214790013322624",
-      "invoice_no": "2026-0958",
-      "company": "Aannemersbedrijf Van Zoelen B.V.",
-      "invoice_date": "2026-03-11",
-      "due_date": "2026-04-10",
-      "amount": 1057.45,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 0.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481205554662868215",
-      "contact_id": "460214790013322624",
-      "invoice_no": "2026-0957",
-      "company": "Aannemersbedrijf Van Zoelen B.V.",
-      "invoice_date": "2026-03-11",
-      "due_date": "2026-04-10",
-      "amount": 517.25,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481222550007842007",
       "contact_id": "442164130156119169",
       "invoice_no": "2026-0954",
@@ -15089,23 +14970,6 @@
       "state": "reminded",
       "is_bad_debt": false,
       "score": 2.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "480680215979230333",
-      "contact_id": "470718947251979380",
-      "invoice_no": "2026-0890",
-      "company": "de uitblinkers",
-      "invoice_date": "2026-03-09",
-      "due_date": "2026-04-08",
-      "amount": 130.0,
-      "currency": "EUR",
-      "days_overdue": 2,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 2.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -21643,34 +21507,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "433295382831694995": {
-      "contact_id": "433295382831694995",
-      "company": "Kegro Deuren B.V.",
-      "invoices": [
-        {
-          "id": "482503501328418326",
-          "contact_id": "433295382831694995",
-          "invoice_no": "2026-1277",
-          "company": "Kegro Deuren B.V.",
-          "invoice_date": "2026-03-27",
-          "due_date": "2026-04-26",
-          "amount": 644.33,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 644.33,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "386630704423765218": {
       "contact_id": "386630704423765218",
       "company": "Kalua Keukens",
@@ -24020,6 +23856,34 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
+    "409005437841573107": {
+      "contact_id": "409005437841573107",
+      "company": "Compleet in Stijl B.V.",
+      "invoices": [
+        {
+          "id": "481768834053703012",
+          "contact_id": "409005437841573107",
+          "invoice_no": "2026-1124",
+          "company": "Compleet in Stijl B.V.",
+          "invoice_date": "2026-03-18",
+          "due_date": "2026-04-17",
+          "amount": -330.55,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 0,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 0,
+      "level": "Monitor"
+    },
     "368333461354710623": {
       "contact_id": "368333461354710623",
       "company": "Re-Create B.V.",
@@ -24943,51 +24807,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "470718947251979380": {
-      "contact_id": "470718947251979380",
-      "company": "de uitblinkers",
-      "invoices": [
-        {
-          "id": "480680215979230333",
-          "contact_id": "470718947251979380",
-          "invoice_no": "2026-0890",
-          "company": "de uitblinkers",
-          "invoice_date": "2026-03-09",
-          "due_date": "2026-04-08",
-          "amount": 130.0,
-          "currency": "EUR",
-          "days_overdue": 2,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 2.0,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "481293223406339741",
-          "contact_id": "470718947251979380",
-          "invoice_no": "2026-0983",
-          "company": "de uitblinkers",
-          "invoice_date": "2026-03-11",
-          "due_date": "2026-04-10",
-          "amount": -130.0,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.0,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 130.0,
-      "total_overdue": 130.0,
-      "max_days": 2,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "477965820148843945": {
       "contact_id": "477965820148843945",
       "company": "De Woonindustrie Events B.V.",
@@ -25312,51 +25131,6 @@
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "460214790013322624": {
-      "contact_id": "460214790013322624",
-      "company": "Aannemersbedrijf Van Zoelen B.V.",
-      "invoices": [
-        {
-          "id": "481205555542623586",
-          "contact_id": "460214790013322624",
-          "invoice_no": "2026-0958",
-          "company": "Aannemersbedrijf Van Zoelen B.V.",
-          "invoice_date": "2026-03-11",
-          "due_date": "2026-04-10",
-          "amount": 1057.45,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 0.3,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "481205554662868215",
-          "contact_id": "460214790013322624",
-          "invoice_no": "2026-0957",
-          "company": "Aannemersbedrijf Van Zoelen B.V.",
-          "invoice_date": "2026-03-11",
-          "due_date": "2026-04-10",
-          "amount": 517.25,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1574.7,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 2,
       "level": "Monitor"
     },
     "379399769169070072": {
@@ -28890,6 +28664,23 @@
       "reminders": []
     },
     {
+      "id": "481768834053703012",
+      "contact_id": "409005437841573107",
+      "invoice_no": "2026-1124",
+      "company": "Compleet in Stijl B.V.",
+      "invoice_date": "2026-03-18",
+      "due_date": "2026-04-17",
+      "amount": -330.55,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.1,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
       "id": "481767043914269997",
       "contact_id": "463006006743402409",
       "invoice_no": "2026-1038",
@@ -28937,23 +28728,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481293223406339741",
-      "contact_id": "470718947251979380",
-      "invoice_no": "2026-0983",
-      "company": "de uitblinkers",
-      "invoice_date": "2026-03-11",
-      "due_date": "2026-04-10",
-      "amount": -130.0,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
