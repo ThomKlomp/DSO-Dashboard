@@ -210,11 +210,11 @@
   },
   {
     "date": "2026-04-15",
-    "total_ar": 607789.14,
+    "total_ar": 627112.45,
     "overdue_ar": 114637.75,
-    "overdue_pct": 18.86,
-    "dso": 47.4,
-    "revenue_180": 2306695.47,
+    "overdue_pct": 18.28,
+    "dso": 48.5,
+    "revenue_180": 2327157.53,
     "target": 36
   }
 ]
