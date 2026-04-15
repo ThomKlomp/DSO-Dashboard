@@ -1,22 +1,22 @@
 {
-  "generated": "2026-04-15T07:26:23",
-  "dso": 46.6,
+  "generated": "2026-04-15T09:21:33",
+  "dso": 46.3,
   "dso_6m_avg": 40.2,
   "dso_target": 36,
-  "total_ar": 591906.79,
-  "total_ar_gross": 617173.44,
-  "total_ar_credit": -25266.65,
-  "invoice_count": 465,
-  "overdue_pct": 19.84,
-  "overdue_pct_6m": 22.89,
+  "total_ar": 588718.85,
+  "total_ar_gross": 613974.77,
+  "total_ar_credit": -25255.92,
+  "invoice_count": 458,
+  "overdue_pct": 19.44,
+  "overdue_pct_6m": 22.86,
   "revenue_180": 2286625.0,
-  "overdue_30": 45661.09,
+  "overdue_30": 44140.33,
   "overdue_60": 26749.06,
   "overdue_90": 20594.66,
   "aging": {
-    "Current": 499729.1,
-    "1-30 days": 71783.25,
-    "31-60 days": 18912.03,
+    "Current": 499520.04,
+    "1-30 days": 70314.4,
+    "31-60 days": 17391.27,
     "61-90 days": 6154.4,
     ">90 days": 20594.66
   },
@@ -232,10 +232,10 @@
     },
     {
       "date": "2026-04-15",
-      "total_ar": 591906.79,
-      "overdue_ar": 117444.34,
-      "overdue_pct": 19.84,
-      "dso": 46.6,
+      "total_ar": 588718.85,
+      "overdue_ar": 114454.73,
+      "overdue_pct": 19.44,
+      "dso": 46.3,
       "revenue_180": 2286625.0,
       "target": 36
     }
@@ -340,23 +340,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "484380182729197384",
-      "contact_id": "431394374340838546",
-      "invoice_no": "2026-1525",
-      "company": "IVONO B.V.",
-      "invoice_date": "2026-04-14",
-      "due_date": "2026-05-14",
-      "amount": -10.73,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
@@ -2584,23 +2567,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 1.7,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "483111779575006393",
-      "contact_id": "431394374340838546",
-      "invoice_no": "2026-1374",
-      "company": "IVONO B.V.",
-      "invoice_date": "2026-04-08",
-      "due_date": "2026-05-08",
-      "amount": 209.06,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -6107,29 +6073,6 @@
       "reminders": []
     },
     {
-      "id": "482680156325938458",
-      "contact_id": "482680129618707839",
-      "invoice_no": "2026-1204",
-      "company": "Ole Brand",
-      "invoice_date": "2026-03-26",
-      "due_date": "2026-03-31",
-      "amount": 197.6,
-      "currency": "EUR",
-      "days_overdue": 15,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 15.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-06",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "482659237462280098",
       "contact_id": "482659216232809885",
       "invoice_no": "2026-1203",
@@ -6200,40 +6143,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 3.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481295812532372693",
-      "contact_id": "477596835087647760",
-      "invoice_no": "2026-1025",
-      "company": "VolkerWessels Materieel & Logistiek",
-      "invoice_date": "2026-03-12",
-      "due_date": "2026-04-11",
-      "amount": 591.95,
-      "currency": "EUR",
-      "days_overdue": 4,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 4.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481295815903545317",
-      "contact_id": "477596835087647760",
-      "invoice_no": "2026-1024",
-      "company": "VolkerWessels Materieel & Logistiek",
-      "invoice_date": "2026-03-12",
-      "due_date": "2026-04-11",
-      "amount": 276.93,
-      "currency": "EUR",
-      "days_overdue": 4,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 4.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -7066,29 +6975,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 46.3,
-      "level": "High",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-06",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "477594936932304373",
-      "contact_id": "464988369501292197",
-      "invoice_no": "2026-0299",
-      "company": "2Shift B.V.",
-      "invoice_date": "2026-01-29",
-      "due_date": "2026-02-28",
-      "amount": 1520.76,
-      "currency": "EUR",
-      "days_overdue": 46,
-      "bucket": "31-60 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 46.5,
       "level": "High",
       "reminders": [
         {
@@ -8573,23 +8459,6 @@
       "reminders": []
     },
     {
-      "id": "481222557028059024",
-      "contact_id": "373979523751871801",
-      "invoice_no": "2026-0987",
-      "company": "De Projectinrichter B.V.",
-      "invoice_date": "2026-03-11",
-      "due_date": "2026-04-10",
-      "amount": 183.02,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 5.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481222595844244982",
       "contact_id": "472440478415980449",
       "invoice_no": "2026-0981",
@@ -9469,29 +9338,6 @@
       "invoice_date": "2026-02-25",
       "due_date": "2026-03-27",
       "amount": 276.38,
-      "currency": "EUR",
-      "days_overdue": 19,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 19.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-02",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "479952346140378199",
-      "contact_id": "464988369501292197",
-      "invoice_no": "2026-0737",
-      "company": "2Shift B.V.",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 219.35,
       "currency": "EUR",
       "days_overdue": 19,
       "bucket": "1-30 days",
@@ -11711,23 +11557,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 1.7,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "483111779575006393",
-      "contact_id": "431394374340838546",
-      "invoice_no": "2026-1374",
-      "company": "IVONO B.V.",
-      "invoice_date": "2026-04-08",
-      "due_date": "2026-05-08",
-      "amount": 209.06,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -14979,29 +14808,6 @@
       "reminders": []
     },
     {
-      "id": "482680156325938458",
-      "contact_id": "482680129618707839",
-      "invoice_no": "2026-1204",
-      "company": "Ole Brand",
-      "invoice_date": "2026-03-26",
-      "due_date": "2026-03-31",
-      "amount": 197.6,
-      "currency": "EUR",
-      "days_overdue": 15,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 15.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-06",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "482659237462280098",
       "contact_id": "482659216232809885",
       "invoice_no": "2026-1203",
@@ -15055,40 +14861,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 3.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481295812532372693",
-      "contact_id": "477596835087647760",
-      "invoice_no": "2026-1025",
-      "company": "VolkerWessels Materieel & Logistiek",
-      "invoice_date": "2026-03-12",
-      "due_date": "2026-04-11",
-      "amount": 591.95,
-      "currency": "EUR",
-      "days_overdue": 4,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 4.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481295815903545317",
-      "contact_id": "477596835087647760",
-      "invoice_no": "2026-1024",
-      "company": "VolkerWessels Materieel & Logistiek",
-      "invoice_date": "2026-03-12",
-      "due_date": "2026-04-11",
-      "amount": 276.93,
-      "currency": "EUR",
-      "days_overdue": 4,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 4.1,
       "level": "Monitor",
       "reminders": []
     },
@@ -15622,29 +15394,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 46.3,
-      "level": "High",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-06",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "477594936932304373",
-      "contact_id": "464988369501292197",
-      "invoice_no": "2026-0299",
-      "company": "2Shift B.V.",
-      "invoice_date": "2026-01-29",
-      "due_date": "2026-02-28",
-      "amount": 1520.76,
-      "currency": "EUR",
-      "days_overdue": 46,
-      "bucket": "31-60 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 46.5,
       "level": "High",
       "reminders": [
         {
@@ -17014,23 +16763,6 @@
       "reminders": []
     },
     {
-      "id": "481222557028059024",
-      "contact_id": "373979523751871801",
-      "invoice_no": "2026-0987",
-      "company": "De Projectinrichter B.V.",
-      "invoice_date": "2026-03-11",
-      "due_date": "2026-04-10",
-      "amount": 183.02,
-      "currency": "EUR",
-      "days_overdue": 5,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 5.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481222595844244982",
       "contact_id": "472440478415980449",
       "invoice_no": "2026-0981",
@@ -17926,29 +17658,6 @@
       ]
     },
     {
-      "id": "479952346140378199",
-      "contact_id": "464988369501292197",
-      "invoice_no": "2026-0737",
-      "company": "2Shift B.V.",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 219.35,
-      "currency": "EUR",
-      "days_overdue": 19,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 19.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-02",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "479473679299774014",
       "contact_id": "473048745125086391",
       "invoice_no": "2026-0735",
@@ -18782,51 +18491,6 @@
         }
       ],
       "total_open": 870.99,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "431394374340838546": {
-      "contact_id": "431394374340838546",
-      "company": "IVONO B.V.",
-      "invoices": [
-        {
-          "id": "483111779575006393",
-          "contact_id": "431394374340838546",
-          "invoice_no": "2026-1374",
-          "company": "IVONO B.V.",
-          "invoice_date": "2026-04-08",
-          "due_date": "2026-05-08",
-          "amount": 209.06,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "484380182729197384",
-          "contact_id": "431394374340838546",
-          "invoice_no": "2026-1525",
-          "company": "IVONO B.V.",
-          "invoice_date": "2026-04-14",
-          "due_date": "2026-05-14",
-          "amount": -10.73,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.0,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 209.06,
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
@@ -26401,40 +26065,6 @@
       "company": "VolkerWessels Materieel & Logistiek",
       "invoices": [
         {
-          "id": "481295812532372693",
-          "contact_id": "477596835087647760",
-          "invoice_no": "2026-1025",
-          "company": "VolkerWessels Materieel & Logistiek",
-          "invoice_date": "2026-03-12",
-          "due_date": "2026-04-11",
-          "amount": 591.95,
-          "currency": "EUR",
-          "days_overdue": 4,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 4.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "481295815903545317",
-          "contact_id": "477596835087647760",
-          "invoice_no": "2026-1024",
-          "company": "VolkerWessels Materieel & Logistiek",
-          "invoice_date": "2026-03-12",
-          "due_date": "2026-04-11",
-          "amount": 276.93,
-          "currency": "EUR",
-          "days_overdue": 4,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 4.1,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "482665399042705048",
           "contact_id": "477596835087647760",
           "invoice_no": "2026-1235",
@@ -26503,10 +26133,10 @@
           "reminders": []
         }
       ],
-      "total_open": 3132.27,
-      "total_overdue": 868.88,
-      "max_days": 4,
-      "invoice_count": 6,
+      "total_open": 2263.39,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 4,
       "level": "Monitor"
     },
     "483028843060266134": {
@@ -27794,40 +27424,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "482680129618707839": {
-      "contact_id": "482680129618707839",
-      "company": "Ole Brand",
-      "invoices": [
-        {
-          "id": "482680156325938458",
-          "contact_id": "482680129618707839",
-          "invoice_no": "2026-1204",
-          "company": "Ole Brand",
-          "invoice_date": "2026-03-26",
-          "due_date": "2026-03-31",
-          "amount": 197.6,
-          "currency": "EUR",
-          "days_overdue": 15,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 15.1,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-04-06",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 197.6,
-      "total_overdue": 197.6,
-      "max_days": 15,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "482659216232809885": {
       "contact_id": "482659216232809885",
       "company": "Daan Abma",
@@ -28407,29 +28003,6 @@
       "company": "2Shift B.V.",
       "invoices": [
         {
-          "id": "477594936932304373",
-          "contact_id": "464988369501292197",
-          "invoice_no": "2026-0299",
-          "company": "2Shift B.V.",
-          "invoice_date": "2026-01-29",
-          "due_date": "2026-02-28",
-          "amount": 1520.76,
-          "currency": "EUR",
-          "days_overdue": 46,
-          "bucket": "31-60 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 46.5,
-          "level": "High",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-06",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
           "id": "471255003741292374",
           "contact_id": "464988369501292197",
           "invoice_no": "2025-4346",
@@ -28497,35 +28070,12 @@
               "source": "berekend"
             }
           ]
-        },
-        {
-          "id": "479952346140378199",
-          "contact_id": "464988369501292197",
-          "invoice_no": "2026-0737",
-          "company": "2Shift B.V.",
-          "invoice_date": "2026-02-25",
-          "due_date": "2026-03-27",
-          "amount": 219.35,
-          "currency": "EUR",
-          "days_overdue": 19,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 19.1,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-04-02",
-              "source": "berekend"
-            }
-          ]
         }
       ],
-      "total_open": 4027.17,
-      "total_overdue": 4027.17,
+      "total_open": 2287.06,
+      "total_overdue": 2287.06,
       "max_days": 113,
-      "invoice_count": 5,
+      "invoice_count": 3,
       "level": "URGENT"
     },
     "471266444919703248": {
@@ -29830,34 +29380,6 @@
       "invoice_count": 3,
       "level": "Monitor"
     },
-    "373979523751871801": {
-      "contact_id": "373979523751871801",
-      "company": "De Projectinrichter B.V.",
-      "invoices": [
-        {
-          "id": "481222557028059024",
-          "contact_id": "373979523751871801",
-          "invoice_no": "2026-0987",
-          "company": "De Projectinrichter B.V.",
-          "invoice_date": "2026-03-11",
-          "due_date": "2026-04-10",
-          "amount": 183.02,
-          "currency": "EUR",
-          "days_overdue": 5,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 5.1,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 183.02,
-      "total_overdue": 183.02,
-      "max_days": 5,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "429316866727478692": {
       "contact_id": "429316866727478692",
       "company": "Dutch Shopfitters B.V.",
@@ -30299,23 +29821,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "484380182729197384",
-      "contact_id": "431394374340838546",
-      "invoice_no": "2026-1525",
-      "company": "IVONO B.V.",
-      "invoice_date": "2026-04-14",
-      "due_date": "2026-05-14",
-      "amount": -10.73,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.0,
       "level": "Monitor",
       "reminders": []
     },
