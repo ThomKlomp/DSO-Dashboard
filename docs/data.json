@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-16T15:48:00",
+  "generated": "2026-04-16T17:15:59",
   "dso": 48.6,
   "dso_6m_avg": 40.6,
   "dso_target": 36,
@@ -250,6 +250,40 @@
     }
   ],
   "invoices": [
+    {
+      "id": "484579995123975683",
+      "contact_id": "481778654566680153",
+      "invoice_no": "2026-1590",
+      "company": "Wonam Project Molenzoom B.V.",
+      "invoice_date": "2026-04-16",
+      "due_date": "2026-05-16",
+      "amount": 589.08,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484579986570741101",
+      "contact_id": "481778654566680153",
+      "invoice_no": "2026-1589",
+      "company": "Wonam Project Molenzoom B.V.",
+      "invoice_date": "2026-04-16",
+      "due_date": "2026-05-16",
+      "amount": 589.08,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "484569670643353225",
       "contact_id": "482767822755202192",
@@ -1289,9 +1323,9 @@
     },
     {
       "id": "483846380811453604",
-      "contact_id": "465911114999268728",
+      "contact_id": "477496163913696535",
       "invoice_no": "2026-1518",
-      "company": "AMB-Design",
+      "company": "AMB Projects B.V.",
       "invoice_date": "2026-04-14",
       "due_date": "2026-05-14",
       "amount": 338.39,
@@ -2427,23 +2461,6 @@
       "reminders": []
     },
     {
-      "id": "483846431687312754",
-      "contact_id": "483833052912420547",
-      "invoice_no": "2026-1446",
-      "company": "Wonam Project Houten BV",
-      "invoice_date": "2026-04-10",
-      "due_date": "2026-05-10",
-      "amount": 589.08,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "483755311882044924",
       "contact_id": "466728376307025494",
       "invoice_no": "2026-1444",
@@ -3403,23 +3420,6 @@
       "invoice_date": "2026-04-08",
       "due_date": "2026-05-08",
       "amount": 538.99,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "482580058351863239",
-      "contact_id": "483833052912420547",
-      "invoice_no": "2026-1369",
-      "company": "Wonam Project Houten BV",
-      "invoice_date": "2026-04-08",
-      "due_date": "2026-05-08",
-      "amount": 589.08,
       "currency": "EUR",
       "days_overdue": 0,
       "bucket": "Current",
@@ -9985,6 +9985,40 @@
   ],
   "active_invoices": [
     {
+      "id": "484579995123975683",
+      "contact_id": "481778654566680153",
+      "invoice_no": "2026-1590",
+      "company": "Wonam Project Molenzoom B.V.",
+      "invoice_date": "2026-04-16",
+      "due_date": "2026-05-16",
+      "amount": 589.08,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484579986570741101",
+      "contact_id": "481778654566680153",
+      "invoice_no": "2026-1589",
+      "company": "Wonam Project Molenzoom B.V.",
+      "invoice_date": "2026-04-16",
+      "due_date": "2026-05-16",
+      "amount": 589.08,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
       "id": "484569670643353225",
       "contact_id": "482767822755202192",
       "invoice_no": "2026-1585",
@@ -11006,9 +11040,9 @@
     },
     {
       "id": "483846380811453604",
-      "contact_id": "465911114999268728",
+      "contact_id": "477496163913696535",
       "invoice_no": "2026-1518",
-      "company": "AMB-Design",
+      "company": "AMB Projects B.V.",
       "invoice_date": "2026-04-14",
       "due_date": "2026-05-14",
       "amount": 338.39,
@@ -12059,23 +12093,6 @@
       "reminders": []
     },
     {
-      "id": "483846431687312754",
-      "contact_id": "483833052912420547",
-      "invoice_no": "2026-1446",
-      "company": "Wonam Project Houten BV",
-      "invoice_date": "2026-04-10",
-      "due_date": "2026-05-10",
-      "amount": 589.08,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "483755311882044924",
       "contact_id": "466728376307025494",
       "invoice_no": "2026-1444",
@@ -12967,23 +12984,6 @@
       "invoice_date": "2026-04-08",
       "due_date": "2026-05-08",
       "amount": 538.99,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "482580058351863239",
-      "contact_id": "483833052912420547",
-      "invoice_no": "2026-1369",
-      "company": "Wonam Project Houten BV",
-      "invoice_date": "2026-04-08",
-      "due_date": "2026-05-08",
-      "amount": 589.08,
       "currency": "EUR",
       "days_overdue": 0,
       "bucket": "Current",
@@ -19496,6 +19496,51 @@
     }
   ],
   "customers": {
+    "481778654566680153": {
+      "contact_id": "481778654566680153",
+      "company": "Wonam Project Molenzoom B.V.",
+      "invoices": [
+        {
+          "id": "484579995123975683",
+          "contact_id": "481778654566680153",
+          "invoice_no": "2026-1590",
+          "company": "Wonam Project Molenzoom B.V.",
+          "invoice_date": "2026-04-16",
+          "due_date": "2026-05-16",
+          "amount": 589.08,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "484579986570741101",
+          "contact_id": "481778654566680153",
+          "invoice_no": "2026-1589",
+          "company": "Wonam Project Molenzoom B.V.",
+          "invoice_date": "2026-04-16",
+          "due_date": "2026-05-16",
+          "amount": 589.08,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 1178.16,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 2,
+      "level": "Monitor"
+    },
     "482767822755202192": {
       "contact_id": "482767822755202192",
       "company": "UTS Den Haag B.V.",
@@ -22900,15 +22945,15 @@
       "invoice_count": 3,
       "level": "Monitor"
     },
-    "465911114999268728": {
-      "contact_id": "465911114999268728",
-      "company": "AMB-Design",
+    "477496163913696535": {
+      "contact_id": "477496163913696535",
+      "company": "AMB Projects B.V.",
       "invoices": [
         {
           "id": "483846380811453604",
-          "contact_id": "465911114999268728",
+          "contact_id": "477496163913696535",
           "invoice_no": "2026-1518",
-          "company": "AMB-Design",
+          "company": "AMB Projects B.V.",
           "invoice_date": "2026-04-14",
           "due_date": "2026-05-14",
           "amount": 338.39,
@@ -25085,51 +25130,6 @@
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 5,
-      "level": "Monitor"
-    },
-    "483833052912420547": {
-      "contact_id": "483833052912420547",
-      "company": "Wonam Project Houten BV",
-      "invoices": [
-        {
-          "id": "483846431687312754",
-          "contact_id": "483833052912420547",
-          "invoice_no": "2026-1446",
-          "company": "Wonam Project Houten BV",
-          "invoice_date": "2026-04-10",
-          "due_date": "2026-05-10",
-          "amount": 589.08,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "482580058351863239",
-          "contact_id": "483833052912420547",
-          "invoice_no": "2026-1369",
-          "company": "Wonam Project Houten BV",
-          "invoice_date": "2026-04-08",
-          "due_date": "2026-05-08",
-          "amount": 589.08,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1178.16,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 2,
       "level": "Monitor"
     },
     "466728376307025494": {
