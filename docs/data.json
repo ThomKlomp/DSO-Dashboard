@@ -1,21 +1,21 @@
 {
-  "generated": "2026-04-16T12:51:08",
-  "dso": 49.1,
+  "generated": "2026-04-16T15:48:00",
+  "dso": 48.6,
   "dso_6m_avg": 40.6,
   "dso_target": 36,
-  "total_ar": 639040.66,
-  "total_ar_gross": 663617.83,
+  "total_ar": 633549.54,
+  "total_ar_gross": 658126.71,
   "total_ar_credit": -24577.17,
-  "invoice_count": 499,
-  "overdue_pct": 17.92,
-  "overdue_pct_6m": 22.57,
-  "revenue_180": 2343762.74,
+  "invoice_count": 493,
+  "overdue_pct": 17.79,
+  "overdue_pct_6m": 22.56,
+  "revenue_180": 2344404.68,
   "overdue_30": 44140.33,
   "overdue_60": 26749.06,
   "overdue_90": 20594.66,
   "aging": {
-    "Current": 549077.58,
-    "1-30 days": 70399.92,
+    "Current": 545399.28,
+    "1-30 days": 68587.1,
     "31-60 days": 17391.27,
     "61-90 days": 6154.4,
     ">90 days": 20594.66
@@ -241,15 +241,49 @@
     },
     {
       "date": "2026-04-16",
-      "total_ar": 639040.66,
-      "overdue_ar": 114540.25,
-      "overdue_pct": 17.92,
-      "dso": 49.1,
-      "revenue_180": 2343762.74,
+      "total_ar": 633549.54,
+      "overdue_ar": 112727.43,
+      "overdue_pct": 17.79,
+      "dso": 48.6,
+      "revenue_180": 2344404.68,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "484569670643353225",
+      "contact_id": "482767822755202192",
+      "invoice_no": "2026-1585",
+      "company": "UTS Den Haag B.V.",
+      "invoice_date": "2026-04-16",
+      "due_date": "2026-05-16",
+      "amount": 24816.34,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 7.4,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "483846427399685283",
+      "contact_id": "468620747309319517",
+      "invoice_no": "2026-1584",
+      "company": "Vervoort Meubelen B.V.",
+      "invoice_date": "2026-04-16",
+      "due_date": "2026-05-16",
+      "amount": 641.94,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "483846416921265864",
       "contact_id": "424054812412216494",
@@ -4195,23 +4229,6 @@
       "reminders": []
     },
     {
-      "id": "482767228649867261",
-      "contact_id": "421769153709344637",
-      "invoice_no": "2026-1301",
-      "company": "UTS Utrecht B.V.",
-      "invoice_date": "2026-03-31",
-      "due_date": "2026-04-30",
-      "amount": 24816.34,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 7.4,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "482767226207732963",
       "contact_id": "421769153709344637",
       "invoice_no": "2026-1300",
@@ -5487,23 +5504,6 @@
       "reminders": []
     },
     {
-      "id": "482122846284285805",
-      "contact_id": "447878312098793341",
-      "invoice_no": "2026-1162",
-      "company": "Homint",
-      "invoice_date": "2026-03-20",
-      "due_date": "2026-04-19",
-      "amount": 724.44,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481295779280979348",
       "contact_id": "373979318352611285",
       "invoice_no": "2026-1157",
@@ -6116,23 +6116,6 @@
       "reminders": []
     },
     {
-      "id": "481768835271099605",
-      "contact_id": "442164130156119169",
-      "invoice_no": "2026-1103",
-      "company": "De Arend Waardenburg B.V.",
-      "invoice_date": "2026-03-18",
-      "due_date": "2026-04-17",
-      "amount": 1696.67,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481946107633469216",
       "contact_id": "481111903814289037",
       "invoice_no": "2026-1102",
@@ -6632,23 +6615,6 @@
       "reminders": []
     },
     {
-      "id": "481768902763742903",
-      "contact_id": "418509435777844300",
-      "invoice_no": "2026-1067",
-      "company": "VDK Projecten B.V.",
-      "invoice_date": "2026-03-17",
-      "due_date": "2026-04-16",
-      "amount": 1167.88,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 0.4,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481768881126376926",
       "contact_id": "423679869693462023",
       "invoice_no": "2026-1064",
@@ -6696,23 +6662,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481854971869922540",
-      "contact_id": "394333231590147659",
-      "invoice_no": "2026-1054",
-      "company": "Groot Project Afbouw",
-      "invoice_date": "2026-03-17",
-      "due_date": "2026-04-16",
-      "amount": 731.25,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 0.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -9390,29 +9339,6 @@
       ]
     },
     {
-      "id": "481222530906981647",
-      "contact_id": "476971471055357173",
-      "invoice_no": "2026-0944",
-      "company": "Backshop B.V.",
-      "invoice_date": "2026-03-10",
-      "due_date": "2026-04-09",
-      "amount": 820.63,
-      "currency": "EUR",
-      "days_overdue": 7,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 7.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-15",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "480680214641248047",
       "contact_id": "474326144833815590",
       "invoice_no": "2026-0930",
@@ -9689,29 +9615,6 @@
       ]
     },
     {
-      "id": "479952378199541611",
-      "contact_id": "402484474048153048",
-      "invoice_no": "2026-0874",
-      "company": "Ritswand B.V.",
-      "invoice_date": "2026-03-06",
-      "due_date": "2026-04-05",
-      "amount": 565.28,
-      "currency": "EUR",
-      "days_overdue": 11,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 11.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-11",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "480680234625008824",
       "contact_id": "375517414708741401",
       "invoice_no": "2026-0867",
@@ -9942,29 +9845,6 @@
       ]
     },
     {
-      "id": "480043258374784078",
-      "contact_id": "480125441593575400",
-      "invoice_no": "2026-0799",
-      "company": "Interstore Winkelinrichting B.V.",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 426.91,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 20.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-02",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "479952382708417901",
       "contact_id": "337931365554062369",
       "invoice_no": "2026-0792",
@@ -10104,6 +9984,40 @@
     }
   ],
   "active_invoices": [
+    {
+      "id": "484569670643353225",
+      "contact_id": "482767822755202192",
+      "invoice_no": "2026-1585",
+      "company": "UTS Den Haag B.V.",
+      "invoice_date": "2026-04-16",
+      "due_date": "2026-05-16",
+      "amount": 24816.34,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 7.4,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "483846427399685283",
+      "contact_id": "468620747309319517",
+      "invoice_no": "2026-1584",
+      "company": "Vervoort Meubelen B.V.",
+      "invoice_date": "2026-04-16",
+      "due_date": "2026-05-16",
+      "amount": 641.94,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "483846416921265864",
       "contact_id": "424054812412216494",
@@ -13845,23 +13759,6 @@
       "reminders": []
     },
     {
-      "id": "482767228649867261",
-      "contact_id": "421769153709344637",
-      "invoice_no": "2026-1301",
-      "company": "UTS Utrecht B.V.",
-      "invoice_date": "2026-03-31",
-      "due_date": "2026-04-30",
-      "amount": 24816.34,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 7.4,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "482767226207732963",
       "contact_id": "421769153709344637",
       "invoice_no": "2026-1300",
@@ -15018,23 +14915,6 @@
       "reminders": []
     },
     {
-      "id": "482122846284285805",
-      "contact_id": "447878312098793341",
-      "invoice_no": "2026-1162",
-      "company": "Homint",
-      "invoice_date": "2026-03-20",
-      "due_date": "2026-04-19",
-      "amount": 724.44,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.2,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481295779280979348",
       "contact_id": "373979318352611285",
       "invoice_no": "2026-1157",
@@ -15613,23 +15493,6 @@
       "reminders": []
     },
     {
-      "id": "481768835271099605",
-      "contact_id": "442164130156119169",
-      "invoice_no": "2026-1103",
-      "company": "De Arend Waardenburg B.V.",
-      "invoice_date": "2026-03-18",
-      "due_date": "2026-04-17",
-      "amount": 1696.67,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481946107633469216",
       "contact_id": "481111903814289037",
       "invoice_no": "2026-1102",
@@ -16095,23 +15958,6 @@
       "reminders": []
     },
     {
-      "id": "481768902763742903",
-      "contact_id": "418509435777844300",
-      "invoice_no": "2026-1067",
-      "company": "VDK Projecten B.V.",
-      "invoice_date": "2026-03-17",
-      "due_date": "2026-04-16",
-      "amount": 1167.88,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 0.4,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481768881126376926",
       "contact_id": "423679869693462023",
       "invoice_no": "2026-1064",
@@ -16159,23 +16005,6 @@
       "state": "late",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "481854971869922540",
-      "contact_id": "394333231590147659",
-      "invoice_no": "2026-1054",
-      "company": "Groot Project Afbouw",
-      "invoice_date": "2026-03-17",
-      "due_date": "2026-04-16",
-      "amount": 731.25,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 0.2,
       "level": "Monitor",
       "reminders": []
     },
@@ -18445,29 +18274,6 @@
       ]
     },
     {
-      "id": "481222530906981647",
-      "contact_id": "476971471055357173",
-      "invoice_no": "2026-0944",
-      "company": "Backshop B.V.",
-      "invoice_date": "2026-03-10",
-      "due_date": "2026-04-09",
-      "amount": 820.63,
-      "currency": "EUR",
-      "days_overdue": 7,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 7.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-15",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "480680214641248047",
       "contact_id": "474326144833815590",
       "invoice_no": "2026-0930",
@@ -18744,29 +18550,6 @@
       ]
     },
     {
-      "id": "479952378199541611",
-      "contact_id": "402484474048153048",
-      "invoice_no": "2026-0874",
-      "company": "Ritswand B.V.",
-      "invoice_date": "2026-03-06",
-      "due_date": "2026-04-05",
-      "amount": 565.28,
-      "currency": "EUR",
-      "days_overdue": 11,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 11.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-11",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "480680234625008824",
       "contact_id": "375517414708741401",
       "invoice_no": "2026-0867",
@@ -18981,29 +18764,6 @@
       "invoice_date": "2026-02-25",
       "due_date": "2026-03-27",
       "amount": 231.81,
-      "currency": "EUR",
-      "days_overdue": 20,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 20.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-02",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "480043258374784078",
-      "contact_id": "480125441593575400",
-      "invoice_no": "2026-0799",
-      "company": "Interstore Winkelinrichting B.V.",
-      "invoice_date": "2026-02-25",
-      "due_date": "2026-03-27",
-      "amount": 426.91,
       "currency": "EUR",
       "days_overdue": 20,
       "bucket": "1-30 days",
@@ -19736,6 +19496,159 @@
     }
   ],
   "customers": {
+    "482767822755202192": {
+      "contact_id": "482767822755202192",
+      "company": "UTS Den Haag B.V.",
+      "invoices": [
+        {
+          "id": "484569670643353225",
+          "contact_id": "482767822755202192",
+          "invoice_no": "2026-1585",
+          "company": "UTS Den Haag B.V.",
+          "invoice_date": "2026-04-16",
+          "due_date": "2026-05-16",
+          "amount": 24816.34,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 7.4,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 24816.34,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
+    "468620747309319517": {
+      "contact_id": "468620747309319517",
+      "company": "Vervoort Meubelen B.V.",
+      "invoices": [
+        {
+          "id": "480680258184414827",
+          "contact_id": "468620747309319517",
+          "invoice_no": "2026-0834",
+          "company": "Vervoort Meubelen B.V.",
+          "invoice_date": "2026-03-04",
+          "due_date": "2026-04-03",
+          "amount": 1088.88,
+          "currency": "EUR",
+          "days_overdue": 13,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 13.3,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-04-09",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "478764288554566865",
+          "contact_id": "468620747309319517",
+          "invoice_no": "2026-0546",
+          "company": "Vervoort Meubelen B.V.",
+          "invoice_date": "2026-02-11",
+          "due_date": "2026-03-13",
+          "amount": 585.07,
+          "currency": "EUR",
+          "days_overdue": 34,
+          "bucket": "31-60 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 34.2,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-03-19",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "483111826437965403",
+          "contact_id": "468620747309319517",
+          "invoice_no": "2026-1396",
+          "company": "Vervoort Meubelen B.V.",
+          "invoice_date": "2026-04-08",
+          "due_date": "2026-05-08",
+          "amount": 739.44,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "483846427399685283",
+          "contact_id": "468620747309319517",
+          "invoice_no": "2026-1584",
+          "company": "Vervoort Meubelen B.V.",
+          "invoice_date": "2026-04-16",
+          "due_date": "2026-05-16",
+          "amount": 641.94,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "481768903908787264",
+          "contact_id": "468620747309319517",
+          "invoice_no": "2026-1123",
+          "company": "Vervoort Meubelen B.V.",
+          "invoice_date": "2026-03-18",
+          "due_date": "2026-04-17",
+          "amount": 414.44,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "483104640170198530",
+          "contact_id": "468620747309319517",
+          "invoice_no": "2026-1302",
+          "company": "Vervoort Meubelen B.V.",
+          "invoice_date": "2026-03-31",
+          "due_date": "2026-04-30",
+          "amount": -585.07,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 3469.77,
+      "total_overdue": 1673.95,
+      "max_days": 34,
+      "invoice_count": 5,
+      "level": "Monitor"
+    },
     "424054812412216494": {
       "contact_id": "424054812412216494",
       "company": "Port Supervisor B.V.",
@@ -21444,23 +21357,6 @@
       "company": "De Arend Waardenburg B.V.",
       "invoices": [
         {
-          "id": "481768835271099605",
-          "contact_id": "442164130156119169",
-          "invoice_no": "2026-1103",
-          "company": "De Arend Waardenburg B.V.",
-          "invoice_date": "2026-03-18",
-          "due_date": "2026-04-17",
-          "amount": 1696.67,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.5,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "484306675959859144",
           "contact_id": "442164130156119169",
           "invoice_no": "2026-1559",
@@ -21512,10 +21408,10 @@
           "reminders": []
         }
       ],
-      "total_open": 3736.03,
+      "total_open": 2039.36,
       "total_overdue": 0,
       "max_days": 0,
-      "invoice_count": 4,
+      "invoice_count": 3,
       "level": "Monitor"
     },
     "460915326513579576": {
@@ -25100,23 +24996,6 @@
       "company": "Homint",
       "invoices": [
         {
-          "id": "482122846284285805",
-          "contact_id": "447878312098793341",
-          "invoice_no": "2026-1162",
-          "company": "Homint",
-          "invoice_date": "2026-03-20",
-          "due_date": "2026-04-19",
-          "amount": 724.44,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "482582335844255738",
           "contact_id": "447878312098793341",
           "invoice_no": "2026-1211",
@@ -25202,10 +25081,10 @@
           "reminders": []
         }
       ],
-      "total_open": 3155.77,
+      "total_open": 2431.33,
       "total_overdue": 0,
       "max_days": 0,
-      "invoice_count": 6,
+      "invoice_count": 5,
       "level": "Monitor"
     },
     "483833052912420547": {
@@ -27849,135 +27728,10 @@
       "invoice_count": 3,
       "level": "Monitor"
     },
-    "468620747309319517": {
-      "contact_id": "468620747309319517",
-      "company": "Vervoort Meubelen B.V.",
-      "invoices": [
-        {
-          "id": "480680258184414827",
-          "contact_id": "468620747309319517",
-          "invoice_no": "2026-0834",
-          "company": "Vervoort Meubelen B.V.",
-          "invoice_date": "2026-03-04",
-          "due_date": "2026-04-03",
-          "amount": 1088.88,
-          "currency": "EUR",
-          "days_overdue": 13,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 13.3,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-04-09",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "478764288554566865",
-          "contact_id": "468620747309319517",
-          "invoice_no": "2026-0546",
-          "company": "Vervoort Meubelen B.V.",
-          "invoice_date": "2026-02-11",
-          "due_date": "2026-03-13",
-          "amount": 585.07,
-          "currency": "EUR",
-          "days_overdue": 34,
-          "bucket": "31-60 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 34.2,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-19",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "483111826437965403",
-          "contact_id": "468620747309319517",
-          "invoice_no": "2026-1396",
-          "company": "Vervoort Meubelen B.V.",
-          "invoice_date": "2026-04-08",
-          "due_date": "2026-05-08",
-          "amount": 739.44,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "481768903908787264",
-          "contact_id": "468620747309319517",
-          "invoice_no": "2026-1123",
-          "company": "Vervoort Meubelen B.V.",
-          "invoice_date": "2026-03-18",
-          "due_date": "2026-04-17",
-          "amount": 414.44,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "483104640170198530",
-          "contact_id": "468620747309319517",
-          "invoice_no": "2026-1302",
-          "company": "Vervoort Meubelen B.V.",
-          "invoice_date": "2026-03-31",
-          "due_date": "2026-04-30",
-          "amount": -585.07,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 2827.83,
-      "total_overdue": 1673.95,
-      "max_days": 34,
-      "invoice_count": 4,
-      "level": "Monitor"
-    },
     "421769153709344637": {
       "contact_id": "421769153709344637",
       "company": "UTS Utrecht B.V.",
       "invoices": [
-        {
-          "id": "482767228649867261",
-          "contact_id": "421769153709344637",
-          "invoice_no": "2026-1301",
-          "company": "UTS Utrecht B.V.",
-          "invoice_date": "2026-03-31",
-          "due_date": "2026-04-30",
-          "amount": 24816.34,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 7.4,
-          "level": "Monitor",
-          "reminders": []
-        },
         {
           "id": "482767227695662800",
           "contact_id": "421769153709344637",
@@ -28030,10 +27784,10 @@
           "reminders": []
         }
       ],
-      "total_open": 37731.81,
+      "total_open": 12915.47,
       "total_overdue": 0,
       "max_days": 0,
-      "invoice_count": 4,
+      "invoice_count": 3,
       "level": "Monitor"
     },
     "434822409056420969": {
@@ -29302,29 +29056,12 @@
           "score": 0.7,
           "level": "Monitor",
           "reminders": []
-        },
-        {
-          "id": "481854971869922540",
-          "contact_id": "394333231590147659",
-          "invoice_no": "2026-1054",
-          "company": "Groot Project Afbouw",
-          "invoice_date": "2026-03-17",
-          "due_date": "2026-04-16",
-          "amount": 731.25,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
         }
       ],
-      "total_open": 3037.5,
+      "total_open": 2306.25,
       "total_overdue": 0,
       "max_days": 0,
-      "invoice_count": 2,
+      "invoice_count": 1,
       "level": "Monitor"
     },
     "409005437841573107": {
@@ -29676,34 +29413,6 @@
         }
       ],
       "total_open": 534.85,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "418509435777844300": {
-      "contact_id": "418509435777844300",
-      "company": "VDK Projecten B.V.",
-      "invoices": [
-        {
-          "id": "481768902763742903",
-          "contact_id": "418509435777844300",
-          "invoice_no": "2026-1067",
-          "company": "VDK Projecten B.V.",
-          "invoice_date": "2026-03-17",
-          "due_date": "2026-04-16",
-          "amount": 1167.88,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 0.4,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1167.88,
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
@@ -31375,29 +31084,6 @@
       "company": "Backshop B.V.",
       "invoices": [
         {
-          "id": "481222530906981647",
-          "contact_id": "476971471055357173",
-          "invoice_no": "2026-0944",
-          "company": "Backshop B.V.",
-          "invoice_date": "2026-03-10",
-          "due_date": "2026-04-09",
-          "amount": 820.63,
-          "currency": "EUR",
-          "days_overdue": 7,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 7.2,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-04-15",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
           "id": "483111680445777611",
           "contact_id": "476971471055357173",
           "invoice_no": "2026-1342",
@@ -31415,10 +31101,10 @@
           "reminders": []
         }
       ],
-      "total_open": 1633.13,
-      "total_overdue": 820.63,
-      "max_days": 7,
-      "invoice_count": 2,
+      "total_open": 812.5,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
       "level": "Monitor"
     },
     "453311310029915217": {
@@ -31869,40 +31555,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "402484474048153048": {
-      "contact_id": "402484474048153048",
-      "company": "Ritswand B.V.",
-      "invoices": [
-        {
-          "id": "479952378199541611",
-          "contact_id": "402484474048153048",
-          "invoice_no": "2026-0874",
-          "company": "Ritswand B.V.",
-          "invoice_date": "2026-03-06",
-          "due_date": "2026-04-05",
-          "amount": 565.28,
-          "currency": "EUR",
-          "days_overdue": 11,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 11.2,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-04-11",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 565.28,
-      "total_overdue": 565.28,
-      "max_days": 11,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "456656981535491709": {
       "contact_id": "456656981535491709",
       "company": "I'am siers interieurbouw",
@@ -32024,40 +31676,6 @@
       ],
       "total_open": 231.81,
       "total_overdue": 231.81,
-      "max_days": 20,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "480125441593575400": {
-      "contact_id": "480125441593575400",
-      "company": "Interstore Winkelinrichting B.V.",
-      "invoices": [
-        {
-          "id": "480043258374784078",
-          "contact_id": "480125441593575400",
-          "invoice_no": "2026-0799",
-          "company": "Interstore Winkelinrichting B.V.",
-          "invoice_date": "2026-02-25",
-          "due_date": "2026-03-27",
-          "amount": 426.91,
-          "currency": "EUR",
-          "days_overdue": 20,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 20.1,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-04-02",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 426.91,
-      "total_overdue": 426.91,
       "max_days": 20,
       "invoice_count": 1,
       "level": "Monitor"
