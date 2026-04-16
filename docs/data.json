@@ -1,21 +1,21 @@
 {
-  "generated": "2026-04-16T07:27:58",
-  "dso": 48.4,
+  "generated": "2026-04-16T09:21:42",
+  "dso": 48.1,
   "dso_6m_avg": 40.6,
   "dso_target": 36,
-  "total_ar": 626274.95,
-  "total_ar_gross": 651530.87,
-  "total_ar_credit": -25255.92,
-  "invoice_count": 492,
-  "overdue_pct": 18.3,
+  "total_ar": 622435.45,
+  "total_ar_gross": 647012.62,
+  "total_ar_credit": -24577.17,
+  "invoice_count": 487,
+  "overdue_pct": 18.4,
   "overdue_pct_6m": 22.6,
   "revenue_180": 2327157.53,
   "overdue_30": 44140.33,
   "overdue_60": 26749.06,
   "overdue_90": 20594.66,
   "aging": {
-    "Current": 536893.12,
-    "1-30 days": 70497.42,
+    "Current": 532472.37,
+    "1-30 days": 70399.92,
     "31-60 days": 17391.27,
     "61-90 days": 6154.4,
     ">90 days": 20594.66
@@ -241,10 +241,10 @@
     },
     {
       "date": "2026-04-16",
-      "total_ar": 626274.95,
-      "overdue_ar": 114637.75,
-      "overdue_pct": 18.3,
-      "dso": 48.4,
+      "total_ar": 622435.45,
+      "overdue_ar": 114540.25,
+      "overdue_pct": 18.4,
+      "dso": 48.1,
       "revenue_180": 2327157.53,
       "target": 36
     }
@@ -2495,23 +2495,6 @@
       "reminders": []
     },
     {
-      "id": "483945083795670101",
-      "contact_id": "478134396996551941",
-      "invoice_no": "2026-1427",
-      "company": "Accompli Afbouw B.V.",
-      "invoice_date": "2026-04-09",
-      "due_date": "2026-05-09",
-      "amount": 225.75,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "483941725980591862",
       "contact_id": "476314074391512421",
       "invoice_no": "2026-1426",
@@ -2627,40 +2610,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.8,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "483925273078662392",
-      "contact_id": "424054812412216494",
-      "invoice_no": "2026-1419",
-      "company": "Port Supervisor B.V.",
-      "invoice_date": "2026-04-09",
-      "due_date": "2026-05-09",
-      "amount": 1133.49,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "483925271780525667",
-      "contact_id": "424054812412216494",
-      "invoice_no": "2026-1418",
-      "company": "Port Supervisor B.V.",
-      "invoice_date": "2026-04-09",
-      "due_date": "2026-05-09",
-      "amount": 1472.11,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.4,
       "level": "Monitor",
       "reminders": []
     },
@@ -4110,23 +4059,6 @@
       "reminders": []
     },
     {
-      "id": "483035953849435649",
-      "contact_id": "441530679613720565",
-      "invoice_no": "2026-1294",
-      "company": "DeFabrique Evenementen B.V.",
-      "invoice_date": "2026-03-30",
-      "due_date": "2026-04-29",
-      "amount": -135.0,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.0,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "483033823098963005",
       "contact_id": "473058978161493541",
       "invoice_no": "2026-1293",
@@ -5290,23 +5222,6 @@
       "invoice_date": "2026-03-23",
       "due_date": "2026-04-22",
       "amount": -3.28,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.0,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "482397772859835686",
-      "contact_id": "449781079864248294",
-      "invoice_no": "2026-1177",
-      "company": "Endevoets Montage",
-      "invoice_date": "2026-03-23",
-      "due_date": "2026-04-22",
-      "amount": -97.5,
       "currency": "EUR",
       "days_overdue": 0,
       "bucket": "Current",
@@ -6564,23 +6479,6 @@
       "reminders": []
     },
     {
-      "id": "481775352093344928",
-      "contact_id": "441530679613720565",
-      "invoice_no": "2026-1061",
-      "company": "DeFabrique Evenementen B.V.",
-      "invoice_date": "2026-03-17",
-      "due_date": "2026-04-16",
-      "amount": 1589.4,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 0.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481768891073168822",
       "contact_id": "449695638840411574",
       "invoice_no": "2026-1055",
@@ -6827,29 +6725,6 @@
         {
           "nr": 1,
           "date": "2026-03-16",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "479478269584868753",
-      "contact_id": "441530679613720565",
-      "invoice_no": "2026-0708",
-      "company": "DeFabrique Evenementen B.V.",
-      "invoice_date": "2026-02-19",
-      "due_date": "2026-03-21",
-      "amount": -446.25,
-      "currency": "EUR",
-      "days_overdue": 26,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 26.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-27",
           "source": "berekend"
         }
       ]
@@ -9416,29 +9291,6 @@
       "state": "reminded",
       "is_bad_debt": false,
       "score": 8.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-14",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "481121807098709361",
-      "contact_id": "449781079864248294",
-      "invoice_no": "2026-0905",
-      "company": "Endevoets Montage",
-      "invoice_date": "2026-03-09",
-      "due_date": "2026-04-08",
-      "amount": 97.5,
-      "currency": "EUR",
-      "days_overdue": 8,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 8.0,
       "level": "Monitor",
       "reminders": [
         {
@@ -12191,23 +12043,6 @@
       "reminders": []
     },
     {
-      "id": "483945083795670101",
-      "contact_id": "478134396996551941",
-      "invoice_no": "2026-1427",
-      "company": "Accompli Afbouw B.V.",
-      "invoice_date": "2026-04-09",
-      "due_date": "2026-05-09",
-      "amount": 225.75,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "483941725980591862",
       "contact_id": "476314074391512421",
       "invoice_no": "2026-1426",
@@ -12272,40 +12107,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "483925273078662392",
-      "contact_id": "424054812412216494",
-      "invoice_no": "2026-1419",
-      "company": "Port Supervisor B.V.",
-      "invoice_date": "2026-04-09",
-      "due_date": "2026-05-09",
-      "amount": 1133.49,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.3,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "483925271780525667",
-      "contact_id": "424054812412216494",
-      "invoice_no": "2026-1418",
-      "company": "Port Supervisor B.V.",
-      "invoice_date": "2026-04-09",
-      "due_date": "2026-05-09",
-      "amount": 1472.11,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.4,
       "level": "Monitor",
       "reminders": []
     },
@@ -15937,23 +15738,6 @@
       "reminders": []
     },
     {
-      "id": "481775352093344928",
-      "contact_id": "441530679613720565",
-      "invoice_no": "2026-1061",
-      "company": "DeFabrique Evenementen B.V.",
-      "invoice_date": "2026-03-17",
-      "due_date": "2026-04-16",
-      "amount": 1589.4,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 0.5,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "481768891073168822",
       "contact_id": "449695638840411574",
       "invoice_no": "2026-1055",
@@ -18358,29 +18142,6 @@
       "state": "reminded",
       "is_bad_debt": false,
       "score": 8.2,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-14",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "481121807098709361",
-      "contact_id": "449781079864248294",
-      "invoice_no": "2026-0905",
-      "company": "Endevoets Montage",
-      "invoice_date": "2026-03-09",
-      "due_date": "2026-04-08",
-      "amount": 97.5,
-      "currency": "EUR",
-      "days_overdue": 8,
-      "bucket": "1-30 days",
-      "state": "reminded",
-      "is_bad_debt": false,
-      "score": 8.0,
       "level": "Monitor",
       "reminders": [
         {
@@ -25213,34 +24974,6 @@
       "invoice_count": 3,
       "level": "Monitor"
     },
-    "478134396996551941": {
-      "contact_id": "478134396996551941",
-      "company": "Accompli Afbouw B.V.",
-      "invoices": [
-        {
-          "id": "483945083795670101",
-          "contact_id": "478134396996551941",
-          "invoice_no": "2026-1427",
-          "company": "Accompli Afbouw B.V.",
-          "invoice_date": "2026-04-09",
-          "due_date": "2026-05-09",
-          "amount": 225.75,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 225.75,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "476314074391512421": {
       "contact_id": "476314074391512421",
       "company": "Styrekx B.V.",
@@ -25443,40 +25176,6 @@
           "reminders": []
         },
         {
-          "id": "483925271780525667",
-          "contact_id": "424054812412216494",
-          "invoice_no": "2026-1418",
-          "company": "Port Supervisor B.V.",
-          "invoice_date": "2026-04-09",
-          "due_date": "2026-05-09",
-          "amount": 1472.11,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.4,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "483925273078662392",
-          "contact_id": "424054812412216494",
-          "invoice_no": "2026-1419",
-          "company": "Port Supervisor B.V.",
-          "invoice_date": "2026-04-09",
-          "due_date": "2026-05-09",
-          "amount": 1133.49,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.3,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "483925406433412528",
           "contact_id": "424054812412216494",
           "invoice_no": "2026-1420",
@@ -25494,10 +25193,10 @@
           "reminders": []
         }
       ],
-      "total_open": 5211.2,
+      "total_open": 2605.6,
       "total_overdue": 0,
       "max_days": 0,
-      "invoice_count": 3,
+      "invoice_count": 1,
       "level": "Monitor"
     },
     "481773398519711149": {
@@ -26569,46 +26268,6 @@
           "reminders": []
         },
         {
-          "id": "479478269584868753",
-          "contact_id": "441530679613720565",
-          "invoice_no": "2026-0708",
-          "company": "DeFabrique Evenementen B.V.",
-          "invoice_date": "2026-02-19",
-          "due_date": "2026-03-21",
-          "amount": -446.25,
-          "currency": "EUR",
-          "days_overdue": 26,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 26.1,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-27",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "481775352093344928",
-          "contact_id": "441530679613720565",
-          "invoice_no": "2026-1061",
-          "company": "DeFabrique Evenementen B.V.",
-          "invoice_date": "2026-03-17",
-          "due_date": "2026-04-16",
-          "amount": 1589.4,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 0.5,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "483197986036253977",
           "contact_id": "441530679613720565",
           "invoice_no": "2026-1358",
@@ -26743,29 +26402,12 @@
           "score": 0.1,
           "level": "Monitor",
           "reminders": []
-        },
-        {
-          "id": "483035953849435649",
-          "contact_id": "441530679613720565",
-          "invoice_no": "2026-1294",
-          "company": "DeFabrique Evenementen B.V.",
-          "invoice_date": "2026-03-30",
-          "due_date": "2026-04-29",
-          "amount": -135.0,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.0,
-          "level": "Monitor",
-          "reminders": []
         }
       ],
-      "total_open": 10942.2,
+      "total_open": 9352.8,
       "total_overdue": 3680.1,
       "max_days": 5,
-      "invoice_count": 10,
+      "invoice_count": 9,
       "level": "Monitor"
     },
     "472615437303022981": {
@@ -28903,57 +28545,6 @@
       "max_days": 56,
       "invoice_count": 10,
       "level": "High"
-    },
-    "449781079864248294": {
-      "contact_id": "449781079864248294",
-      "company": "Endevoets Montage",
-      "invoices": [
-        {
-          "id": "481121807098709361",
-          "contact_id": "449781079864248294",
-          "invoice_no": "2026-0905",
-          "company": "Endevoets Montage",
-          "invoice_date": "2026-03-09",
-          "due_date": "2026-04-08",
-          "amount": 97.5,
-          "currency": "EUR",
-          "days_overdue": 8,
-          "bucket": "1-30 days",
-          "state": "reminded",
-          "is_bad_debt": false,
-          "score": 8.0,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-04-14",
-              "source": "berekend"
-            }
-          ]
-        },
-        {
-          "id": "482397772859835686",
-          "contact_id": "449781079864248294",
-          "invoice_no": "2026-1177",
-          "company": "Endevoets Montage",
-          "invoice_date": "2026-03-23",
-          "due_date": "2026-04-22",
-          "amount": -97.5,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.0,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 97.5,
-      "total_overdue": 97.5,
-      "max_days": 8,
-      "invoice_count": 1,
-      "level": "Monitor"
     },
     "431738863135754199": {
       "contact_id": "431738863135754199",
@@ -32111,23 +31702,6 @@
       "reminders": []
     },
     {
-      "id": "483035953849435649",
-      "contact_id": "441530679613720565",
-      "invoice_no": "2026-1294",
-      "company": "DeFabrique Evenementen B.V.",
-      "invoice_date": "2026-03-30",
-      "due_date": "2026-04-29",
-      "amount": -135.0,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.0,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
       "id": "483033823098963005",
       "contact_id": "473058978161493541",
       "invoice_no": "2026-1293",
@@ -32220,23 +31794,6 @@
       "invoice_date": "2026-03-23",
       "due_date": "2026-04-22",
       "amount": -3.28,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.0,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "482397772859835686",
-      "contact_id": "449781079864248294",
-      "invoice_no": "2026-1177",
-      "company": "Endevoets Montage",
-      "invoice_date": "2026-03-23",
-      "due_date": "2026-04-22",
-      "amount": -97.5,
       "currency": "EUR",
       "days_overdue": 0,
       "bucket": "Current",
@@ -32436,29 +31993,6 @@
         {
           "nr": 1,
           "date": "2026-04-02",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
-      "id": "479478269584868753",
-      "contact_id": "441530679613720565",
-      "invoice_no": "2026-0708",
-      "company": "DeFabrique Evenementen B.V.",
-      "invoice_date": "2026-02-19",
-      "due_date": "2026-03-21",
-      "amount": -446.25,
-      "currency": "EUR",
-      "days_overdue": 26,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 26.1,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-03-27",
           "source": "berekend"
         }
       ]
