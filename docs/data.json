@@ -1,5 +1,5 @@
 {
-  "generated": "2026-04-17T09:20:32",
+  "generated": "2026-04-17T11:04:05",
   "dso": 47.4,
   "dso_6m_avg": 40.9,
   "dso_target": 36,
@@ -259,6 +259,23 @@
     }
   ],
   "invoices": [
+    {
+      "id": "484651220853589586",
+      "contact_id": "482036799610291716",
+      "invoice_no": "2026-1591",
+      "company": "ATSO B.V.",
+      "invoice_date": "2026-04-17",
+      "due_date": "2026-05-17",
+      "amount": 2380.0,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.7,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "484579995123975683",
       "contact_id": "481778654566680153",
@@ -3792,23 +3809,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "483131503016937033",
-      "contact_id": "482036799610291716",
-      "invoice_no": "2026-1341",
-      "company": "ATSO B.V.",
-      "invoice_date": "2026-04-07",
-      "due_date": "2026-05-07",
-      "amount": 2380.0,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.7,
       "level": "Monitor",
       "reminders": []
     },
@@ -9837,6 +9837,23 @@
   ],
   "active_invoices": [
     {
+      "id": "484651220853589586",
+      "contact_id": "482036799610291716",
+      "invoice_no": "2026-1591",
+      "company": "ATSO B.V.",
+      "invoice_date": "2026-04-17",
+      "due_date": "2026-05-17",
+      "amount": 2380.0,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.7,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
       "id": "484579995123975683",
       "contact_id": "481778654566680153",
       "invoice_no": "2026-1590",
@@ -13199,23 +13216,6 @@
       "state": "open",
       "is_bad_debt": false,
       "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "483131503016937033",
-      "contact_id": "482036799610291716",
-      "invoice_no": "2026-1341",
-      "company": "ATSO B.V.",
-      "invoice_date": "2026-04-07",
-      "due_date": "2026-05-07",
-      "amount": 2380.0,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.7,
       "level": "Monitor",
       "reminders": []
     },
@@ -19174,6 +19174,34 @@
     }
   ],
   "customers": {
+    "482036799610291716": {
+      "contact_id": "482036799610291716",
+      "company": "ATSO B.V.",
+      "invoices": [
+        {
+          "id": "484651220853589586",
+          "contact_id": "482036799610291716",
+          "invoice_no": "2026-1591",
+          "company": "ATSO B.V.",
+          "invoice_date": "2026-04-17",
+          "due_date": "2026-05-17",
+          "amount": 2380.0,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.7,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 2380.0,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
     "481778654566680153": {
       "contact_id": "481778654566680153",
       "company": "Wonam Project Molenzoom B.V.",
@@ -26871,34 +26899,6 @@
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 2,
-      "level": "Monitor"
-    },
-    "482036799610291716": {
-      "contact_id": "482036799610291716",
-      "company": "ATSO B.V.",
-      "invoices": [
-        {
-          "id": "483131503016937033",
-          "contact_id": "482036799610291716",
-          "invoice_no": "2026-1341",
-          "company": "ATSO B.V.",
-          "invoice_date": "2026-04-07",
-          "due_date": "2026-05-07",
-          "amount": 2380.0,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.7,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 2380.0,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
       "level": "Monitor"
     },
     "460279939756722108": {
