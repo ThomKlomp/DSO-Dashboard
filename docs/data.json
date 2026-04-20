@@ -1,20 +1,20 @@
 {
-  "generated": "2026-04-20T08:09:50",
-  "dso": 45.0,
+  "generated": "2026-04-20T11:26:19",
+  "dso": 45.8,
   "dso_6m_avg": 41.0,
   "dso_target": 36,
-  "total_ar": 587661.12,
-  "total_ar_gross": 612423.65,
+  "total_ar": 601545.08,
+  "total_ar_gross": 626307.61,
   "total_ar_credit": -24762.53,
-  "invoice_count": 461,
-  "overdue_pct": 32.47,
-  "overdue_pct_6m": 23.34,
-  "revenue_180": 2350004.13,
+  "invoice_count": 469,
+  "overdue_pct": 31.72,
+  "overdue_pct_6m": 23.29,
+  "revenue_180": 2363644.32,
   "overdue_30": 46552.67,
   "overdue_60": 25542.94,
   "overdue_90": 19388.54,
   "aging": {
-    "Current": 421594.08,
+    "Current": 435478.04,
     "1-30 days": 144276.9,
     "31-60 days": 21009.73,
     "61-90 days": 6154.4,
@@ -259,15 +259,168 @@
     },
     {
       "date": "2026-04-20",
-      "total_ar": 587661.12,
+      "total_ar": 601545.08,
       "overdue_ar": 190829.57,
-      "overdue_pct": 32.47,
-      "dso": 45.0,
-      "revenue_180": 2350004.13,
+      "overdue_pct": 31.72,
+      "dso": 45.8,
+      "revenue_180": 2363644.32,
       "target": 36
     }
   ],
   "invoices": [
+    {
+      "id": "484477982023353439",
+      "contact_id": "471785808938927194",
+      "invoice_no": "2026-1606",
+      "company": "Circulair Management",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 2440.21,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.7,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484474391518775138",
+      "contact_id": "483110187166598437",
+      "invoice_no": "2026-1605",
+      "company": "Van den Hogen Bouwbedrijven B.V.",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 672.48,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484474409585739123",
+      "contact_id": "482746552625923657",
+      "invoice_no": "2026-1604",
+      "company": "Brouwer VloerenMontage Groep B.V.",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 1921.9,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.6,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484474389946958973",
+      "contact_id": "446525460768097819",
+      "invoice_no": "2026-1603",
+      "company": "Van Dalen Bouw B.V.",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 1279.04,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.4,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484474372986243002",
+      "contact_id": "450499877786355246",
+      "invoice_no": "2026-1602",
+      "company": "Marinus Montage- en Timmerwerken",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 545.62,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484474329897109225",
+      "contact_id": "434300583732577911",
+      "invoice_no": "2026-1601",
+      "company": "BBM Montage B.V.",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 1645.6,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.5,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484921248768329571",
+      "contact_id": "479498039674799504",
+      "invoice_no": "2026-1600",
+      "company": "Modus Furniture",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 4217.8,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 1.3,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484474368400820170",
+      "contact_id": "338693389432129462",
+      "invoice_no": "2026-1599",
+      "company": "Jupiter Vloerverwarming Benelux B.V.",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 917.54,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.3,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484474415552136797",
+      "contact_id": "481778654566680153",
+      "invoice_no": "2026-1598",
+      "company": "Wonam Project Molenzoom B.V.",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 589.08,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "484474384644310637",
       "contact_id": "436095466625566069",
@@ -1942,23 +2095,6 @@
       "invoice_date": "2026-04-13",
       "due_date": "2026-05-13",
       "amount": 317.02,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "484032921239290959",
-      "contact_id": "453302621644522865",
-      "invoice_no": "2026-1484",
-      "company": "Helder GlasSystemen B.V.",
-      "invoice_date": "2026-04-13",
-      "due_date": "2026-05-13",
-      "amount": 345.31,
       "currency": "EUR",
       "days_overdue": 0,
       "bucket": "Current",
@@ -5947,29 +6083,6 @@
       "reminders": []
     },
     {
-      "id": "483762669358154985",
-      "contact_id": "473606107526333771",
-      "invoice_no": "2026-1355",
-      "company": "Jannes Bos",
-      "invoice_date": "2026-04-07",
-      "due_date": "2026-04-14",
-      "amount": 64.5,
-      "currency": "EUR",
-      "days_overdue": 6,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 6.0,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-20",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "482659237462280098",
       "contact_id": "482659216232809885",
       "invoice_no": "2026-1203",
@@ -8413,6 +8526,29 @@
       ]
     },
     {
+      "id": "483762669358154985",
+      "contact_id": "473606107526333771",
+      "invoice_no": "2026-1355",
+      "company": "Jannes Bos",
+      "invoice_date": "2026-04-07",
+      "due_date": "2026-04-14",
+      "amount": 64.5,
+      "currency": "EUR",
+      "days_overdue": 6,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 6.0,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-04-20",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
       "id": "482651872634603096",
       "contact_id": "453311310029915217",
       "invoice_no": "2026-1196",
@@ -9435,6 +9571,159 @@
     }
   ],
   "active_invoices": [
+    {
+      "id": "484477982023353439",
+      "contact_id": "471785808938927194",
+      "invoice_no": "2026-1606",
+      "company": "Circulair Management",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 2440.21,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.7,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484474391518775138",
+      "contact_id": "483110187166598437",
+      "invoice_no": "2026-1605",
+      "company": "Van den Hogen Bouwbedrijven B.V.",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 672.48,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484474409585739123",
+      "contact_id": "482746552625923657",
+      "invoice_no": "2026-1604",
+      "company": "Brouwer VloerenMontage Groep B.V.",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 1921.9,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.6,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484474389946958973",
+      "contact_id": "446525460768097819",
+      "invoice_no": "2026-1603",
+      "company": "Van Dalen Bouw B.V.",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 1279.04,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.4,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484474372986243002",
+      "contact_id": "450499877786355246",
+      "invoice_no": "2026-1602",
+      "company": "Marinus Montage- en Timmerwerken",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 545.62,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484474329897109225",
+      "contact_id": "434300583732577911",
+      "invoice_no": "2026-1601",
+      "company": "BBM Montage B.V.",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 1645.6,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.5,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484921248768329571",
+      "contact_id": "479498039674799504",
+      "invoice_no": "2026-1600",
+      "company": "Modus Furniture",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 4217.8,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 1.3,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484474368400820170",
+      "contact_id": "338693389432129462",
+      "invoice_no": "2026-1599",
+      "company": "Jupiter Vloerverwarming Benelux B.V.",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 917.54,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.3,
+      "level": "Monitor",
+      "reminders": []
+    },
+    {
+      "id": "484474415552136797",
+      "contact_id": "481778654566680153",
+      "invoice_no": "2026-1598",
+      "company": "Wonam Project Molenzoom B.V.",
+      "invoice_date": "2026-04-20",
+      "due_date": "2026-05-20",
+      "amount": 589.08,
+      "currency": "EUR",
+      "days_overdue": 0,
+      "bucket": "Current",
+      "state": "open",
+      "is_bad_debt": false,
+      "score": 0.2,
+      "level": "Monitor",
+      "reminders": []
+    },
     {
       "id": "484474384644310637",
       "contact_id": "436095466625566069",
@@ -11041,23 +11330,6 @@
       "invoice_date": "2026-04-13",
       "due_date": "2026-05-13",
       "amount": 317.02,
-      "currency": "EUR",
-      "days_overdue": 0,
-      "bucket": "Current",
-      "state": "open",
-      "is_bad_debt": false,
-      "score": 0.1,
-      "level": "Monitor",
-      "reminders": []
-    },
-    {
-      "id": "484032921239290959",
-      "contact_id": "453302621644522865",
-      "invoice_no": "2026-1484",
-      "company": "Helder GlasSystemen B.V.",
-      "invoice_date": "2026-04-13",
-      "due_date": "2026-05-13",
-      "amount": 345.31,
       "currency": "EUR",
       "days_overdue": 0,
       "bucket": "Current",
@@ -14723,29 +14995,6 @@
       "reminders": []
     },
     {
-      "id": "483762669358154985",
-      "contact_id": "473606107526333771",
-      "invoice_no": "2026-1355",
-      "company": "Jannes Bos",
-      "invoice_date": "2026-04-07",
-      "due_date": "2026-04-14",
-      "amount": 64.5,
-      "currency": "EUR",
-      "days_overdue": 6,
-      "bucket": "1-30 days",
-      "state": "late",
-      "is_bad_debt": false,
-      "score": 6.0,
-      "level": "Monitor",
-      "reminders": [
-        {
-          "nr": 1,
-          "date": "2026-04-20",
-          "source": "berekend"
-        }
-      ]
-    },
-    {
       "id": "482659237462280098",
       "contact_id": "482659216232809885",
       "invoice_no": "2026-1203",
@@ -16804,6 +17053,29 @@
       ]
     },
     {
+      "id": "483762669358154985",
+      "contact_id": "473606107526333771",
+      "invoice_no": "2026-1355",
+      "company": "Jannes Bos",
+      "invoice_date": "2026-04-07",
+      "due_date": "2026-04-14",
+      "amount": 64.5,
+      "currency": "EUR",
+      "days_overdue": 6,
+      "bucket": "1-30 days",
+      "state": "reminded",
+      "is_bad_debt": false,
+      "score": 6.0,
+      "level": "Monitor",
+      "reminders": [
+        {
+          "nr": 1,
+          "date": "2026-04-20",
+          "source": "berekend"
+        }
+      ]
+    },
+    {
       "id": "482651872634603096",
       "contact_id": "453311310029915217",
       "invoice_no": "2026-1196",
@@ -18403,6 +18675,434 @@
     }
   ],
   "customers": {
+    "471785808938927194": {
+      "contact_id": "471785808938927194",
+      "company": "Circulair Management",
+      "invoices": [
+        {
+          "id": "484477982023353439",
+          "contact_id": "471785808938927194",
+          "invoice_no": "2026-1606",
+          "company": "Circulair Management",
+          "invoice_date": "2026-04-20",
+          "due_date": "2026-05-20",
+          "amount": 2440.21,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.7,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "482503475033278063",
+          "contact_id": "471785808938927194",
+          "invoice_no": "2026-1268",
+          "company": "Circulair Management",
+          "invoice_date": "2026-03-27",
+          "due_date": "2026-04-26",
+          "amount": 585.27,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "483111696968189645",
+          "contact_id": "471785808938927194",
+          "invoice_no": "2026-1349",
+          "company": "Circulair Management",
+          "invoice_date": "2026-04-07",
+          "due_date": "2026-05-07",
+          "amount": 158.66,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.0,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 3184.14,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 3,
+      "level": "Monitor"
+    },
+    "483110187166598437": {
+      "contact_id": "483110187166598437",
+      "company": "Van den Hogen Bouwbedrijven B.V.",
+      "invoices": [
+        {
+          "id": "483852155986380617",
+          "contact_id": "483110187166598437",
+          "invoice_no": "2026-1548",
+          "company": "Van den Hogen Bouwbedrijven B.V.",
+          "invoice_date": "2026-04-15",
+          "due_date": "2026-05-15",
+          "amount": 1412.11,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.4,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "484474391518775138",
+          "contact_id": "483110187166598437",
+          "invoice_no": "2026-1605",
+          "company": "Van den Hogen Bouwbedrijven B.V.",
+          "invoice_date": "2026-04-20",
+          "due_date": "2026-05-20",
+          "amount": 672.48,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 2084.59,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 2,
+      "level": "Monitor"
+    },
+    "482746552625923657": {
+      "contact_id": "482746552625923657",
+      "company": "Brouwer VloerenMontage Groep B.V.",
+      "invoices": [
+        {
+          "id": "484474409585739123",
+          "contact_id": "482746552625923657",
+          "invoice_no": "2026-1604",
+          "company": "Brouwer VloerenMontage Groep B.V.",
+          "invoice_date": "2026-04-20",
+          "due_date": "2026-05-20",
+          "amount": 1921.9,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.6,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "483852153395348854",
+          "contact_id": "482746552625923657",
+          "invoice_no": "2026-1522",
+          "company": "Brouwer VloerenMontage Groep B.V.",
+          "invoice_date": "2026-04-14",
+          "due_date": "2026-05-14",
+          "amount": 528.6,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 2450.5,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 2,
+      "level": "Monitor"
+    },
+    "446525460768097819": {
+      "contact_id": "446525460768097819",
+      "company": "Van Dalen Bouw B.V.",
+      "invoices": [
+        {
+          "id": "484474389946958973",
+          "contact_id": "446525460768097819",
+          "invoice_no": "2026-1603",
+          "company": "Van Dalen Bouw B.V.",
+          "invoice_date": "2026-04-20",
+          "due_date": "2026-05-20",
+          "amount": 1279.04,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.4,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 1279.04,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
+    "450499877786355246": {
+      "contact_id": "450499877786355246",
+      "company": "Marinus Montage- en Timmerwerken",
+      "invoices": [
+        {
+          "id": "477961456650814691",
+          "contact_id": "450499877786355246",
+          "invoice_no": "2026-0380",
+          "company": "Marinus Montage- en Timmerwerken",
+          "invoice_date": "2026-02-02",
+          "due_date": "2026-03-04",
+          "amount": -32.5,
+          "currency": "EUR",
+          "days_overdue": 47,
+          "bucket": "31-60 days",
+          "state": "late",
+          "is_bad_debt": false,
+          "score": 47.0,
+          "level": "High",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-03-10",
+              "source": "berekend"
+            }
+          ]
+        },
+        {
+          "id": "484474372986243002",
+          "contact_id": "450499877786355246",
+          "invoice_no": "2026-1602",
+          "company": "Marinus Montage- en Timmerwerken",
+          "invoice_date": "2026-04-20",
+          "due_date": "2026-05-20",
+          "amount": 545.62,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 545.62,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
+    "434300583732577911": {
+      "contact_id": "434300583732577911",
+      "company": "BBM Montage B.V.",
+      "invoices": [
+        {
+          "id": "484474329897109225",
+          "contact_id": "434300583732577911",
+          "invoice_no": "2026-1601",
+          "company": "BBM Montage B.V.",
+          "invoice_date": "2026-04-20",
+          "due_date": "2026-05-20",
+          "amount": 1645.6,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.5,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "482503471178712665",
+          "contact_id": "434300583732577911",
+          "invoice_no": "2026-1230",
+          "company": "BBM Montage B.V.",
+          "invoice_date": "2026-03-27",
+          "due_date": "2026-04-26",
+          "amount": 1122.01,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.3,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "483111682067924444",
+          "contact_id": "434300583732577911",
+          "invoice_no": "2026-1332",
+          "company": "BBM Montage B.V.",
+          "invoice_date": "2026-04-02",
+          "due_date": "2026-05-02",
+          "amount": 403.68,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.1,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 3171.29,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 3,
+      "level": "Monitor"
+    },
+    "479498039674799504": {
+      "contact_id": "479498039674799504",
+      "company": "Modus Furniture",
+      "invoices": [
+        {
+          "id": "484921248768329571",
+          "contact_id": "479498039674799504",
+          "invoice_no": "2026-1600",
+          "company": "Modus Furniture",
+          "invoice_date": "2026-04-20",
+          "due_date": "2026-05-20",
+          "amount": 4217.8,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 1.3,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 4217.8,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 1,
+      "level": "Monitor"
+    },
+    "338693389432129462": {
+      "contact_id": "338693389432129462",
+      "company": "Jupiter Vloerverwarming Benelux B.V.",
+      "invoices": [
+        {
+          "id": "484474368400820170",
+          "contact_id": "338693389432129462",
+          "invoice_no": "2026-1599",
+          "company": "Jupiter Vloerverwarming Benelux B.V.",
+          "invoice_date": "2026-04-20",
+          "due_date": "2026-05-20",
+          "amount": 917.54,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.3,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "482503499535353177",
+          "contact_id": "338693389432129462",
+          "invoice_no": "2026-1240",
+          "company": "Jupiter Vloerverwarming Benelux B.V.",
+          "invoice_date": "2026-03-27",
+          "due_date": "2026-04-26",
+          "amount": 733.15,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 1650.69,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 2,
+      "level": "Monitor"
+    },
+    "481778654566680153": {
+      "contact_id": "481778654566680153",
+      "company": "Wonam Project Molenzoom B.V.",
+      "invoices": [
+        {
+          "id": "484474415552136797",
+          "contact_id": "481778654566680153",
+          "invoice_no": "2026-1598",
+          "company": "Wonam Project Molenzoom B.V.",
+          "invoice_date": "2026-04-20",
+          "due_date": "2026-05-20",
+          "amount": 589.08,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "484579995123975683",
+          "contact_id": "481778654566680153",
+          "invoice_no": "2026-1590",
+          "company": "Wonam Project Molenzoom B.V.",
+          "invoice_date": "2026-04-16",
+          "due_date": "2026-05-16",
+          "amount": 589.08,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        },
+        {
+          "id": "484579986570741101",
+          "contact_id": "481778654566680153",
+          "invoice_no": "2026-1589",
+          "company": "Wonam Project Molenzoom B.V.",
+          "invoice_date": "2026-04-16",
+          "due_date": "2026-05-16",
+          "amount": 589.08,
+          "currency": "EUR",
+          "days_overdue": 0,
+          "bucket": "Current",
+          "state": "open",
+          "is_bad_debt": false,
+          "score": 0.2,
+          "level": "Monitor",
+          "reminders": []
+        }
+      ],
+      "total_open": 1767.24,
+      "total_overdue": 0,
+      "max_days": 0,
+      "invoice_count": 3,
+      "level": "Monitor"
+    },
     "436095466625566069": {
       "contact_id": "436095466625566069",
       "company": "TheNewMakers BV",
@@ -18570,51 +19270,6 @@
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "481778654566680153": {
-      "contact_id": "481778654566680153",
-      "company": "Wonam Project Molenzoom B.V.",
-      "invoices": [
-        {
-          "id": "484579995123975683",
-          "contact_id": "481778654566680153",
-          "invoice_no": "2026-1590",
-          "company": "Wonam Project Molenzoom B.V.",
-          "invoice_date": "2026-04-16",
-          "due_date": "2026-05-16",
-          "amount": 589.08,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "484579986570741101",
-          "contact_id": "481778654566680153",
-          "invoice_no": "2026-1589",
-          "company": "Wonam Project Molenzoom B.V.",
-          "invoice_date": "2026-04-16",
-          "due_date": "2026-05-16",
-          "amount": 589.08,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1178.16,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 2,
       "level": "Monitor"
     },
     "482767822755202192": {
@@ -20924,34 +21579,6 @@
       "invoice_count": 2,
       "level": "Monitor"
     },
-    "483110187166598437": {
-      "contact_id": "483110187166598437",
-      "company": "Van den Hogen Bouwbedrijven B.V.",
-      "invoices": [
-        {
-          "id": "483852155986380617",
-          "contact_id": "483110187166598437",
-          "invoice_no": "2026-1548",
-          "company": "Van den Hogen Bouwbedrijven B.V.",
-          "invoice_date": "2026-04-15",
-          "due_date": "2026-05-15",
-          "amount": 1412.11,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.4,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1412.11,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "483105775062877639": {
       "contact_id": "483105775062877639",
       "company": "Meubelmontageteam",
@@ -21639,34 +22266,6 @@
         }
       ],
       "total_open": 484.53,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
-    "482746552625923657": {
-      "contact_id": "482746552625923657",
-      "company": "Brouwer VloerenMontage Groep B.V.",
-      "invoices": [
-        {
-          "id": "483852153395348854",
-          "contact_id": "482746552625923657",
-          "invoice_no": "2026-1522",
-          "company": "Brouwer VloerenMontage Groep B.V.",
-          "invoice_date": "2026-04-14",
-          "due_date": "2026-05-14",
-          "amount": 528.6,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 528.6,
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 1,
@@ -22399,23 +22998,6 @@
           "reminders": []
         },
         {
-          "id": "484032921239290959",
-          "contact_id": "453302621644522865",
-          "invoice_no": "2026-1484",
-          "company": "Helder GlasSystemen B.V.",
-          "invoice_date": "2026-04-13",
-          "due_date": "2026-05-13",
-          "amount": 345.31,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
           "id": "484032920223221373",
           "contact_id": "453302621644522865",
           "invoice_no": "2026-1485",
@@ -22433,10 +23015,10 @@
           "reminders": []
         }
       ],
-      "total_open": 1007.64,
+      "total_open": 662.33,
       "total_overdue": 0,
       "max_days": 0,
-      "invoice_count": 3,
+      "invoice_count": 2,
       "level": "Monitor"
     },
     "460910121204057681": {
@@ -25927,51 +26509,6 @@
       "invoice_count": 1,
       "level": "Monitor"
     },
-    "471785808938927194": {
-      "contact_id": "471785808938927194",
-      "company": "Circulair Management",
-      "invoices": [
-        {
-          "id": "482503475033278063",
-          "contact_id": "471785808938927194",
-          "invoice_no": "2026-1268",
-          "company": "Circulair Management",
-          "invoice_date": "2026-03-27",
-          "due_date": "2026-04-26",
-          "amount": 585.27,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "483111696968189645",
-          "contact_id": "471785808938927194",
-          "invoice_no": "2026-1349",
-          "company": "Circulair Management",
-          "invoice_date": "2026-04-07",
-          "due_date": "2026-05-07",
-          "amount": 158.66,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.0,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 743.93,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 2,
-      "level": "Monitor"
-    },
     "466274078079059361": {
       "contact_id": "466274078079059361",
       "company": "byWorkx B.V.",
@@ -26308,51 +26845,6 @@
       "total_overdue": 0,
       "max_days": 0,
       "invoice_count": 3,
-      "level": "Monitor"
-    },
-    "434300583732577911": {
-      "contact_id": "434300583732577911",
-      "company": "BBM Montage B.V.",
-      "invoices": [
-        {
-          "id": "482503471178712665",
-          "contact_id": "434300583732577911",
-          "invoice_no": "2026-1230",
-          "company": "BBM Montage B.V.",
-          "invoice_date": "2026-03-27",
-          "due_date": "2026-04-26",
-          "amount": 1122.01,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.3,
-          "level": "Monitor",
-          "reminders": []
-        },
-        {
-          "id": "483111682067924444",
-          "contact_id": "434300583732577911",
-          "invoice_no": "2026-1332",
-          "company": "BBM Montage B.V.",
-          "invoice_date": "2026-04-02",
-          "due_date": "2026-05-02",
-          "amount": 403.68,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.1,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 1525.69,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 2,
       "level": "Monitor"
     },
     "472510645078591284": {
@@ -27250,34 +27742,6 @@
       "invoice_count": 3,
       "level": "Monitor"
     },
-    "338693389432129462": {
-      "contact_id": "338693389432129462",
-      "company": "Jupiter Vloerverwarming Benelux B.V.",
-      "invoices": [
-        {
-          "id": "482503499535353177",
-          "contact_id": "338693389432129462",
-          "invoice_no": "2026-1240",
-          "company": "Jupiter Vloerverwarming Benelux B.V.",
-          "invoice_date": "2026-03-27",
-          "due_date": "2026-04-26",
-          "amount": 733.15,
-          "currency": "EUR",
-          "days_overdue": 0,
-          "bucket": "Current",
-          "state": "open",
-          "is_bad_debt": false,
-          "score": 0.2,
-          "level": "Monitor",
-          "reminders": []
-        }
-      ],
-      "total_open": 733.15,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "483028843060266134": {
       "contact_id": "483028843060266134",
       "company": "SKILLED B.V.",
@@ -27883,40 +28347,6 @@
       "invoice_count": 0,
       "level": "Monitor"
     },
-    "473606107526333771": {
-      "contact_id": "473606107526333771",
-      "company": "Jannes Bos",
-      "invoices": [
-        {
-          "id": "483762669358154985",
-          "contact_id": "473606107526333771",
-          "invoice_no": "2026-1355",
-          "company": "Jannes Bos",
-          "invoice_date": "2026-04-07",
-          "due_date": "2026-04-14",
-          "amount": 64.5,
-          "currency": "EUR",
-          "days_overdue": 6,
-          "bucket": "1-30 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 6.0,
-          "level": "Monitor",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-04-20",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 64.5,
-      "total_overdue": 64.5,
-      "max_days": 6,
-      "invoice_count": 1,
-      "level": "Monitor"
-    },
     "482659216232809885": {
       "contact_id": "482659216232809885",
       "company": "Daan Abma",
@@ -28503,40 +28933,6 @@
       "max_days": 50,
       "invoice_count": 2,
       "level": "High"
-    },
-    "450499877786355246": {
-      "contact_id": "450499877786355246",
-      "company": "Marinus Montage- en Timmerwerken",
-      "invoices": [
-        {
-          "id": "477961456650814691",
-          "contact_id": "450499877786355246",
-          "invoice_no": "2026-0380",
-          "company": "Marinus Montage- en Timmerwerken",
-          "invoice_date": "2026-02-02",
-          "due_date": "2026-03-04",
-          "amount": -32.5,
-          "currency": "EUR",
-          "days_overdue": 47,
-          "bucket": "31-60 days",
-          "state": "late",
-          "is_bad_debt": false,
-          "score": 47.0,
-          "level": "High",
-          "reminders": [
-            {
-              "nr": 1,
-              "date": "2026-03-10",
-              "source": "berekend"
-            }
-          ]
-        }
-      ],
-      "total_open": 0,
-      "total_overdue": 0,
-      "max_days": 0,
-      "invoice_count": 0,
-      "level": "Monitor"
     },
     "474325256554678255": {
       "contact_id": "474325256554678255",
@@ -29403,6 +29799,40 @@
       "max_days": 379,
       "invoice_count": 9,
       "level": "URGENT"
+    },
+    "473606107526333771": {
+      "contact_id": "473606107526333771",
+      "company": "Jannes Bos",
+      "invoices": [
+        {
+          "id": "483762669358154985",
+          "contact_id": "473606107526333771",
+          "invoice_no": "2026-1355",
+          "company": "Jannes Bos",
+          "invoice_date": "2026-04-07",
+          "due_date": "2026-04-14",
+          "amount": 64.5,
+          "currency": "EUR",
+          "days_overdue": 6,
+          "bucket": "1-30 days",
+          "state": "reminded",
+          "is_bad_debt": false,
+          "score": 6.0,
+          "level": "Monitor",
+          "reminders": [
+            {
+              "nr": 1,
+              "date": "2026-04-20",
+              "source": "berekend"
+            }
+          ]
+        }
+      ],
+      "total_open": 64.5,
+      "total_overdue": 64.5,
+      "max_days": 6,
+      "invoice_count": 1,
+      "level": "Monitor"
     },
     "453311310029915217": {
       "contact_id": "453311310029915217",
